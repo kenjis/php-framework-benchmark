@@ -10,3 +10,5 @@ require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 $config = require(__DIR__ . '/../config/web.php');
 
 (new yii\web\Application($config))->run();
+
+echo "\n" . (memory_get_peak_usage(true)/1024/1024);
