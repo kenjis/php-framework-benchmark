@@ -291,5 +291,7 @@ switch (ENVIRONMENT)
  */
 require_once BASEPATH.'core/CodeIgniter.php';
 
+echo "\n" . (memory_get_peak_usage(true)/1024/1024);
+
 /* End of file index.php */
 /* Location: ./index.php */
