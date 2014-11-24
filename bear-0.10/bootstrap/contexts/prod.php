@@ -30,6 +30,14 @@ $app = require dirname(__DIR__) . '/instance.php';
 //
 list($method, $pagePath, $query) = $app->router->match();
 
+// Remove sub directories from pagePath
+$tmp = explode('/', $pagePath);
+$pagePath = '';
+for ($i = 6, $c = count($tmp); $i < $c; $i++) {
+    $pagePath .= '/' . $tmp[$i];
+}
+//var_dump($pagePath); exit;
+
 //
 // An attempt to request the page resource is made.
 // Upon failure the appropriate error code is assigned and forwarded to ERROR.
@@ -57,6 +65,7 @@ try {
 //
 OK: {
     $app->response->setResource($app->page)->render()->send();
+    echo "\n" . (memory_get_peak_usage(true)/1024/1024);
     exit(0);
 }
 

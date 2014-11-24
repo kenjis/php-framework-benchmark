@@ -30,3 +30,7 @@ chmod o+w app/cache/ app/logs/
 
 cd ../phalcon-1.3
 chmod o+w app/cache/
+
+cd ../bear-0.10
+composer install
+chmod o+w var/tmp
