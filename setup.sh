@@ -26,3 +26,4 @@ COMPOSER_PROCESS_TIMEOUT=3600 composer install
 
 cd ../symfony-2.5
 composer install
+chmod o+w app/cache/ app/logs/

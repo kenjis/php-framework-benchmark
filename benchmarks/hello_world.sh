@@ -32,5 +32,5 @@ url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
 fw="symfony-2.5"
-url="$base/$fw/web/hello/index"
+url="$base/$fw/web/app.php/hello/index"
 benchmark "$fw" "$url"
