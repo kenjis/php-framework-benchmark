@@ -1,17 +1,9 @@
 <?php
 
 require __DIR__ . '/libs/php-recipe-2nd/make_chart_parts.php';
+require __DIR__ . '/libs/parse_results.php';
 
-$lines = file(__DIR__ . '/output/results.hello_world.log');
-$results = [];
-foreach ($lines as $line) {
-    $column = explode(':', $line);
-    $results[$column[0]] = [
-        'rps' => (float) trim($column[1]),
-        'memory' => (float) trim($column[2]),
-    ];
-}
-//var_dump($results);
+$results = parse_results(__DIR__ . '/output/results.hello_world.log');
 
 $barColors = array('green', 'red', 'orange', 'purple', 'blue', 'gray', 'pink');
 
@@ -25,7 +17,7 @@ foreach ($results as $fw => $result) {
 //var_dump($data); exit;
 
 $options = array(
-  'title'  => 'Performance',
+  'title'  => 'Throughput',
   'titleTextStyle' => array('fontSize' => 16),
   'hAxis'  => array('title' => 'requests per second',
                     'titleTextStyle' => array('bold' => true)),
