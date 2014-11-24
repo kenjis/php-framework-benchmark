@@ -4,15 +4,15 @@
 
 ### Hello World Benchmark
 
-|framework          |request per second|peak memory|
-|-------------------|-----------------:|----------:|
-|phalcon-1.3        |           1100.85|        0.5|
-|codeigniter-3.0-dev|            609.61|        0.5|
-|yii-2.0            |            345.73|        1.5|
-|fuel-1.8-dev       |            301.11|       0.75|
-|cake-3.0-dev       |            193.42|       1.25|
-|symfony-2.5        |            107.86|          2|
-|laravel-4.2        |              80.6|          2|
+|framework          |requests per second|peak memory|
+|-------------------|------------------:|----------:|
+|phalcon-1.3        |            1100.85|        0.5|
+|codeigniter-3.0-dev|             609.61|        0.5|
+|yii-2.0            |             345.73|        1.5|
+|fuel-1.8-dev       |             301.11|       0.75|
+|cake-3.0-dev       |             193.42|       1.25|
+|symfony-2.5        |             107.86|          2|
+|laravel-4.2        |               80.6|          2|
 
 ## How to Benchmark
 
