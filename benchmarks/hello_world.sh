@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd `dirname $0`
-. _functions.sh
+. ./_functions.sh
 
 base="$1"
 bm_name=`basename $0 .sh`

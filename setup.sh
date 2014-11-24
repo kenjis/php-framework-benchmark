@@ -16,6 +16,7 @@ composer install --prefer-source
 
 cd ../laravel-4.2
 composer install
+chmod o+w app/storage/*
 
 cd ../cake-3.0-dev
-composer install
+COMPOSER_PROCESS_TIMEOUT=3600 composer install
