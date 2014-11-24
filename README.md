@@ -4,15 +4,15 @@
 
 ### Hello World Benchmark
 
-|framework         |request per second |peak memory|
-|------------------|------------------:|----------:|
-|[Phalcon 1.3](http://phalconphp.com/)             |1100.85|0.5 |
-|[CodeIgniter 3.0-dev](http://www.codeigniter.com/)| 609.61|0.5 |
-|[Yii 2.0](http://www.yiiframework.com/)           | 345.73|1.5 |
-|[FuelPHP 1.8-dev](http://fuelphp.com/)            | 301.11|0.75|
-|[CakePHP 3.0-dev](http://cakephp.org/)            | 193.42|1.25|
-|[Symfony 2.5](http://symfony.com/)                | 107.86|2   |
-|[Laravel 4.2](http://laravel.com/)                |  80.60|2   |
+|framework          |request per second|peak memory|
+|-------------------|-----------------:|----------:|
+|phalcon-1.3        |           1100.85|        0.5|
+|codeigniter-3.0-dev|            609.61|        0.5|
+|yii-2.0            |            345.73|        1.5|
+|fuel-1.8-dev       |            301.11|       0.75|
+|cake-3.0-dev       |            193.42|       1.25|
+|symfony-2.5        |            107.86|          2|
+|laravel-4.2        |              80.6|          2|
 
 ## How to Benchmark
 
@@ -31,3 +31,13 @@ $ sh benchmark.sh
 ~~~
 
 See <http://localhost/php-framework-benchmark/>.
+
+## Reference
+
+* [Phalcon](http://phalconphp.com/)
+* [CodeIgniter](http://www.codeigniter.com/)
+* [Yii](http://www.yiiframework.com/)
+* [FuelPHP](http://fuelphp.com/)
+* [CakePHP](http://cakephp.org/)
+* [Symfony](http://symfony.com/)
+* [Laravel](http://laravel.com/)
