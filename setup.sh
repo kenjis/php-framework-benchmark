@@ -11,3 +11,8 @@ composer global require "fxp/composer-asset-plugin:1.0.0-beta3"
 cd yii-2.0
 composer install
 
+cd ../fuel-1.8-dev
+composer install --prefer-source
+
+cd ../laravel-4.2
+composer install
