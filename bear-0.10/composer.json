@@ -1,0 +1,23 @@
+{
+    "name": "my/hello",
+    "description":"n/a",
+    "license": "proprietary",
+    "require": {
+        "bear/package": "~0.11"
+    },
+    "require-dev": {
+        "bear/dev-package": "~0.1@dev"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "BEAR\\Skeleton\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}

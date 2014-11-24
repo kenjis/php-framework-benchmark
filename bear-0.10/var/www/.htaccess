@@ -1,0 +1,23 @@
+order deny,allow
+
+<Files "dev.php">
+	order allow,deny
+	deny from all
+</Files>
+<Files "dev.php">
+	order allow,deny
+	deny from all
+</Files>
+
+<IfModule mod_rewrite.c>
+    # turn on rewriting
+    RewriteEngine On
+    
+    # for all files not found in the file system,
+    # reroute to "index.php" bootstrap script,
+    # keeping the query string intact.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !favicon.ico$
+    RewriteRule ^(.*)$ /index.php [QSA,L]
+</IfModule>
