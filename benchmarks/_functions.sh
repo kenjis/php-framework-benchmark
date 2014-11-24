@@ -6,7 +6,7 @@ benchmark ()
     output="output/$fw.output"
 
     echo $url
-    ab -c 10 -n 1000 "$url" > "$ab_log"
+    ab -c 10 -t 10 "$url" > "$ab_log"
     curl "$url" > "$output"
     rps=`grep "Requests per second:" "$ab_log" | cut -f 7 -d " "`
     m=`tail -1 "$output"`
