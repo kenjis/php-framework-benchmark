@@ -13,7 +13,7 @@ foreach ($lines as $line) {
 }
 //var_dump($results);
 
-$barColors = array('blue', 'red', 'orange', 'green', 'purple', 'blue');
+$barColors = array('red', 'green', 'purple', 'blue', 'gray', 'pink');
 
 // RPS Benchmark
 $data[] = array('', 'rps', array('role' => 'style'));  // header
