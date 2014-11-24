@@ -6,12 +6,13 @@
 
 |framework         |request per second |peak memory|
 |------------------|------------------:|----------:|
-|[CodeIgniter 3.0-dev](http://www.codeigniter.com/)|610.77|0.5 |
-|[Yii 2.0](http://www.yiiframework.com/)           |344.38|1.5 |
-|[FuelPHP 1.8-dev](http://fuelphp.com/)            |289.71|0.75|
-|[CakePHP 3.0-dev](http://cakephp.org/)            |177.52|1.25|
-|[Symfony 2.5](http://symfony.com/)                |110.31|2   |
-|[Laravel 4.2](http://laravel.com/)                | 72.43|2   |
+|[Phalcon 1.3](http://phalconphp.com/)             |1100.85|0.5 |
+|[CodeIgniter 3.0-dev](http://www.codeigniter.com/)| 609.61|0.5 |
+|[Yii 2.0](http://www.yiiframework.com/)           | 345.73|1.5 |
+|[FuelPHP 1.8-dev](http://fuelphp.com/)            | 301.11|0.75|
+|[CakePHP 3.0-dev](http://cakephp.org/)            | 193.42|1.25|
+|[Symfony 2.5](http://symfony.com/)                | 107.86|2   |
+|[Laravel 4.2](http://laravel.com/)                |  80.60|2   |
 
 ## How to Benchmark
 
