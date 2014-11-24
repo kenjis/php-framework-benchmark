@@ -16,3 +16,6 @@ composer install --prefer-source
 
 cd ../laravel-4.2
 composer install
+
+cd ../cake-3.0-dev
+composer install
