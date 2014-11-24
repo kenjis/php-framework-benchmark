@@ -27,3 +27,6 @@ COMPOSER_PROCESS_TIMEOUT=3600 composer install
 cd ../symfony-2.5
 composer install
 chmod o+w app/cache/ app/logs/
+
+cd ../phalcon-1.3
+chmod o+w app/cache/

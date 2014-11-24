@@ -11,6 +11,10 @@ results="output/results.$bm_name.log"
 mv "$results" "$results.old"
 
 
+fw="phalcon-1.3"
+url="$base/$fw/public/index.php?_url=/hello/index"
+benchmark "$fw" "$url"
+
 fw="codeigniter-3.0-dev"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
