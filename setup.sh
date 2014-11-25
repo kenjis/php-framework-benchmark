@@ -5,6 +5,16 @@ if [ ! `which composer` ]; then
     exit 1;
 fi
 
+if [ ! `which ab` ]; then
+    echo "ab command not found."
+    exit 1;
+fi
+
+if [ ! `which curl` ]; then
+    echo "curl command not found."
+    exit 1;
+fi
+
 # Yii 2.0 requires composer-asset-plugin
 composer global require "fxp/composer-asset-plugin:1.0.0-beta3"
 
