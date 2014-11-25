@@ -32,6 +32,24 @@ $ sh benchmark.sh
 
 See <http://localhost/php-framework-benchmark/>.
 
+## Kernel Configuration
+
+I added below in `/etc/sysctl.conf`
+
+~~~
+# Added
+net.netfilter.nf_conntrack_max = 100000
+net.nf_conntrack_max = 100000
+net.ipv4.tcp_max_tw_buckets = 180000
+net.ipv4.tcp_tw_recycle = 1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_fin_timeout = 10
+~~~
+
+and run `sudo sysctl -p`.
+
+If you want to see current configuration, run `sudo sysctl -a`.
+
 ## Reference
 
 * [Phalcon](http://phalconphp.com/)
