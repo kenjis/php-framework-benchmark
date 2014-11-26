@@ -1,0 +1,558 @@
+================================================================================
+| This is the list of static methods as defined in the 1.x API. It is used to  |
+| track completeness of the framework static interface, and as a reference to  |
+| the methods that have to be added to the 1.x compatibility layer.            |
+================================================================================
+
+Legend:
+	[TODO]                                This method has not been looked at
+	[REMOVED]                             This method will not be supported in 2.0
+	[2.0]                                 This method is in 2.0 as-is
+	[2.0 relocated New::call/New->call()] This method is in 2.0, but in a different class/method
+	[2.0 newName]                         This method is in 2.0, but with a new name
+	[2.0 helper]                          This method is in 2.0, as a helper function, not as a class method
+	[2.0 proto]                           This method is in 2.0, but with a different prototype
+You can combine the last ones, in case they all changed: [2.0 newName helper proto]
+
+--------------------------------------------------------------------------------
+
+Agent:
+
+Implemented in the fuelphp\agent composer package.
+
+[TODO]: At the moment is supports browscap data only. Towards the future, it will
+have to be modified to be driver based, so other sources of browser data can be
+plugged in.
+
+	[2.0 getBrower] - public static function browser()
+	[2.0 getPlatform] - public static function platform()
+	[2.0 getVersion] - public static function version()
+	[2.0 getProperty] - public static function property($property = null)
+	[2.0 getProperties] - public static function properties()
+	[2.0 isRobot] - public static function is_robot()
+	[2.0 isMobileDevice] - public static function is_mobiledevice()
+	[2.0 doesAcceptLanguage] - public static function accepts_language($language = 'en')
+	[2.0 doesAcceptCharset] - public static function accepts_charset($charset = 'utf-8')
+	[2.0 getAcceptLanguages] - public static function languages()
+	[2.0 getAcceptCharsets] - public static function charsets()
+
+Arr:
+
+Implemented in the fuelphp\common composer package.
+
+Functionally equivalent to the v1.x Arr class.
+
+	[2.0] - public static function get($array, $key, $default = null)
+	[2.0] - public static function set(&$array, $key, $value = null)
+	[2.0] - public static function pluck($array, $key, $index = null)
+	[2.0 has] - public static function key_exists($array, $key)
+	[2.0] - public static function delete(&$array, $key)
+	[2.0 assocToKeyval] - public static function assoc_to_keyval($assoc, $key_field, $val_field)
+	[2.0 toAssoc] - public static function to_assoc($arr)
+	[2.0 isAssoc] - public static function is_assoc($arr)
+	[2.0] - public static function flatten($array, $glue = ':', $reset = true, $indexed = true)
+	[2.0 flattenAssoc] - public static function flatten_assoc($array, $glue = ':', $reset = true)
+	[2.0 reverseFlatten] - public static function reverse_flatten($array, $glue = ':')
+	[2.0 filterPrefixed] - public static function filter_prefixed($array, $prefix, $remove_prefix = true)
+	[2.0 filterRecursive] - public static function filter_recursive($array, $callback = null)
+	[2.0 removePrefixed] - public static function remove_prefixed($array, $prefix)
+	[2.0 filterSuffixed] - public static function filter_suffixed($array, $suffix, $remove_suffix = true)
+	[2.0 removeSuffixed] - public static function remove_suffixed($array, $suffix)
+	[2.0 filterKeys] - public static function filter_keys($array, $keys, $remove = false)
+	[2.0] - public static function insert(array &$original, $value, $pos)
+	[2.0 insertAssoc] - public static function insert_assoc(array &$original, array $values, $pos)
+	[2.0 insertBeforeKey] - public static function insert_before_key(array &$original, $value, $key, $is_assoc = false)
+	[2.0 insertAfterKey] - public static function insert_after_key(array &$original, $value, $key, $is_assoc = false)
+	[2.0 insertAfterValue] - public static function insert_after_value(array &$original, $value, $search, $is_assoc = false)
+	[2.0 insertBeforeValue] - public static function insert_before_value(array &$original, $value, $search, $is_assoc = false)
+	[2.0] - public static function sort($array, $key, $order = 'asc', $sort_flags = SORT_REGULAR)
+	[2.0] - public static function multisort($array, $conditions, $ignore_case = false)
+	[2.0] - public static function average($array)
+	[2.0 replaceKey] - public static function replace_key($source, $replace, $new_key = null)
+	[2.0] - public static function merge()
+	[2.0] - public static function prepend(&$arr, $key, $value = null)
+	[2.0 inArrayRecursive] - public static function in_array_recursive($needle, $haystack, $strict = false)
+	[2.0 isMulti] - public static function is_multi($arr, $all_keys = false)
+	[2.0] - public static function search($array, $value, $default = null, $recursive = true, $delimiter = '.')
+	[2.0] - public static function unique($arr)
+	[2.0] - public static function sum($array, $key)
+	[2.0 previousByKey] - public static function previous_by_key($array, $key, $get_value = false, $strict = false)
+	[2.0 nextByKey] - public static function next_by_key($array, $key, $get_value = false, $strict = false)
+	[2.0 previousByValue] - public static function previous_by_value($array, $value, $get_value = true, $strict = false)
+	[2.0 nextByValue] - public static function next_by_value($array, $value, $get_value = true, $strict = false)
+	[2.0 reIndex] - public static function reIndex($arr)
+	[2.0] - public static function subset(array $array, array $keys, $default = null)
+	[2.0 mergeAssoc] - public static function mergeAssoc()
+
+Asset:
+	[TODO] - public static function instance($instance = null)
+	[TODO] - public static function forge($name = 'default', array $config = array())
+	[TODO] - public static function add_path($path, $type = null)
+	[TODO] - public static function remove_path($path, $type = null)
+	[TODO] - public static function render($group = null, $raw = false)
+	[TODO] - public static function css($stylesheets = array(), $attr = array(), $group = NULL, $raw = false)
+	[TODO] - public static function js($scripts = array(), $attr = array(), $group = NULL, $raw = false)
+	[TODO] - public static function img($images = array(), $attr = array(), $group = NULL)
+	[TODO] - public static function get_file($file, $type, $folder = '')
+	[TODO] - public static function find_file($file, $type, $folder = '')
+
+Autoloader:
+	[2.0 proto relocated Composer::add] - public static function add_namespace($namespace, $path, $psr = false)
+	[2.0 proto relocated Composer::addClassMap] - public static function add_namespaces(array $namespaces, $prepend = false)
+	[REMOVED] - public static function namespace_path($namespace)
+	[REMOVED] - public static function add_class($class, $path)
+	[REMOVED] - public static function add_classes($classes)
+	[2.0 proto relocated Alias::alias] - public static function alias_to_namespace($class, $namespace = '')
+	[REMOVED] - public static function register()
+	[REMOVED] - public static function add_core_namespace($namespace, $prefix = true)
+	[REMOVED] - public static function load($class)
+	[REMOVED] - public static function _reset()
+
+Cache:
+	[TODO] - public static function forge($identifier, $config = array())
+	[TODO] - public static function set($identifier, $contents = null, $expiration = false, $dependencies = array())
+	[TODO] - public static function call($identifier, $callback, $args = array(), $expiration = null, $dependencies = array())
+	[TODO] - public static function get($identifier, $use_expiration = true)
+	[TODO] - public static function delete($identifier)
+	[TODO] - public static function delete_all($section = null, $driver = null)
+
+Cli:
+	[TODO] - public static function option($name, $default = null)
+	[TODO] - public static function set_option($name, $value = null)
+	[TODO] - public static function input($prefix = '')
+	[TODO] - public static function prompt()
+	[TODO] - public static function write($text = '', $foreground = null, $background = null)
+	[TODO] - public static function error($text = '', $foreground = 'light_red', $background = null)
+	[TODO] - public static function beep($num = 1)
+	[TODO] - public static function wait($seconds = 0, $countdown = false)
+ 	[TODO] - public static function is_windows()
+	[TODO] - public static function new_line($num = 1)
+	[TODO] - public static function clear_screen()
+	[TODO] - public static function color($text, $foreground, $background = null)
+	[TODO] - public static function spawn($call, $output = '/dev/null')
+
+Config:
+	[2.0 proto] - public static function load($file, $group = null, $reload = false, $overwrite = false)
+	[2.0] - public static function save($file, $config)
+	[2.0] - public static function get($item, $default = null)
+	[2.0] - public static function set($item, $value)
+	[2.0] - public static function delete($item)
+
+Cookie:
+	[2.0] - public static function get($name = null, $default = null)
+	[2.0] - public static function set($name, $value, $expiration = null, $path = null, $domain = null, $secure = null, $http_only = null)
+	[2.0] - public static function delete($name, $path = null, $domain = null, $secure = null, $http_only = null)
+
+Crypt:
+	[TODO] - public static function encode($value, $key = false)
+	[TODO] - public static function decode($value, $key = false)
+
+Date:
+	[2.0] - public static function forge($timestamp = null, $timezone = null)
+	[2.0] - public static function time($timezone = null)
+	[2.0 defaultTimezone] - public static function display_timezone($timezone = null)
+	[2.0 createFromFormat proto] - public static function create_from_string($input, $pattern_key = 'local')
+	[2.0 DateRange class] - public static function range_to_array($start, $end, $interval = '+1 Day')
+	[2.0 daysInMonth] - public static function days_in_month($month, $year = null)
+	[2.0 timeAgo] - public static function time_ago($timestamp, $from_timestamp = null, $unit = null)
+
+DB:
+	[TODO] - public static function query($sql, $type = null)
+	[TODO] - public static function last_query($db = null)
+	[TODO] - public static function error_info($db = null)
+	[TODO] - public static function select($columns = NULL)
+	[TODO] - public static function select_array(array $columns = NULL)
+	[TODO] - public static function insert($table = NULL, array $columns = NULL)
+	[TODO] - public static function update($table = NULL)
+	[TODO] - public static function delete($table = NULL)
+	[TODO] - public static function expr($string)
+	[TODO] - public static function identifier($string, $db = null)
+	[TODO] - public static function quote($string, $db = null)
+	[TODO] - public static function quote_identifier($string, $db = null)
+	[TODO] - public static function quote_table($string, $db = null)
+	[TODO] - public static function escape($string, $db = null)
+	[TODO] - public static function table_prefix($table = null, $db = null)
+	[TODO] - public static function list_columns($table = null, $like = null, $db = null)
+	[TODO] - public static function list_tables($like = null, $db = null)
+	[TODO] - public static function datatype($type, $db = null)
+	[TODO] - public static function count_records($table, $db = null)
+	[TODO] - public static function count_last_query($db = null)
+	[TODO] - public static function set_charset($charset, $db = null)
+	[TODO] - public static function in_transaction($db = null)
+	[TODO] - public static function start_transaction($db = null)
+	[TODO] - public static function commit_transaction($db = null)
+	[TODO] - public static function rollback_transaction($db = null)
+
+DBUtil:
+	[TODO] - public static function set_connection($connection)
+	[TODO] - public static function create_database($database, $charset = null, $if_not_exists = true, $db = null)
+	[TODO] - public static function drop_database($database, $db = null)
+	[TODO] - public static function drop_table($table, $db = null)
+	[TODO] - public static function rename_table($table, $new_table_name, $db = null)
+	[TODO] - public static function create_table($table, $fields, $primary_keys = array(), $if_not_exists = true, $engine = false, $charset = null, $foreign_keys = array(), $db = null)
+	[TODO] - public static function add_fields($table, $fields, $db = null)
+	[TODO] - public static function modify_fields($table, $fields, $db = null)
+	[TODO] - public static function drop_fields($table, $fields, $db = null)
+	[TODO] - public static function create_index($table, $index_columns, $index_name = '', $index = '', $db = null)
+	[TODO] - public static function drop_index($table, $index_name, $db = null)
+	[TODO] - public static function add_foreign_key($table, $foreign_key)
+	[TODO] - public static function drop_foreign_key($table, $fk_name)
+	[TODO] - public static function process_foreign_keys($foreign_keys, $db = null)
+	[TODO] - public static function truncate_table($table, $db = null)
+	[TODO] - public static function analyze_table($table, $db = null)
+	[TODO] - public static function check_table($table, $db = null)
+	[TODO] - public static function optimize_table($table, $db = null)
+	[TODO] - public static function repair_table($table, $db = null)
+	[TODO] - public static function table_exists($table, $db = null)
+	[TODO] - public static function field_exists($table, $columns, $db = null)
+
+Debug:
+	[2.0] - public static function dump()
+	[TODO] - public static function inspect()
+	[2.0] - public static function format($name, $var, $level = 0, $indent_char = '&nbsp;&nbsp;&nbsp;&nbsp;', $scope = '')
+	[2.0 fileLines] - public static function file_lines($filepath, $line_num, $highlight = true, $padding = 5)
+	[2.0] - public static function backtrace()
+	[2.0] - public static function classes()
+	[2.0] - public static function interfaces()
+	[2.0] - public static function includes()
+	[2.0] - public static function functions()
+	[2.0] - public static function constants()
+	[2.0] - public static function extensions()
+	[2.0] - public static function headers()
+	[2.0] - public static function phpini()
+	[2.0] - public static function benchmark($callable, array $params = array())
+
+Error:
+	[TODO] - public static function shutdown_handler()
+	[TODO] - public static function exception_handler(\Exception $e)
+	[TODO] - public static function error_handler($severity, $message, $filepath, $line)
+	[TODO] - public static function show_php_error(\Exception $e)
+	[TODO] - public static function notice($msg, $always_show = false)
+	[TODO] - public static function show_production_error(\Exception $e)
+
+Event:
+	[2.0 proto] - public static function forge(array $events = array())
+	[2.0 proto] - public static function instance($name = 'fuelphp', array $events = array())
+	[TODO] - public static function shutdown()
+
+Fieldset:
+	[TODO] - public static function forge($name = 'default', array $config = array())
+	[TODO] - public static function instance($instance = null)
+
+File:
+	[TODO] - public static function forge(array $config = array())
+	[TODO] - public static function instance($area = null)
+	[TODO] - public static function get($path, array $config = array(), $area = null)
+	[TODO] - public static function get_url($path, array $config = array(), $area = null)
+	[TODO] - public static function create($basepath, $name, $contents = null, $area = null)
+	[TODO] - public static function create_dir($basepath, $name, $chmod = null, $area = null)
+	[TODO] - public static function read($path, $as_string = false, $area = null)
+	[TODO] - public static function read_dir($path, $depth = 0, $filter = null, $area = null)
+	[TODO] - public static function update($basepath, $name, $contents = null, $area = null)
+	[TODO] - public static function append($basepath, $name, $contents = null, $area = null)
+	[TODO] - public static function get_permissions($path, $area = null)
+	[TODO] - public static function get_time($path, $type = 'modified', $area = null)
+	[TODO] - public static function get_size($path, $area = null)
+	[TODO] - public static function rename($path, $new_path, $source_area = null, $target_area = null)
+	[TODO] - public static function rename_dir($path, $new_path, $source_area = null, $target_area = null)
+	[TODO] - public static function copy($path, $new_path, $source_area = null, $target_area = null)
+	[TODO] - public static function copy_dir($path, $new_path, $source_area = null, $target_area = null)
+	[TODO] - public static function symlink($path, $link_path, $is_file = true, $area = null)
+	[TODO] - public static function delete($path, $area = null)
+	[TODO] - public static function delete_dir($path, $recursive = true, $delete_top = true, $area = null)
+	[TODO] - public static function open_file($path, $lock = true, $area = null)
+	[TODO] - public static function close_file($resource, $area = null)
+	[TODO] - public static function file_info($path, $area = null)
+	[TODO] - public static function download($path, $name = null, $mime = null, $area = null)
+
+Finder:
+	[2.0] - public static function search($dir, $file, $ext = '.php', $multiple = false, $cache = true)
+	[TODO] - public static function instance()
+	[2.0 proto] - public static function forge($paths = array())
+
+Form:
+	[TODO] - public static function forge($fieldset = 'default', array $config = array())
+	[TODO] - public static function instance($name = null)
+	[TODO] - public static function open($attributes = array(), array $hidden = array())
+	[TODO] - public static function close()
+	[TODO] - public static function fieldset_open($attributes = array(), $legend = null)
+	[TODO] - public static function fieldset_close()
+	[TODO] - public static function input($field, $value = null, array $attributes = array())
+	[TODO] - public static function hidden($field, $value = null, array $attributes = array())
+	[TODO] - public static function csrf()
+	[TODO] - public static function password($field, $value = null, array $attributes = array())
+	[TODO] - public static function radio($field, $value = null, $checked = null, array $attributes = array())
+	[TODO] - public static function checkbox($field, $value = null, $checked = null, array $attributes = array())
+	[TODO] - public static function file($field, array $attributes = array())
+	[TODO] - public static function button($field, $value = null, array $attributes = array())
+	[TODO] - public static function reset($field = 'reset', $value = 'Reset', array $attributes = array())
+	[TODO] - public static function submit($field = 'submit', $value = 'Submit', array $attributes = array())
+	[TODO] - public static function textarea($field, $value = null, array $attributes = array())
+	[TODO] - public static function select($field, $values = null, array $options = array(), array $attributes = array())
+	[TODO] - public static function label($label, $id = null, array $attributes = array())
+	[TODO] - public static function prep_value($value)
+
+Format:
+	[2.0] - public static function forge($data = null, $from_type = null)
+
+Ftp:
+	[TODO] - public static function forge($config = 'default', $connect = true)
+
+Fuel:
+	[TODO] - public static function init($config)
+	[TODO] - public static function finish()
+	[TODO] - public static function load($file)
+	[TODO] - public static function always_load($array = null)
+	[2.0 result helper] - public static function value($var)
+	[2.0 cleanpath helper] - public static function clean_path($path)
+
+Html:
+	[TODO] - public static function anchor($href, $text = null, $attr = array(), $secure = null)
+	[TODO] - public static function img($src, $attr = array())
+	[TODO] - public static function prep_url($url, $schema = 'http')
+	[TODO] - public static function mail_to($email, $text = null, $subject = null, $attr = array())
+	[TODO] - public static function mail_to_safe($email, $text = null, $subject = null, $attr = array())
+	[TODO] - public static function meta($name = '', $content = '', $type = 'name')
+	[TODO] - public static function doctype($type = 'xhtml1-trans')
+	[TODO] - public static function audio($src = '', $attr = false)
+	[TODO] - public static function ul(array $list = array(), $attr = false)
+	[TODO] - public static function ol(array $list = array(), $attr = false)
+
+Image:
+	[TODO] - public static function forge($config = array(), $filename = null)
+	[TODO] - public static function config($index = array(), $value = null)
+	[TODO] - public static function load($filename, $return_data = false, $force_extension = false)
+	[TODO] - public static function crop($x1, $y1, $x2, $y2)
+	[TODO] - public static function resize($width, $height, $keepar = true, $pad = false)
+	[TODO] - public static function crop_resize($width, $height)
+	[TODO] - public static function rotate($degrees)
+	[TODO] - public static function flip($direction)
+	[TODO] - public static function watermark($filename, $position, $padding = 5)
+	[TODO] - public static function border($size, $color = null)
+	[TODO] - public static function mask($maskimage)
+	[TODO] - public static function rounded($radius, $sides = null, $antialias = null)
+	[TODO] - public static function grayscale()
+	[TODO] - public static function save($filename = null, $permissions = null)
+	[TODO] - public static function save_pa($prepend, $append = null, $permissions = null)
+	[TODO] - public static function output($filetype = null)
+	[TODO] - public static function sizes($filename = null)
+	[TODO] - public static function reload()
+
+Inflector:
+	[2.0] - public static function ordinalize($number)
+	[2.0] - public static function pluralize($word, $count = 0)
+	[2.0] - public static function singularize($word)
+	[2.0] - public static function camelize($underscored_word)
+	[2.0] - public static function underscore($camel_cased_word)
+	[2.0] - public static function ascii($str, $allow_non_ascii = false)
+	[2.0 friendlyTitle] - public static function friendly_title($str, $sep = '-', $lowercase = false, $allow_non_ascii = false)
+	[2.0] - public static function humanize($str, $sep = '_', $lowercase = true)
+	[2.0] - public static function demodulize($class_name_in_module)
+	[2.0] - public static function denamespace($class_name)
+	[2.0 getNamespace] - public static function get_namespace($class_name)
+	[2.0] - public static function tableize($class_name)
+	[2.0 wordsToUpper] - public static function words_to_upper($class, $sep = '_')
+	[2.0] - public static function classify($name, $force_singular = true)
+	[2.0 foreignKey] - public static function foreign_key($class_name, $u
+
+Input:
+	[TODO] - public static function json($index = null, $default = null)
+	[TODO] - public static function xml($index = null, $default = null)
+	[TODO] - public static function uri()
+	[2.0 getExtension] - public static function extension()
+	[2.0 getIp] - public static function ip($default = '0.0.0.0')
+	[2.0 getRealIp proto] - public static function real_ip($default = '0.0.0.0', $exclude_reserved = false)
+	[2.0 getScheme] - public static function protocol()
+	[2.0 isAjax] - public static function is_ajax()
+	[2.0 getReferrer] - public static function referrer($default = '')
+	[2.0 getMethod] - public static function method($default = 'GET')
+	[2.0 getUserAgent] - public static function user_agent($default = '')
+	[TODO] - public static function all()
+	[2.0 getQuery] - public static function get($index = null, $default = null)
+	[2.0 getParam] - public static function post($index = null, $default = null)
+	[2.0 getParam] - public static function put($index = null, $default = null)
+	[2.0 getParam] - public static function delete($index = null, $default = null)
+	[2.0 getFile] - public static function file($index = null, $default = null)
+	[2.0 getParam] - public static function param($index = null, $default = null)
+	[2.0 getCookie] - public static function cookie($index = null, $default = null)
+	[2.0 getServer] - public static function server($index = null, $default = null)
+	[TODO] - public static function headers($index = null, $default = null)
+
+Lang:
+	[2.0 getActive] - public static function get_lang()
+	[2.0 proto] - public static function load($file, $group = null, $language = null, $overwrite = false, $reload = false)
+	[2.0 proto] - public static function save($file, $lang, $language = null)
+	[2.0 proto] - public static function get($line, array $params = array(), $default = null, $language = null)
+	[2.0 proto] - public static function set($line, $value, $group = null, $language = null)
+	[2.0 proto] - public static function delete($item, $group = null, $language = null)
+
+Log:
+	[2.0 getInstance] - public static function instance()
+	[2.0 proto] - public static function info($msg, $method = null)
+	[2.0 proto] - public static function debug($msg, $method = null)
+	[2.0 proto] - public static function warning($msg, $method = null)
+	[2.0 proto] - public static function error($msg, $method = null)
+	[2.0 addRecord proto] - public static function write($level, $msg, $method = null)
+
+Markdown:
+	[2.0] - public static function parse($text)
+
+Migrate:
+	[TODO] - public static function version($version = null, $name = 'default', $type = 'app', $all = false)
+	[TODO] - public static function latest($name = 'default', $type = 'app', $all = false)
+	[TODO] - public static function current($name = 'default', $type = 'app')
+	[TODO] - public static function up($version = null, $name = 'default', $type = 'app')
+	[TODO] - public static function down($version = null, $name = 'default', $type = 'app')
+
+Module:
+	[TODO] - public static function load($module, $path = null)
+	[TODO] - public static function unload($module)
+	[TODO] - public static function loaded($module = null)
+	[TODO] - public static function exists($module)
+
+Num:
+	[2.0] - public static function bytes($size = 0)
+	[2.0 formatBytes] - public static function format_bytes($bytes = 0, $decimals = 0)
+	[2.0] - public static function quantity($num, $decimals = 0)
+	[2.0] - public static function format($string = '', $format = '')
+	[2.0 maskString] - public static function mask_string($string = '', $format = '', $ignore = ' ')
+	[2.0 formatPhone] - public static function format_phone($string = '', $format = null)
+	[2.0 smartFormatPhone] - public static function smart_format_phone($string)
+	[2.0 formatExp] - public static function format_exp($string, $format = null)
+	[2.0 maskCreditCard] - public static function mask_credit_card($string, $format = null)
+
+Package:
+	[TODO] - public static function load($package, $path = null)
+	[TODO] - public static function unload($package)
+	[TODO] - public static function loaded($package = null)
+	[TODO] - public static function exists($package)
+
+Pagination (Class completely rewritten to use views):
+	[TODO] - public static function __callStatic($name, $arguments)
+	[2.0 proto] - public static function forge($name = 'default', $config = array())
+	[TODO] - public static function instance($name = null)
+
+Profiler:
+	[TODO] - public static function init()
+	[TODO] - public static function mark($label)
+	[TODO] - public static function mark_memory($var = false, $name = 'PHP')
+	[TODO] - public static function console($text)
+	[TODO] - public static function output()
+	[TODO] - public static function start($dbname, $sql, $stacktrace = array())
+	[TODO] - public static function stop($text)
+	[TODO] - public static function delete($text)
+	[TODO] - public static function app_total()
+
+Redis:
+	[TODO] - public static function instance($name = 'default')
+	[TODO] - public static function forge($name = 'default', $config = array())
+
+Request:
+	[2.0 proto] - public static function forge($uri = null, $options = true, $method = null)
+	[TODO] - public static function main()
+	[2.0 getInstance] - public static function active($request = false)
+	[TODO] - public static function is_hmvc()
+	[TODO] - public static function reset_request()
+
+Response:
+	[2.0] - public static function forge($body = null, $status = 200, array $headers = array())
+	[TODO] - public static function redirect($url = '', $method = 'location', $code = 302)
+	[TODO] - public static function redirect_back($url = '', $method = 'location', $code = 302)
+
+Router:
+	[TODO] - public static function add($path, $options = null, $prepend = false, $case_sensitive = null)
+	[TODO] - public static function get($name, $named_params = array())
+	[TODO] - public static function delete($path, $case_sensitive = null)
+	[TODO] - public static function process(\Request $request, $route = true)
+
+Security:
+	[2.0 CleanUri] - public static function clean_uri($uri, $strict = false)
+	[TODO] - public static function clean_input()
+	[2.0] - public static function clean($var, $filters = null, $type = 'security.input_filter')
+	[TODO] - public static function xss_clean($value)
+	[2.0 stripTags] - public static function strip_tags($value)
+	[TODO] - public static function htmlentities($value, $flags = null, $encoding = null, $double_encode = null)
+	[2.0 validateCsrfToken] - public static function check_token($value = null)
+	[TODO] - public static function fetch_token()
+	[2.0 getCsrfToken] - public static function generate_token()
+	[TODO] - public static function js_fetch_token()
+	[TODO] - public static function js_set_token()
+
+Session:
+	[2.0] - public static function forge($custom = array())
+	[TODO] - public static function instance($instance = null)
+	[2.0] - public static function set($name, $value = null)
+	[2.0] - public static function get($name = null, $default = null)
+	[2.0] - public static function delete($name)
+	[2.0] - public static function key($name = 'session_id')
+	[2.0 setFlash] - public static function set_flash($name, $value = null)
+	[2.0 getFlash] - public static function get_flash($name = null, $default = null, $expire = null)
+	[2.0 keepFlash] - public static function keep_flash($name = null)
+	[2.0 deleteFlash] - public static function delete_flash($name = null)
+	[2.0] - public static function create()
+	[2.0] - public static function read()
+	[2.0] - public static function write()
+	[2.0] - public static function rotate()
+	[2.0] - public static function destroy()
+
+Str:
+	[2.0] - public static function truncate($string, $limit, $continuation = '...', $is_html = false)
+	[2.0] - public static function increment($str, $first = 1, $separator = '_')
+	[2.0 startsWith] - public static function starts_with($str, $start, $ignore_case = false)
+	[2.0 endsWith] - public static function ends_with($str, $end, $ignore_case = false)
+	[2.0] - public static function sub($str, $start, $length = null, $encoding = null)
+	[2.0] - public static function length($str, $encoding = null)
+	[2.0] - public static function lower($str, $encoding = null)
+	[2.0] - public static function upper($str, $encoding = null)
+	[2.0] - public static function lcfirst($str, $encoding = null)
+	[2.0] - public static function ucfirst($str, $encoding = null)
+	[2.0] - public static function ucwords($str, $encoding = null)
+	[2.0] - public static function random($type = 'alnum', $length = 16)
+	[2.0] - public static function alternator()
+	[2.0] - public static function tr($string, $array = array())
+	[2.0] - public static function is_json($string)
+	[2.0] - public static function is_xml($string)
+	[2.0] - public static function is_serialized($string)
+	[2.0] - public static function is_html($string)
+
+Theme:
+	[TODO] - public static function instance($name = '_default_', array $config = array())
+	[TODO] - public static function forge(array $config = array())
+
+Upload:
+	[TODO] - public static function instance()
+	[TODO] - public static function lang_callback($error)
+	[TODO] - public static function move_callback($from, $to)
+	[TODO] - public static function is_valid()
+	[TODO] - public static function get_files($index = null)
+	[TODO] - public static function get_errors($index = null)
+	[TODO] - public static function register($event, $callback)
+	[TODO] - public static function process($config = array())
+	[TODO] - public static function with_ftp($config = 'default', $connect = true)
+	[TODO] - public static function save()
+
+Uri:
+	[TODO] - public static function segment($segment, $default = null)
+	[TODO] - public static function segments()
+	[TODO] - public static function segment_replace($url)
+	[TODO] - public static function to_assoc($start = 1)
+	[TODO] - public static function string()
+	[TODO] - public static function create($uri = null, $variables = array(), $get_variables = array(), $secure = null)
+	[TODO] - public static function main()
+	[TODO] - public static function current()
+	[TODO] - public static function base($include_index = true)
+
+Validation:
+	[TODO] - public static function forge($fieldset = 'default')
+	[TODO] - public static function instance($name = null)
+	[TODO] - public static function active()
+	[TODO] - public static function active_field()
+	[TODO] - public static function _empty($val)
+
+View:
+	[2.0] - public static function forge($file = null, $data = null, $auto_filter = null)
+	[2.0 setGlobal] - public static function set_global($key, $value = null, $filter = null)
+	[2.0 bindGlobal] - public static function bind_global($key, &$value, $filter = null)
+
+ViewModel (class is renamed to Presenter in 2.0!):
+	[2.0 relocated] - public static function forge($viewmodel, $method = 'view', $auto_filter = null, $view = null)
