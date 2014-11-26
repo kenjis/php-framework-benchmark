@@ -12,5 +12,3 @@ nbproject
 .idea
 vendor
 composer.phar
-components/*/
-composer.lock
