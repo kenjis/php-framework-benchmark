@@ -42,3 +42,7 @@ benchmark "$fw" "$url"
 #fw="bear-0.10"
 #url="$base/$fw/var/www/index.php/hello"
 #benchmark "$fw" "$url"
+
+#fw="laravel-5.0-dev"
+#url="$base/$fw/public/index.php/hello/index"
+#benchmark "$fw" "$url"

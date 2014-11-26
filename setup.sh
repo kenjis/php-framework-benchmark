@@ -44,3 +44,7 @@ chmod o+w app/cache/
 cd ../bear-0.10
 composer install
 chmod o+w var/tmp
+
+cd ../laravel-5.0-dev
+composer install
+chmod o+w storage/*
