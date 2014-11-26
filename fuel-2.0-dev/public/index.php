@@ -42,7 +42,7 @@ require VENDORPATH.'autoload.php';
 $component = Fuel::forge(
 	'Demo Application',                                                 // name to idenfity this application
 	'Demo',                                                             // namespace that defines the main application component
-	isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : 'development'  // default environment for all components
+	isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : 'production'  // default environment for all components
 );
 
 /**
