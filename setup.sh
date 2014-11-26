@@ -48,3 +48,7 @@ chmod o+w var/tmp
 cd ../laravel-5.0-dev
 composer install
 chmod o+w storage/*
+
+cd ../fuel-2.0-dev
+composer install
+chmod o+w components/demo/cache/ components/demo/logs/

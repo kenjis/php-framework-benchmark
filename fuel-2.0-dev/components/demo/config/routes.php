@@ -26,7 +26,7 @@ $this->router->all(null, 'welcome/404', '404');
 $this->router->all('/', 'welcome/index', 'root');
 
 // named GET route with a parameter
-$this->router->get('hello/{name}', 'welcome/hello', 'hello');
+//$this->router->get('hello/{name}', 'welcome/hello', 'hello');
 
 // inline route
 $this->router->all('inline', function() { return \Response::forge('html', 'This is an inline route!'); });
