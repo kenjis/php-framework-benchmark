@@ -20,9 +20,7 @@ composer global require "fxp/composer-asset-plugin:1.0.0-beta3"
 
 cd yii-2.0
 composer install
-chmod o+w assets/
-chmod o+w runtime/
-chmod o+w web/assets/
+chmod o+w assets/ runtime/ web/assets/
 
 cd ../fuel-1.8-dev
 composer install --prefer-source
@@ -43,7 +41,7 @@ chmod o+w app/cache/
 
 cd ../bear-0.10
 composer install
-chmod o+w var/tmp
+chmod o+w var/tmp/ var/log/
 
 cd ../laravel-5.0-dev
 composer install
