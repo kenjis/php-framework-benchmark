@@ -27,7 +27,7 @@ fw="fuel-1.8-dev"
 url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"
 
-fw="cake-3.0-dev"
+fw="cake-3.0"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
