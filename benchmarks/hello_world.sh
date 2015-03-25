@@ -43,9 +43,9 @@ benchmark "$fw" "$url"
 #url="$base/$fw/var/www/index.php/hello"
 #benchmark "$fw" "$url"
 
-fw="symfony-2.5"
-url="$base/$fw/web/app.php/hello/index"
-benchmark "$fw" "$url"
+#fw="symfony-2.5"
+#url="$base/$fw/web/app.php/hello/index"
+#benchmark "$fw" "$url"
 
 fw="symfony-2.6"
 url="$base/$fw/web/app.php/hello/index"
