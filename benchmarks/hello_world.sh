@@ -31,6 +31,10 @@ fw="fuel-1.8-dev"
 url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"
 
+fw="bear-1.0"
+url="$base/$fw/var/www/index.php/hello"
+benchmark "$fw" "$url"
+
 fw="cake-3.0"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
@@ -43,11 +47,7 @@ fw="laravel-4.2"
 url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"
 
-#fw="bear-0.10"
-#url="$base/$fw/var/www/index.php/hello"
-#benchmark "$fw" "$url"
-
-fw="bear-1.0"
+fw="bear-0.10"
 url="$base/$fw/var/www/index.php/hello"
 benchmark "$fw" "$url"
 
