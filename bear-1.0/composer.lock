@@ -1,0 +1,983 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "76864240da187c1197a8ad44ab7541f9",
+    "packages": [
+        {
+            "name": "aura/cli",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Cli.git",
+                "reference": "b8cd7b3a435f25082fd5c174cffab375113c2838"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Cli/zipball/b8cd7b3a435f25082fd5c174cffab375113c2838",
+                "reference": "b8cd7b3a435f25082fd5c174cffab375113c2838",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Cli\\_Config\\Common"
+                    }
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Cli\\": "src/",
+                    "Aura\\Cli\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Cli Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Cli/contributors"
+                }
+            ],
+            "description": "Provides the equivalent of request (Context) and response (Stdio) classes for a command line environment, including Getopt support.",
+            "homepage": "https://github.com/auraphp/Aura.Cli",
+            "keywords": [
+                "cli",
+                "command",
+                "command line",
+                "getopt",
+                "options",
+                "stdio"
+            ],
+            "time": "2015-03-16 14:42:45"
+        },
+        {
+            "name": "aura/router",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Router.git",
+                "reference": "61003d545bcaf5b7f3a40c8b60c2b963a8f0ce19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Router/zipball/61003d545bcaf5b7f3a40c8b60c2b963a8f0ce19",
+                "reference": "61003d545bcaf5b7f3a40c8b60c2b963a8f0ce19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Router\\_Config\\Common"
+                    }
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Router\\": "src/",
+                    "Aura\\Router\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Router Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Router/contributors"
+                }
+            ],
+            "description": "A web router implementation; given a URI path and a copy of $_SERVER, it will extract path-info parameter values for a specific route.",
+            "homepage": "https://github.com/auraphp/Aura.Router",
+            "keywords": [
+                "route",
+                "router",
+                "routing"
+            ],
+            "time": "2015-03-15 19:41:14"
+        },
+        {
+            "name": "aura/web",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Web.git",
+                "reference": "38b07f7f4f52d0f86e2fcab924fe2769f1f056d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Web/zipball/38b07f7f4f52d0f86e2fcab924fe2769f1f056d7",
+                "reference": "38b07f7f4f52d0f86e2fcab924fe2769f1f056d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Web\\_Config\\Common"
+                    }
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Web\\": "src/",
+                    "Aura\\Web\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Web Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Web/contributors"
+                }
+            ],
+            "description": "Provides web Request and Response objects for use by web controllers and actions. These are representations of the PHP web environment, not HTTP request and response objects proper.",
+            "homepage": "https://github.com/auraphp/Aura.Web",
+            "keywords": [
+                "request",
+                "response"
+            ],
+            "time": "2015-03-15 19:12:55"
+        },
+        {
+            "name": "bear/app-meta",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BEARSunday/BEAR.AppMeta.git",
+                "reference": "f8410ec824853570274246a45a0b94b869d337fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BEARSunday/BEAR.AppMeta/zipball/f8410ec824853570274246a45a0b94b869d337fc",
+                "reference": "f8410ec824853570274246a45a0b94b869d337fc",
+                "shasum": ""
+            },
+            "require": {
+                "bear/resource": "~1.0@dev",
+                "koriym/psr4list": "~1.0@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\AppMeta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "BEAR.Sunday application meta information",
+            "keywords": [
+                "BEARSunday"
+            ],
+            "time": "2015-02-17 16:23:25"
+        },
+        {
+            "name": "bear/package",
+            "version": "1.0.0-alpha.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bearsunday/BEAR.Package.git",
+                "reference": "60486e85851cdd9f73f48699cbb1f2328ed0da69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/60486e85851cdd9f73f48699cbb1f2328ed0da69",
+                "reference": "60486e85851cdd9f73f48699cbb1f2328ed0da69",
+                "shasum": ""
+            },
+            "require": {
+                "aura/cli": "~2.0",
+                "aura/router": "~2.0",
+                "aura/web": "~2.0",
+                "bear/app-meta": "~0.1",
+                "bear/query-repository": "~0.1",
+                "bear/sunday": "~1.0",
+                "php": ">=5.5.0",
+                "ray/web-param-module": "~0.1"
+            },
+            "bin": [
+                "bin/bear.env"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\Package\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "BEAR.Package Contributors",
+                    "homepage": "https://github.com/koriym/BEAR.Package/graphs/contributors"
+                }
+            ],
+            "description": "BEAR.Sunday framework package",
+            "homepage": "https://github.com/koriym/BEAR.Package",
+            "keywords": [
+                "BEAR.Sunday",
+                "aop",
+                "api",
+                "di",
+                "framework",
+                "hypermedia",
+                "rest"
+            ],
+            "time": "2015-03-11 04:51:37"
+        },
+        {
+            "name": "bear/query-repository",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bearsunday/BEAR.QueryRepository.git",
+                "reference": "fea591e64f154f8b65930cefffcf5af16c1f127f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.QueryRepository/zipball/fea591e64f154f8b65930cefffcf5af16c1f127f",
+                "reference": "fea591e64f154f8b65930cefffcf5af16c1f127f",
+                "shasum": ""
+            },
+            "require": {
+                "bear/resource": "~1.0@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\QueryRepository\\": "src/"
+                },
+                "files": [
+                    "src-file/doctrine_annotations.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Resource query responsibility segregation",
+            "time": "2015-03-11 02:36:49"
+        },
+        {
+            "name": "bear/resource",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bearsunday/BEAR.Resource.git",
+                "reference": "ee21dfe6ea02e28d13e1b2bc7afefdb1c7b69fce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/ee21dfe6ea02e28d13e1b2bc7afefdb1c7b69fce",
+                "reference": "ee21dfe6ea02e28d13e1b2bc7afefdb1c7b69fce",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "~1.0",
+                "nocarrier/hal": "~0.9",
+                "php": ">=5.5.0",
+                "ray/di": "~2.0",
+                "rize/uri-template": "~0.2.5"
+            },
+            "suggest": {
+                "ext-uri_template": "ext/uri_template for URI Template(RFC6570) specification."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\Resource\\": "src/"
+                },
+                "files": [
+                    "src-files/uri_template.php",
+                    "src-files/doctrine_annotations.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Hypermedia framework for object as a service",
+            "homepage": "https://github.com/koriym/BEAR.Resource",
+            "keywords": [
+                "HATEOAS",
+                "Object as a service",
+                "hypermedia",
+                "protocol",
+                "rest"
+            ],
+            "time": "2015-03-24 03:41:41"
+        },
+        {
+            "name": "bear/sunday",
+            "version": "1.0.0-rc.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bearsunday/BEAR.Sunday.git",
+                "reference": "c32ddf261af41e9c3d839fe1ba5b58bf6c075142"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/c32ddf261af41e9c3d839fe1ba5b58bf6c075142",
+                "reference": "c32ddf261af41e9c3d839fe1ba5b58bf6c075142",
+                "shasum": ""
+            },
+            "require": {
+                "bear/resource": "~1.0",
+                "doctrine/cache": "~1.0",
+                "php": ">=5.5.0",
+                "psr/log": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\Sunday\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Resource oriented framework",
+            "homepage": "https://github.com/koriym/BEAR.Sunday",
+            "keywords": [
+                "aop",
+                "di",
+                "framework",
+                "hypermedia",
+                "rest"
+            ],
+            "time": "2015-03-24 01:47:36"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "eeda578cbe24a170331a1cfdf78be723412df7a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/eeda578cbe24a170331a1cfdf78be723412df7a4",
+                "reference": "eeda578cbe24a170331a1cfdf78be723412df7a4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Annotations\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2014-12-20 20:49:38"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "2346085d2b027b233ae1d5de59b07440b9f288c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/2346085d2b027b233ae1d5de59b07440b9f288c8",
+                "reference": "2346085d2b027b233ae1d5de59b07440b9f288c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7",
+                "predis/predis": "~0.8",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Cache\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2015-01-15 20:38:55"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "koriym/psr4list",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koriym/Koriym.Psr4List.git",
+                "reference": "090772659511ea137bbc573e681cf71a1b7f7b2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koriym/Koriym.Psr4List/zipball/090772659511ea137bbc573e681cf71a1b7f7b2d",
+                "reference": "090772659511ea137bbc573e681cf71a1b7f7b2d",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Koriym\\Psr4List\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Returns the name of the classes in PSR4 path",
+            "keywords": [
+                "psr4"
+            ],
+            "time": "2014-12-07 13:10:31"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dba7524b3724f25b947cd26a580787c55c8a6f9b",
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2015-03-24 19:10:28"
+        },
+        {
+            "name": "nocarrier/hal",
+            "version": "0.9.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blongden/hal.git",
+                "reference": "4ff57176cb4ebde4245bda979ed662a0f8480b97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blongden/hal/zipball/4ff57176cb4ebde4245bda979ed662a0f8480b97",
+                "reference": "4ff57176cb4ebde4245bda979ed662a0f8480b97",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Nocarrier": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Longden",
+                    "email": "ben@nocarrier.co.uk",
+                    "homepage": "http://nocarrier.co.uk"
+                }
+            ],
+            "description": "application/hal builder / formatter for PHP 5.3+",
+            "homepage": "https://github.com/blongden/hal",
+            "keywords": [
+                "hal",
+                "hypermedia",
+                "json",
+                "rest",
+                "xml"
+            ],
+            "time": "2014-11-24 11:48:52"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "ray/aop",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.Aop.git",
+                "reference": "fdd97c2d59d7e2cb0a12399a583b2f38d63142e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.Aop/zipball/fdd97c2d59d7e2cb0a12399a583b2f38d63142e9",
+                "reference": "fdd97c2d59d7e2cb0a12399a583b2f38d63142e9",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "~1.1",
+                "nikic/php-parser": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "ray/di": "A dependency injection framework with Ray.Aop"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ray\\Aop\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "An aspect oriented framework",
+            "homepage": "https://github.com/koriym/Ray.Aop",
+            "keywords": [
+                "AOP Alliance",
+                "annotations",
+                "aop",
+                "code-gen"
+            ],
+            "time": "2015-02-28 11:17:42"
+        },
+        {
+            "name": "ray/di",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.Di.git",
+                "reference": "0b8f613a8796cad530ddf6562ff4806349b5fea5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.Di/zipball/0b8f613a8796cad530ddf6562ff4806349b5fea5",
+                "reference": "0b8f613a8796cad530ddf6562ff4806349b5fea5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "ray/aop": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ray\\Di\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "Guice style annotation-driven dependency injection framework",
+            "homepage": "https://github.com/koriym/Ray.Di",
+            "keywords": [
+                "annotations",
+                "aop",
+                "di",
+                "guice"
+            ],
+            "time": "2015-02-28 12:55:28"
+        },
+        {
+            "name": "ray/web-param-module",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.WebParamModule.git",
+                "reference": "c7dd0fd10a2444af1df9fca42652eb955c80a1da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.WebParamModule/zipball/c7dd0fd10a2444af1df9fca42652eb955c80a1da",
+                "reference": "c7dd0fd10a2444af1df9fca42652eb955c80a1da",
+                "shasum": ""
+            },
+            "require": {
+                "bear/resource": "~1.0@dev",
+                "koriym/psr4list": "~1.0@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BEAR\\AppMeta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "BEAR.Sunday application meta information",
+            "keywords": [
+                "BEARSunday"
+            ],
+            "time": "2015-02-17 11:16:56"
+        },
+        {
+            "name": "rize/uri-template",
+            "version": "0.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rize/UriTemplate.git",
+                "reference": "907ca9b59014f18f6c3f1158bdd46a3c1675e9f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rize/UriTemplate/zipball/907ca9b59014f18f6c3f1158bdd46a3c1675e9f0",
+                "reference": "907ca9b59014f18f6c3f1158bdd46a3c1675e9f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Rize\\UriTemplate": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marut K",
+                    "homepage": "http://twitter.com/rezigned"
+                }
+            ],
+            "description": "PHP URI Template (RFC 6570) supports both expansion & extraction",
+            "keywords": [
+                "RFC 6570",
+                "template",
+                "uri"
+            ],
+            "time": "2014-06-11 06:00:32"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "bear/package": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
