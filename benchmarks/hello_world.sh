@@ -23,6 +23,10 @@ fw="yii-2.0"
 url="$base/$fw/web/index.php?r=hello/index"
 benchmark "$fw" "$url"
 
+fw="silex-1.2"
+url="$base/$fw/web/"
+benchmark "$fw" "$url"
+
 fw="fuel-1.8-dev"
 url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"

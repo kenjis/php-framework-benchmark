@@ -51,3 +51,6 @@ chmod o+w storage/*
 cd ../fuel-2.0-dev
 composer install
 chmod o+w components/demo/cache/ components/demo/logs/
+
+cd ../silex-1.2
+composer install
