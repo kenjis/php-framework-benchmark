@@ -1,60 +1,48 @@
-@extends('layouts.app')
+<html>
+	<head>
+		<title>Laravel</title>
+		
+		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-@section('content')
-<div id="welcome">
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="jumbotron__header">You have arrived.</h1>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				color: #B0BEC5;
+				display: table;
+				font-weight: 100;
+				font-family: 'Lato';
+			}
 
-            <p class="jumbotron__body">
-                Laravel is a web application framework with expressive, elegant syntax. We believe development
-                must be an enjoyable, creative experience. Enjoy the fresh air.
-            </p>
-        </div>
-    </div>
+			.container {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
 
-    <div class="container">
-        <ol class="steps">
-            <li class="steps__item">
-                <div class="body">
-                    <h2>Go Exploring</h2>
+			.content {
+				text-align: center;
+				display: inline-block;
+			}
 
-                    <p>
-                        Review <code>app/Http/routes.php</code> to learn how HTTP requests are
-                        routed to controllers.
-                    </p>
+			.title {
+				font-size: 96px;
+				margin-bottom: 40px;
+			}
 
-                    <p>
-                        We've included simple login and registration screens to get you started.
-                    </p>
-                </div>
-            </li>
-
-            <li class="steps__item">
-                <div class="body">
-                    <h2>Master Your Craft</h2>
-
-                    <p>
-                        Ready to keep learning more about Laravel? Start here:
-                    </p>
-
-                    <ul>
-                        <li><a href="http://laravel.com/docs">Laravel Documentation</a></li>
-                        <li><a href="https://laracasts.com">Laravel 5 From Scratch (via Laracasts)</a></li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="steps__item">
-                <div class="body">
-                    <h2>Forge Ahead</h2>
-
-                    <p>
-                        When you're finished building your application, Laravel still has your back. Check out <a href="https://forge.laravel.com">Laravel Forge</a>.
-                    </p>
-                </div>
-            </li>
-        </ol>
-    </div>
-</div>
-@stop
+			.quote {
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="title">Laravel 5</div>
+				<div class="quote">{{ Inspiring::quote() }}</div>
+			</div>
+		</div>
+	</body>
+</html>
