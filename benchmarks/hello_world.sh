@@ -47,6 +47,10 @@ fw="symfony-2.5"
 url="$base/$fw/web/app.php/hello/index"
 benchmark "$fw" "$url"
 
+fw="symfony-2.6"
+url="$base/$fw/web/app.php/hello/index"
+benchmark "$fw" "$url"
+
 #fw="laravel-4.2"
 #url="$base/$fw/public/index.php/hello/index"
 #benchmark "$fw" "$url"
