@@ -15,7 +15,7 @@ fw="phalcon-1.3"
 url="$base/$fw/public/index.php?_url=/hello/index"
 benchmark "$fw" "$url"
 
-fw="codeigniter-3.0-dev"
+fw="codeigniter-3.0"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
