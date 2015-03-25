@@ -51,9 +51,9 @@ fw="laravel-4.2"
 url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"
 
-#fw="laravel-5.0-dev"
-#url="$base/$fw/public/index.php/hello/index"
-#benchmark "$fw" "$url"
+fw="laravel-5.0-dev"
+url="$base/$fw/public/index.php/hello/index"
+benchmark "$fw" "$url"
 
 #fw="fuel-2.0-dev"
 #url="$base/$fw/public/index.php/hello/index"
