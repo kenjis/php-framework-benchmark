@@ -5,7 +5,11 @@ require __DIR__ . '/libs/parse_results.php';
 
 $results = parse_results(__DIR__ . '/output/results.hello_world.log');
 
-$barColors = array('green', 'red', 'orange', 'purple', 'blue', 'gray', 'pink');
+$barColors = array(
+    'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
+    'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
+    'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
+);
 
 // RPS Benchmark
 $data[] = array('', 'rps', array('role' => 'style'));  // header
