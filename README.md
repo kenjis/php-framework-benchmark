@@ -6,13 +6,15 @@
 
 |framework          |requests per second|peak memory|
 |-------------------|------------------:|----------:|
-|phalcon-1.3        |            1209.39|        0.5|
-|codeigniter-3.0-dev|             475.88|        0.5|
-|yii-2.0            |             271.12|        1.5|
-|fuel-1.8-dev       |             186.39|       0.75|
-|cake-3.0-dev       |             135.34|       1.25|
-|symfony-2.5        |               84.9|          2|
-|laravel-4.2        |              78.09|          2|
+|phalcon-1.3        |            1445.99|       0.50|
+|codeigniter-3.0    |             698.69|       0.50|
+|yii-2.0            |             376.68|       1.50|
+|fuel-1.8-dev       |             322.90|       0.75|
+|silex-1.2          |             311.63|       0.75|
+|bear-1.0           |             296.89|       1.00|
+|cake-3.0           |             259.01|       1.00|
+|symfony-2.6        |             122.58|       2.00|
+|laravel-5.0        |              70.63|       3.00|
 
 ## How to Benchmark
 
@@ -56,6 +58,8 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [CodeIgniter](http://www.codeigniter.com/)
 * [Yii](http://www.yiiframework.com/)
 * [FuelPHP](http://fuelphp.com/)
+* [Silex](http://silex.sensiolabs.org/)
+* [BEAR.Sunday](https://bearsunday.github.io/)
 * [CakePHP](http://cakephp.org/)
 * [Symfony](http://symfony.com/)
 * [Laravel](http://laravel.com/)
