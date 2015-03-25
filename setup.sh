@@ -48,7 +48,7 @@ cd ../bear-1.0
 composer install
 chmod o+w var/tmp/ var/log/
 
-cd ../laravel-5.0-dev
+cd ../laravel-5.0
 composer install
 chmod o+w storage/*
 chmod o+w storage/framework/*
