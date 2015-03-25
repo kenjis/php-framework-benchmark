@@ -2,11 +2,11 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.2.4 or newer
+ * An open source application development framework for PHP
  *
  * This content is released under the MIT License (MIT)
  *
- * Copyright (c) 2014, British Columbia Institute of Technology
+ * Copyright (c) 2014 - 2015, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
- * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
+ * @copyright	Copyright (c) 2014 - 2015, British Columbia Institute of Technology (http://bcit.ca/)
  * @license	http://opensource.org/licenses/MIT	MIT License
  * @link	http://codeigniter.com
  * @since	Version 1.0.0
@@ -55,7 +55,7 @@ class CI_Input {
 	 *
 	 * @var	string
 	 */
-	public $ip_address = FALSE;
+	protected $ip_address = FALSE;
 
 	/**
 	 * Allow GET array flag
@@ -104,14 +104,28 @@ class CI_Input {
 	protected $headers = array();
 
 	/**
-	 * Input stream data
+	 * Raw input stream data
+	 *
+	 * Holds a cache of php://input contents
+	 *
+	 * @var	string
+	 */
+	protected $_raw_input_stream;
+
+	/**
+	 * Parsed input stream data
 	 *
 	 * Parsed from php://input at runtime
 	 *
 	 * @see	CI_Input::input_stream()
 	 * @var	array
 	 */
-	protected $_input_stream = NULL;
+	protected $_input_stream;
+
+	protected $security;
+	protected $uni;
+
+	// --------------------------------------------------------------------
 
 	/**
 	 * Class constructor
@@ -123,8 +137,6 @@ class CI_Input {
 	 */
 	public function __construct()
 	{
-		log_message('debug', 'Input Class Initialized');
-
 		$this->_allow_get_array		= (config_item('allow_get_array') === TRUE);
 		$this->_enable_xss		= (config_item('global_xss_filtering') === TRUE);
 		$this->_enable_csrf		= (config_item('csrf_protection') === TRUE);
@@ -140,6 +152,8 @@ class CI_Input {
 
 		// Sanitize global arrays
 		$this->_sanitize_globals();
+
+		log_message('info', 'Input Class Initialized');
 	}
 
 	// --------------------------------------------------------------------
@@ -150,25 +164,28 @@ class CI_Input {
 	 * Internal method used to retrieve values from global arrays.
 	 *
 	 * @param	array	&$array		$_GET, $_POST, $_COOKIE, $_SERVER, etc.
-	 * @param	string	$index		Index for item to be fetched from $array
+	 * @param	mixed	$index		Index for item to be fetched from $array
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed
 	 */
 	protected function _fetch_from_array(&$array, $index = NULL, $xss_clean = NULL)
 	{
+		is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
+
 		// If $index is NULL, it means that the whole $array is requested
-		if ($index === NULL)
+		isset($index) OR $index = array_keys($array);
+
+		// allow fetching multiple keys at once
+		if (is_array($index))
 		{
 			$output = array();
-			foreach (array_keys($array) as $key)
+			foreach ($index as $key)
 			{
 				$output[$key] = $this->_fetch_from_array($array, $key, $xss_clean);
 			}
 
 			return $output;
 		}
-
-		is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
 
 		if (isset($array[$index]))
 		{
@@ -210,7 +227,7 @@ class CI_Input {
 	/**
 	 * Fetch an item from the GET array
 	 *
-	 * @param	string	$index		Index for item to be fetched from $_GET
+	 * @param	mixed	$index		Index for item to be fetched from $_GET
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed
 	 */
@@ -224,7 +241,7 @@ class CI_Input {
 	/**
 	 * Fetch an item from the POST array
 	 *
-	 * @param	string	$index		Index for item to be fetched from $_POST
+	 * @param	mixed	$index		Index for item to be fetched from $_POST
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed
 	 */
@@ -270,7 +287,7 @@ class CI_Input {
 	/**
 	 * Fetch an item from the COOKIE array
 	 *
-	 * @param	string	$index		Index for item to be fetched from $_COOKIE
+	 * @param	mixed	$index		Index for item to be fetched from $_COOKIE
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed
 	 */
@@ -284,7 +301,7 @@ class CI_Input {
 	/**
 	 * Fetch an item from the SERVER array
 	 *
-	 * @param	string	$index		Index for item to be fetched from $_SERVER
+	 * @param	mixed	$index		Index for item to be fetched from $_SERVER
 	 * @param	bool	$xss_clean	Whether to apply XSS filtering
 	 * @return	mixed
 	 */
@@ -310,7 +327,8 @@ class CI_Input {
 		// so we'll need to check if we have already done that first.
 		if ( ! is_array($this->_input_stream))
 		{
-			parse_str(file_get_contents('php://input'), $this->_input_stream);
+			// $this->raw_input_stream will trigger __get().
+			parse_str($this->raw_input_stream, $this->_input_stream);
 			is_array($this->_input_stream) OR $this->_input_stream = array();
 		}
 
@@ -699,7 +717,7 @@ class CI_Input {
 	 * only named with alpha-numeric text and a few other items.
 	 *
 	 * @param	string	$str	Input string
-	 * @param	string	$fatal	Whether to terminate script exection
+	 * @param	bool	$fatal	Whether to terminate script exection
 	 *				or to return FALSE if an invalid
 	 *				key is encountered
 	 * @return	string|bool
@@ -843,7 +861,27 @@ class CI_Input {
 			: strtolower($this->server('REQUEST_METHOD'));
 	}
 
-}
+	// ------------------------------------------------------------------------
 
-/* End of file Input.php */
-/* Location: ./system/core/Input.php */
+	/**
+	 * Magic __get()
+	 *
+	 * Allows read access to protected properties
+	 *
+	 * @param	string	$name
+	 * @return	mixed
+	 */
+	public function __get($name)
+	{
+		if ($name === 'raw_input_stream')
+		{
+			isset($this->_raw_input_stream) OR $this->_raw_input_stream = file_get_contents('php://input');
+			return $this->_raw_input_stream;
+		}
+		elseif ($name === 'ip_address')
+		{
+			return $this->ip_address;
+		}
+	}
+
+}

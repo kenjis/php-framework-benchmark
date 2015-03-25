@@ -2,11 +2,11 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.2.4 or newer
+ * An open source application development framework for PHP
  *
  * This content is released under the MIT License (MIT)
  *
- * Copyright (c) 2014, British Columbia Institute of Technology
+ * Copyright (c) 2014 - 2015, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (http://ellislab.com/)
- * @copyright	Copyright (c) 2014, British Columbia Institute of Technology (http://bcit.ca/)
+ * @copyright	Copyright (c) 2014 - 2015, British Columbia Institute of Technology (http://bcit.ca/)
  * @license	http://opensource.org/licenses/MIT	MIT License
  * @link	http://codeigniter.com
  * @since	Version 1.0.0
@@ -115,7 +115,7 @@ class CI_Jquery extends CI_Javascript {
 			$this->script();
 		}
 
-		log_message('debug', 'Jquery Class Initialized');
+		log_message('info', 'Jquery Class Initialized');
 	}
 
 	// --------------------------------------------------------------------
@@ -1074,6 +1074,3 @@ class CI_Jquery extends CI_Javascript {
 	}
 
 }
-
-/* End of file Jquery.php */
-/* Location: ./system/libraries/Jquery.php */
