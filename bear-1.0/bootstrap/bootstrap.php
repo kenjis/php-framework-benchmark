@@ -22,11 +22,16 @@ route: {
     $request = $app->router->match($GLOBALS, $_SERVER);
 }
 
+// Adhoc fix for benchmarking
+// Remove sub directories from URI
+$pagePath = preg_replace('!/php-framework-benchmark/bear-1.0/var/www/index.php!', '', $request->path);
+//var_dump($pagePath); exit;
+
 try {
     /** @var $page \BEAR\Resource\Request */
     $page = $app->resource
         ->{$request->method}
-        ->uri($request->path)
+        ->uri($pagePath)
         ->withQuery($request->query)
         ->request();
 
