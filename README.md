@@ -63,3 +63,8 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [CakePHP](http://cakephp.org/)
 * [Symfony](http://symfony.com/)
 * [Laravel](http://laravel.com/)
+
+## Related
+
+* [PHP ORM Benchmark](https://github.com/kenjis/php-orm-benchmark)
+* [PHP User Agent Parser Benchmarks](https://github.com/kenjis/user-agent-parser-benchmarks)
