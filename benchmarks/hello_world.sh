@@ -19,6 +19,10 @@ fw="codeigniter-3.0"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
+fw="slim-2.6"
+url="$base/$fw/"
+benchmark "$fw" "$url"
+
 fw="yii-2.0"
 url="$base/$fw/web/index.php?r=hello/index"
 benchmark "$fw" "$url"

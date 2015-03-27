@@ -63,3 +63,6 @@ chmod o+w components/demo/cache/ components/demo/logs/
 
 cd ../silex-1.2
 composer install
+
+cd ../slim-2.6
+composer install
