@@ -8,6 +8,7 @@
 |-------------------|------------------:|----------:|
 |phalcon-1.3        |            1445.99|       0.50|
 |codeigniter-3.0    |             698.69|       0.50|
+|slim-2.6           |             685.63|       0.50|
 |yii-2.0            |             376.68|       1.50|
 |fuel-1.8-dev       |             322.90|       0.75|
 |silex-1.2          |             311.63|       0.75|
@@ -56,6 +57,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 
 * [Phalcon](http://phalconphp.com/)
 * [CodeIgniter](http://www.codeigniter.com/)
+* [Slim](http://www.slimframework.com/)
 * [Yii](http://www.yiiframework.com/)
 * [FuelPHP](http://fuelphp.com/)
 * [Silex](http://silex.sensiolabs.org/)
