@@ -19,50 +19,50 @@ fi
 composer global require "fxp/composer-asset-plugin:1.0.0-beta3"
 
 cd yii-2.0
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w assets/ runtime/ web/assets/
 
 cd ../fuel-1.8-dev
-composer install --prefer-source
+composer install --prefer-source --no-dev --optimize-autoloader
 
 cd ../laravel-4.2
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w app/storage/*
 
 cd ../cake-3.0
 sudo rm -rf tmp/*
-COMPOSER_PROCESS_TIMEOUT=3600 composer install
+COMPOSER_PROCESS_TIMEOUT=3600 composer install --no-dev --optimize-autoloader
 
 cd ../symfony-2.5
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w app/cache/ app/logs/
 
 cd ../symfony-2.6
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w app/cache/ app/logs/
 
 cd ../phalcon-1.3
 chmod o+w app/cache/
 
 cd ../bear-0.10
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w var/tmp/ var/log/
 
 cd ../bear-1.0
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w var/tmp/ var/log/
 
 cd ../laravel-5.0
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w storage/*
 chmod o+w storage/framework/*
 
 cd ../fuel-2.0-dev
-composer install
+composer install --no-dev --optimize-autoloader
 chmod o+w components/demo/cache/ components/demo/logs/
 
 cd ../silex-1.2
-composer install
+composer install --no-dev --optimize-autoloader
 
 cd ../slim-2.6
-composer install
+composer install --no-dev --optimize-autoloader
