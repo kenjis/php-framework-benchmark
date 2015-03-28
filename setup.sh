@@ -60,6 +60,8 @@ cd ../laravel-5.0
 composer install --no-dev --optimize-autoloader
 chmod o+w storage/*
 chmod o+w storage/framework/*
+php artisan optimize --force
+php artisan config:cache
 
 cd ../fuel-2.0-dev
 composer install --no-dev --optimize-autoloader
