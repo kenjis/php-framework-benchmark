@@ -3,14 +3,31 @@
 function parse_results($file)
 {
     $lines = file($file);
+    
     $results = [];
+    $min_rps    = 1000000;
+    $min_memory = 1000000;
+    
     foreach ($lines as $line) {
         $column = explode(':', $line);
-        $results[$column[0]] = [
-            'rps' => (float) trim($column[1]),
-            'memory' => (float) trim($column[2]),
+        $fw = $column[0];
+        $rps    = (float) trim($column[1]);
+        $memory = (float) trim($column[2]);
+        
+        $min_rps    = min($min_rps, $rps);
+        $min_memory = min($min_memory, $memory);
+        
+        $results[$fw] = [
+            'rps'    => $rps,
+            'memory' => $memory,
         ];
     }
-    //var_dump($results);
+    
+    foreach ($results as $fw => $data) {
+        $results[$fw]['rps_relative']    = $data['rps'] / $min_rps;
+        $results[$fw]['memory_relative'] = $data['memory'] / $min_memory;
+    }
+//    var_dump($results);
+    
     return $results;
 }
