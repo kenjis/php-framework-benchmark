@@ -34,12 +34,16 @@ sudo rm -rf tmp/*
 COMPOSER_PROCESS_TIMEOUT=3600 composer install --no-dev --optimize-autoloader
 
 cd ../symfony-2.5
+export SYMFONY_ENV=prod
 composer install --no-dev --optimize-autoloader
 chmod o+w app/cache/ app/logs/
+chmod -R o+w app/cache/*
 
 cd ../symfony-2.6
+export SYMFONY_ENV=prod
 composer install --no-dev --optimize-autoloader
 chmod o+w app/cache/ app/logs/
+chmod -R o+w app/cache/*
 
 cd ../phalcon-1.3
 chmod o+w app/cache/
