@@ -19,11 +19,11 @@ fi
 composer global require "fxp/composer-asset-plugin:1.0.0-beta3"
 
 cd yii-2.0
-composer install --no-dev --optimize-autoloader
+composer install --no-dev
 chmod o+w assets/ runtime/ web/assets/
 
 cd ../fuel-1.8-dev
-composer install --prefer-source --no-dev --optimize-autoloader
+composer install --prefer-source --no-dev
 
 cd ../laravel-4.2
 composer install --no-dev --optimize-autoloader
@@ -31,17 +31,15 @@ chmod o+w app/storage/*
 
 cd ../cake-3.0
 sudo rm -rf tmp/*
-COMPOSER_PROCESS_TIMEOUT=3600 composer install --no-dev --optimize-autoloader
+COMPOSER_PROCESS_TIMEOUT=3600 composer install --no-dev
 
 cd ../symfony-2.5
-export SYMFONY_ENV=prod
-composer install --no-dev --optimize-autoloader
+composer install
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
 
 cd ../symfony-2.6
-export SYMFONY_ENV=prod
-composer install --no-dev --optimize-autoloader
+composer install
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
 
@@ -64,7 +62,7 @@ php artisan optimize --force
 php artisan config:cache
 
 cd ../fuel-2.0-dev
-composer install --no-dev --optimize-autoloader
+composer install --no-dev
 chmod o+w components/demo/cache/ components/demo/logs/
 
 cd ../silex-1.2
