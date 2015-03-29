@@ -1,5 +1,17 @@
 # PHP Framework Benchmark
 
+This project attempts to mesure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
+
+So I think the minimun applications to benchmark should not include:
+
+* cost of template engine (HTML output)
+* cost of database manipulation
+* cost of debugging information
+
+Components like Template engine or ORM/Database library are out of scope in this project.
+
+If you find something wrong with my code, please feel free to send Pull Requests. But please note optimizing only for "Hello World" is not acceptable. Building fastest "Hello World" application is not the goal in this project.
+
 ## Results
 
 ### Hello World Benchmark
