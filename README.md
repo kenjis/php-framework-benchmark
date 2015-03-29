@@ -4,18 +4,20 @@
 
 ### Hello World Benchmark
 
-|framework          |requests per second|peak memory|
-|-------------------|------------------:|----------:|
-|phalcon-1.3        |            1445.99|       0.50|
-|codeigniter-3.0    |             698.69|       0.50|
-|slim-2.6           |             685.63|       0.50|
-|yii-2.0            |             376.68|       1.50|
-|fuel-1.8-dev       |             322.90|       0.75|
-|silex-1.2          |             311.63|       0.75|
-|bear-1.0           |             296.89|       1.00|
-|cake-3.0           |             259.01|       1.00|
-|symfony-2.6        |             122.58|       2.00|
-|laravel-5.0        |              70.63|       3.00|
+(2015/03/29) *I've got some feedback after I published the results below. So I will update the results after tweaking this benchmarks.*
+
+|framework          |requests per second|relative|peak memory|relative|
+|-------------------|------------------:|-------:|----------:|-------:|
+|phalcon-1.3        |           1,445.99|    20.5|       0.50|     1.0|
+|codeigniter-3.0    |             698.69|     9.9|       0.50|     1.0|
+|slim-2.6           |             685.63|     9.7|       0.50|     1.0|
+|yii-2.0            |             376.68|     5.3|       1.50|     3.0|
+|fuel-1.8-dev       |             322.90|     4.6|       0.75|     1.5|
+|silex-1.2          |             311.63|     4.4|       0.75|     1.5|
+|bear-1.0           |             296.89|     4.2|       1.00|     2.0|
+|cake-3.0           |             259.01|     3.7|       1.00|     2.0|
+|symfony-2.6        |             122.58|     1.7|       2.00|     4.0|
+|laravel-5.0        |              70.63|     1.0|       3.00|     6.0|
 
 ## How to Benchmark
 
