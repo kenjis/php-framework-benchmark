@@ -34,11 +34,13 @@ sudo rm -rf tmp/*
 COMPOSER_PROCESS_TIMEOUT=3600 composer install --no-dev
 
 cd ../symfony-2.5
+export SYMFONY_ENV=prod
 composer install
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
 
 cd ../symfony-2.6
+export SYMFONY_ENV=prod
 composer install
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
