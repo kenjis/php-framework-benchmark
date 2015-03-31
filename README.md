@@ -16,6 +16,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 * Phalcon 1.3.4
 * CodeIgniter 3.0-rc3
+* Slim 2.6.2
 * Yii 2.0.4
 * FuelPHP 1.8-dev
 * Silex 1.2.3
