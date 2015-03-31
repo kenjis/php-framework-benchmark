@@ -12,6 +12,18 @@ Components like Template engine or ORM/Database library are out of scope in this
 
 If you find something wrong with my code, please feel free to send Pull Requests. But please note optimizing only for "Hello World" is not acceptable. Building fastest "Hello World" application is not the goal in this project.
 
+## Frameworks to Benchmark
+
+* Phalcon 1.3.4
+* CodeIgniter 3.0-rc3
+* Yii 2.0.4
+* FuelPHP 1.8-dev
+* Silex 1.2.3
+* BEAR.Sunday 1.0.0-rc2
+* CakePHP 3.0.0
+* Symfony 2.6.5
+* Laravel 5.0.20
+
 ## Results
 
 ### Hello World Benchmark
