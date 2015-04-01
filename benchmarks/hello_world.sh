@@ -68,4 +68,8 @@ benchmark "$fw" "$url"
 #url="$base/$fw/public/index.php/hello/index"
 #benchmark "$fw" "$url"
 
+fw="zf-2.4"
+url="$base/$fw/public/index.php/application/hello/index"
+benchmark "$fw" "$url"
+
 cat "$check_file"

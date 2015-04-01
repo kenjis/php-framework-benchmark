@@ -73,3 +73,6 @@ composer install --no-dev --optimize-autoloader
 
 cd ../slim-2.6
 composer install --no-dev --optimize-autoloader
+
+cd ../zf-2.4
+composer install --no-dev
