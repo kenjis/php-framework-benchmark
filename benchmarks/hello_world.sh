@@ -11,6 +11,8 @@ results_file="output/results.$bm_name.log"
 mv "$results_file" "$results_file.old"
 check_file="output/check.$bm_name.log"
 mv "$check_file" "$check_file.old"
+url_file="output/urls.log"
+mv "$url_file" "$url_file.old"
 
 fw="phalcon-1.3"
 url="$base/$fw/public/index.php?_url=/hello/index"

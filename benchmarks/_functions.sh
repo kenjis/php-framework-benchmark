@@ -19,5 +19,7 @@ benchmark ()
     grep 'Hello World!' "$output" >> "$check_file"
     echo "---" >> "$check_file"
 
+    echo "$url" >> "$url_file"
+
     echo
 }
