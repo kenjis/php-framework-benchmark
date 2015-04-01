@@ -74,4 +74,8 @@ fw="zf-2.4"
 url="$base/$fw/public/index.php/application/hello/index"
 benchmark "$fw" "$url"
 
+fw="typo3-flow-2.3"
+url="$base/$fw/Web/index.php/flow/benchmark"
+benchmark "$fw" "$url"
+
 cat "$check_file"
