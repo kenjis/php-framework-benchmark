@@ -27,6 +27,8 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ## Results
 
+These are my benchmarks, not yours. I encourage you to run on your environments.
+
 ### Hello World Benchmark
 
 (2015/03/30)
@@ -62,7 +64,7 @@ $ sh benchmark.sh
 
 See <http://localhost/php-framework-benchmark/>.
 
-## Kernel Configuration
+## Linux Kernel Configuration
 
 I added below in `/etc/sysctl.conf`
 
