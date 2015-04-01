@@ -62,6 +62,7 @@ chmod o+w storage/*
 chmod o+w storage/framework/*
 php artisan optimize --force
 php artisan config:cache
+php artisan route:cache
 
 cd ../fuel-2.0-dev
 composer install --no-dev
