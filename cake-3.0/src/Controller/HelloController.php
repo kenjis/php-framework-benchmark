@@ -8,6 +8,7 @@ class HelloController extends AppController
 
     public function index()
     {
-        echo 'Hello World!';
+        $this->response->body('Hello World!');
+        return $this->response;
     }
 }
