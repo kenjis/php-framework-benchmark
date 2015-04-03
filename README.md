@@ -50,6 +50,8 @@ These are my benchmarks, not yours. I encourage you to run on your environments.
 |zf-2.4             |              69.69|     1.7|       2.25|     4.5|
 |typo3-flow-2.3     |              41.46|     1.0|       5.25|    10.5|
 
+Note(1): All the results are run on php with phalcon.so. If you don't load phalcon.so, the rps except for Phalcon probably increase.
+
 ## How to Benchmark
 
 Install source code as <http://localhost/php-framework-benchmark/>.
