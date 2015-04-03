@@ -76,3 +76,8 @@ composer install --no-dev --optimize-autoloader
 
 cd ../zf-2.4
 composer install --no-dev
+
+cd ../typo3-flow-2.3
+export FLOW_CONTEXT=Production
+composer install --no-dev --optimize-autoloader
+./flow flow:cache:warmup
