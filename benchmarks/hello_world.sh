@@ -24,32 +24,32 @@ fw="phalcon-1.3"
 url="$base/$fw/public/index.php?_url=/hello/index"
 benchmark "$fw" "$url"
 
-fw="codeigniter-3.0"
-url="$base/$fw/index.php/hello/index"
-benchmark "$fw" "$url"
-
 fw="slim-2.6"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
-fw="lumen-5.0"
-url="$base/$fw/public/index.php/hello/index"
+fw="codeigniter-3.0"
+url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
 
 fw="yii-2.0"
 url="$base/$fw/web/index.php?r=hello/index"
 benchmark "$fw" "$url"
 
-fw="fuel-1.8-dev"
-url="$base/$fw/public/index.php/hello/index"
-benchmark "$fw" "$url"
-
 fw="silex-1.2"
 url="$base/$fw/web/index.php/hello/index"
 benchmark "$fw" "$url"
 
+fw="lumen-5.0"
+url="$base/$fw/public/index.php/hello/index"
+benchmark "$fw" "$url"
+
 fw="bear-1.0"
 url="$base/$fw/var/www/index.php/hello"
+benchmark "$fw" "$url"
+
+fw="fuel-1.8-dev"
+url="$base/$fw/public/index.php/hello/index"
 benchmark "$fw" "$url"
 
 fw="cake-3.0"
