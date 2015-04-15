@@ -11,6 +11,9 @@ $barColors = array(
     'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
 );
 
+$graphWidth  = 700;
+$graphHeight = 400;
+
 // RPS Benchmark
 $data[] = array('', 'rps', array('role' => 'style'));  // header
 
@@ -26,8 +29,8 @@ $options = array(
   'hAxis'  => array('title' => 'requests per second',
                     'titleTextStyle' => array('bold' => true)),
   'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
-  'width'  => 600,
-  'height' => 400,
+  'width'  => $graphWidth,
+  'height' => $graphHeight,
   'bar'    => array('groupWidth' => '90%'),
   'legend' => array('position' => 'none')
 );
@@ -49,8 +52,8 @@ $options = array(
   'hAxis'  => array('title' => 'peak memory (MB)',
                     'titleTextStyle' => array('bold' => true)),
   'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
-  'width'  => 600,
-  'height' => 400,
+  'width'  => $graphWidth,
+  'height' => $graphHeight,
   'bar'    => array('groupWidth' => '90%'),
   'legend' => array('position' => 'none')
 );
