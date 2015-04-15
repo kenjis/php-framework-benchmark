@@ -20,7 +20,11 @@ url="$base/$fw/index.php"
 benchmark "$fw" "$url"
 #COMMENT
 
-fw="phalcon-1.3"
+#fw="phalcon-1.3"
+#url="$base/$fw/public/index.php?_url=/hello/index"
+#benchmark "$fw" "$url"
+
+fw="phalcon-2.0"
 url="$base/$fw/public/index.php?_url=/hello/index"
 benchmark "$fw" "$url"
 
