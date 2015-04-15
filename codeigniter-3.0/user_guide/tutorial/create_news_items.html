@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create news items &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Create news items &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Tutorial" href="index.html"/>
         <link rel="next" title="Conclusion" href="conclusion.html"/>
         <link rel="prev" title="News section" href="news_section.html"/> 
@@ -282,15 +282,15 @@ application/views/news/create.php.</p>
 </div>
 <p>There are only two things here that probably look unfamiliar to you: the
 form_open() function and the validation_errors() function.</p>
-<p>The first function is provided by the <a class="reference external" href="../helpers/form_helper.html">form
-helper</a> and renders the form element and
-adds extra functionality, like adding a hidden <a class="reference external" href="../libraries/security.html">CSRF prevention
-field</a>. The latter is used to report
+<p>The first function is provided by the <a class="reference internal" href="../helpers/form_helper.html"><em>form
+helper</em></a> and renders the form element and
+adds extra functionality, like adding a hidden <a class="reference internal" href="../libraries/security.html"><em>CSRF prevention
+field</em></a>. The latter is used to report
 errors related to form validation.</p>
 <p>Go back to your news controller. You&#8217;re going to do two things here,
 check whether the form was submitted and whether the submitted data
-passed the validation rules. You&#8217;ll use the <a class="reference external" href="../libraries/form_validation.html">form
-validation</a> library to do this.</p>
+passed the validation rules. You&#8217;ll use the <a class="reference internal" href="../libraries/form_validation.html"><em>form
+validation</em></a> library to do this.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">);</span>
@@ -322,8 +322,8 @@ form validation are set. The set_rules() method takes three arguments;
 the name of the input field, the name to be used in error messages, and
 the rule. In this case the title and text fields are required.</p>
 <p>CodeIgniter has a powerful form validation library as demonstrated
-above. You can read <a class="reference external" href="../libraries/form_validation.html">more about this library
-here</a>.</p>
+above. You can read <a class="reference internal" href="../libraries/form_validation.html"><em>more about this library
+here</em></a>.</p>
 <p>Continuing down, you can see a condition that checks whether the form
 validation ran successfully. If it did not, the form is displayed, if it
 was submitted <strong>and</strong> passed all the rules, the model is called. After
@@ -354,15 +354,15 @@ the model created earlier and add the following:</p>
 </div>
 <p>This new method takes care of inserting the news item into the database.
 The third line contains a new function, url_title(). This function -
-provided by the <a class="reference external" href="../helpers/url_helper.html">URL helper</a> - strips down
+provided by the <a class="reference internal" href="../helpers/url_helper.html"><em>URL helper</em></a> - strips down
 the string you pass it, replacing all spaces by dashes (-) and makes
 sure everything is in lowercase characters. This leaves you with a nice
 slug, perfect for creating URIs.</p>
 <p>Let&#8217;s continue with preparing the record that is going to be inserted
 later, inside the $data array. Each element corresponds with a column in
 the database table created earlier. You might notice a new method here,
-namely the post() method from the <a class="reference external" href="../libraries/input.html">input
-library</a>. This method makes sure the data is
+namely the post() method from the <a class="reference internal" href="../libraries/input.html"><em>input
+library</em></a>. This method makes sure the data is
 sanitized, protecting you from nasty attacks from others. The input
 library is loaded by default. At last, you insert our $data array into
 our database.</p>
@@ -406,7 +406,7 @@ Add some news and check out the different pages you made.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -427,7 +427,7 @@ Add some news and check out the different pages you made.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

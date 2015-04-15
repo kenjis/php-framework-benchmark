@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Change Log &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Change Log &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="index.html"/>
         <link rel="next" title="The MIT License (MIT)" href="license.html"/>
         <link rel="prev" title="Developer’s Certificate of Origin 1.1" href="DCO.html"/> 
 
@@ -249,9 +249,9 @@
             
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="version-3-0-planned">
-<h2>Version 3.0 (planned)<a class="headerlink" href="#version-3-0-planned" title="Permalink to this headline">¶</a></h2>
-<p>Release Date: Not Released</p>
+<div class="section" id="version-3-0-0">
+<h2>Version 3.0.0<a class="headerlink" href="#version-3-0-0" title="Permalink to this headline">¶</a></h2>
+<p>Release Date: March 30, 2015</p>
 <ul class="simple">
 <li>License<ul>
 <li>CodeIgniter has been relicensed with the <a class="reference external" href="http://opensource.org/licenses/MIT">MIT License</a>, eliminating its old proprietary licensing.</li>
@@ -301,7 +301,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Added availability checks where usage of dangerous functions like <tt class="docutils literal"><span class="pre">eval()</span></tt> and <tt class="docutils literal"><span class="pre">exec()</span></tt> is required.</li>
 <li>Added support for changing the file extension of log files using <tt class="docutils literal"><span class="pre">$config['log_file_extension']</span></tt>.</li>
 <li>Added support for turning newline standardization on/off via <tt class="docutils literal"><span class="pre">$config['standardize_newlines']</span></tt> and set it to FALSE by default.</li>
-<li>Added configuration setting <tt class="docutils literal"><span class="pre">$config['composer_autoload']</span></tt> to enable loading of a <a class="reference external" href="https://getcomposer.org/">Composer</a> auto-loader.</li>
+<li>Added configuration setting <tt class="docutils literal"><span class="pre">$config['composer_autoload']</span></tt> to enable loading of a <a class="reference external" href="https://getcomposer.org">Composer</a> auto-loader.</li>
 <li>Removed the automatic conversion of &#8216;programmatic characters&#8217; to HTML entities from the <a class="reference internal" href="libraries/uri.html"><em>URI Library</em></a>.</li>
 <li>Changed log messages that say a class or file was loaded to &#8220;info&#8221; level instead of &#8220;debug&#8221;, so that they don&#8217;t pollute log files when <tt class="docutils literal"><span class="pre">$config['log_threshold']</span></tt> is set to 2 (debug).</li>
 </ul>
@@ -311,7 +311,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Added an optional third parameter to <a class="reference internal" href="helpers/date_helper.html#timespan" title="timespan"><tt class="xref php php-func docutils literal"><span class="pre">timespan()</span></tt></a> that constrains the number of time units displayed.</li>
 <li>Added an optional parameter to <a class="reference internal" href="helpers/date_helper.html#timezone_menu" title="timezone_menu"><tt class="xref php php-func docutils literal"><span class="pre">timezone_menu()</span></tt></a> that allows more attributes to be added to the generated select tag.</li>
 <li>Added function <a class="reference internal" href="helpers/date_helper.html#date_range" title="date_range"><tt class="xref php php-func docutils literal"><span class="pre">date_range()</span></tt></a> that generates a list of dates between a specified period.</li>
-<li>Deprecated <tt class="docutils literal"><span class="pre">standard_date()</span></tt>, which now just uses the native <tt class="docutils literal"><span class="pre">date()</span></tt> with <a class="reference external" href="http://www.php.net/manual/en/class.datetime.php#datetime.constants.types">DateTime constants</a>.</li>
+<li>Deprecated <tt class="docutils literal"><span class="pre">standard_date()</span></tt>, which now just uses the native <tt class="docutils literal"><span class="pre">date()</span></tt> with <a class="reference external" href="http://php.net/manual/en/class.datetime.php#datetime.constants.types">DateTime constants</a>.</li>
 <li>Changed <a class="reference internal" href="helpers/date_helper.html#now" title="now"><tt class="xref php php-func docutils literal"><span class="pre">now()</span></tt></a> to work with all timezone strings supported by PHP.</li>
 <li>Changed <a class="reference internal" href="helpers/date_helper.html#days_in_month" title="days_in_month"><tt class="xref php php-func docutils literal"><span class="pre">days_in_month()</span></tt></a> to use the native <tt class="docutils literal"><span class="pre">cal_days_in_month()</span></tt> PHP function, if available.</li>
 </ul>
@@ -435,6 +435,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Methods <tt class="docutils literal"><span class="pre">insert_batch()</span></tt> and <tt class="docutils literal"><span class="pre">update_batch()</span></tt> now return an integer representing the number of rows affected by them.</li>
 <li>Methods <tt class="docutils literal"><span class="pre">where()</span></tt>, <tt class="docutils literal"><span class="pre">or_where()</span></tt>, <tt class="docutils literal"><span class="pre">having()</span></tt> and <tt class="docutils literal"><span class="pre">or_having()</span></tt> now convert trailing  <tt class="docutils literal"><span class="pre">=</span></tt> and <tt class="docutils literal"><span class="pre">&lt;&gt;</span></tt>,  <tt class="docutils literal"><span class="pre">!=</span></tt> SQL operators to <tt class="docutils literal"><span class="pre">IS</span> <span class="pre">NULL</span></tt> and <tt class="docutils literal"><span class="pre">IS</span> <span class="pre">NOT</span> <span class="pre">NULL</span></tt> respectively when the supplied comparison value is <tt class="docutils literal"><span class="pre">NULL</span></tt>.</li>
 <li>Added method chaining support to <tt class="docutils literal"><span class="pre">reset_query()</span></tt>, <tt class="docutils literal"><span class="pre">start_cache()</span></tt>, <tt class="docutils literal"><span class="pre">stop_cache()</span></tt> and <tt class="docutils literal"><span class="pre">flush_cache()</span></tt>.</li>
+<li>Added an optional second parameter to <tt class="docutils literal"><span class="pre">count_all_results()</span></tt> to disable resetting of QB values.</li>
 </ul>
 </li>
 <li><a class="reference internal" href="database/results.html"><em>Database Results</em></a> changes include:<ul>
@@ -605,6 +606,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Added support for custom error messages per field rule.</li>
 <li>Added support for callable rules when they are passed as an array.</li>
 <li>Added support for non-ASCII domains in <strong>valid_email</strong> rule, depending on the Intl extension.</li>
+<li>Changed the debug message about an error message not being set to include the rule name it is about.</li>
 </ul>
 </li>
 <li><a class="reference internal" href="libraries/caching.html"><em>Caching Library</em></a> changes include:<ul>
@@ -807,7 +809,7 @@ Only entries in <tt class="docutils literal"><span class="pre">$autoload['librar
 <li>Added support for microseconds (&#8220;u&#8221; date format character) in <tt class="docutils literal"><span class="pre">$config['log_date_format']</span></tt>.</li>
 </ul>
 </li>
-<li>Added <cite>compatibility layers &lt;general/compatibility_functions&gt;</cite> for:<ul>
+<li>Added <a class="reference internal" href="general/compatibility_functions.html"><em>compatibility layers</em></a> for:<ul>
 <li><a class="reference external" href="http://php.net/mbstring">Multibyte String</a> (limited support).</li>
 <li><a class="reference external" href="http://php.net/hash">Hash</a> (<tt class="docutils literal"><span class="pre">hash_equals()</span></tt>, <tt class="docutils literal"><span class="pre">hash_pbkdf2()</span></tt>).</li>
 <li><a class="reference external" href="http://php.net/password">Password Hashing</a>.</li>
@@ -1401,12 +1403,8 @@ empty file when on Windows or with safe_mode enabled.</li>
 class</em></a>.</li>
 <li>Added form_validation_lang entries for decimal, less_than and
 greater_than.</li>
-<li><a class="reference external" href="https://bitbucket.org/ellislab/codeigniter-reactor/issue/153/escape-str-bug-in-mssql-driver">Fixed issue
-#153</a>
-Escape Str Bug in MSSQL driver.</li>
-<li><a class="reference external" href="https://bitbucket.org/ellislab/codeigniter-reactor/issue/172/bug-in-chrome-and-form_open-in-201">Fixed issue
-#172</a>
-Google Chrome 11 posts incorrectly when action is empty.</li>
+<li>Fixed issue #153 Escape Str Bug in MSSQL driver.</li>
+<li>Fixed issue #172 Google Chrome 11 posts incorrectly when action is empty.</li>
 </ul>
 </div>
 </div>
@@ -1499,8 +1497,7 @@ file. This allows distribution of sub-applications with their own
 libraries, models, config files, etc. in a single &#8220;package&#8221;
 directory. See the <a class="reference internal" href="libraries/loader.html"><em>Loader class</em></a>
 documentation for more details.</li>
-<li>In-development code is now hosted at
-<a class="reference external" href="http://bitbucket.org/ellislab/codeigniter-reactor/">BitBucket</a>.</li>
+<li>In-development code is now hosted at BitBucket .</li>
 <li>Removed the deprecated Validation Class.</li>
 <li>Added CI_ Prefix to all core classes.</li>
 <li>Package paths can now be set in application/config/autoload.php.</li>
@@ -1642,7 +1639,7 @@ Helper</em></a> to return FALSE on failure.</li>
 precision.</li>
 <li>Added alpha, and sha1 string types to random_string() in the
 <a class="reference internal" href="helpers/string_helper.html"><em>String Helper</em></a>.</li>
-<li>Modified prep_url() so as to not prepend <a class="reference external" href="http://">http://</a> if the supplied
+<li>Modified prep_url() so as to not prepend http&amp;#58;// if the supplied
 string already has a scheme.</li>
 <li>Modified get_file_info in the file helper, changing filectime()
 to filemtime() for dates.</li>
@@ -2393,7 +2390,7 @@ performed on lines that begin with a dot.</li>
 instantiating new Language and Exception objects, and not using the
 error heading.</li>
 <li>Fixed a bug (#4413) where a URI containing slashes only e.g.
-&#8216;<a class="reference external" href="http://example.com/index.php?//">http://example.com/index.php?//</a>&#8216; would result in PHP errors</li>
+&#8216;http&amp;#58;//example.com/index.php?//&#8217; would result in PHP errors</li>
 <li>Fixed an array to string conversion error in the Validation library
 (#4425)</li>
 <li>Fixed bug (#4451, #4299, #4339) where failed transactions will not
@@ -3050,8 +3047,7 @@ into and modify the inner workings of the framework without hacking
 the core files.</li>
 <li>Added the ability to organize controller files <a class="reference internal" href="general/controllers.html"><em>into
 sub-folders</em></a>. Kudos to Marco for
-<a class="reference external" href="http://codeigniter.com/forums/viewthread/627/">suggesting</a> this
-(and the next two) feature.</li>
+suggesting this (and the next two) feature.</li>
 <li>Added regular expressions support for <a class="reference internal" href="general/routing.html"><em>routing
 rules</em></a>.</li>
 <li>Added the ability to <a class="reference internal" href="general/controllers.html"><em>remap function
@@ -3356,7 +3352,7 @@ and fixed various typos.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -3377,7 +3373,7 @@ and fixed various typos.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

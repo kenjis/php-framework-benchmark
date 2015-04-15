@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Encryption Library &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Encryption Library &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="File Uploading Class" href="file_uploading.html"/>
         <link rel="prev" title="Encrypt Class" href="encrypt.html"/> 
@@ -252,6 +252,12 @@
             
   <div class="section" id="encryption-library">
 <h1>Encryption Library<a class="headerlink" href="#encryption-library" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">DO NOT use this or any other <em>encryption</em> library for
+user password storage! Passwords must be <em>hashed</em> instead, and you
+should do that via PHP&#8217;s own <a class="reference external" href="http://php.net/password">Password Hashing extension</a>.</p>
+</div>
 <p>The Encryption Library provides two-way data encryption. To do so in
 a cryptographically secure way, it utilizes PHP extensions that are
 unfortunately not always available on all systems.
@@ -981,7 +987,7 @@ usage of the SHA-2 family of algorithms:</p>
 MD5 or SHA1 is that they are no longer considered secure enough
 and as such, we don&#8217;t want to encourage their usage.
 If you absolutely need to use them, it is easy to do so via PHP&#8217;s
-native <a class="reference external" href="http://php.net/hash_hmac()">hash_hmac()</a> function.</p>
+native <a class="reference external" href="http://php.net/manual/en/function.hash-hmac.php">hash_hmac()</a> function.</p>
 <p>Stronger algorithms of course will be added in the future as they
 appear and become widely available.</p>
 </div>
@@ -1176,7 +1182,7 @@ doesn&#8217;t support SHA1.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -1197,7 +1203,7 @@ doesn&#8217;t support SHA1.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

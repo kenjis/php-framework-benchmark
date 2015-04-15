@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>HTML Helper &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>HTML Helper &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="Inflector Helper" href="inflector_helper.html"/>
         <link rel="prev" title="Form Helper" href="form_helper.html"/> 
@@ -280,7 +280,7 @@ HTML.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>$data</strong> (<em>string</em>) &#8211; Content</li>
 <li><strong>$h</strong> (<em>string</em>) &#8211; Heading level</li>
-<li><strong>$attributes</strong> (<em>array</em>) &#8211; HTML attributes</li>
+<li><strong>$attributes</strong> (<em>mixed</em>) &#8211; HTML attributes</li>
 </ul>
 </td>
 </tr>
@@ -299,12 +299,15 @@ data, the second the size of the heading. Example:</p>
 </div>
 <p>The above would produce: &lt;h3&gt;Welcome!&lt;/h3&gt;</p>
 <p>Additionally, in order to add attributes to the heading tag such as HTML
-classes, ids or inline styles, a third parameter is available:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">heading</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;class=&quot;pink&quot;&#39;</span><span class="p">)</span>
+classes, ids or inline styles, a third parameter accepts either a string
+or an array:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">heading</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;class=&quot;pink&quot;&#39;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nx">heading</span><span class="p">(</span><span class="s1">&#39;How are you?&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;green&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>The above code produces:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;pink&quot;</span><span class="nt">&gt;</span>Welcome!<span class="nt">&lt;h3&gt;</span>
+<span class="nt">&lt;h4</span> <span class="na">id=</span><span class="s">&quot;question&quot;</span> <span class="na">class=</span><span class="s">&quot;green&quot;</span><span class="nt">&gt;</span>How are you?<span class="nt">&lt;/h4&gt;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -865,7 +868,7 @@ in combination with <tt class="docutils literal"><span class="pre">&amp;nbsp;</s
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -886,7 +889,7 @@ in combination with <tt class="docutils literal"><span class="pre">&amp;nbsp;</s
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

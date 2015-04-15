@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Static pages &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Static pages &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Tutorial" href="index.html"/>
         <link rel="next" title="News section" href="news_section.html"/>
         <link rel="prev" title="Tutorial" href="index.html"/> 
@@ -253,20 +253,20 @@
   <div class="section" id="static-pages">
 <h1>Static pages<a class="headerlink" href="#static-pages" title="Permalink to this headline">¶</a></h1>
 <p><strong>Note:</strong> This tutorial assumes you&#8217;ve downloaded CodeIgniter and
-<a class="reference external" href="../installation/index.html">installed the framework</a> in your
+<a class="reference internal" href="../installation/index.html"><em>installed the framework</em></a> in your
 development environment.</p>
 <p>The first thing you&#8217;re going to do is set up a <strong>controller</strong> to handle
 static pages. A controller is simply a class that helps delegate work.
 It is the glue of your web application.</p>
 <p>For example, when a call is made to:</p>
 <blockquote>
-<div><a class="reference external" href="http://example.com/news/latest/10">http://example.com/news/latest/10</a></div></blockquote>
+<div>http&amp;#58;//example.com/news/latest/10</div></blockquote>
 <p>We might imagine that there is a controller named &#8220;news&#8221;. The method
 being called on news would be &#8220;latest&#8221;. The news method&#8217;s job could be to
 grab 10 news items, and render them on the page. Very often in MVC,
 you&#8217;ll see URL patterns that match:</p>
 <blockquote>
-<div><a class="reference external" href="http://example.com/[controller-class]/[controller-method]/[arguments">http://example.com/[controller-class]/[controller-method]/[arguments</a>]</div></blockquote>
+<div>http&amp;#58;//example.com/[controller-class]/[controller-method]/[arguments]</div></blockquote>
 <p>As URL schemes become more complex, this may change. But for now, this
 is all we will need to know.</p>
 <p>Create a file at application/controllers/Pages.php with the following
@@ -301,7 +301,7 @@ following code.</p>
         <span class="o">&lt;/</span><span class="nx">head</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
 
-                <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">CodeIgniter</span> <span class="nx">Tutorial</span><span class="o">&lt;/</span><span class="nx">h1</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$title</span> <span class="cp">?&gt;</span><span class="nt">&lt;/h1&gt;</span>
 </pre></div>
 </div>
 <p>The header contains the basic HTML code that you&#8217;ll want to display
@@ -381,7 +381,7 @@ request to the first matching rule. Each rule is a regular expression
 match, and calls the appropriate controller and method, possibly with
 arguments.</p>
 <p>More information about routing can be found in the URI Routing
-<a class="reference external" href="../general/routing.html">documentation</a>.</p>
+<a class="reference internal" href="../general/routing.html"><em>documentation</em></a>.</p>
 <p>Here, the second rule in the $routes array matches <strong>any</strong> request using
 the wildcard string (:any). and passes the parameter to the <tt class="docutils literal"><span class="pre">view()</span></tt>
 method of the pages class.</p>
@@ -409,7 +409,7 @@ method in the pages controller? Awesome!</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -430,7 +430,7 @@ method in the pages controller? Awesome!</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

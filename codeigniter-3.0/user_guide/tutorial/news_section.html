@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>News section &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>News section &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Tutorial" href="index.html"/>
         <link rel="next" title="Create news items" href="create_news_items.html"/>
         <link rel="prev" title="Static pages" href="static_pages.html"/> 
@@ -265,7 +265,7 @@ database or other data stores. They represent your data.</p>
 <p>Open up the application/models directory and create a new file called
 News_model.php and add the following code. Make sure you&#8217;ve configured
 your database properly as described
-<a class="reference external" href="../database/configuration.html">here</a>.</p>
+<a class="reference internal" href="../database/configuration.html"><em>here</em></a>.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">News_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
 
@@ -295,10 +295,10 @@ seed records.</p>
 </div>
 <p>Now that the database and a model have been set up, you&#8217;ll need a method
 to get all of our posts from our database. To do this, the database
-abstraction layer that is included with CodeIgniter — <a class="reference external" href="../database/query_builder.html">Active
-Record</a> — is used. This makes it
-possible to write your &#8216;queries&#8217; once and make them work on <a class="reference external" href="../general/requirements.html">all
-supported database systems</a>. Add the
+abstraction layer that is included with CodeIgniter —
+<a class="reference internal" href="../database/query_builder.html"><em>Query Builder</em></a> — is used. This makes it
+possible to write your &#8216;queries&#8217; once and make them work on <a class="reference internal" href="../general/requirements.html"><em>all
+supported database systems</em></a>. Add the
 following code to your model.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">get_news</span><span class="p">(</span><span class="nv">$slug</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">)</span>
 <span class="p">{</span>
@@ -388,8 +388,8 @@ and add the next piece of code.</p>
 </div>
 <p>Here, each news item is looped and displayed to the user. You can see we
 wrote our template in PHP mixed with HTML. If you prefer to use a
-template language, you can use CodeIgniter&#8217;s <a class="reference external" href="../libraries/parser">Template
-Parser</a> class or a third party parser.</p>
+template language, you can use CodeIgniter&#8217;s <a class="reference internal" href="../libraries/parser.html"><em>Template
+Parser</em></a> class or a third party parser.</p>
 <p>The news overview page is now done, but a page to display individual
 news items is still absent. The model created earlier is made in such
 way that it can easily be used for this functionality. You only need to
@@ -460,7 +460,7 @@ watch your news page.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -481,7 +481,7 @@ watch your news page.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

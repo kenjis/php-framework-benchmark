@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating Ancillary Classes &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Creating Ancillary Classes &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
         <link rel="next" title="Hooks - Extending the Framework Core" href="hooks.html"/>
         <link rel="prev" title="Creating Core System Classes" href="core_classes.html"/> 
@@ -264,7 +264,9 @@ resources. This is easily possible as you&#8217;ll see.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">object of class CI_Controller</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Reference to your controller&#8217;s instance</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">CI_Controller</td>
 </tr>
 </tbody>
 </table>
@@ -299,19 +301,9 @@ within your own custom classes you can do so as follows:</p>
 <span class="c1">// etc.</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>You&#8217;ll notice that the above get_instance() <tt class="docutils literal"><span class="pre">function</span></tt> is being
-passed by reference:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
-</pre></div>
-</div>
-<p class="last">This is very important. Assigning by reference allows you to use the
-original CodeIgniter object rather than creating a copy of it.</p>
-</div>
-<p>Furthermore, if you&#8217;ll be using <tt class="docutils literal"><span class="pre">get_instance()</span></tt> inside another class,
-then it would be better if you assign it to a property. This way, you
-won&#8217;t need to call <tt class="docutils literal"><span class="pre">get_instance()</span></tt> in every single method.</p>
+<p>If you&#8217;ll be using <tt class="docutils literal"><span class="pre">get_instance()</span></tt> inside another class, then it would
+be better if you assign it to a property. This way, you won&#8217;t need to call
+<tt class="docutils literal"><span class="pre">get_instance()</span></tt> in every single method.</p>
 <p>Example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
 
@@ -335,7 +327,6 @@ won&#8217;t need to call <tt class="docutils literal"><span class="pre">get_inst
         <span class="p">{</span>
                 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">CI</span><span class="o">-&gt;</span><span class="na">config</span><span class="o">-&gt;</span><span class="na">item</span><span class="p">(</span><span class="s1">&#39;base_url&#39;</span><span class="p">);</span>
         <span class="p">}</span>
-
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -364,7 +355,7 @@ after you instantiate the Example class, without the need to call
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -385,7 +376,7 @@ after you instantiate the Example class, without the need to call
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

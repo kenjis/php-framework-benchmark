@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "4db8898759143c742a8661b626d23f1535a42c15"
+                "reference": "f8c20b427de1cfe7a28a015c1640ce4e4eef1e33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/4db8898759143c742a8661b626d23f1535a42c15",
-                "reference": "4db8898759143c742a8661b626d23f1535a42c15",
+                "url": "https://api.github.com/repos/composer/installers/zipball/f8c20b427de1cfe7a28a015c1640ce4e4eef1e33",
+                "reference": "f8c20b427de1cfe7a28a015c1640ce4e4eef1e33",
                 "shasum": ""
             },
             "replace": {
@@ -99,7 +99,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-03-18 21:44:04"
+            "time": "2015-03-26 16:11:30"
         },
         {
             "name": "fuel/auth",
@@ -107,12 +107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/auth.git",
-                "reference": "3229c05da608a9d5a6b350362b2e771a8d8ae17b"
+                "reference": "27bc21cb77a433506dee287f4c4064bcb597c434"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/auth/zipball/3229c05da608a9d5a6b350362b2e771a8d8ae17b",
-                "reference": "3229c05da608a9d5a6b350362b2e771a8d8ae17b",
+                "url": "https://api.github.com/repos/fuel/auth/zipball/27bc21cb77a433506dee287f4c4064bcb597c434",
+                "reference": "27bc21cb77a433506dee287f4c4064bcb597c434",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "source": "https://github.com/fuel/auth/tree/1.8/develop",
                 "issues": "https://github.com/fuel/auth/issues"
             },
-            "time": "2015-02-26 22:14:12"
+            "time": "2015-04-05 18:25:11"
         },
         {
             "name": "fuel/core",
@@ -142,12 +142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/core.git",
-                "reference": "fbed4a063667c357179435e7b8d32b1f8a6269b0"
+                "reference": "36c09c64b7150de919b28549286a4fc6605ac258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/core/zipball/fbed4a063667c357179435e7b8d32b1f8a6269b0",
-                "reference": "fbed4a063667c357179435e7b8d32b1f8a6269b0",
+                "url": "https://api.github.com/repos/fuel/core/zipball/36c09c64b7150de919b28549286a4fc6605ac258",
+                "reference": "36c09c64b7150de919b28549286a4fc6605ac258",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                 "source": "https://github.com/fuel/core/tree/1.8/develop",
                 "issues": "https://github.com/fuel/core/issues"
             },
-            "time": "2015-03-22 14:46:07"
+            "time": "2015-04-12 17:17:20"
         },
         {
             "name": "fuel/email",
@@ -475,12 +475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "1af1529b49a6e065ae6802e70192aba35d79b7d8"
+                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/1af1529b49a6e065ae6802e70192aba35d79b7d8",
-                "reference": "1af1529b49a6e065ae6802e70192aba35d79b7d8",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/bf2c13de4300e227d7b2fd08027673a79c519987",
+                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987",
                 "shasum": ""
             },
             "type": "library",
@@ -490,8 +490,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -510,7 +510,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-02-05 09:32:11"
+            "time": "2015-03-26 14:39:45"
         }
     ],
     "packages-dev": [
@@ -520,12 +520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/docs.git",
-                "reference": "fc8bcb2d60fdbf49b84cb3a7c748caa125a880e1"
+                "reference": "22428d5f154a6d374f965492c23ee27dca67c5b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/docs/zipball/fc8bcb2d60fdbf49b84cb3a7c748caa125a880e1",
-                "reference": "fc8bcb2d60fdbf49b84cb3a7c748caa125a880e1",
+                "url": "https://api.github.com/repos/fuel/docs/zipball/22428d5f154a6d374f965492c23ee27dca67c5b4",
+                "reference": "22428d5f154a6d374f965492c23ee27dca67c5b4",
                 "shasum": ""
             },
             "require": {
@@ -547,7 +547,7 @@
                 "source": "https://github.com/fuel/docs/tree/1.8/develop",
                 "issues": "https://github.com/fuel/docs/issues"
             },
-            "time": "2015-03-23 11:11:45"
+            "time": "2015-04-02 13:45:24"
         }
     ],
     "aliases": [],

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Query Builder Class &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Query Builder Class &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Transactions" href="transactions.html"/>
         <link rel="prev" title="Query Helper Methods" href="helpers.html"/> 
@@ -721,11 +721,17 @@ will default to ASC instead.</p>
 <p><strong>$this-&gt;db-&gt;count_all_results()</strong></p>
 <p>Permits you to determine the number of rows in a particular Active
 Record query. Queries will accept Query Builder restrictors such as
-where(), or_where(), like(), or_like(), etc. Example:</p>
+<tt class="docutils literal"><span class="pre">where()</span></tt>, <tt class="docutils literal"><span class="pre">or_where()</span></tt>, <tt class="docutils literal"><span class="pre">like()</span></tt>, <tt class="docutils literal"><span class="pre">or_like()</span></tt>, etc. Example:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">);</span>  <span class="c1">// Produces an integer, like 25</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">();</span> <span class="c1">// Produces an integer, like 17</span>
+</pre></div>
+</div>
+<p>However, this method also resets any field values that you may have passed
+to <tt class="docutils literal"><span class="pre">select()</span></tt>. If you need to keep them, you can pass <tt class="docutils literal"><span class="pre">FALSE</span></tt> as the
+second parameter:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;count_all()</strong></p>
@@ -1309,13 +1315,14 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::count_all_results">
-<tt class="descname">count_all_results</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::count_all_results" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">count_all_results</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::count_all_results" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
+<li><strong>$reset</strong> (<em>bool</em>) &#8211; Whether to reset values for SELECTs</li>
 </ul>
 </td>
 </tr>
@@ -2459,7 +2466,7 @@ a DELETE statement will be used instead.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -2480,7 +2487,7 @@ a DELETE statement will be used instead.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Session Library &mdash; CodeIgniter 3.0-dev documentation</title>
+  <title>Session Library &mdash; CodeIgniter 3.0.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0-dev documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="HTML Table Class" href="table.html"/>
         <link rel="prev" title="Security Class" href="security.html"/> 
@@ -891,9 +891,10 @@ an application - it is just another table in your database.</p>
 <div><ul class="simple">
 <li>Only your <strong>default</strong> database connection (or the one that you access
 as <tt class="docutils literal"><span class="pre">$this-&gt;db</span></tt> from your controllers) can be used.</li>
-<li>You can NOT use a persistent connection.</li>
 <li>You must have the <a class="reference internal" href="../database/query_builder.html"><em>Query Builder</em></a>
 enabled.</li>
+<li>You can NOT use a persistent connection.</li>
+<li>You can NOT use a connection with the <em>cache_on</em> setting enabled.</li>
 </ul>
 </div></blockquote>
 <p>In order to use the &#8216;database&#8217; session driver, you must also create this
@@ -966,7 +967,7 @@ to 300 seconds.</p>
 of its high performance, which is also probably your reason to use the
 &#8216;redis&#8217; session driver.</p>
 <p>The downside is that it is not as ubiquitous as relational databases and
-requires the <a class="reference external" href="https://github.com/nicolasff/phpredis">phpredis</a> PHP
+requires the <a class="reference external" href="https://github.com/phpredis/phpredis">phpredis</a> PHP
 extension to be installed on your system, and that one doesn&#8217;t come
 bundled with PHP.
 Chances are, you&#8217;re only be using the &#8216;redis&#8217; driver only if you&#8217;re already
@@ -1187,7 +1188,7 @@ with no parameters instead.</p>
 
 <dl class="method">
 <dt>
-<tt class="descname">&amp;get_usedata()</tt></dt>
+<tt class="descname">&amp;get_userdata()</tt></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1694,7 +1695,7 @@ properties:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
-      Last updated on Mar 10, 2015.
+      Last updated on Mar 30, 2015.
     </p>
   </div>
 
@@ -1715,7 +1716,7 @@ properties:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0-dev',
+            VERSION:'3.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
