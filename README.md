@@ -14,14 +14,14 @@ Components like Template engine or ORM/Database library are out of scope in this
 
 This is `optimize` branch.
 
-This branch accepts optimization like
+This branch accepts optimization like:
 
-* Removing components/configurations which they are not used.
-* Optimized configuration
+* removing components/configurations which are not used
+* optimized configuration
 
 Caution: Not all the frameworks are optimized!
 
-If you want to interested in benchmarking with no optimization/manipulation (removing components/configurations which are not used), See [master](https://github.com/kenjis/php-framework-benchmark/) branch.
+If you are interested in benchmarking with no optimization/manipulation (removing components/configurations which are not used), See [master](https://github.com/kenjis/php-framework-benchmark/) branch.
 
 If you find something wrong with my code, please feel free to send Pull Requests. But please note optimizing only for "Hello World" is not acceptable. Building fastest "Hello World" application is not the goal in this project.
 
