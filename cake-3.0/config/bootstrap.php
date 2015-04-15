@@ -132,12 +132,12 @@ if (!Configure::read('App.fullBaseUrl')) {
     unset($httpHost, $s);
 }
 
-Cache::config(Configure::consume('Cache'));
-ConnectionManager::config(Configure::consume('Datasources'));
-Email::configTransport(Configure::consume('EmailTransport'));
-Email::config(Configure::consume('Email'));
-Log::config(Configure::consume('Log'));
-Security::salt(Configure::consume('Security.salt'));
+//Cache::config(Configure::consume('Cache'));
+//ConnectionManager::config(Configure::consume('Datasources'));
+//Email::configTransport(Configure::consume('EmailTransport'));
+//Email::config(Configure::consume('Email'));
+//Log::config(Configure::consume('Log'));
+//Security::salt(Configure::consume('Security.salt'));
 
 /**
  * The default crypto extension in 3.0 is OpenSSL.
@@ -149,14 +149,14 @@ Security::salt(Configure::consume('Security.salt'));
 /**
  * Setup detectors for mobile and tablet.
  */
-Request::addDetector('mobile', function ($request) {
-    $detector = new \Detection\MobileDetect();
-    return $detector->isMobile();
-});
-Request::addDetector('tablet', function ($request) {
-    $detector = new \Detection\MobileDetect();
-    return $detector->isTablet();
-});
+//Request::addDetector('mobile', function ($request) {
+//    $detector = new \Detection\MobileDetect();
+//    return $detector->isMobile();
+//});
+//Request::addDetector('tablet', function ($request) {
+//    $detector = new \Detection\MobileDetect();
+//    return $detector->isTablet();
+//});
 
 /**
  * Custom Inflector rules, can be set to correctly pluralize or singularize
