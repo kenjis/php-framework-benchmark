@@ -12,18 +12,16 @@ Components like Template engine or ORM/Database library are out of scope in this
 
 ## Benchmarking Policy
 
-This is `master` branch.
+This is `optimize` branch.
 
-* Install a framework according to the official documentation.
-* Use the default configuration.
-  * Don't remove any components/configurations even if they are not used.
-  * With minimum changes to run this benchmark.
-* Set environment production/Turn off debug mode.
-* Run optimization which you normally do in your production environment, like composer's `--optimize-autoloader`.
+This branch accepts optimization like
 
-Some people may think using default configuration is not fair. But I think a framework's default configuration is an assertion of what it is. It is good to know a framework. And I can't optimize all the frameworks. Some frameworks are optimized, some are not, it is not fair. So I don't remove any components/configurations.
+* Removing components/configurations which they are not used.
+* Optimized configuration
 
-But if you want to interested in benchmarking with optimization (removing components/configurations which are not used), See [optimize](https://github.com/kenjis/php-framework-benchmark/tree/optimize) branch.
+Caution: Not all the frameworks are optimized!
+
+If you want to interested in benchmarking with no optimization/manipulation (removing components/configurations which are not used), See [master](https://github.com/kenjis/php-framework-benchmark/) branch.
 
 If you find something wrong with my code, please feel free to send Pull Requests. But please note optimizing only for "Hello World" is not acceptable. Building fastest "Hello World" application is not the goal in this project.
 
@@ -53,21 +51,23 @@ These are my benchmarks, not yours. I encourage you to run on your environments.
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,456.57|    32.4|       0.50|     1.0|
-|slim-2.6           |             774.31|    17.2|       0.50|     1.0|
-|codeigniter-3.0    |             742.14|    16.5|       0.50|     1.0|
-|yii-2.0            |             374.91|     8.3|       1.75|     3.5|
-|silex-1.2          |             383.12|     8.5|       1.00|     2.0|
-|lumen-5.0          |             372.07|     8.3|       1.00|     2.0|
-|bear-1.0           |             343.18|     7.6|       1.00|     2.0|
-|fuel-1.8-dev       |             325.91|     7.3|       0.75|     1.5|
-|cake-3.0           |             264.58|     5.9|       1.25|     2.5|
-|symfony-2.6        |             123.81|     2.8|       3.00|     6.0|
-|laravel-5.0        |              80.65|     1.8|       2.75|     5.5|
-|zf-2.4             |              79.55|     1.8|       3.00|     6.0|
-|typo3-flow-2.3     |              44.93|     1.0|       5.25|    10.5|
+|phalcon-2.0        |           1,425.55|    32.2|       0.50|     1.0|
+|slim-2.6           |             769.47|    17.4|       0.50|     1.0|
+|codeigniter-3.0    |             716.95|    16.2|       0.50|     1.0|
+|yii-2.0            |             367.26|     8.3|       1.75|     3.5|
+|silex-1.2          |             351.59|     8.0|       1.00|     2.0|
+|lumen-5.0          |             361.34|     8.2|       1.00|     2.0|
+|bear-1.0           |             345.60|     7.8|       1.00|     2.0|
+|fuel-1.8-dev       |             328.28|     7.4|       0.75|     1.5|
+|cake-3.0        (*)|             350.60|     7.9|       1.00|     2.0|
+|symfony-2.6     (*)|             210.75|     4.8|       2.00|     4.0|
+|laravel-5.0        |              73.00|     1.7|       2.75|     5.5|
+|zf-2.4             |              69.73|     1.6|       3.00|     6.0|
+|typo3-flow-2.3     |              44.21|     1.0|       5.25|    10.5|
 
 Note(1): All the results are run on php with phalcon.so. If you don't load phalcon.so, the rps except for Phalcon probably increase.
+
+Note(2): Only frameworks with (*) mark are optimized. Other frameworks are not optimized yet.
 
 ## How to Benchmark
 
