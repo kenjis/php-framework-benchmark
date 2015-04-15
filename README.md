@@ -69,6 +69,15 @@ Note(1): All the results are run on php with phalcon.so. If you don't load phalc
 
 Note(2): Only frameworks with (*) mark are optimized. Other frameworks are not optimized yet.
 
+#### Comparision before and after optimization
+
+|framework          |requests per second|relative|peak memory|relative|
+|-------------------|------------------:|-------:|----------:|-------:|
+|cake-3.0           |             264.58|     1.0|       1.25|     1.3|
+|cake-3.0 (*)       |             350.60|     1.3|       1.00|     1.0|
+|symfony-2.6        |             123.81|     1.0|       3.00|     1.5|
+|symfony-2.6 (*)    |             210.75|     1.7|       2.00|     1.0|
+
 ## How to Benchmark
 
 Install source code as <http://localhost/php-framework-benchmark/>.
