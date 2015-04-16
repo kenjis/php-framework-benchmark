@@ -43,7 +43,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ## Results
 
-These are my benchmarks, not yours. I encourage you to run on your environments.
+These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
 ### Benchmarking Environment
 
