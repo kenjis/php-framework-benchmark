@@ -47,6 +47,13 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 These are my benchmarks, not yours. I encourage you to run on your environments.
 
+### Benchmarking Environment
+
+* CentOS 6.5 64bit (VM; VirtualBox)
+  * PHP 5.5.23 (Remi RPM)
+    * Zend OPcache v7.0.4-dev
+  * Apache 2.2
+
 ### Hello World Benchmark
 
 (2015/04/15)
