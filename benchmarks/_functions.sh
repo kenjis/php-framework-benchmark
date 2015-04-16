@@ -19,6 +19,24 @@ benchmark ()
     grep 'Hello World!' "$output" >> "$check_file"
     echo "---" >> "$check_file"
 
+    # check errors
+    touch "$error_file"
+    error=''
+    x=`grep 'Failed requests:        0' "$ab_log"`
+    if [ "$x" = "" ]; then
+        tmp=`grep "Failed requests:" "$ab_log"`
+        error="$error$tmp"
+    fi
+    x=`grep 'Hello World!' "$output"`
+    if [ "$x" = "" ]; then
+        tmp=`cat "$output"`
+        error="$error$tmp"
+    fi
+    if [ "$error" != "" ]; then
+        echo -e "$fw\n$error" >> "$error_file"
+        echo "---" >> "$error_file"
+    fi
+
     echo "$url" >> "$url_file"
 
     echo

@@ -6,13 +6,18 @@ cd `dirname $0`
 base="$1"
 bm_name=`basename $0 .sh`
 
-cd ..
 results_file="output/results.$bm_name.log"
-mv "$results_file" "$results_file.old"
 check_file="output/check.$bm_name.log"
-mv "$check_file" "$check_file.old"
+error_file="output/error.$bm_name.log"
 url_file="output/urls.log"
+
+cd ..
+
+mv "$results_file" "$results_file.old"
+mv "$check_file" "$check_file.old"
+mv "$error_file" "$error_file.old"
 mv "$url_file" "$url_file.old"
+
 
 :<<'#COMMENT'
 fw="no-framework"
@@ -92,4 +97,4 @@ fw="typo3-flow-2.3"
 url="$base/$fw/Web/index.php/flow/benchmark"
 benchmark "$fw" "$url"
 
-cat "$check_file"
+cat "$error_file"
