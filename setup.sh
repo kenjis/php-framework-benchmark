@@ -81,7 +81,7 @@ cd ../typo3-flow-2.3
 export FLOW_CONTEXT=Production
 composer install --no-dev --optimize-autoloader
 ./flow flow:cache:warmup
-sed -i -e 's/{ exit(); }/{ echo "\n" . (memory_get_peak_usage(true)\/1024\/1024); exit(); };/' Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Http/RequestHandler.php
+sed -i -e "s/{ exit(); }/{ printf(\"\\\n%' 8d\", memory_get_peak_usage(true)); exit(); }/" Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Http/RequestHandler.php
 
 cd ../lumen-5.0
 composer install --no-dev --optimize-autoloader

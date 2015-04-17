@@ -12,7 +12,7 @@ function parse_results($file)
         $column = explode(':', $line);
         $fw = $column[0];
         $rps    = (float) trim($column[1]);
-        $memory = (float) trim($column[2]);
+        $memory = (float) trim($column[2])/1024/1024;
         
         $min_rps    = min($min_rps, $rps);
         $min_memory = min($min_memory, $memory);
