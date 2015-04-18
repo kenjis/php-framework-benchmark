@@ -9,6 +9,11 @@ class Common extends Config
     public function define(Container $di)
     {
         $di->set('aura/project-kernel:logger', $di->lazyNew('Monolog\Logger'));
+        
+        $di->params['App\Actions\Hello'] = array(
+            'request' => $di->lazyGet('aura/web-kernel:request'),
+            'response' => $di->lazyGet('aura/web-kernel:response'),
+        );
     }
 
     public function modify(Container $di)
@@ -16,6 +21,19 @@ class Common extends Config
         $this->modifyLogger($di);
         $this->modifyWebRouter($di);
         $this->modifyWebDispatcher($di);
+        
+        $dispatcher = $di->get('aura/web-kernel:dispatcher');
+        $dispatcher->setObject(
+            'hello',
+            $di->lazyNew('App\Actions\Hello')
+        );
+        
+        $router = $di->get('aura/web-kernel:router');
+        $router
+            ->add('hello', '/hello/index')
+            ->addValues(array(
+                'action' => 'hello',
+            ));
     }
 
     public function modifyLogger(Container $di)
