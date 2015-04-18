@@ -35,7 +35,7 @@ $options = array(
   'legend' => array('position' => 'none')
 );
 $type = 'ColumnChart';
-list($chart_time, $div_time) = makeChartParts($data, $options, $type);
+list($chart_rpm, $div_rpm) = makeChartParts($data, $options, $type);
 
 // Memory Benchmark
 $data = array();
@@ -59,6 +59,29 @@ $options = array(
 );
 $type = 'ColumnChart';
 list($chart_mem, $div_mem) = makeChartParts($data, $options, $type);
+
+// Exec Time Benchmark
+$data = array();
+$data[] = array('', 'time', array('role' => 'style'));  // header
+
+$colors = $barColors;
+foreach ($results as $fw => $result) {
+    $data[] = array($fw, $result['time'], array_shift($colors));
+}
+
+$options = array(
+  'title'  => 'Exec Time',
+  'titleTextStyle' => array('fontSize' => 16),
+  'hAxis'  => array('title' => 'ms',
+                    'titleTextStyle' => array('bold' => true)),
+  'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
+  'width'  => $graphWidth,
+  'height' => $graphHeight,
+  'bar'    => array('groupWidth' => '90%'),
+  'legend' => array('position' => 'none')
+);
+$type = 'ColumnChart';
+list($chart_time, $div_time) = makeChartParts($data, $options, $type);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +91,7 @@ list($chart_mem, $div_mem) = makeChartParts($data, $options, $type);
 <script src="https://www.google.com/jsapi"></script>
 <script>
 <?php
-echo $chart_time, $chart_mem;
+echo $chart_rpm, $chart_mem, $chart_time;
 ?>
 </script>
 </head>
@@ -77,7 +100,7 @@ echo $chart_time, $chart_mem;
 <h2>Hello World Benchmark</h1>
 <div>
 <?php
-echo $div_time, $div_mem;
+echo $div_rpm, $div_mem, $div_time;
 ?>
 </div>
 
