@@ -1,0 +1,42 @@
+{
+    "name": "aura/web-project",
+    "type": "project",
+    "description": "A minimal web framework built from Aura v2 packages",
+    "keywords": [
+        "web",
+        "framework"
+    ],
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Aura.Web_Project Contributors",
+            "homepage": "https://github.com/auraphp/Aura.Web_Project/contributors"
+        }
+    ],
+    "require": {
+        "aura/web-kernel": "~2.0",
+        "monolog/monolog": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "Aura\\Web_Project\\_Config\\": "config/"
+        }
+    },
+    "extra": {
+        "aura": {
+            "type": "project",
+            "config": {
+                "common": "Aura\\Web_Project\\_Config\\Common",
+                "dev": "Aura\\Web_Project\\_Config\\Dev",
+                "test": "Aura\\Web_Project\\_Config\\Test",
+                "prod": "Aura\\Web_Project\\_Config\\Prod"
+            }
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aura\\Web_Project\\": "tests/"
+        }
+    }
+}
