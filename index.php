@@ -97,7 +97,7 @@ echo $chart_rpm, $chart_mem, $chart_time;
 </head>
 <body>
 <h1>PHP Framework Benchmark</h1>
-<h2>Hello World Benchmark</h1>
+<h2>Hello World Benchmark</h2>
 <div>
 <?php
 echo $div_rpm, $div_mem, $div_time;
