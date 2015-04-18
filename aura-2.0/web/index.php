@@ -15,3 +15,5 @@ $kernel = (new \Aura\Project_Kernel\Factory)->newKernel(
     'Aura\Web_Kernel\WebKernel'
 );
 $kernel();
+
+printf("\n%' 8d", memory_get_peak_usage(true));

@@ -87,3 +87,7 @@ cd ../lumen-5.0
 composer install --no-dev --optimize-autoloader
 chmod o+w storage/*
 chmod o+w storage/framework/*
+
+cd ../aura-2.0
+composer install --no-dev --optimize-autoloader
+chmod o+w tmp/cache/ tmp/log/
