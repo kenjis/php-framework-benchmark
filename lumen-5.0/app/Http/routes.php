@@ -15,4 +15,9 @@ $app->get('/', function() use ($app) {
 	return $app->welcome();
 });
 
-$app->get('/php-framework-benchmark/lumen-5.0/public/index.php/hello/index', 'App\Http\Controllers\HelloController@index');
+$app->group(['namespace' => 'App\Http\Controllers'], function ($group) {
+    $group->get(
+        '/php-framework-benchmark/lumen-5.0/public/index.php/hello/index',
+        'HelloController@index'
+     );
+});
