@@ -92,6 +92,7 @@ Install source code as <http://localhost/php-framework-benchmark/>.
 ~~~
 $ git clone https://github.com/kenjis/php-framework-benchmark.git
 $ cd php-framework-benchmark
+$ git checkout optimize
 $ sh setup.sh
 ~~~
 
