@@ -41,6 +41,7 @@ cd ../symfony-2.5
 basename `pwd`
 export SYMFONY_ENV=prod
 composer install --no-dev --optimize-autoloader
+php app/console cache:clear --env=prod --no-debug
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
 
@@ -48,6 +49,7 @@ cd ../symfony-2.6
 basename `pwd`
 export SYMFONY_ENV=prod
 composer install --no-dev --optimize-autoloader
+php app/console cache:clear --env=prod --no-debug
 chmod o+w app/cache/ app/logs/
 chmod -R o+w app/cache/*
 
