@@ -29,6 +29,16 @@ class Module
     public function getAutoloaderConfig()
     {
         return array(
+            /*
+             * This autoloader is a much higher performing autoloader than the standard. 
+             * The reason being, is because it doesn’t search the filesystem to attempt 
+             * to resolve a class.
+            */ 
+            'Zend\Loader\ClassMapAutoloader' => array(
+                array(
+                    __DIR__ . '/autoload_classmap.php'
+                )
+            ),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
