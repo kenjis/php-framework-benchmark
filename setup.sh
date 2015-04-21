@@ -101,7 +101,7 @@ composer install --no-dev --optimize-autoloader
 sed -i -e "s/{ exit(); }/{ printf(\"\\\n%' 8d:%f\", memory_get_peak_usage(true), microtime(true) - \$_SERVER['REQUEST_TIME_FLOAT']); exit(); }/" Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Http/RequestHandler.php
 
 cd ../lumen-5.0
-basename `pwd`s
+basename `pwd`
 composer install --no-dev --optimize-autoloader
 chmod o+w storage/*
 chmod o+w storage/framework/*
