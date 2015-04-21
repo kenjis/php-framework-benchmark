@@ -137,6 +137,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [CakePHP](http://cakephp.org/)
 * [Aura](http://auraphp.com/)
 * [Symfony](http://symfony.com/)
+  * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
 * [Laravel](http://laravel.com/)
 * [Zend Framework](http://framework.zend.com/)
 * [TYPO3 Flow](http://flow.typo3.org/)
