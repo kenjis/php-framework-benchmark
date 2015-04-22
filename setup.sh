@@ -92,6 +92,7 @@ composer install --no-dev --optimize-autoloader
 cd ../zf-2.4
 basename `pwd`
 composer install --no-dev --optimize-autoloader
+chmod o+w data/cache/
 
 cd ../typo3-flow-2.3
 basename `pwd`
