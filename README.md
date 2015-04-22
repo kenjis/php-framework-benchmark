@@ -135,11 +135,14 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [BEAR.Sunday](https://bearsunday.github.io/)
 * [FuelPHP](http://fuelphp.com/)
 * [CakePHP](http://cakephp.org/)
+  * https://github.com/kenjis/php-framework-benchmark/pull/5
 * [Aura](http://auraphp.com/)
 * [Symfony](http://symfony.com/)
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
+  * https://github.com/kenjis/php-framework-benchmark/pull/3
 * [Laravel](http://laravel.com/)
 * [Zend Framework](http://framework.zend.com/)
+  * https://github.com/kenjis/php-framework-benchmark/pull/15
 * [TYPO3 Flow](http://flow.typo3.org/)
 
 ## Related
