@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+// Change your time zone accordingly
+date_default_timezone_set('UTC');
+
+set_time_limit(0);
+
+(@include_once __DIR__ . '/../../vendor/autoload.php') || @include_once __DIR__ . '/../../autoload.php';
+
+defined('BASE_PATH') or define('BASE_PATH', dirname(dirname(__DIR__)));
+
+defined('CF_SYSTEM') or define('CF_SYSTEM', 'packages');
+
+defined('APP_PATH') or define('APP_PATH', 'apps');
+
+defined('DS') or define('DS', DIRECTORY_SEPARATOR);
+
+// Change your time zone accordingly
+define('SET_TIME_ZONE', 'Asia/Kolkata');
+
+define('VERSION', 'Cygnite CLI v1.3.2');
+
+use Cygnite\Console\CygniteApplication;
+
+//Lets initialize Console application
+$app = new CygniteApplication(VERSION);
+
+//Boot Strapping done! Lets Run Application.
+$app->run();
