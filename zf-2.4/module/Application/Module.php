@@ -34,7 +34,7 @@ class Module
              * The reason being, is because it doesn’t search the filesystem to attempt 
              * to resolve a class.
             */ 
-            'ZendLoaderClassMapAutoloader' => array(
+            'Zend\Loader\ClassMapAutoloader' => array(
                 array(
                     __DIR__ . '/autoload_classmap.php'
                 )
