@@ -74,7 +74,7 @@ These are my benchmarks, not yours. **I encourage you to run on your environment
 |zf-2.4             |              69.39|     1.7|       3.00|     6.0|
 |typo3-flow-2.3     |              39.87|     1.0|       5.25|    10.5|
 
-Note(1): All the results are run on php with phalcon.so. If you don't load phalcon.so, the rps except for Phalcon probably increase.
+Note(1): All the results are run on php with phalcon.so and ice.so. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase.
 
 Note(2): Only frameworks with (*) mark are optimized. Other frameworks are not optimized yet.
 
