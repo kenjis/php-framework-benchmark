@@ -181,16 +181,16 @@
         },
         {
             "name": "bear/app-meta",
-            "version": "0.1.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/BEARSunday/BEAR.AppMeta.git",
-                "reference": "f8410ec824853570274246a45a0b94b869d337fc"
+                "url": "https://github.com/bearsunday/BEAR.AppMeta.git",
+                "reference": "a70bfd5d6cd92833ffee832843f28ec8f59ad61e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BEARSunday/BEAR.AppMeta/zipball/f8410ec824853570274246a45a0b94b869d337fc",
-                "reference": "f8410ec824853570274246a45a0b94b869d337fc",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.AppMeta/zipball/a70bfd5d6cd92833ffee832843f28ec8f59ad61e",
+                "reference": "a70bfd5d6cd92833ffee832843f28ec8f59ad61e",
                 "shasum": ""
             },
             "require": {
@@ -198,11 +198,6 @@
                 "koriym/psr4list": "~1.0@dev"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "BEAR\\AppMeta\\": "src/"
@@ -210,26 +205,26 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "description": "BEAR.Sunday application meta information",
             "keywords": [
                 "BEARSunday"
             ],
-            "time": "2015-02-17 16:23:25"
+            "time": "2015-04-28 17:12:41"
         },
         {
             "name": "bear/package",
-            "version": "1.0.0-alpha.4",
+            "version": "1.0.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Package.git",
-                "reference": "60486e85851cdd9f73f48699cbb1f2328ed0da69"
+                "reference": "23f33e89289a615dbce3d045910cbf4962d7dc9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/60486e85851cdd9f73f48699cbb1f2328ed0da69",
-                "reference": "60486e85851cdd9f73f48699cbb1f2328ed0da69",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/23f33e89289a615dbce3d045910cbf4962d7dc9d",
+                "reference": "23f33e89289a615dbce3d045910cbf4962d7dc9d",
                 "shasum": ""
             },
             "require": {
@@ -238,7 +233,7 @@
                 "aura/web": "~2.0",
                 "bear/app-meta": "~0.1",
                 "bear/query-repository": "~0.1",
-                "bear/sunday": "~1.0",
+                "bear/sunday": "~1.0.0-rc",
                 "php": ">=5.5.0",
                 "ray/web-param-module": "~0.1"
             },
@@ -246,11 +241,6 @@
                 "bin/bear.env"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop-2": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "BEAR\\Package\\": "src/"
@@ -258,7 +248,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -277,31 +267,27 @@
                 "hypermedia",
                 "rest"
             ],
-            "time": "2015-03-11 04:51:37"
+            "time": "2015-04-29 15:41:03"
         },
         {
             "name": "bear/query-repository",
-            "version": "0.2.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.QueryRepository.git",
-                "reference": "fea591e64f154f8b65930cefffcf5af16c1f127f"
+                "reference": "ad280e4a94c26386949a66f55a5eae9c8d5d3381"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.QueryRepository/zipball/fea591e64f154f8b65930cefffcf5af16c1f127f",
-                "reference": "fea591e64f154f8b65930cefffcf5af16c1f127f",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.QueryRepository/zipball/ad280e4a94c26386949a66f55a5eae9c8d5d3381",
+                "reference": "ad280e4a94c26386949a66f55a5eae9c8d5d3381",
                 "shasum": ""
             },
             "require": {
-                "bear/resource": "~1.0@dev"
+                "bear/resource": "~1.0@dev",
+                "mobiledetect/mobiledetectlib": "~2.0@dev"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "0.1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "BEAR\\QueryRepository\\": "src/"
@@ -312,7 +298,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -321,20 +307,20 @@
                 }
             ],
             "description": "Resource query responsibility segregation",
-            "time": "2015-03-11 02:36:49"
+            "time": "2015-04-29 13:15:20"
         },
         {
             "name": "bear/resource",
-            "version": "1.0.2",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Resource.git",
-                "reference": "daf9d7871b3f7d3f23a20469182508d809ddc241"
+                "reference": "80890b3e509404c989aee680df89266e46614807"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/daf9d7871b3f7d3f23a20469182508d809ddc241",
-                "reference": "daf9d7871b3f7d3f23a20469182508d809ddc241",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/80890b3e509404c989aee680df89266e46614807",
+                "reference": "80890b3e509404c989aee680df89266e46614807",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +345,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -368,7 +354,6 @@
                 }
             ],
             "description": "Hypermedia framework for object as a service",
-            "homepage": "https://github.com/koriym/BEAR.Resource",
             "keywords": [
                 "HATEOAS",
                 "Object as a service",
@@ -376,20 +361,20 @@
                 "protocol",
                 "rest"
             ],
-            "time": "2015-04-06 06:37:31"
+            "time": "2015-04-29 11:32:10"
         },
         {
             "name": "bear/sunday",
-            "version": "1.0.0-rc.3",
+            "version": "1.0.0-rc.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Sunday.git",
-                "reference": "9b1891a5f8258e18f0680597b652abd572f010bb"
+                "reference": "4e8ba405d93f900f79539dbc0f10f06a945b9955"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/9b1891a5f8258e18f0680597b652abd572f010bb",
-                "reference": "9b1891a5f8258e18f0680597b652abd572f010bb",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/4e8ba405d93f900f79539dbc0f10f06a945b9955",
+                "reference": "4e8ba405d93f900f79539dbc0f10f06a945b9955",
                 "shasum": ""
             },
             "require": {
@@ -406,7 +391,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -414,16 +399,16 @@
                     "email": "akihito.koriyama@gmail.com"
                 }
             ],
-            "description": "Resource oriented framework",
-            "homepage": "https://github.com/koriym/BEAR.Sunday",
+            "description": "A resource oriented framework",
             "keywords": [
                 "aop",
                 "di",
                 "framework",
                 "hypermedia",
+                "ray",
                 "rest"
             ],
-            "time": "2015-04-06 07:23:34"
+            "time": "2015-04-29 14:56:09"
         },
         {
             "name": "doctrine/annotations",
@@ -653,6 +638,60 @@
             "time": "2014-12-07 13:10:31"
         },
         {
+            "name": "mobiledetect/mobiledetectlib",
+            "version": "2.8.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serbanghita/Mobile-Detect.git",
+                "reference": "fc81cb582c9cd9024a16e0698c02b6d3cb0229df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/fc81cb582c9cd9024a16e0698c02b6d3cb0229df",
+                "reference": "fc81cb582c9cd9024a16e0698c02b6d3cb0229df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "johnkary/phpunit-speedtrap": "~1.0@dev",
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Mobile_Detect.php"
+                ],
+                "psr-0": {
+                    "Detection": "namespaced/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serban Ghita",
+                    "email": "serbanghita@gmail.com",
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+            "homepage": "https://github.com/serbanghita/Mobile-Detect",
+            "keywords": [
+                "detect mobile devices",
+                "mobile",
+                "mobile detect",
+                "mobile detector",
+                "php mobile detect"
+            ],
+            "time": "2015-04-25 20:10:52"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "v1.2.2",
             "source": {
@@ -785,16 +824,16 @@
         },
         {
             "name": "ray/aop",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.Aop.git",
-                "reference": "fdd97c2d59d7e2cb0a12399a583b2f38d63142e9"
+                "reference": "b718e857c0a53df9287d352646aeb7594aa4009a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.Aop/zipball/fdd97c2d59d7e2cb0a12399a583b2f38d63142e9",
-                "reference": "fdd97c2d59d7e2cb0a12399a583b2f38d63142e9",
+                "url": "https://api.github.com/repos/ray-di/Ray.Aop/zipball/b718e857c0a53df9287d352646aeb7594aa4009a",
+                "reference": "b718e857c0a53df9287d352646aeb7594aa4009a",
                 "shasum": ""
             },
             "require": {
@@ -806,11 +845,6 @@
                 "ray/di": "A dependency injection framework with Ray.Aop"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop-2": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Ray\\Aop\\": "src/"
@@ -834,32 +868,63 @@
                 "aop",
                 "code-gen"
             ],
-            "time": "2015-02-28 11:17:42"
+            "time": "2015-04-26 04:09:53"
         },
         {
-            "name": "ray/di",
-            "version": "2.0.0",
+            "name": "ray/compiler",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ray-di/Ray.Di.git",
-                "reference": "0b8f613a8796cad530ddf6562ff4806349b5fea5"
+                "url": "https://github.com/ray-di/Ray.Compiler.git",
+                "reference": "680aed9693b81740d759569251c663f53ec4c75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.Di/zipball/0b8f613a8796cad530ddf6562ff4806349b5fea5",
-                "reference": "0b8f613a8796cad530ddf6562ff4806349b5fea5",
+                "url": "https://api.github.com/repos/ray-di/Ray.Compiler/zipball/680aed9693b81740d759569251c663f53ec4c75d",
+                "reference": "680aed9693b81740d759569251c663f53ec4c75d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "ray/di": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ray\\Compiler\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A dependency injection compiler for Ray.Di",
+            "keywords": [
+                "Ray.Di",
+                "code-gen",
+                "compiler"
+            ],
+            "time": "2015-05-01 00:21:56"
+        },
+        {
+            "name": "ray/di",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ray-di/Ray.Di.git",
+                "reference": "7c1a062cfebd28bb3ad9c059c982c2718b4e07f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ray-di/Ray.Di/zipball/7c1a062cfebd28bb3ad9c059c982c2718b4e07f0",
+                "reference": "7c1a062cfebd28bb3ad9c059c982c2718b4e07f0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "ray/aop": "~2.0"
+                "ray/aop": "~2.0",
+                "ray/compiler": "~0.1"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop-2": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Ray\\Di\\": "src/"
@@ -867,7 +932,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -876,32 +941,33 @@
                 }
             ],
             "description": "Guice style annotation-driven dependency injection framework",
-            "homepage": "https://github.com/koriym/Ray.Di",
+            "homepage": "https://github.com/ray-di/Ray.Di",
             "keywords": [
                 "annotations",
                 "aop",
                 "di",
-                "guice"
+                "guice",
+                "ray"
             ],
-            "time": "2015-02-28 12:55:28"
+            "time": "2015-04-30 09:08:44"
         },
         {
             "name": "ray/web-param-module",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.WebParamModule.git",
-                "reference": "c7dd0fd10a2444af1df9fca42652eb955c80a1da"
+                "reference": "9d45dcc90fd768d2aaa50852eddce9e0eb18873b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.WebParamModule/zipball/c7dd0fd10a2444af1df9fca42652eb955c80a1da",
-                "reference": "c7dd0fd10a2444af1df9fca42652eb955c80a1da",
+                "url": "https://api.github.com/repos/ray-di/Ray.WebParamModule/zipball/9d45dcc90fd768d2aaa50852eddce9e0eb18873b",
+                "reference": "9d45dcc90fd768d2aaa50852eddce9e0eb18873b",
                 "shasum": ""
             },
             "require": {
-                "bear/resource": "~1.0@dev",
-                "koriym/psr4list": "~1.0@dev"
+                "doctrine/cache": "~1.0",
+                "ray/di": "~2.0@dev"
             },
             "type": "library",
             "extra": {
@@ -911,18 +977,23 @@
             },
             "autoload": {
                 "psr-4": {
-                    "BEAR\\AppMeta\\": "src/"
-                }
+                    "Ray\\WebContextParam\\": "src/"
+                },
+                "files": [
+                    "doctrine_annotations.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "BEAR.Sunday application meta information",
+            "description": "Binds the value(s) of a web context to method parameter.",
             "keywords": [
-                "BEARSunday"
+                "Ray.Di module",
+                "Web context",
+                "testability"
             ],
-            "time": "2015-02-17 11:16:56"
+            "time": "2015-03-01 16:08:20"
         },
         {
             "name": "rize/uri-template",
