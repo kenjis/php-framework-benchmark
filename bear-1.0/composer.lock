@@ -181,16 +181,16 @@
         },
         {
             "name": "bear/app-meta",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.AppMeta.git",
-                "reference": "a70bfd5d6cd92833ffee832843f28ec8f59ad61e"
+                "reference": "5648b8520108110ac90cfd5003642cee6e063ac5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.AppMeta/zipball/a70bfd5d6cd92833ffee832843f28ec8f59ad61e",
-                "reference": "a70bfd5d6cd92833ffee832843f28ec8f59ad61e",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.AppMeta/zipball/5648b8520108110ac90cfd5003642cee6e063ac5",
+                "reference": "5648b8520108110ac90cfd5003642cee6e063ac5",
                 "shasum": ""
             },
             "require": {
@@ -211,20 +211,20 @@
             "keywords": [
                 "BEARSunday"
             ],
-            "time": "2015-04-28 17:12:41"
+            "time": "2015-05-01 17:36:24"
         },
         {
             "name": "bear/package",
-            "version": "1.0.0-beta",
+            "version": "1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Package.git",
-                "reference": "23f33e89289a615dbce3d045910cbf4962d7dc9d"
+                "reference": "2de4a232d3a9dd2f7cf08383b996ef743aa835d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/23f33e89289a615dbce3d045910cbf4962d7dc9d",
-                "reference": "23f33e89289a615dbce3d045910cbf4962d7dc9d",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/2de4a232d3a9dd2f7cf08383b996ef743aa835d9",
+                "reference": "2de4a232d3a9dd2f7cf08383b996ef743aa835d9",
                 "shasum": ""
             },
             "require": {
@@ -267,7 +267,7 @@
                 "hypermedia",
                 "rest"
             ],
-            "time": "2015-04-29 15:41:03"
+            "time": "2015-05-01 15:15:51"
         },
         {
             "name": "bear/query-repository",
@@ -365,16 +365,16 @@
         },
         {
             "name": "bear/sunday",
-            "version": "1.0.0-rc.4",
+            "version": "1.0.0-rc.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Sunday.git",
-                "reference": "4e8ba405d93f900f79539dbc0f10f06a945b9955"
+                "reference": "c6b39ce700e3f2ff427d1a77c3629b60bb54b585"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/4e8ba405d93f900f79539dbc0f10f06a945b9955",
-                "reference": "4e8ba405d93f900f79539dbc0f10f06a945b9955",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/c6b39ce700e3f2ff427d1a77c3629b60bb54b585",
+                "reference": "c6b39ce700e3f2ff427d1a77c3629b60bb54b585",
                 "shasum": ""
             },
             "require": {
@@ -408,7 +408,7 @@
                 "ray",
                 "rest"
             ],
-            "time": "2015-04-29 14:56:09"
+            "time": "2015-04-30 00:27:16"
         },
         {
             "name": "doctrine/annotations",
