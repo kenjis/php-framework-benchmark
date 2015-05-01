@@ -111,3 +111,7 @@ cd ../aura-2.0
 basename `pwd`
 composer install --no-dev --optimize-autoloader
 chmod o+w tmp/cache/ tmp/log/
+
+cd ../cygnite-1.3
+basename `pwd`
+composer install --no-dev --optimize-autoloader

@@ -53,6 +53,10 @@ fw="silex-1.2"
 url="$base/$fw/web/index.php/hello/index"
 benchmark "$fw" "$url"
 
+fw="cygnite-1.3"
+url="$base/$fw/index.php/hello/index"
+benchmark "$fw" "$url"
+
 fw="bear-1.0"
 url="$base/$fw/var/www/index.php/hello"
 benchmark "$fw" "$url"
