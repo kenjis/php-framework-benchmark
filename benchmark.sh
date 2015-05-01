@@ -6,3 +6,5 @@ cd `dirname $0`
 cd benchmarks
 
 sh hello_world.sh "$base"
+
+php ../bin/show_results_table.php
