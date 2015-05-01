@@ -33,6 +33,10 @@ fw="phalcon-2.0"
 url="$base/$fw/public/index.php?_url=/hello/index"
 benchmark "$fw" "$url"
 
+fw="ice-1.0"
+url="$base/$fw/public/index.php?_url=/hello/index"
+benchmark "$fw" "$url"
+
 fw="slim-2.6"
 url="$base/$fw/index.php/hello/index"
 benchmark "$fw" "$url"
