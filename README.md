@@ -31,14 +31,16 @@ If you find something wrong with my code, please feel free to send Pull Requests
 ## Frameworks to Benchmark
 
 * Phalcon 2.0.0-RC1
+* Ice 1.0.10
 * Slim 2.6.2
 * CodeIgniter 3.0.0
-* Lumen 5.0.0
+* Lumen 5.0.8
 * Yii 2.0.4
 * Silex 1.2.4
-* BEAR.Sunday 1.0.0-rc3
+* Cygnite 1.3.1
+* BEAR.Sunday 1.0.0-rc.5
 * FuelPHP 1.8-dev
-* CakePHP 3.0.1
+* CakePHP 3.0.2
 * Aura 2.0.2
 * Symfony 2.6.6
 * Laravel 5.0.27
@@ -46,8 +48,6 @@ If you find something wrong with my code, please feel free to send Pull Requests
 * TYPO3 Flow 2.3.3
 
 ## Results
-
-These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
 ### Benchmarking Environment
 
@@ -58,26 +58,30 @@ These are my benchmarks, not yours. **I encourage you to run on your environment
 
 ### Hello World Benchmark
 
-(2015/04/21)
+These are my benchmarks, not yours. **I encourage you to run on your environments.**
+
+(2015/05/02)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,505.93|    35.3|       0.50|     1.0|
-|slim-2.6           |             831.64|    19.5|       0.50|     1.0|
-|codeigniter-3.0    |             737.73|    17.3|       0.50|     1.0|
-|lumen-5.0          |             369.11|     8.7|       1.00|     2.0|
-|yii-2.0            |             361.72|     8.5|       1.75|     3.5|
-|silex-1.2          |             358.56|     8.4|       1.00|     2.0|
-|bear-1.0           |             351.69|     8.3|       1.00|     2.0|
-|fuel-1.8-dev       |             321.27|     7.5|       0.75|     1.5|
-|cake-3.0           |             275.10|     6.5|       1.25|     2.5|
-|aura-2.0           |             210.18|     4.9|       1.00|     2.0|
-|symfony-2.6        |             122.50|     2.9|       3.00|     6.0|
-|laravel-5.0        |              64.04|     1.5|       2.75|     5.5|
-|zf-2.4             |              72.88|     1.7|       3.00|     6.0|
-|typo3-flow-2.3     |              42.61|     1.0|       5.25|    10.5|
+|phalcon-2.0        |           1,433.32|    35.4|       0.50|     1.0|
+|ice-1.0            |           1,101.46|    27.2|       0.50|     1.0|
+|slim-2.6           |             795.53|    19.7|       0.50|     1.0|
+|codeigniter-3.0    |             715.65|    17.7|       0.50|     1.0|
+|lumen-5.0          |             362.13|     9.0|       1.00|     2.0|
+|yii-2.0            |             358.11|     8.9|       1.75|     3.5|
+|silex-1.2          |             343.66|     8.5|       1.00|     2.0|
+|cygnite-1.3        |             344.60|     8.5|       0.75|     1.5|
+|bear-1.0           |             344.94|     8.5|       1.00|     2.0|
+|fuel-1.8-dev       |             299.44|     7.4|       0.75|     1.5|
+|cake-3.0           |             261.22|     6.5|       1.25|     2.5|
+|aura-2.0           |             204.90|     5.1|       1.00|     2.0|
+|symfony-2.6        |             100.28|     2.5|       3.00|     6.0|
+|laravel-5.0        |              71.14|     1.8|       2.75|     5.5|
+|zf-2.4             |              75.75|     1.9|       3.00|     6.0|
+|typo3-flow-2.3     |              40.46|     1.0|       5.25|    10.5|
 
-Note(1): All the results are run on php with phalcon.so and ice.so. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase.
+Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
 ## How to Benchmark
 
@@ -118,11 +122,13 @@ If you want to see current configuration, run `sudo sysctl -a`.
 ## Reference
 
 * [Phalcon](http://phalconphp.com/)
+* [Ice](http://www.iceframework.org/)
 * [Slim](http://www.slimframework.com/)
 * [CodeIgniter](http://www.codeigniter.com/)
 * [Lumen](http://lumen.laravel.com/)
 * [Yii](http://www.yiiframework.com/)
 * [Silex](http://silex.sensiolabs.org/)
+* [Cygnite](http://www.cygniteframework.com/)
 * [BEAR.Sunday](https://bearsunday.github.io/)
 * [FuelPHP](http://fuelphp.com/)
 * [CakePHP](http://cakephp.org/)
