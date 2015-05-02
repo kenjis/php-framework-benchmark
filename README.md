@@ -38,7 +38,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 * Yii 2.0.4
 * Silex 1.2.4
 * Cygnite 1.3.1
-* BEAR.Sunday 1.0.0-rc.5
+* BEAR.Sunday 1.0.0-rc.3
 * FuelPHP 1.8-dev
 * CakePHP 3.0.2
 * Aura 2.0.2
