@@ -1,12 +1,14 @@
 <?php
 
-function build_table($results)
+function build_table($results, $header = true)
 {
     $table = '';
 
-    $table .= '|framework          |requests per second|relative|peak memory|relative|' . "\n";
-    $table .= '|-------------------|------------------:|-------:|----------:|-------:|' . "\n";
-
+    if ($header) {
+        $table .= '|framework          |requests per second|relative|peak memory|relative|' . "\n";
+        $table .= '|-------------------|------------------:|-------:|----------:|-------:|' . "\n";
+    }
+    
     foreach ($results as $fw => $result) {
         $table .= sprintf(
             "|%-19s|%19s|%8s|%11s|%8s|\n",
