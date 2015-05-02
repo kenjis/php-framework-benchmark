@@ -84,7 +84,20 @@ Note(2): Only frameworks with (*) mark are optimized, and optimized does not mea
 
 #### Comparision before and after optimization
 
-@TODO
+|framework          |requests per second|relative|peak memory|relative|
+|-------------------|------------------:|-------:|----------:|-------:|
+|cake-3.0           |             261.22|     1.0|       1.25|     1.3|
+|cake-3.0 (*)       |             345.06|     1.3|       1.00|     1.0|
+
+|framework          |requests per second|relative|peak memory|relative|
+|-------------------|------------------:|-------:|----------:|-------:|
+|symfony-2.6        |             100.28|     1.0|       3.00|     1.5|
+|symfony-2.6 (*)    |             181.19|     1.8|       2.00|     1.0|
+
+|framework          |requests per second|relative|peak memory|relative|
+|-------------------|------------------:|-------:|----------:|-------:|
+|zf-2.4             |              75.75|     1.0|       3.00|     1.0|
+|zf-2.4 (*)         |              75.24|     1.0|       3.00|     1.0|
 
 ## How to Benchmark
 
