@@ -110,6 +110,7 @@ $url_file = __DIR__ . '/output/urls.log';
 if (file_exists($url_file)) {
     $urls = file($url_file);
     foreach ($urls as $url) {
+        $url = str_replace('127.0.0.1',$_SERVER['HTTP_HOST'],$url);
         echo '<li><a href="' . $url . '">' . $url . '</a></li>' . "\n";
     }
 }
