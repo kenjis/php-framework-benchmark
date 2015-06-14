@@ -28,3 +28,9 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+
+printf(
+    "\n%' 8d:%f",
+    memory_get_peak_usage(true),
+    microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']
+);
