@@ -5,8 +5,8 @@ if [ ! `which composer` ]; then
     exit 1;
 fi
 
-if [ ! `which ab` ]; then
-    echo "ab command not found."
+if [ ! `which siege` ]; then
+    echo "siege command not found."
     exit 1;
 fi
 

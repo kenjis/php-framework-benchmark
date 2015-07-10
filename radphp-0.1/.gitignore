@@ -1,0 +1,14 @@
+var/tmp/*
+!var/tmp/empty
+var/cache/*
+!var/cache/empty
+var/log/*
+!var/log/empty
+src/*
+!src/App
+
+vendor
+.idea
+.vagrant
+composer.lock
+composer.phar
