@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "58db0b898525da89f544af354027defc",
+    "content-hash": "802b6d81f7a95fadfbb6fac07ba22430",
+    "packages": [
+        {
+            "name": "nofussframework/nofussframework",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jarnix/nofussframework.git",
+                "reference": "008ae56380caeaa24fe33116e161bbd13980e785"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jarnix/nofussframework/zipball/008ae56380caeaa24fe33116e161bbd13980e785",
+                "reference": "008ae56380caeaa24fe33116e161bbd13980e785",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "NoFussFramework",
+            "homepage": "http://www.nofussframework.com/",
+            "keywords": [
+                "framework",
+                "nofussframework"
+            ],
+            "time": "2015-09-25 15:14:22"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4.0"
+    },
+    "platform-dev": []
+}

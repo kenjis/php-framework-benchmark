@@ -1,0 +1,14 @@
+{
+    "name": "nofussframework/empty-website",
+    "description": "Skeleton Application for NoFussFramework",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "nofussframework"
+    ],
+    "homepage": "http://www.nofussframework.com/",
+    "require": {
+        "php": ">=5.4.0",
+        "nofussframework/nofussframework": "~1.2.3"
+    }
+}
