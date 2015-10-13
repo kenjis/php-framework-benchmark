@@ -17,9 +17,11 @@ cake-3.0
 aura-2.0
 #bear-0.10
 #symfony-2.5
-symfony-2.6
+#symfony-2.6
+symfony-2.7
 #laravel-4.2
-laravel-5.0
+#laravel-5.0
+laravel-5.1
 #fuel-2.0-dev
 zf-2.4
 typo3-flow-2.3
