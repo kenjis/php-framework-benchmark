@@ -6,6 +6,7 @@ list="
 phalcon-2.0
 ice-1.0
 slim-2.6
+slim-3.0
 codeigniter-3.0
 lumen-5.0
 yii-2.0
