@@ -17,6 +17,7 @@ cygnite-1.3
 lumen-5.0
 fuel-1.8-dev
 cake-3.0
+cake-3.1
 aura-2.0
 #bear-0.10
 #symfony-2.5
