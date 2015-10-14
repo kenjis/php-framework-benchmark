@@ -2,7 +2,6 @@
 
 namespace My\Hello;
 
-use BEAR\AppMeta\AppMeta;
 use BEAR\Package\Bootstrap;
 use BEAR\Sunday\Extension\Application\AbstractApp;
 
@@ -24,7 +23,7 @@ class AppModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testNewApp($contexts)
     {
-        $app = (new Bootstrap())->newApp(new AppMeta(__NAMESPACE__), $contexts);
+        $app = (new Bootstrap())->getApp(__NAMESPACE__, $contexts);
         $this->assertInstanceOf(AbstractApp::class, $app);
     }
 }
