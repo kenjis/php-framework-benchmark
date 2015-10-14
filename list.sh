@@ -6,13 +6,13 @@ list="
 phalcon-2.0
 ice-1.0
 slim-2.6
-slim-3.0
 codeigniter-3.0
-lumen-5.0
+slim-3.0
+bear-1.0
 yii-2.0
 silex-1.2
 cygnite-1.3
-bear-1.0
+lumen-5.0
 fuel-1.8-dev
 cake-3.0
 aura-2.0
