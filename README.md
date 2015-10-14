@@ -30,20 +30,21 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ## Frameworks to Benchmark
 
-* Phalcon 2.0.0-RC1
-* Ice 1.0.10
+* Phalcon 2.0.8
+* Ice 1.0.13
 * Slim 2.6.2
+* Slim 3.0-RC1
 * CodeIgniter 3.0.0
 * Lumen 5.0.8
 * Yii 2.0.4
-* Silex 1.2.4
+* Silex 1.2.5
 * Cygnite 1.3.1
-* BEAR.Sunday 1.0.0-rc.3
+* BEAR.Sunday 1.0.1
 * FuelPHP 1.8-dev
-* CakePHP 3.0.2
+* CakePHP 3.0.14
 * Aura 2.0.2
-* Symfony 2.6.6
-* Laravel 5.0.27
+* Symfony 2.7.5
+* Laravel 5.1.19
 * Zend Framework 2.4.0
 * TYPO3 Flow 2.3.3
 
@@ -51,8 +52,8 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ### Benchmarking Environment
 
-* CentOS 6.5 64bit (VM; VirtualBox)
-  * PHP 5.5.23 (Remi RPM)
+* CentOS 6.6 64bit (VM; VirtualBox)
+  * PHP 5.5.30 (Remi RPM)
     * Zend OPcache v7.0.4-dev
   * Apache 2.2
 
@@ -60,26 +61,27 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
-(2015/05/02)
+(2015/10/14)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,433.32|    35.4|       0.50|     1.0|
-|ice-1.0            |           1,101.46|    27.2|       0.50|     1.0|
-|slim-2.6           |             795.53|    19.7|       0.50|     1.0|
-|codeigniter-3.0    |             715.65|    17.7|       0.50|     1.0|
-|lumen-5.0          |             362.13|     9.0|       1.00|     2.0|
-|yii-2.0            |             358.11|     8.9|       1.75|     3.5|
-|silex-1.2          |             343.66|     8.5|       1.00|     2.0|
-|cygnite-1.3        |             344.60|     8.5|       0.75|     1.5|
-|bear-1.0           |             344.94|     8.5|       1.00|     2.0|
-|fuel-1.8-dev       |             299.44|     7.4|       0.75|     1.5|
-|cake-3.0           |             261.22|     6.5|       1.25|     2.5|
-|aura-2.0           |             204.90|     5.1|       1.00|     2.0|
-|symfony-2.6        |             100.28|     2.5|       3.00|     6.0|
-|laravel-5.0        |              71.14|     1.8|       2.75|     5.5|
-|zf-2.4             |              75.75|     1.9|       3.00|     6.0|
-|typo3-flow-2.3     |              40.46|     1.0|       5.25|    10.5|
+|phalcon-2.0        |           1,418.87|    35.8|       0.50|     1.0|
+|ice-1.0            |           1,182.30|    29.9|       0.50|     1.0|
+|slim-2.6           |             795.78|    20.1|       0.50|     1.0|
+|codeigniter-3.0    |             719.76|    18.2|       0.50|     1.0|
+|slim-3.0           |             544.03|    13.7|       0.75|     1.5|
+|bear-1.0           |             449.94|    11.4|       1.00|     2.0|
+|yii-2.0            |             368.59|     9.3|       1.75|     3.5|
+|silex-1.2          |             354.93|     9.0|       1.00|     2.0|
+|cygnite-1.3        |             354.57|     9.0|       0.75|     1.5|
+|lumen-5.0          |             350.33|     8.8|       1.25|     2.5|
+|fuel-1.8-dev       |             310.30|     7.8|       0.75|     1.5|
+|cake-3.0           |             262.46|     6.6|       1.25|     2.5|
+|aura-2.0           |             210.57|     5.3|       1.00|     2.0|
+|symfony-2.7        |              95.72|     2.4|       3.50|     7.0|
+|laravel-5.1        |              82.22|     2.1|       2.75|     5.5|
+|zf-2.4             |              69.53|     1.8|       3.25|     6.5|
+|typo3-flow-2.3     |              39.59|     1.0|       5.25|    10.5|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
@@ -123,6 +125,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 
 * [Phalcon](http://phalconphp.com/)
 * [Ice](http://www.iceframework.org/)
+  * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
 * [Slim](http://www.slimframework.com/)
 * [CodeIgniter](http://www.codeigniter.com/)
 * [Lumen](http://lumen.laravel.com/)
