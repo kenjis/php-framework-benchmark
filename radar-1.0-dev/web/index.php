@@ -30,15 +30,14 @@ $adr->middle('Radar\Adr\Handler\ActionHandler');
 /**
  * Routes
  */
-$adr->get('Hello', '/{name}?', function (array $input) {
+$adr->get('Hello', '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index', function (array $input) {
         $payload = new Aura\Payload\Payload();
         return $payload
             ->setStatus($payload::SUCCESS)
             ->setOutput([
-                'phrase' => 'Hello ' . $input['name']
+                'value' => 'Hello World!'
             ]);
-    })
-    ->defaults(['name' => 'world']);
+    });
 
 /**
  * Run
