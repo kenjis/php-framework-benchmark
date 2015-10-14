@@ -9,6 +9,6 @@
     "homepage": "http://www.nofussframework.com/",
     "require": {
         "php": ">=5.4.0",
-        "nofussframework/nofussframework": "~1.2.3"
+        "nofussframework/nofussframework": "=1.2.5"
     }
 }
