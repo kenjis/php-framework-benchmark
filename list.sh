@@ -9,6 +9,7 @@ slim-2.6
 codeigniter-3.0
 slim-3.0
 bear-1.0
+radar-1.0-dev
 yii-2.0
 silex-1.2
 cygnite-1.3
