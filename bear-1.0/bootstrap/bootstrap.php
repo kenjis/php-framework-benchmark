@@ -5,20 +5,18 @@
  */
 namespace My\Hello;
 
-use BEAR\AppMeta\AppMeta;
 use BEAR\Package\Bootstrap;
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Doctrine\Common\Cache\ApcCache;
 
 load: {
-    $dir = dirname(__DIR__);
-    $loader = require $dir . '/vendor/autoload.php';
+    /* @var $loader \Composer\Autoload\ClassLoader */
+    $loader = require dirname(__DIR__) . '/vendor/autoload.php';
     AnnotationRegistry::registerLoader([$loader, 'loadClass']);
 }
 
 route: {
-    /** @var $app \BEAR\Sunday\Extension\Application\AbstractApp */
-    $app = (new Bootstrap)->newApp(new AppMeta(__NAMESPACE__), $context);
+    $app = (new Bootstrap)->getApp(__NAMESPACE__, $context);
+    /* @var $app AbstractApp \BEAR\Sunday\Extension\Application\AbstractApp */
     $request = $app->router->match($GLOBALS, $_SERVER);
 }
 
@@ -28,12 +26,13 @@ $pagePath = preg_replace('!/php-framework-benchmark/bear-1.0/var/www/index.php!'
 //var_dump($pagePath); exit;
 
 try {
-    /** @var $page \BEAR\Resource\Request */
+    // resource request
     $page = $app->resource
         ->{$request->method}
         ->uri($pagePath)
         ->withQuery($request->query)
         ->request();
+    /* @var $page \BEAR\Resource\Request */
 
     // representation transfer
     $page()->transfer($app->responder, $_SERVER);
