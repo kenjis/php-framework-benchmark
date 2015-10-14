@@ -3,7 +3,7 @@
 return array(
     array(
         'name' => 'home',
-        'regexp' => '*',
+        'regexp' => 'home/index',
         'controller' => 'home/index/index'
     )
 );
