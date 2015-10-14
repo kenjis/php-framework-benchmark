@@ -41,3 +41,4 @@ printf(
     memory_get_peak_usage(true),
     microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']
 );
+

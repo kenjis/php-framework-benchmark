@@ -9,7 +9,7 @@ slim-2.6
 codeigniter-3.0
 lumen-5.0
 yii-2.0
-#silex-1.2
+silex-1.2
 cygnite-1.3
 bear-1.0
 fuel-1.8-dev
