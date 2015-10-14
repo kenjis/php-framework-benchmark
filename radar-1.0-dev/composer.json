@@ -1,0 +1,24 @@
+{
+    "name": "radar/project",
+    "type": "project",
+    "description": "An Action-Domain-Responder project skeleton.",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "radar/adr": "~1.0",
+        "relay/middleware": "~1.0",
+        "josegonzalez/dotenv": "~1.0",
+        "zendframework/zend-diactoros": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd" : [
+            "php --run \"touch('.env');\""
+        ]
+    },
+    "minimum-stability": "dev"
+}
