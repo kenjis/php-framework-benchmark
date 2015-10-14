@@ -20,7 +20,7 @@ if [ $# -eq 0 ]; then
     . ./list.sh
     targets="$list"
 else
-    targets="$@"
+    targets="${@%/}"
 fi
 
 for fw in $targets
