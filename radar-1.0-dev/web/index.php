@@ -30,14 +30,11 @@ $adr->middle('Radar\Adr\Handler\ActionHandler');
 /**
  * Routes
  */
-$adr->get('Hello', '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index', function (array $input) {
-        $payload = new Aura\Payload\Payload();
-        return $payload
-            ->setStatus($payload::SUCCESS)
-            ->setOutput([
-                'value' => 'Hello World!'
-            ]);
-    });
+$adr->get(
+    'Hello',
+    '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index',
+     'Domain\Hello\HelloApplicationService'
+);
 
 /**
  * Run
