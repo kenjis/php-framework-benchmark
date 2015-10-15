@@ -3,7 +3,7 @@
 return array(
     array(
         'name' => 'home',
-        'regexp' => 'home/index',
+        'regexp' => 'nofussframework-1.2/html/index.php/hello/index',
         'controller' => 'home/index/index'
     )
 );
