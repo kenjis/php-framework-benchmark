@@ -16,3 +16,9 @@ $container = require 'config/container.php';
 /** @var \Zend\Expressive\Application $app */
 $app = $container->get('Zend\Expressive\Application');
 $app->run();
+
+printf(
+    "\n%' 8d:%f",
+    memory_get_peak_usage(true),
+    microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']
+);
