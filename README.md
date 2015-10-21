@@ -65,6 +65,8 @@ These are my benchmarks, not yours. **I encourage you to run on your environment
 
 (2015/10/21)
 
+![Benchmark Results Graph](https://pbs.twimg.com/media/CR0Z69AU8AAfQO1.png)
+
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
 |phalcon-2.0        |           1,533.02|    37.5|       0.50|     1.0|
