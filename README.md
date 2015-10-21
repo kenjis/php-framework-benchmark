@@ -1,8 +1,8 @@
 # PHP Framework Benchmark
 
-This project attempts to mesure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
+This project attempts to measure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
 
-So I think the minimun applications to benchmark should not include:
+So I think the minimum applications to benchmark should not include:
 
 * cost of template engine (HTML output)
 * cost of database manipulation
@@ -30,23 +30,25 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ## Frameworks to Benchmark
 
-* Phalcon 2.0.8
-* Ice 1.0.13
-* Slim 2.6.2
-* Slim 3.0-RC1
-* CodeIgniter 3.0.0
-* Lumen 5.0.8
-* Yii 2.0.4
-* Silex 1.2.5
-* Cygnite 1.3.1
-* BEAR.Sunday 1.0.1
-* FuelPHP 1.8-dev
-* CakePHP 3.0.14
-* Aura 2.0.2
-* Symfony 2.7.5
-* Laravel 5.1.19
-* Zend Framework 2.4.0
-* TYPO3 Flow 2.3.3
+1. Phalcon 2.0.8
+2. Ice 1.0.13
+3. Slim 2.6.2
+4. CodeIgniter 3.0.0
+5. NoFussFramework 1.2.3
+6. Slim 3.0.0-RC1
+7. BEAR.Sunday 1.0.1
+8. Radar 1.0.0-dev
+9. Yii 2.0.6
+10. Lumen 5.0.8
+11. Silex 1.3.4
+12. Cygnite 1.3.1
+13. FuelPHP 1.8-dev
+14. Aura 2.0.2
+15. CakePHP 3.1.1
+16. Symfony 2.7.5
+17. Laravel 5.1.19
+18. Zend Framework 2.4.0
+19. TYPO3 Flow 2.3.6
 
 ## Results
 
@@ -61,27 +63,29 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
-(2015/10/14)
+(2015/10/21)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,418.87|    35.8|       0.50|     1.0|
-|ice-1.0            |           1,182.30|    29.9|       0.50|     1.0|
-|slim-2.6           |             795.78|    20.1|       0.50|     1.0|
-|codeigniter-3.0    |             719.76|    18.2|       0.50|     1.0|
-|slim-3.0           |             544.03|    13.7|       0.75|     1.5|
-|bear-1.0           |             449.94|    11.4|       1.00|     2.0|
-|yii-2.0            |             368.59|     9.3|       1.75|     3.5|
-|silex-1.2          |             354.93|     9.0|       1.00|     2.0|
-|cygnite-1.3        |             354.57|     9.0|       0.75|     1.5|
-|lumen-5.0          |             350.33|     8.8|       1.25|     2.5|
-|fuel-1.8-dev       |             310.30|     7.8|       0.75|     1.5|
-|cake-3.0           |             262.46|     6.6|       1.25|     2.5|
-|aura-2.0           |             210.57|     5.3|       1.00|     2.0|
-|symfony-2.7        |              95.72|     2.4|       3.50|     7.0|
-|laravel-5.1        |              82.22|     2.1|       2.75|     5.5|
-|zf-2.4             |              69.53|     1.8|       3.25|     6.5|
-|typo3-flow-2.3     |              39.59|     1.0|       5.25|    10.5|
+|phalcon-2.0        |           1,533.02|    37.5|       0.50|     1.0|
+|ice-1.0            |           1,229.68|    30.1|       0.50|     1.0|
+|slim-2.6           |             773.15|    18.9|       0.50|     1.0|
+|codeigniter-3.0    |             729.73|    17.9|       0.50|     1.0|
+|nofussframework-1.2|             608.67|    14.9|       0.50|     1.0|
+|slim-3.0           |             570.34|    14.0|       0.75|     1.5|
+|bear-1.0           |             469.80|    11.5|       1.00|     2.0|
+|radar-1.0-dev      |             380.83|     9.3|       0.75|     1.5|
+|yii-2.0            |             377.08|     9.2|       1.75|     3.5|
+|lumen-5.0          |             370.59|     9.1|       1.25|     2.5|
+|silex-1.3          |             358.22|     8.8|       1.00|     2.0|
+|cygnite-1.3        |             351.00|     8.6|       1.00|     2.0|
+|fuel-1.8-dev       |             326.63|     8.0|       0.75|     1.5|
+|aura-2.0           |             216.28|     5.3|       1.00|     2.0|
+|cake-3.1           |             206.28|     5.0|       1.50|     3.0|
+|symfony-2.7        |             106.60|     2.6|       3.25|     6.5|
+|laravel-5.1        |              92.90|     2.3|       2.75|     5.5|
+|zf-2.4             |              76.40|     1.9|       3.25|     6.5|
+|typo3-flow-2.3     |              40.87|     1.0|       5.50|    11.0|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
@@ -128,14 +132,16 @@ If you want to see current configuration, run `sudo sysctl -a`.
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
 * [Slim](http://www.slimframework.com/)
 * [CodeIgniter](http://www.codeigniter.com/)
-* [Lumen](http://lumen.laravel.com/)
+* [NoFussFramework](http://www.nofussframework.com/)
+* [BEAR.Sunday](https://bearsunday.github.io/)
+* [Radar](https://github.com/radarphp/Radar.Project)
 * [Yii](http://www.yiiframework.com/)
+* [Lumen](http://lumen.laravel.com/)
 * [Silex](http://silex.sensiolabs.org/)
 * [Cygnite](http://www.cygniteframework.com/)
-* [BEAR.Sunday](https://bearsunday.github.io/)
 * [FuelPHP](http://fuelphp.com/)
-* [CakePHP](http://cakephp.org/)
 * [Aura](http://auraphp.com/)
+* [CakePHP](http://cakephp.org/)
 * [Symfony](http://symfony.com/)
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
 * [Laravel](http://laravel.com/)
