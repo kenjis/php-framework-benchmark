@@ -22,7 +22,7 @@ return [
         ],
         [
             'name' => 'hello',
-            'path' => '/hello/index',
+            'path' => '/php-framework-benchmark/ze-1.0/public/index.php/hello/index',
             'middleware' => App\Action\HelloAction::class,
             'allowed_methods' => ['GET'],
         ],
