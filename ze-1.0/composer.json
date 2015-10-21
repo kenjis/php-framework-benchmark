@@ -1,0 +1,42 @@
+{
+    "name": "zendframework/zend-expressive-skeleton",
+    "type": "project",
+    "homepage": "https://github.com/zendframework/zend-expressive-skeleton",
+    "license": "BSD-3-CLAUSE",
+    "authors": [
+        {
+            "name": "Geert Eltink",
+            "homepage": "https://xtreamwayz.github.io/"
+        }
+    ],
+    "require": {
+        "roave/security-advisories": "dev-master",
+        "zendframework/zend-expressive": "1.0.0rc2",
+        "zendframework/zend-stdlib": "~2.7",
+        "zendframework/zend-expressive-fastroute": "^0.2",
+        "zendframework/zend-servicemanager": "^2.5",
+        "ocramius/proxy-manager": "^1.0"
+    },
+    "require-dev": {
+        "composer/composer": ">=1.0.0-alpha10",
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^2.3",
+        "filp/whoops": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppTest\\": "test/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "php vendor/squizlabs/php_codesniffer/scripts/phpcs",
+            "php vendor/phpunit/phpunit/phpunit"
+        ]
+    }
+}
