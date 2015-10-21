@@ -1,8 +1,8 @@
 # PHP Framework Benchmark
 
-This project attempts to mesure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
+This project attempts to measure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
 
-So I think the minimun applications to benchmark should not include:
+So I think the minimum applications to benchmark should not include:
 
 * cost of template engine (HTML output)
 * cost of database manipulation
@@ -134,6 +134,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 
 * [Phalcon](http://phalconphp.com/)
 * [Ice](http://www.iceframework.org/)
+  * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
 * [Slim](http://www.slimframework.com/)
 * [CodeIgniter](http://www.codeigniter.com/)
 * [Lumen](http://lumen.laravel.com/)

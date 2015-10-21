@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    # turn on rewriting
+    RewriteEngine On
+
+    # turn empty requests into requests for "index.php",
+    # keeping the query string intact
+    RewriteRule ^$ index.php [QSA]
+
+    # for all files not found in the file system,
+    # reroute to "index.php" bootstrap script,
+    # keeping the query string intact.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
