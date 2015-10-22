@@ -27,6 +27,10 @@ $di->set('dispatcher', function () {
 
 $di->set('router', function () {
     $router = new \Ice\Mvc\Router();
+    $router->setOptions([
+        'cache' => true,
+        'cacheFile' => __DIR__ . '/Cache/routes.php'
+    ]);
     $router->setRoutes([
         // The default routes
         ['GET', '/{controller:[a-z]+}/{action:[a-z]+[/]?}'],
