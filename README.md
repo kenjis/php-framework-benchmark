@@ -31,13 +31,13 @@ If you find something wrong with my code, please feel free to send Pull Requests
 ## Frameworks to Benchmark
 
 1. Phalcon 2.0.8
-1. Ice 1.0.13
+1. Ice 1.0.34
 1. Slim 2.6.2
 1. CodeIgniter 3.0.0
 1. NoFussFramework 1.2.3
 1. Slim 3.0.0-RC1
 1. BEAR.Sunday 1.0.1
-1. zend-expressive 1.0.0rc2 (Comming Soon)
+1. zend-expressive 1.0.0rc2
 1. Radar 1.0.0-dev
 1. Yii 2.0.6
 1. Lumen 5.0.8
@@ -64,31 +64,32 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
-(2015/10/21)
+(2015/10/22)
 
-![Benchmark Results Graph](https://pbs.twimg.com/media/CR0Z69AU8AAfQO1.png)
+![Benchmark Results Graph](https://pbs.twimg.com/media/CR6F0mKUYAAzOJE.png)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,533.02|    37.5|       0.50|     1.0|
-|ice-1.0            |           1,229.68|    30.1|       0.50|     1.0|
-|slim-2.6           |             773.15|    18.9|       0.50|     1.0|
-|codeigniter-3.0    |             729.73|    17.9|       0.50|     1.0|
-|nofussframework-1.2|             608.67|    14.9|       0.50|     1.0|
-|slim-3.0           |             570.34|    14.0|       0.75|     1.5|
-|bear-1.0           |             469.80|    11.5|       1.00|     2.0|
-|radar-1.0-dev      |             380.83|     9.3|       0.75|     1.5|
-|yii-2.0            |             377.08|     9.2|       1.75|     3.5|
-|lumen-5.0          |             370.59|     9.1|       1.25|     2.5|
-|silex-1.3          |             358.22|     8.8|       1.00|     2.0|
-|cygnite-1.3        |             351.00|     8.6|       1.00|     2.0|
-|fuel-1.8-dev       |             326.63|     8.0|       0.75|     1.5|
-|aura-2.0           |             216.28|     5.3|       1.00|     2.0|
-|cake-3.1           |             206.28|     5.0|       1.50|     3.0|
-|symfony-2.7        |             106.60|     2.6|       3.25|     6.5|
-|laravel-5.1        |              92.90|     2.3|       2.75|     5.5|
-|zf-2.4             |              76.40|     1.9|       3.25|     6.5|
-|typo3-flow-2.3     |              40.87|     1.0|       5.50|    11.0|
+|phalcon-2.0        |           1,523.55|    38.2|       0.50|     1.0|
+|ice-1.0            |           1,275.87|    32.0|       0.50|     1.0|
+|slim-2.6           |             812.56|    20.4|       0.50|     1.0|
+|codeigniter-3.0    |             732.62|    18.4|       0.50|     1.0|
+|nofuss-1.2         |             632.46|    15.9|       0.50|     1.0|
+|slim-3.0           |             567.68|    14.2|       0.75|     1.5|
+|bear-1.0           |             472.28|    11.9|       1.00|     2.0|
+|ze-1.0             |             395.13|     9.9|       1.00|     2.0|
+|radar-1.0-dev      |             376.21|     9.4|       0.75|     1.5|
+|yii-2.0            |             393.89|     9.9|       1.75|     3.5|
+|lumen-5.0          |             363.65|     9.1|       1.25|     2.5|
+|silex-1.3          |             356.55|     8.9|       1.00|     2.0|
+|cygnite-1.3        |             353.72|     8.9|       1.00|     2.0|
+|fuel-1.8-dev       |             321.57|     8.1|       0.75|     1.5|
+|aura-2.0           |             210.10|     5.3|       1.00|     2.0|
+|cake-3.1           |             215.51|     5.4|       1.50|     3.0|
+|symfony-2.7        |             100.22|     2.5|       3.25|     6.5|
+|laravel-5.1        |              95.87|     2.4|       2.75|     5.5|
+|zf-2.4             |              72.16|     1.8|       3.25|     6.5|
+|typo3-flow-2.3     |              39.85|     1.0|       5.50|    11.0|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
