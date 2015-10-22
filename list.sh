@@ -4,6 +4,7 @@ list="
 #no-framework
 #phalcon-1.3
 phalcon-2.0
+phpixie-3.2
 ice-1.0
 slim-2.6
 codeigniter-3.0

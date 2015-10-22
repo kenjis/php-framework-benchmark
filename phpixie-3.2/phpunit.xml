@@ -1,0 +1,14 @@
+<phpunit bootstrap="./tests/phpunit.php">
+    <testsuites>
+        <testsuite>
+            <directory>./tests</directory>
+            <directory>./bundles/app/tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./bundles/app/src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
