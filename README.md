@@ -37,7 +37,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. NoFussFramework 1.2.3
 1. Slim 3.0.0-RC1
 1. BEAR.Sunday 1.0.1
-1. zend-expressive 1.0.0rc2
+1. zend-expressive 1.0.0rc2 (Comming Soon)
 1. Radar 1.0.0-dev
 1. Yii 2.0.6
 1. Lumen 5.0.8
@@ -130,27 +130,27 @@ If you want to see current configuration, run `sudo sysctl -a`.
 
 ## Reference
 
-* [Phalcon](http://phalconphp.com/) [@phalconphp](https://twitter.com/phalconphp)
-* [Ice](http://www.iceframework.org/) [@iceframework](https://twitter.com/iceframework)
+* [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp))
+* [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework))
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
-* [Slim](http://www.slimframework.com/) [@slimphp](https://twitter.com/slimphp)
-* [CodeIgniter](http://www.codeigniter.com/) [@CodeIgniter](https://twitter.com/CodeIgniter)
+* [Slim](http://www.slimframework.com/) ([@slimphp](https://twitter.com/slimphp))
+* [CodeIgniter](http://www.codeigniter.com/) ([@CodeIgniter](https://twitter.com/CodeIgniter))
 * [NoFussFramework](http://www.nofussframework.com/)
-* [BEAR.Sunday](https://bearsunday.github.io/) [BEARSunday](https://twitter.com/BEARSunday)
-* [zend-expressive](https://github.com/zendframework/zend-expressive) [@zfdevteam](https://twitter.com/zfdevteam)
+* [BEAR.Sunday](https://bearsunday.github.io/) ([@BEARSunday](https://twitter.com/BEARSunday))
+* [zend-expressive](https://github.com/zendframework/zend-expressive) ([@zfdevteam](https://twitter.com/zfdevteam))
 * [Radar](https://github.com/radarphp/Radar.Project)
-* [Yii](http://www.yiiframework.com/) [@yiiframework](https://twitter.com/yiiframework)
+* [Yii](http://www.yiiframework.com/) ([@yiiframework](https://twitter.com/yiiframework))
 * [Lumen](http://lumen.laravel.com/)
 * [Silex](http://silex.sensiolabs.org/)
-* [Cygnite](http://www.cygniteframework.com/) [@cygnitephp](https://twitter.com/cygnitephp)
-* [FuelPHP](http://fuelphp.com/) [@fuelphp](https://twitter.com/fuelphp)
-* [Aura](http://auraphp.com/) [@auraphp](https://twitter.com/auraphp)
-* [CakePHP](http://cakephp.org/) [@cakephp](https://twitter.com/cakephp)
-* [Symfony](http://symfony.com/) [@symfony](https://twitter.com/symfony)
+* [Cygnite](http://www.cygniteframework.com/) ([@cygnitephp](https://twitter.com/cygnitephp))
+* [FuelPHP](http://fuelphp.com/) ([@fuelphp](https://twitter.com/fuelphp))
+* [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
+* [CakePHP](http://cakephp.org/) ([@cakephp](https://twitter.com/cakephp))
+* [Symfony](http://symfony.com/) ([@symfony](https://twitter.com/symfony))
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
-* [Laravel](http://laravel.com/) [@laravelphp](https://twitter.com/laravelphp)
-* [Zend Framework](http://framework.zend.com/) [@zfdevteam](https://twitter.com/zfdevteam)
-* [TYPO3 Flow](http://flow.typo3.org/) [@neoscms](https://twitter.com/neoscms)
+* [Laravel](http://laravel.com/) ([@laravelphp](https://twitter.com/laravelphp))
+* [Zend Framework](http://framework.zend.com/) ([@zfdevteam](https://twitter.com/zfdevteam))
+* [TYPO3 Flow](http://flow.typo3.org/) ([@neoscms](https://twitter.com/neoscms))
 
 ## Related
 
