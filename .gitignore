@@ -1,4 +1,3 @@
 !.gitignore
 /nbproject/
-/output/
 vendor/
