@@ -37,7 +37,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. NoFussFramework 1.2.3
 1. Slim 3.0.0-RC1
 1. BEAR.Sunday 1.0.1
-1. zend-expressive 1.0.0rc2
+1. zend-expressive 1.0.0rc2 (FastRoute + zend-servicemanager)
 1. Radar 1.0.0-dev
 1. Yii 2.0.6
 1. Lumen 5.0.8
