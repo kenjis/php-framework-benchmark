@@ -44,6 +44,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. Silex 1.3.4
 1. Cygnite 1.3.1
 1. FuelPHP 1.8-dev
+1. PHPixie 3.2 (Comming Soon)
 1. Aura 2.0.2
 1. CakePHP 3.1.1
 1. Symfony 2.7.5
@@ -145,6 +146,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Silex](http://silex.sensiolabs.org/)
 * [Cygnite](http://www.cygniteframework.com/) ([@cygnitephp](https://twitter.com/cygnitephp))
 * [FuelPHP](http://fuelphp.com/) ([@fuelphp](https://twitter.com/fuelphp))
+* [PHPixie](http://phpixie.com/) ([@phpixie](https://twitter.com/phpixie))
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
 * [CakePHP](http://cakephp.org/) ([@cakephp](https://twitter.com/cakephp))
 * [Symfony](http://symfony.com/) ([@symfony](https://twitter.com/symfony))
