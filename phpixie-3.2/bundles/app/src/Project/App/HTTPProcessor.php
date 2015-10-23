@@ -6,6 +6,6 @@ class HTTPProcessor implements \PHPixie\Processors\Processor
 {
     public function process($request)
     {
-        return 'Hello World';
+        return 'Hello World!';
     }
 }
