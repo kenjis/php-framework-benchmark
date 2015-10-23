@@ -4,7 +4,6 @@ list="
 #no-framework
 #phalcon-1.3
 phalcon-2.0
-phpixie-3.2
 ice-1.0
 slim-2.6
 codeigniter-3.0
@@ -20,6 +19,7 @@ silex-1.3
 cygnite-1.3
 fuel-1.8-dev
 #fuel-2.0-dev
+phpixie-3.2
 #cake-3.0
 aura-2.0
 cake-3.1
