@@ -31,11 +31,7 @@ try {
 
     // representation transfer
     $page()->transfer($app->responder, $_SERVER);
-    printf(
-        "\n%' 8d:%f",
-        memory_get_peak_usage(true),
-        microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']
-    );
+    require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
     exit(0);
 } catch (\Exception $e) {
     $app->error->handle($e, $request)->transfer();
