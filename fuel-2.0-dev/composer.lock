@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a785de18658204506298aca209ce9b6",
-    "content-hash": "19dde3b154ec2ede19683fc333e8d824",
+    "hash": "ce0ee53af0f60d844ae9a426ab8f9677",
+    "content-hash": "00997db33ada2494e5939aceb5fcd2c9",
     "packages": [
         {
             "name": "browscap/browscap-php",
@@ -61,101 +61,6 @@
                 "user agent"
             ],
             "time": "2014-10-09 07:43:37"
-        },
-        {
-            "name": "composer/installers",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
-                "shasum": ""
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-installer",
-            "extra": {
-                "class": "Composer\\Installers\\Installer",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Hurad",
-                "MODX Evo",
-                "OXID",
-                "SMF",
-                "Thelia",
-                "WolfCMS",
-                "agl",
-                "aimeos",
-                "annotatecms",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "elgg",
-                "fuelphp",
-                "grav",
-                "installer",
-                "joomla",
-                "kohana",
-                "laravel",
-                "lithium",
-                "magento",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "moodle",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "zend",
-                "zikula"
-            ],
-            "time": "2015-06-13 15:30:38"
         },
         {
             "name": "doctrine/annotations",
@@ -913,50 +818,6 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "FuelPHP Database Component",
             "time": "2015-01-01 15:41:53"
-        },
-        {
-            "name": "fuelphp/demo-component",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fuelphp/demo-component.git",
-                "reference": "a55ef3b56ff7b4084842e1d7fedb32aca9467f28"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/demo-component/zipball/a55ef3b56ff7b4084842e1d7fedb32aca9467f28",
-                "reference": "a55ef3b56ff7b4084842e1d7fedb32aca9467f28",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "dev-master",
-                "php": ">=5.4"
-            },
-            "type": "fuelphp-component",
-            "extra": {
-                "installer-name": "demo"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Demo\\": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FuelPHP Development Team",
-                    "email": "team@fuelphp.com"
-                }
-            ],
-            "description": "FuelPHP demo component",
-            "homepage": "http://fuelphp.com",
-            "keywords": [
-                "framework"
-            ],
-            "time": "2015-01-01 15:42:14"
         },
         {
             "name": "fuelphp/dependency",
@@ -1894,8 +1755,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fuelphp/foundation": 20,
-        "fuelphp/demo-component": 20
+        "fuelphp/foundation": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
