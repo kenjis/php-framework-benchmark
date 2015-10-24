@@ -10,10 +10,11 @@ codeigniter-3.0
 nofuss-1.2
 slim-3.0
 bear-1.0
+lumen-5.1
 ze-1.0
 radar-1.0-dev
 yii-2.0
-lumen-5.0
+#lumen-5.0
 #silex-1.2
 silex-1.3
 cygnite-1.3
@@ -30,6 +31,7 @@ symfony-2.7
 #laravel-4.2
 #laravel-5.0
 laravel-5.1
-zf-2.4
+#zf-2.4
+zf-2.5
 typo3-flow-2.3
 "
