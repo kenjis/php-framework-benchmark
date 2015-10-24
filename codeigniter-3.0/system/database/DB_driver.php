@@ -451,7 +451,7 @@ abstract class CI_DB_driver {
 	 *
 	 * This is just a dummy method that all drivers will override.
 	 *
-	 * @return      mixed
+	 * @return	mixed
 	 */
 	public function db_connect()
 	{
@@ -481,7 +481,7 @@ abstract class CI_DB_driver {
 	 * This is just a dummy method to allow drivers without such
 	 * functionality to not declare it, while others will override it.
 	 *
-	 * @return      void
+	 * @return	void
 	 */
 	public function reconnect()
 	{
@@ -495,7 +495,7 @@ abstract class CI_DB_driver {
 	 * This is just a dummy method to allow drivers without such
 	 * functionality to not declare it, while others will override it.
 	 *
-	 * @return      bool
+	 * @return	bool
 	 */
 	public function db_select()
 	{
@@ -647,7 +647,10 @@ abstract class CI_DB_driver {
 			}
 
 			// This will trigger a rollback if transactions are being used
-			$this->_trans_status = FALSE;
+			if ($this->_trans_depth !== 0)
+			{
+				$this->_trans_status = FALSE;
+			}
 
 			// Grab the error now, as we might run some additional queries before displaying the error
 			$error = $this->error();
@@ -788,10 +791,13 @@ abstract class CI_DB_driver {
 
 	/**
 	 * Enable/disable Transaction Strict Mode
+	 *
 	 * When strict mode is enabled, if you are running multiple groups of
-	 * transactions, if one group fails all groups will be rolled back.
-	 * If strict mode is disabled, each group is treated autonomously, meaning
-	 * a failure of one group will not affect any others
+	 * transactions, if one group fails all subsequent groups will be
+	 * rolled back.
+	 *
+	 * If strict mode is disabled, each group is treated autonomously,
+	 * meaning a failure of one group will not affect any others
 	 *
 	 * @param	bool	$mode = TRUE
 	 * @return	void
@@ -858,8 +864,8 @@ abstract class CI_DB_driver {
 			$this->trans_rollback();
 
 			// If we are NOT running in strict mode, we will reset
-			// the _trans_status flag so that subsequent groups of transactions
-			// will be permitted.
+			// the _trans_status flag so that subsequent groups of
+			// transactions will be permitted.
 			if ($this->trans_strict === FALSE)
 			{
 				$this->_trans_status = TRUE;
@@ -1218,7 +1224,7 @@ abstract class CI_DB_driver {
 	/**
 	 * Fetch Field Names
 	 *
-	 * @param	string	the table name
+	 * @param	string	$table	Table name
 	 * @return	array
 	 */
 	public function list_fields($table)
@@ -1477,18 +1483,18 @@ abstract class CI_DB_driver {
 				? '\s+'.preg_quote(trim(sprintf($this->_like_escape_str, $this->_like_escape_chr)), '/')
 				: '';
 			$_operators = array(
-				'\s*(?:<|>|!)?=\s*',		// =, <=, >=, !=
-				'\s*<>?\s*',			// <, <>
-				'\s*>\s*',			// >
-				'\s+IS NULL',			// IS NULL
-				'\s+IS NOT NULL',		// IS NOT NULL
-				'\s+EXISTS\s*\([^\)]+\)',	// EXISTS(sql)
-				'\s+NOT EXISTS\s*\([^\)]+\)',	// NOT EXISTS(sql)
-				'\s+BETWEEN\s+\S+\s+AND\s+\S+',	// BETWEEN value AND value
-				'\s+IN\s*\([^\)]+\)',		// IN(list)
-				'\s+NOT IN\s*\([^\)]+\)',	// NOT IN (list)
-				'\s+LIKE\s+\S+'.$_les,		// LIKE 'expr'[ ESCAPE '%s']
-				'\s+NOT LIKE\s+\S+'.$_les	// NOT LIKE 'expr'[ ESCAPE '%s']
+				'\s*(?:<|>|!)?=\s*',             // =, <=, >=, !=
+				'\s*<>?\s*',                     // <, <>
+				'\s*>\s*',                       // >
+				'\s+IS NULL',                    // IS NULL
+				'\s+IS NOT NULL',                // IS NOT NULL
+				'\s+EXISTS\s*\([^\)]+\)',        // EXISTS(sql)
+				'\s+NOT EXISTS\s*\([^\)]+\)',    // NOT EXISTS(sql)
+				'\s+BETWEEN\s+',                 // BETWEEN value AND value
+				'\s+IN\s*\([^\)]+\)',            // IN(list)
+				'\s+NOT IN\s*\([^\)]+\)',        // NOT IN (list)
+				'\s+LIKE\s+\S.*('.$_les.')?',    // LIKE 'expr'[ ESCAPE '%s']
+				'\s+NOT LIKE\s+\S.*('.$_les.')?' // NOT LIKE 'expr'[ ESCAPE '%s']
 			);
 
 		}
@@ -1751,13 +1757,13 @@ abstract class CI_DB_driver {
 		//
 		// Added exception for single quotes as well, we don't want to alter
 		// literal strings. -- Narf
-		if (strpos($item, '(') !== FALSE OR strpos($item, "'") !== FALSE)
+		if (strcspn($item, "()'") !== strlen($item))
 		{
 			return $item;
 		}
 
 		// Convert tabs or multiple spaces into single spaces
-		$item = preg_replace('/\s+/', ' ', $item);
+		$item = preg_replace('/\s+/', ' ', trim($item));
 
 		// If the item has an alias declaration we remove it and set it aside.
 		// Note: strripos() is used in order to support spaces in table names
@@ -1785,12 +1791,15 @@ abstract class CI_DB_driver {
 		// with an alias. While we're at it, we will escape the components
 		if (strpos($item, '.') !== FALSE)
 		{
-			$parts	= explode('.', $item);
+			$parts = explode('.', $item);
 
 			// Does the first segment of the exploded item match
 			// one of the aliases previously identified? If so,
 			// we have nothing more to do other than escape the item
-			if (in_array($parts[0], $this->qb_aliased_tables))
+			//
+			// NOTE: The ! empty() condition prevents this method
+			//       from breaking when QB isn't enabled.
+			if ( ! empty($this->qb_aliased_tables) && in_array($parts[0], $this->qb_aliased_tables))
 			{
 				if ($protect_identifiers === TRUE)
 				{

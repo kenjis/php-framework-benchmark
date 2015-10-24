@@ -804,11 +804,12 @@ class CI_Email {
 	 *
 	 * @param	string
 	 * @param	string
-	 * @return	void
+	 * @return	CI_Email
 	 */
 	public function set_header($header, $value)
 	{
 		$this->_headers[$header] = str_replace(array("\n", "\r"), '', $value);
+		return $this;
 	}
 
 	// --------------------------------------------------------------------
@@ -1868,20 +1869,26 @@ class CI_Email {
 			return FALSE;
 		}
 
-		$this->_send_command('from', $this->clean_email($this->_headers['From']));
+		if ( ! $this->_send_command('from', $this->clean_email($this->_headers['From'])))
+		{
+			return FALSE;
+		}
 
 		foreach ($this->_recipients as $val)
 		{
-			$this->_send_command('to', $val);
+			if ( ! $this->_send_command('to', $val))
+			{
+				return FALSE;
+			}
 		}
 
 		if (count($this->_cc_array) > 0)
 		{
 			foreach ($this->_cc_array as $val)
 			{
-				if ($val !== '')
+				if ($val !== '' && ! $this->_send_command('to', $val))
 				{
-					$this->_send_command('to', $val);
+					return FALSE;
 				}
 			}
 		}
@@ -1890,14 +1897,17 @@ class CI_Email {
 		{
 			foreach ($this->_bcc_array as $val)
 			{
-				if ($val !== '')
+				if ($val !== '' && ! $this->_send_command('to', $val))
 				{
-					$this->_send_command('to', $val);
+					return FALSE;
 				}
 			}
 		}
 
-		$this->_send_command('data');
+		if ( ! $this->_send_command('data'))
+		{
+			return FALSE;
+		}
 
 		// perform dot transformation on any lines that begin with a dot
 		$this->_send_data($this->_header_str.preg_replace('/^\./m', '..$1', $this->_finalbody));
@@ -2126,11 +2136,31 @@ class CI_Email {
 	protected function _send_data($data)
 	{
 		$data .= $this->newline;
-		for ($written = 0, $length = strlen($data); $written < $length; $written += $result)
+		for ($written = $timestamp = 0, $length = strlen($data); $written < $length; $written += $result)
 		{
 			if (($result = fwrite($this->_smtp_connect, substr($data, $written))) === FALSE)
 			{
 				break;
+			}
+			// See https://bugs.php.net/bug.php?id=39598 and http://php.net/manual/en/function.fwrite.php#96951
+			elseif ($result === 0)
+			{
+				if ($timestamp === 0)
+				{
+					$timestamp = time();
+				}
+				elseif ($timestamp < (time() - $this->smtp_timeout))
+				{
+					$result = FALSE;
+					break;
+				}
+
+				usleep(250000);
+				continue;
+			}
+			else
+			{
+				$timestamp = 0;
 			}
 		}
 
