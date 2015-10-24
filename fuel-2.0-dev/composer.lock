@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a785de18658204506298aca209ce9b6",
+    "hash": "f10b700e8d310a8cb5738282a67c4bd2",
+    "content-hash": "00997db33ada2494e5939aceb5fcd2c9",
     "packages": [
         {
             "name": "browscap/browscap-php",
@@ -62,110 +63,17 @@
             "time": "2014-10-09 07:43:37"
         },
         {
-            "name": "composer/installers",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "91e7724e6e75291d6f5512415fbdcec525ad4d7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/91e7724e6e75291d6f5512415fbdcec525ad4d7e",
-                "reference": "91e7724e6e75291d6f5512415fbdcec525ad4d7e",
-                "shasum": ""
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-installer",
-            "extra": {
-                "class": "Composer\\Installers\\Installer",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Hurad",
-                "MODX Evo",
-                "OXID",
-                "Thelia",
-                "WolfCMS",
-                "agl",
-                "annotatecms",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "elgg",
-                "fuelphp",
-                "grav",
-                "installer",
-                "joomla",
-                "kohana",
-                "laravel",
-                "lithium",
-                "magento",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "moodle",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "zend",
-                "zikula"
-            ],
-            "time": "2014-11-23 19:34:57"
-        },
-        {
             "name": "doctrine/annotations",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "3b6668f54ad3f95d68b64a742f6b0de55d6caeb1"
+                "reference": "f25c8aab83e0c3e976fd7d19875f198ccf2f7535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/3b6668f54ad3f95d68b64a742f6b0de55d6caeb1",
-                "reference": "3b6668f54ad3f95d68b64a742f6b0de55d6caeb1",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/f25c8aab83e0c3e976fd7d19875f198ccf2f7535",
+                "reference": "f25c8aab83e0c3e976fd7d19875f198ccf2f7535",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +128,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-11-04 15:34:10"
+            "time": "2015-08-31 12:32:49"
         },
         {
             "name": "doctrine/cache",
@@ -228,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "7b625bf42f08ceb3e7dc7852095ef5e1a5756884"
+                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/7b625bf42f08ceb3e7dc7852095ef5e1a5756884",
-                "reference": "7b625bf42f08ceb3e7dc7852095ef5e1a5756884",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1c3483678ab767c3e21d3a96d6dd1006b327d425",
+                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425",
                 "shasum": ""
             },
             "require": {
@@ -244,13 +152,13 @@
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.7",
-                "predis/predis": "~0.8",
+                "predis/predis": "~1.0",
                 "satooshi/php-coveralls": "~0.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -290,7 +198,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2014-11-24 16:07:53"
+            "time": "2015-10-08 07:32:30"
         },
         {
             "name": "doctrine/collections",
@@ -298,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "38ed66e6606309bec203a9df506ffa26d956d21d"
+                "reference": "866e100a425b8b73d15393fd081c6bf067f05bf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/38ed66e6606309bec203a9df506ffa26d956d21d",
-                "reference": "38ed66e6606309bec203a9df506ffa26d956d21d",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/866e100a425b8b73d15393fd081c6bf067f05bf9",
+                "reference": "866e100a425b8b73d15393fd081c6bf067f05bf9",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +223,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -356,7 +264,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2014-11-05 15:56:21"
+            "time": "2015-09-11 15:24:21"
         },
         {
             "name": "doctrine/common",
@@ -364,12 +272,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "559a805125524b0bb6742638784c2979a5c5e607"
+                "reference": "3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/559a805125524b0bb6742638784c2979a5c5e607",
-                "reference": "559a805125524b0bb6742638784c2979a5c5e607",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c",
+                "reference": "3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c",
                 "shasum": ""
             },
             "require": {
@@ -381,12 +289,12 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.7"
+                "phpunit/phpunit": "~4.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5.x-dev"
+                    "dev-master": "2.6.x-dev"
                 }
             },
             "autoload": {
@@ -429,7 +337,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2014-07-27 17:39:50"
+            "time": "2015-10-23 21:41:01"
         },
         {
             "name": "doctrine/dbal",
@@ -437,12 +345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "2423cce3bcfba386a1f4a20c6d98f47ea25e0931"
+                "reference": "4845507add849eea92e88f38882d826301e22cfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/2423cce3bcfba386a1f4a20c6d98f47ea25e0931",
-                "reference": "2423cce3bcfba386a1f4a20c6d98f47ea25e0931",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/4845507add849eea92e88f38882d826301e22cfb",
+                "reference": "4845507add849eea92e88f38882d826301e22cfb",
                 "shasum": ""
             },
             "require": {
@@ -492,7 +400,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2014-10-16 11:57:27"
+            "time": "2015-04-30 17:02:20"
         },
         {
             "name": "doctrine/inflector",
@@ -500,12 +408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "8a0b96e65d2399d6f95b75de11134843a2c61feb"
+                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/8a0b96e65d2399d6f95b75de11134843a2c61feb",
-                "reference": "8a0b96e65d2399d6f95b75de11134843a2c61feb",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
+                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +467,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-10-05 18:49:49"
+            "time": "2015-10-07 18:00:26"
         },
         {
             "name": "doctrine/lexer",
@@ -621,12 +529,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "85d4b9ac8718ea179c7d909657e0d12a180fe29d"
+                "reference": "9a393ceb80f7497b6513feb574638e87048fed55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/85d4b9ac8718ea179c7d909657e0d12a180fe29d",
-                "reference": "85d4b9ac8718ea179c7d909657e0d12a180fe29d",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/9a393ceb80f7497b6513feb574638e87048fed55",
+                "reference": "9a393ceb80f7497b6513feb574638e87048fed55",
                 "shasum": ""
             },
             "require": {
@@ -671,7 +579,7 @@
                 "whoops",
                 "zf2"
             ],
-            "time": "2014-11-15 07:46:20"
+            "time": "2015-09-27 09:47:06"
         },
         {
             "name": "fuelphp/agent",
@@ -679,12 +587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/agent.git",
-                "reference": "224de4be83cf304f34990e5ff1292da243beb2b8"
+                "reference": "41040a9616a04b074cbccc883b2f5efccf4df04c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/agent/zipball/224de4be83cf304f34990e5ff1292da243beb2b8",
-                "reference": "224de4be83cf304f34990e5ff1292da243beb2b8",
+                "url": "https://api.github.com/repos/fuelphp/agent/zipball/41040a9616a04b074cbccc883b2f5efccf4df04c",
+                "reference": "41040a9616a04b074cbccc883b2f5efccf4df04c",
                 "shasum": ""
             },
             "require": {
@@ -692,9 +600,14 @@
                 "php": ">=5.4"
             },
             "require-dev": {
-                "codeception/codeception": "~2.0.0"
+                "codeception/codeception": "~2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Agent\\": "src/"
@@ -712,7 +625,7 @@
             ],
             "description": "FuelPHP browscap browser agent package",
             "homepage": "https://github.com/fuelphp/agent",
-            "time": "2014-11-05 00:02:32"
+            "time": "2015-02-25 14:36:00"
         },
         {
             "name": "fuelphp/alias",
@@ -720,12 +633,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/alias.git",
-                "reference": "5ca37071172c7e305e569f5d76584831ee73f239"
+                "reference": "911cf6caab6b35becd19f30c57768ba977bcec9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/alias/zipball/5ca37071172c7e305e569f5d76584831ee73f239",
-                "reference": "5ca37071172c7e305e569f5d76584831ee73f239",
+                "url": "https://api.github.com/repos/fuelphp/alias/zipball/911cf6caab6b35becd19f30c57768ba977bcec9d",
+                "reference": "911cf6caab6b35becd19f30c57768ba977bcec9d",
                 "shasum": ""
             },
             "require": {
@@ -736,6 +649,11 @@
                 "codeception/mockery-module": "dev-master"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Alias\\": "src/"
@@ -757,7 +675,7 @@
                 "Aliassing",
                 "alias"
             ],
-            "time": "2014-09-13 22:28:51"
+            "time": "2015-02-26 01:05:04"
         },
         {
             "name": "fuelphp/common",
@@ -765,25 +683,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/common.git",
-                "reference": "7046e3867163ad7f9fca3b6385d5e95fd9f5f9bc"
+                "reference": "a9fff44535213eb88ca4782676d2d7b4f18f8a75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/common/zipball/7046e3867163ad7f9fca3b6385d5e95fd9f5f9bc",
-                "reference": "7046e3867163ad7f9fca3b6385d5e95fd9f5f9bc",
+                "url": "https://api.github.com/repos/fuelphp/common/zipball/a9fff44535213eb88ca4782676d2d7b4f18f8a75",
+                "reference": "a9fff44535213eb88ca4782676d2d7b4f18f8a75",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4"
             },
             "require-dev": {
-                "codeception/codeception": "1.8.*",
-                "symfony/yaml": "2.3.x"
+                "codeception/codeception": "~2.0",
+                "symfony/yaml": "^2.3"
             },
             "suggest": {
                 "symfony/yaml": "Allows YAML data conversions."
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Common\\": "src/"
@@ -802,13 +725,13 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP generic helper functions and classes.",
+            "description": "FuelPHP generic helper functions and classes",
             "homepage": "https://github.com/fuelphp/common",
             "keywords": [
                 "helper",
                 "utility"
             ],
-            "time": "2014-10-28 22:37:08"
+            "time": "2015-09-21 08:08:18"
         },
         {
             "name": "fuelphp/config",
@@ -816,17 +739,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/config.git",
-                "reference": "b671defb66feccba6dae4364dff566c0abf691a2"
+                "reference": "3bdec50027dcf0f84b2a3786b292ef103eb4789f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/config/zipball/b671defb66feccba6dae4364dff566c0abf691a2",
-                "reference": "b671defb66feccba6dae4364dff566c0abf691a2",
+                "url": "https://api.github.com/repos/fuelphp/config/zipball/3bdec50027dcf0f84b2a3786b292ef103eb4789f",
+                "reference": "3bdec50027dcf0f84b2a3786b292ef103eb4789f",
                 "shasum": ""
             },
             "require": {
-                "fuelphp/common": "dev-master",
-                "fuelphp/filesystem": "dev-master",
+                "fuelphp/common": "~2.0",
+                "fuelphp/filesystem": "~2.0",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -836,6 +759,11 @@
                 "symfony/yaml": "Allows YAML config handling."
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Config\\": "src/"
@@ -851,26 +779,26 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "Dependency handling.",
+            "description": "Fuel package for loading, saving and accessing config settings",
             "homepage": "https://github.com/fuelphp/config",
             "keywords": [
                 "config",
                 "configuration"
             ],
-            "time": "2014-09-10 19:42:27"
+            "time": "2015-02-25 21:47:25"
         },
         {
             "name": "fuelphp/database",
-            "version": "dev-master",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/database.git",
-                "reference": "bf11aac8c7ee8723885a9586f0ea44acef79bf4c"
+                "reference": "71c4a9415ca02caab58b35e332148f442ab029c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/database/zipball/bf11aac8c7ee8723885a9586f0ea44acef79bf4c",
-                "reference": "bf11aac8c7ee8723885a9586f0ea44acef79bf4c",
+                "url": "https://api.github.com/repos/fuelphp/database/zipball/71c4a9415ca02caab58b35e332148f442ab029c9",
+                "reference": "71c4a9415ca02caab58b35e332148f442ab029c9",
                 "shasum": ""
             },
             "require": {
@@ -889,51 +817,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "FuelPHP Database Component",
-            "time": "2014-09-09 06:29:44"
-        },
-        {
-            "name": "fuelphp/demo-component",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fuelphp/demo-component.git",
-                "reference": "0a2c1dbc8a166651cd7911d190e80748acc786d4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/demo-component/zipball/0a2c1dbc8a166651cd7911d190e80748acc786d4",
-                "reference": "0a2c1dbc8a166651cd7911d190e80748acc786d4",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "dev-master",
-                "php": ">=5.4"
-            },
-            "type": "fuelphp-component",
-            "extra": {
-                "installer-name": "demo"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Demo\\": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FuelPHP Development Team",
-                    "email": "team@fuelphp.com"
-                }
-            ],
-            "description": "FuelPHP demo component",
-            "homepage": "http://fuelphp.com",
-            "keywords": [
-                "framework"
-            ],
-            "time": "2014-10-27 07:21:56"
+            "time": "2015-01-01 15:41:53"
         },
         {
             "name": "fuelphp/dependency",
@@ -941,21 +825,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/dependency.git",
-                "reference": "c9e24c08b3f4bcb782c0a1e3ce6295de7ec884d4"
+                "reference": "63d03fff8f377ef8363595220f34845f5fca924a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/dependency/zipball/c9e24c08b3f4bcb782c0a1e3ce6295de7ec884d4",
-                "reference": "c9e24c08b3f4bcb782c0a1e3ce6295de7ec884d4",
+                "url": "https://api.github.com/repos/fuelphp/dependency/zipball/63d03fff8f377ef8363595220f34845f5fca924a",
+                "reference": "63d03fff8f377ef8363595220f34845f5fca924a",
                 "shasum": ""
             },
             "require": {
+                "league/container": "~1.2",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "codeception/codeception": "~2.0.0"
+                "codeception/codeception": "~2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Dependency\\": "src/"
@@ -971,14 +861,14 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP Dependency handling",
+            "description": "Fuel Dependency package based on League\\Container",
             "homepage": "https://github.com/fuelphp/dependency",
             "keywords": [
                 "dependencies",
                 "dependency",
                 "injection"
             ],
-            "time": "2014-11-05 21:14:08"
+            "time": "2015-10-20 22:19:29"
         },
         {
             "name": "fuelphp/display",
@@ -986,26 +876,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/display.git",
-                "reference": "6e17b83f5c5b504f53afc181f9d848845526f50a"
+                "reference": "d9a3eddbf80f0fd81beb40d9f4507600ac6611a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/display/zipball/6e17b83f5c5b504f53afc181f9d848845526f50a",
-                "reference": "6e17b83f5c5b504f53afc181f9d848845526f50a",
+                "url": "https://api.github.com/repos/fuelphp/display/zipball/d9a3eddbf80f0fd81beb40d9f4507600ac6611a4",
+                "reference": "d9a3eddbf80f0fd81beb40d9f4507600ac6611a4",
                 "shasum": ""
             },
             "require": {
-                "fuelphp/common": "dev-master",
-                "fuelphp/filesystem": "dev-master",
+                "fuelphp/common": "~2.0",
+                "fuelphp/filesystem": "~2.0",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "codeception/codeception": "~2.0.0",
+                "codeception/codeception": "~2.0.10",
                 "codeception/mockery-module": "dev-master",
-                "dflydev/markdown": "1.0.*",
-                "mustache/mustache": "2.3.*",
-                "smarty/smarty": "3.1.*",
-                "twig/twig": "1.*",
+                "dflydev/markdown": "~1.0",
+                "mustache/mustache": "~2.3",
+                "smarty/smarty": "~3.1",
+                "twig/twig": "~1.0",
                 "xamin/handlebars.php": "dev-master"
             },
             "suggest": {
@@ -1016,6 +906,11 @@
                 "xamin/handlebars.php": "Allow Handlebars templating with the Display package"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Display\\": "src/"
@@ -1031,9 +926,65 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP Display and templating.",
+            "description": "View package for FuelPHP supporting multiple parser languages",
             "homepage": "https://github.com/fuelphp/display",
-            "time": "2014-11-05 20:33:30"
+            "time": "2015-03-26 21:19:51"
+        },
+        {
+            "name": "fuelphp/fieldset",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuelphp/fieldset.git",
+                "reference": "23c9d624849a989bdea289495f8cf998f793b6e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuelphp/fieldset/zipball/23c9d624849a989bdea289495f8cf998f793b6e8",
+                "reference": "23c9d624849a989bdea289495f8cf998f793b6e8",
+                "shasum": ""
+            },
+            "require": {
+                "fuelphp/common": "~2.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.0.10",
+                "codeception/mockery-module": "dev-master",
+                "fuelphp/validation": "dev-master"
+            },
+            "suggest": {
+                "fuelphp/validation": "Allows forms to be validated"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fuel\\Fieldset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
+            ],
+            "description": "Form generation and building",
+            "homepage": "https://github.com/fuelphp/fieldset",
+            "keywords": [
+                "fieldset",
+                "form",
+                "form builder"
+            ],
+            "time": "2015-04-06 17:08:17"
         },
         {
             "name": "fuelphp/filesystem",
@@ -1041,12 +992,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/filesystem.git",
-                "reference": "eed23b3a88432c16577603f8d37f1f679e31da89"
+                "reference": "7422f2e3ecb6e043670ddc299fc933ba4ef631d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/filesystem/zipball/eed23b3a88432c16577603f8d37f1f679e31da89",
-                "reference": "eed23b3a88432c16577603f8d37f1f679e31da89",
+                "url": "https://api.github.com/repos/fuelphp/filesystem/zipball/7422f2e3ecb6e043670ddc299fc933ba4ef631d0",
+                "reference": "7422f2e3ecb6e043670ddc299fc933ba4ef631d0",
                 "shasum": ""
             },
             "require": {
@@ -1057,6 +1008,11 @@
                 "codeception/codeception": "~2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\FileSystem\\": "src"
@@ -1072,9 +1028,14 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "File system handling.",
+            "description": "File system handling",
             "homepage": "https://github.com/fuelphp/filesystem",
-            "time": "2014-09-15 21:04:33"
+            "keywords": [
+                "directory",
+                "file",
+                "filesystem"
+            ],
+            "time": "2015-02-25 20:17:58"
         },
         {
             "name": "fuelphp/foundation",
@@ -1082,35 +1043,47 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/foundation.git",
-                "reference": "24f6a582b89fcb3a84cf303199140b2e331961e8"
+                "reference": "0753a05eca5cd0465e4afc18929d851c3965b0c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/foundation/zipball/24f6a582b89fcb3a84cf303199140b2e331961e8",
-                "reference": "24f6a582b89fcb3a84cf303199140b2e331961e8",
+                "url": "https://api.github.com/repos/fuelphp/foundation/zipball/0753a05eca5cd0465e4afc18929d851c3965b0c4",
+                "reference": "0753a05eca5cd0465e4afc18929d851c3965b0c4",
                 "shasum": ""
             },
             "require": {
                 "filp/whoops": "dev-master",
-                "fuelphp/agent": "dev-master",
-                "fuelphp/alias": "dev-master",
-                "fuelphp/common": "dev-master",
-                "fuelphp/config": "dev-master",
-                "fuelphp/database": "dev-master",
-                "fuelphp/dependency": "dev-master",
-                "fuelphp/display": "dev-master",
-                "fuelphp/routing": "dev-master",
-                "fuelphp/security": "dev-master",
-                "fuelphp/session": "dev-master",
-                "fuelphp/upload": "dev-master",
-                "league/event": "dev-master",
+                "fuelphp/agent": "~2.0",
+                "fuelphp/alias": "~2.0",
+                "fuelphp/common": "~2.0",
+                "fuelphp/config": "~2.0",
+                "fuelphp/database": "~2.0",
+                "fuelphp/dependency": "~2.0",
+                "fuelphp/display": "~2.0",
+                "fuelphp/fieldset": "~2.0",
+                "fuelphp/legacy": "~2.0",
+                "fuelphp/orm": "~2.0",
+                "fuelphp/routing": "~2.0",
+                "fuelphp/security": "~2.0",
+                "fuelphp/session": "~2.0",
+                "fuelphp/upload": "~2.0",
+                "fuelphp/validation": "~2.0",
+                "league/event": "~2.0",
                 "monolog/monolog": "1.6.0",
                 "php": ">=5.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.0"
             },
             "suggest": {
                 "michelf/php-markdown": "Required if you want to use the Markdown facade class"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Foundation\\": "src/"
@@ -1126,9 +1099,109 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP Framework foundation library.",
+            "description": "FuelPHP Framework foundation",
             "homepage": "https://github.com/fuelphp/foundation",
-            "time": "2014-11-04 17:32:42"
+            "time": "2015-03-04 15:41:17"
+        },
+        {
+            "name": "fuelphp/legacy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuelphp/legacy.git",
+                "reference": "9241ade6ed418de3a41dbe9653b08daa846a1b40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuelphp/legacy/zipball/9241ade6ed418de3a41dbe9653b08daa846a1b40",
+                "reference": "9241ade6ed418de3a41dbe9653b08daa846a1b40",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fuel\\Legacy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
+            ],
+            "description": "Legacy package for FuelPHP",
+            "homepage": "https://github.com/fuelphp/legacy",
+            "keywords": [
+                "legacy",
+                "proxy"
+            ],
+            "time": "2015-05-20 18:21:15"
+        },
+        {
+            "name": "fuelphp/orm",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuelphp/orm.git",
+                "reference": "f26bd25d85bd0092f8b39153aa15c00908f4bba3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuelphp/orm/zipball/f26bd25d85bd0092f8b39153aa15c00908f4bba3",
+                "reference": "f26bd25d85bd0092f8b39153aa15c00908f4bba3",
+                "shasum": ""
+            },
+            "require": {
+                "fuelphp/common": "~2.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.0.0",
+                "codeception/mockery-module": "dev-master",
+                "fuelphp/database": "dev-master"
+            },
+            "suggest": {
+                "fuelphp/validation": "Allows models to be validated"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fuel\\Orm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
+            ],
+            "description": "FuelPHP ORM package",
+            "homepage": "https://github.com/fuelphp/orm",
+            "keywords": [
+                "activerecord",
+                "datamapper",
+                "orm"
+            ],
+            "time": "2015-01-01 16:22:13"
         },
         {
             "name": "fuelphp/routing",
@@ -1136,18 +1209,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/routing.git",
-                "reference": "fc5d36726e117108f406fb3c3c19e0c3046e812f"
+                "reference": "c81bdc31c5dfd9513b65154f995484485e70a1b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/routing/zipball/fc5d36726e117108f406fb3c3c19e0c3046e812f",
-                "reference": "fc5d36726e117108f406fb3c3c19e0c3046e812f",
+                "url": "https://api.github.com/repos/fuelphp/routing/zipball/c81bdc31c5dfd9513b65154f995484485e70a1b0",
+                "reference": "c81bdc31c5dfd9513b65154f995484485e70a1b0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4"
             },
+            "require-dev": {
+                "codeception/codeception": "~2.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Routing\\": "src/"
@@ -1163,9 +1244,9 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP Framework routing library.",
+            "description": "FuelPHP Framework routing",
             "homepage": "https://github.com/fuelphp/routing",
-            "time": "2014-09-11 19:51:57"
+            "time": "2015-02-25 20:50:10"
         },
         {
             "name": "fuelphp/security",
@@ -1173,12 +1254,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/security.git",
-                "reference": "73c6c245ed52a675ee7179155227cda2cbd48033"
+                "reference": "2cad42a8432bc9c9de46486623b71e105ff84b1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/security/zipball/73c6c245ed52a675ee7179155227cda2cbd48033",
-                "reference": "73c6c245ed52a675ee7179155227cda2cbd48033",
+                "url": "https://api.github.com/repos/fuelphp/security/zipball/2cad42a8432bc9c9de46486623b71e105ff84b1b",
+                "reference": "2cad42a8432bc9c9de46486623b71e105ff84b1b",
                 "shasum": ""
             },
             "require": {
@@ -1186,9 +1267,15 @@
                 "phpseclib/phpseclib": "dev-master"
             },
             "require-dev": {
-                "mockery/mockery": "0.7.*"
+                "codeception/codeception": "~2.0",
+                "codeception/mockery-module": "dev-master"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Security\\": "src/"
@@ -1204,7 +1291,7 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "FuelPHP Framework security and encryption library.",
+            "description": "Fuel Security and Encryption tools",
             "homepage": "https://github.com/fuelphp/security",
             "keywords": [
                 "crypt",
@@ -1213,7 +1300,7 @@
                 "security",
                 "ssh"
             ],
-            "time": "2014-10-28 22:38:49"
+            "time": "2015-02-25 21:07:13"
         },
         {
             "name": "fuelphp/session",
@@ -1221,22 +1308,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/session.git",
-                "reference": "552b7f10afd70208b341031197b23f9ecb8561f3"
+                "reference": "948fd2b45286e65e7fababf65de89ca6aaca3c4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/session/zipball/552b7f10afd70208b341031197b23f9ecb8561f3",
-                "reference": "552b7f10afd70208b341031197b23f9ecb8561f3",
+                "url": "https://api.github.com/repos/fuelphp/session/zipball/948fd2b45286e65e7fababf65de89ca6aaca3c4a",
+                "reference": "948fd2b45286e65e7fababf65de89ca6aaca3c4a",
                 "shasum": ""
             },
             "require": {
-                "fuelphp/common": "dev-master",
+                "fuelphp/common": "~2.0",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "mockery/mockery": "0.7.*"
+                "codeception/codeception": "~2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Session\\": "src/"
@@ -1252,12 +1344,12 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": ".",
+            "description": "Fuel session manager",
             "homepage": "https://github.com/fuelphp/session",
             "keywords": [
                 "sessions"
             ],
-            "time": "2014-11-04 17:45:48"
+            "time": "2015-03-19 16:19:02"
         },
         {
             "name": "fuelphp/upload",
@@ -1265,12 +1357,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/upload.git",
-                "reference": "8737285ade7b890c958add297c9d977bc717fc76"
+                "reference": "c8b163bfd1c07b1790c53a452dfebdd5be495911"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/upload/zipball/8737285ade7b890c958add297c9d977bc717fc76",
-                "reference": "8737285ade7b890c958add297c9d977bc717fc76",
+                "url": "https://api.github.com/repos/fuelphp/upload/zipball/c8b163bfd1c07b1790c53a452dfebdd5be495911",
+                "reference": "c8b163bfd1c07b1790c53a452dfebdd5be495911",
                 "shasum": ""
             },
             "require": {
@@ -1278,9 +1370,14 @@
                 "php": ">=5.3"
             },
             "require-dev": {
-                "mockery/mockery": "0.8.*"
+                "codeception/codeception": "~2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Fuel\\Upload\\": "src/"
@@ -1296,13 +1393,115 @@
                     "email": "team@fuelphp.com"
                 }
             ],
-            "description": "Uploaded file processing.",
+            "description": "Process uploaded files",
             "homepage": "https://github.com/fuelphp/upload",
             "keywords": [
                 "file uploads",
                 "upload"
             ],
-            "time": "2014-09-04 19:25:52"
+            "time": "2015-10-03 10:56:54"
+        },
+        {
+            "name": "fuelphp/validation",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuelphp/validation.git",
+                "reference": "e616d73b409b3e88871bed67e95ff94d096abf8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuelphp/validation/zipball/e616d73b409b3e88871bed67e95ff94d096abf8e",
+                "reference": "e616d73b409b3e88871bed67e95ff94d096abf8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "codeception/codeception": "~2.0",
+                "codeception/mockery-module": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fuel\\Validation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
+            ],
+            "description": ".",
+            "homepage": "https://github.com/fuelphp/validation",
+            "keywords": [
+                "validation"
+            ],
+            "time": "2015-01-01 15:50:03"
+        },
+        {
+            "name": "league/container",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/container.git",
+                "reference": "f561ca8a1b3e8f05d6c71820246c49fde79154dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/container/zipball/f561ca8a1b3e8f05d6c71820246c49fde79154dc",
+                "reference": "f561ca8a1b3e8f05d6c71820246c49fde79154dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "replace": {
+                "orno/di": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev",
+                    "dev-1.x": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Container\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "philipobenito@gmail.com",
+                    "homepage": "http://philipobenito.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fast and intuitive dependency injection container.",
+            "homepage": "https://github.com/thephpleague/container",
+            "keywords": [
+                "container",
+                "dependency",
+                "di",
+                "injection",
+                "league"
+            ],
+            "time": "2015-08-24 13:24:34"
         },
         {
             "name": "league/event",
@@ -1310,25 +1509,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/event.git",
-                "reference": "a2e0749bae98dd1c173b81e7a0f6f260fb759538"
+                "reference": "f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/event/zipball/a2e0749bae98dd1c173b81e7a0f6f260fb759538",
-                "reference": "a2e0749bae98dd1c173b81e7a0f6f260fb759538",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe",
+                "reference": "f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "1.0.*@dev",
-                "phpspec/phpspec": "~2.0.0"
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -1352,7 +1551,7 @@
                 "event",
                 "listener"
             ],
-            "time": "2014-11-25 12:18:32"
+            "time": "2015-09-14 05:51:39"
         },
         {
             "name": "monolog/monolog",
@@ -1422,50 +1621,36 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c0511f2df456014da07a2e607ada5510904c6db3"
+                "reference": "33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c0511f2df456014da07a2e607ada5510904c6db3",
-                "reference": "c0511f2df456014da07a2e607ada5510904c6db3",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4",
+                "reference": "33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.0.0"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "phing/phing": "2.7.*",
-                "phpunit/phpunit": "4.0.*",
-                "sami/sami": "1.*",
-                "squizlabs/php_codesniffer": "1.*"
+                "phing/phing": "~2.7",
+                "phpunit/phpunit": "~4.0",
+                "sami/sami": "~2.0",
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
                 "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
-                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a wide variety of cryptographic operations.",
-                "pear-pear/PHP_Compat": "Install PHP_Compat to get phpseclib working on PHP < 4.3.3."
+                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
+                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
+            "autoload": {
+                "psr-4": {
+                    "phpseclib\\": "phpseclib/"
                 }
             },
-            "autoload": {
-                "psr-0": {
-                    "Crypt": "phpseclib/",
-                    "File": "phpseclib/",
-                    "Math": "phpseclib/",
-                    "Net": "phpseclib/",
-                    "System": "phpseclib/"
-                },
-                "files": [
-                    "phpseclib/Crypt/Random.php"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "phpseclib/"
-            ],
             "license": [
                 "MIT"
             ],
@@ -1488,6 +1673,11 @@
                 {
                     "name": "Hans-Jürgen Petrich",
                     "email": "petrich@tronic-media.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com",
                     "role": "Developer"
                 }
             ],
@@ -1512,7 +1702,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2014-11-20 09:58:23"
+            "time": "2015-10-22 15:14:50"
         },
         {
             "name": "psr/log",
@@ -1520,13 +1710,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11"
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/a78d6504ff5d4367497785ab2ade91db3a9fbe11",
-                "reference": "a78d6504ff5d4367497785ab2ade91db3a9fbe11",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/9e45edca52cc9c954680072c93e621f8b71fab26",
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
@@ -1535,8 +1728,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1555,17 +1748,17 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2014-01-18 15:33:09"
+            "time": "2015-06-02 13:48:41"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fuelphp/foundation": 20,
-        "fuelphp/demo-component": 20
+        "fuelphp/foundation": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.4"
     },

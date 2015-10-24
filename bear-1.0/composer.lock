@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76864240da187c1197a8ad44ab7541f9",
-    "content-hash": "dba6e190737c31a3b0db7543cd75d613",
+    "hash": "1d239010803158f1515018c5a06dcedf",
+    "content-hash": "514e561e6ec7ab33f2605d72b66f1020",
     "packages": [
         {
             "name": "aura/cli",
@@ -199,16 +199,16 @@
         },
         {
             "name": "bear/resource",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Resource.git",
-                "reference": "d6a29de4769f4e59aadcea587a78b10d71d2e1c8"
+                "reference": "1c1960baf52e93d8113b152db56e4f31b054802b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/d6a29de4769f4e59aadcea587a78b10d71d2e1c8",
-                "reference": "d6a29de4769f4e59aadcea587a78b10d71d2e1c8",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/1c1960baf52e93d8113b152db56e4f31b054802b",
+                "reference": "1c1960baf52e93d8113b152db56e4f31b054802b",
                 "shasum": ""
             },
             "require": {
@@ -216,7 +216,7 @@
                 "nocarrier/hal": "~0.9",
                 "php": ">=5.5.0",
                 "ray/di": "~2.0",
-                "rize/uri-template": "~0.2.5"
+                "rize/uri-template": "~0.2"
             },
             "suggest": {
                 "ext-uri_template": "ext/uri_template for URI Template(RFC6570) specification."
@@ -227,8 +227,7 @@
                     "BEAR\\Resource\\": "src/"
                 },
                 "files": [
-                    "src-files/uri_template.php",
-                    "src-files/doctrine_annotations.php"
+                    "src-files/uri_template.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -249,7 +248,7 @@
                 "protocol",
                 "rest"
             ],
-            "time": "2015-10-05 17:44:42"
+            "time": "2015-10-15 14:45:26"
         },
         {
             "name": "bear/sunday",
@@ -938,16 +937,16 @@
         },
         {
             "name": "rize/uri-template",
-            "version": "0.2.6",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rize/UriTemplate.git",
-                "reference": "907ca9b59014f18f6c3f1158bdd46a3c1675e9f0"
+                "reference": "2496aa674438f1c48fce122ffc44291ad7014717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rize/UriTemplate/zipball/907ca9b59014f18f6c3f1158bdd46a3c1675e9f0",
-                "reference": "907ca9b59014f18f6c3f1158bdd46a3c1675e9f0",
+                "url": "https://api.github.com/repos/rize/UriTemplate/zipball/2496aa674438f1c48fce122ffc44291ad7014717",
+                "reference": "2496aa674438f1c48fce122ffc44291ad7014717",
                 "shasum": ""
             },
             "require": {
@@ -978,15 +977,13 @@
                 "template",
                 "uri"
             ],
-            "time": "2014-06-11 06:00:32"
+            "time": "2015-04-17 16:12:22"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bear/package": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

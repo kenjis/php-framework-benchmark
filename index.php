@@ -14,7 +14,7 @@ $barColors = array(
     'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
 );
 
-$graphWidth  = 900;
+$graphWidth  = 1000;
 $graphHeight = 400;
 
 // RPS Benchmark

@@ -1101,16 +1101,16 @@
         },
         {
             "name": "neos/composer-plugin",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/composer-plugin.git",
-                "reference": "b6284ac3b72478744ded1ee94162fbb7e260fb6d"
+                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/composer-plugin/zipball/b6284ac3b72478744ded1ee94162fbb7e260fb6d",
-                "reference": "b6284ac3b72478744ded1ee94162fbb7e260fb6d",
+                "url": "https://api.github.com/repos/neos/composer-plugin/zipball/35a6166a1a7a033d0105f5500c057b184a47dfbb",
+                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb",
                 "shasum": ""
             },
             "require": {
@@ -1126,7 +1126,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-08-18 13:04:16"
+            "time": "2015-10-17 12:29:21"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1818,16 +1818,16 @@
         },
         {
             "name": "typo3/buildessentials",
-            "version": "2.3.8",
+            "version": "2.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/BuildEssentials.git",
-                "reference": "5a32e2f9a09e04a1b9c250f00780c4c027baef95"
+                "reference": "cbcd4a665b6f7998746666f2e2de81dbffae1d10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/BuildEssentials/zipball/5a32e2f9a09e04a1b9c250f00780c4c027baef95",
-                "reference": "5a32e2f9a09e04a1b9c250f00780c4c027baef95",
+                "url": "https://api.github.com/repos/neos/BuildEssentials/zipball/cbcd4a665b6f7998746666f2e2de81dbffae1d10",
+                "reference": "cbcd4a665b6f7998746666f2e2de81dbffae1d10",
                 "shasum": ""
             },
             "require": {
@@ -1842,7 +1842,7 @@
                 "LGPL-3.0+"
             ],
             "description": "TYPO3 Flow Build Toolchain Essentials",
-            "time": "2015-10-13 04:42:51"
+            "time": "2015-10-21 07:02:16"
         },
         {
             "name": "typo3/kickstart",

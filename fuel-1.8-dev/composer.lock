@@ -108,12 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/auth.git",
-                "reference": "ac9dec3dc44d7c30104e815b5e7e9526cf349604"
+                "reference": "539ce8a3f16896ec6d4ffadceb0b337ec94a2a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/auth/zipball/ac9dec3dc44d7c30104e815b5e7e9526cf349604",
-                "reference": "ac9dec3dc44d7c30104e815b5e7e9526cf349604",
+                "url": "https://api.github.com/repos/fuel/auth/zipball/539ce8a3f16896ec6d4ffadceb0b337ec94a2a15",
+                "reference": "539ce8a3f16896ec6d4ffadceb0b337ec94a2a15",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +135,7 @@
                 "source": "https://github.com/fuel/auth/tree/1.8/develop",
                 "issues": "https://github.com/fuel/auth/issues"
             },
-            "time": "2015-10-13 08:32:35"
+            "time": "2015-10-21 12:18:59"
         },
         {
             "name": "fuel/core",
@@ -143,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/core.git",
-                "reference": "0d9efca077b3e21653c71e7d118f8acbbb3695e6"
+                "reference": "6349304cf4ebb7c2c48f9095b557b1a2408ce6d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/core/zipball/0d9efca077b3e21653c71e7d118f8acbbb3695e6",
-                "reference": "0d9efca077b3e21653c71e7d118f8acbbb3695e6",
+                "url": "https://api.github.com/repos/fuel/core/zipball/6349304cf4ebb7c2c48f9095b557b1a2408ce6d7",
+                "reference": "6349304cf4ebb7c2c48f9095b557b1a2408ce6d7",
                 "shasum": ""
             },
             "require": {
@@ -170,7 +170,7 @@
                 "source": "https://github.com/fuel/core/tree/1.8/develop",
                 "issues": "https://github.com/fuel/core/issues"
             },
-            "time": "2015-10-06 17:08:51"
+            "time": "2015-10-23 15:04:48"
         },
         {
             "name": "fuel/email",

@@ -1,0 +1,29 @@
+{
+    "name": "phpixie/project",
+    "type": "project",
+    "description" : "PHPixie skeleton project",
+    "license" : "BSD",
+    "autoload": {
+        "psr-4": {
+            "": [
+                "src/",
+                "tests/",
+
+                "bundles/app/src/",
+                "bundles/app/tests/"
+            ]
+        }
+    },
+    "require": {
+        "phpixie/default-bundle": "~3.1",
+        "phpixie/bundle-framework": "~3.1"
+    },
+    "require-dev": {
+        "phpixie/test": "~3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.*-dev"
+        }
+    }
+}
