@@ -6,7 +6,7 @@ list="
 phalcon-2.0
 ice-1.0
 slim-2.6
-codeigniter-3.0
+ci-3.0
 nofuss-1.2
 slim-3.0
 bear-1.0
@@ -33,5 +33,5 @@ symfony-2.7
 laravel-5.1
 #zf-2.4
 zf-2.5
-typo3-flow-2.3
+typo3f-2.3
 "

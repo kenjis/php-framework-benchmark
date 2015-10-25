@@ -10,8 +10,4 @@ $app->get('/hello/index', function ($request, $response, $args) {
 
 $app->run();
 
-printf(
-    "\n%' 8d:%f",
-    memory_get_peak_usage(true),
-    microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']
-);
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
