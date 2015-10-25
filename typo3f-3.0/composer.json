@@ -1,0 +1,30 @@
+{
+    "name": "typo3/flow-base-distribution",
+    "description": "TYPO3 Flow Base Distribution",
+    "license": "LGPL-3.0+",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "typo3/flow": "3.0.*",
+        "typo3/welcome": "3.0.*",
+        "doctrine/migrations": "@rc"
+    },
+    "require-dev": {
+        "typo3/kickstart": "3.0.*",
+        "typo3/buildessentials": "3.0.*",
+        "phpunit/phpunit": "4.6.*",
+        "mikey179/vfsstream": "1.5.*",
+        "flowpack/behat": "dev-master"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+    },
+    "scripts": {
+        "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}
