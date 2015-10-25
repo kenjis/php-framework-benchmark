@@ -1,0 +1,8 @@
+-
+  name: 'Hello World'
+  uriPattern: 'index.php/{@package}'
+  defaults:
+    '@controller': 'Standard'
+    '@action':     'index'
+    '@format':     'html'
+  appendExceedingArguments: true
