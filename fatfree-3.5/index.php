@@ -2,12 +2,11 @@
 
 require 'vendor/autoload.php';
 
-$app = \Base::instance();
+$f3 = \Base::instance();
+$f3->set('AUTOLOAD','app/controllers/');
 
-$app->route('GET /index.php/hello/index', function() {
-    echo 'Hello World!';
-});
+$f3->route('GET /index.php/hello/index', 'Hello->index');
 
-$app->run();
+$f3->run();
 
 require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
