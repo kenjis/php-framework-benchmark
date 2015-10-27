@@ -5,86 +5,56 @@ require __DIR__ . '/libs/parse_results.php';
 
 $results = parse_results(__DIR__ . '/output/results.hello_world.log');
 
-$barColors = array(
-    'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
-    'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
-    'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
-    'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
-    'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
-    'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
-);
+function makeGraph($id, $title, $hAxis_title)
+{
+    global $results;
 
-$graphWidth  = 1000;
-$graphHeight = 400;
+    $barColors = array(
+        'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
+        'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
+        'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
+        'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
+        'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
+        'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
+    );
+    $graphWidth  = 1000;
+    $graphHeight = 400;
+
+    $data = array();
+    $data[] = array('', $id, array('role' => 'style'));  // header
+
+    $colors = $barColors;
+    foreach ($results as $fw => $result) {
+        $data[] = array($fw, $result[$id], array_shift($colors));
+    }
+    //var_dump($data); exit;
+
+    $options = array(
+      'title'  => $title,
+      'titleTextStyle' => array('fontSize' => 16),
+      'hAxis'  => array('title' => $hAxis_title,
+                        'titleTextStyle' => array('bold' => true)),
+      'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
+      'width'  => $graphWidth,
+      'height' => $graphHeight,
+      'bar'    => array('groupWidth' => '90%'),
+      'legend' => array('position' => 'none')
+    );
+    $type = 'ColumnChart';
+    return makeChartParts($data, $options, $type);
+}
 
 // RPS Benchmark
-$data[] = array('', 'rps', array('role' => 'style'));  // header
-
-$colors = $barColors;
-foreach ($results as $fw => $result) {
-    $data[] = array($fw, $result['rps'], array_shift($colors));
-}
-//var_dump($data); exit;
-
-$options = array(
-  'title'  => 'Throughput',
-  'titleTextStyle' => array('fontSize' => 16),
-  'hAxis'  => array('title' => 'requests per second',
-                    'titleTextStyle' => array('bold' => true)),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
-  'width'  => $graphWidth,
-  'height' => $graphHeight,
-  'bar'    => array('groupWidth' => '90%'),
-  'legend' => array('position' => 'none')
-);
-$type = 'ColumnChart';
-list($chart_rpm, $div_rpm) = makeChartParts($data, $options, $type);
+list($chart_rpm, $div_rpm) = makeGraph('rps', 'Throughput', 'requests per second');
 
 // Memory Benchmark
-$data = array();
-$data[] = array('', 'memory', array('role' => 'style'));  // header
-
-$colors = $barColors;
-foreach ($results as $fw => $result) {
-    $data[] = array($fw, $result['memory'], array_shift($colors));
-}
-
-$options = array(
-  'title'  => 'Memory',
-  'titleTextStyle' => array('fontSize' => 16),
-  'hAxis'  => array('title' => 'peak memory (MB)',
-                    'titleTextStyle' => array('bold' => true)),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
-  'width'  => $graphWidth,
-  'height' => $graphHeight,
-  'bar'    => array('groupWidth' => '90%'),
-  'legend' => array('position' => 'none')
-);
-$type = 'ColumnChart';
-list($chart_mem, $div_mem) = makeChartParts($data, $options, $type);
+list($chart_mem, $div_mem) = makeGraph('memory', 'Memory', 'peak memory (MB)');
 
 // Exec Time Benchmark
-$data = array();
-$data[] = array('', 'time', array('role' => 'style'));  // header
+list($chart_time, $div_time) = makeGraph('time', 'Exec Time', 'ms');
 
-$colors = $barColors;
-foreach ($results as $fw => $result) {
-    $data[] = array($fw, $result['time'], array_shift($colors));
-}
-
-$options = array(
-  'title'  => 'Exec Time',
-  'titleTextStyle' => array('fontSize' => 16),
-  'hAxis'  => array('title' => 'ms',
-                    'titleTextStyle' => array('bold' => true)),
-  'vAxis'  => array('minValue' => 0, 'maxValue' => 1),
-  'width'  => $graphWidth,
-  'height' => $graphHeight,
-  'bar'    => array('groupWidth' => '90%'),
-  'legend' => array('position' => 'none')
-);
-$type = 'ColumnChart';
-list($chart_time, $div_time) = makeChartParts($data, $options, $type);
+// Included Files
+list($chart_file, $div_file) = makeGraph('file', 'Included Files', 'count');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +64,7 @@ list($chart_time, $div_time) = makeChartParts($data, $options, $type);
 <script src="https://www.google.com/jsapi"></script>
 <script>
 <?php
-echo $chart_rpm, $chart_mem, $chart_time;
+echo $chart_rpm, $chart_mem, $chart_time, $chart_file;
 ?>
 </script>
 </head>
@@ -103,7 +73,7 @@ echo $chart_rpm, $chart_mem, $chart_time;
 <h2>Hello World Benchmark</h2>
 <div>
 <?php
-echo $div_rpm, $div_mem, $div_time;
+echo $div_rpm, $div_mem, $div_time, $div_file;
 ?>
 </div>
 
