@@ -32,7 +32,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 1. Phalcon 2.0.8
 1. Ice 1.0.34
-1. FatFree 3.5.0
+1. FatFree 3.5.0 (Comming Soon)
 1. Slim 2.6.2
 1. CodeIgniter 3.0.0
 1. NoFussFramework 1.2.3
