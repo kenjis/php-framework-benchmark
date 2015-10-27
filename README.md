@@ -32,6 +32,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 1. Phalcon 2.0.8
 1. Ice 1.0.34
+1. FatFree 3.5.0
 1. Slim 2.6.2
 1. CodeIgniter 3.0.0
 1. NoFussFramework 1.2.3
@@ -135,6 +136,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp))
 * [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework))
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
+* [FatFree](http://fatfreeframework.com/) ([@phpfatfree](https://twitter.com/phpfatfree))
 * [Slim](http://www.slimframework.com/) ([@slimphp](https://twitter.com/slimphp))
 * [CodeIgniter](http://www.codeigniter.com/) ([@CodeIgniter](https://twitter.com/CodeIgniter))
 * [NoFussFramework](http://www.nofussframework.com/)
