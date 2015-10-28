@@ -20,7 +20,7 @@ This is `master` branch.
   * With minimum changes to run this benchmark.
 * Set environment production/Turn off debug mode.
 * Run optimization which you normally do in your production environment, like composer's `--optimize-autoloader`.
-* Use controller class if a framework supports.
+* Use controller or action class if a framework has the functionality.
 
 Some people may think using default configuration is not fair. But I think a framework's default configuration is an assertion of what it is. Default configuration is a good starting point to know a framework. And I can't optimize all the frameworks. Some frameworks are optimized, some are not, it is not fair. So I don't remove any components/configurations.
 
@@ -32,26 +32,26 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 1. Phalcon 2.0.8
 1. Ice 1.0.34
-1. FatFree 3.5.0 (Comming Soon)
+1. FatFree 3.5.0
 1. Slim 2.6.2
-1. CodeIgniter 3.0.0
+1. CodeIgniter 3.0.2
 1. NoFussFramework 1.2.3
 1. Slim 3.0.0-RC1
 1. BEAR.Sunday 1.0.1
+1. Lumen 5.1.5
 1. zend-expressive 1.0.0rc2 (FastRoute + zend-servicemanager)
 1. Radar 1.0.0-dev
 1. Yii 2.0.6
-1. Lumen 5.0.8
 1. Silex 1.3.4
 1. Cygnite 1.3.1
 1. FuelPHP 1.8-dev
-1. PHPixie 3.2 (Comming Soon)
+1. PHPixie 3.2
 1. Aura 2.0.2
-1. CakePHP 3.1.1
+1. CakePHP 3.1.2
 1. Symfony 2.7.5
 1. Laravel 5.1.19
-1. Zend Framework 2.4.0
-1. TYPO3 Flow 2.3.6
+1. Zend Framework 2.5.2
+1. TYPO3 Flow 3.0.0
 
 ## Results
 
@@ -66,38 +66,40 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 These are my benchmarks, not yours. **I encourage you to run on your environments.**
 
-(2015/10/22)
+(2015/10/28)
 
-![Benchmark Results Graph](https://pbs.twimg.com/media/CR6F0mKUYAAzOJE.png)
+![Benchmark Results Graph](https://pbs.twimg.com/media/CSXXvggUYAA74_j.png)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,523.55|    38.2|       0.50|     1.0|
-|ice-1.0            |           1,275.87|    32.0|       0.50|     1.0|
-|slim-2.6           |             812.56|    20.4|       0.50|     1.0|
-|codeigniter-3.0    |             732.62|    18.4|       0.50|     1.0|
-|nofuss-1.2         |             632.46|    15.9|       0.50|     1.0|
-|slim-3.0           |             567.68|    14.2|       0.75|     1.5|
-|bear-1.0           |             472.28|    11.9|       1.00|     2.0|
-|ze-1.0             |             395.13|     9.9|       1.00|     2.0|
-|radar-1.0-dev      |             376.21|     9.4|       0.75|     1.5|
-|yii-2.0            |             393.89|     9.9|       1.75|     3.5|
-|lumen-5.0          |             363.65|     9.1|       1.25|     2.5|
-|silex-1.3          |             356.55|     8.9|       1.00|     2.0|
-|cygnite-1.3        |             353.72|     8.9|       1.00|     2.0|
-|fuel-1.8-dev       |             321.57|     8.1|       0.75|     1.5|
-|aura-2.0           |             210.10|     5.3|       1.00|     2.0|
-|cake-3.1           |             215.51|     5.4|       1.50|     3.0|
-|symfony-2.7        |             100.22|     2.5|       3.25|     6.5|
-|laravel-5.1        |              95.87|     2.4|       2.75|     5.5|
-|zf-2.4             |              72.16|     1.8|       3.25|     6.5|
-|typo3-flow-2.3     |              39.85|     1.0|       5.50|    11.0|
+|phalcon-2.0        |           1,470.10|    56.0|       0.50|     1.0|
+|ice-1.0            |           1,230.86|    46.9|       0.50|     1.0|
+|fatfree-3.5        |             948.76|    36.2|       0.50|     1.0|
+|slim-2.6           |             749.78|    28.6|       0.50|     1.0|
+|ci-3.0             |             687.84|    26.2|       0.50|     1.0|
+|nofuss-1.2         |             596.83|    22.7|       0.50|     1.0|
+|slim-3.0           |             534.92|    20.4|       0.75|     1.5|
+|bear-1.0           |             418.27|    15.9|       1.00|     2.0|
+|lumen-5.1          |             387.59|    14.8|       1.00|     2.0|
+|ze-1.0             |             353.47|    13.5|       1.00|     2.0|
+|radar-1.0-dev      |             355.74|    13.6|       0.75|     1.5|
+|yii-2.0            |             351.31|    13.4|       1.75|     3.5|
+|silex-1.3          |             316.28|    12.1|       1.00|     2.0|
+|cygnite-1.3        |             324.87|    12.4|       1.00|     2.0|
+|fuel-1.8-dev       |             301.30|    11.5|       0.75|     1.5|
+|phpixie-3.2        |             253.21|     9.6|       1.50|     3.0|
+|aura-2.0           |             198.16|     7.6|       1.00|     2.0|
+|cake-3.1           |             202.34|     7.7|       1.50|     3.0|
+|symfony-2.7        |              88.22|     3.4|       3.25|     6.5|
+|laravel-5.1        |              80.09|     3.1|       2.75|     5.5|
+|zf-2.5             |              69.57|     2.7|       3.25|     6.5|
+|typo3f-3.0         |              26.24|     1.0|       6.75|    13.5|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
 ## How to Benchmark
 
-Install source code as <http://localhost/php-framework-benchmark/>.
+Install source code as <http://localhost/php-framework-benchmark/>:
 
 ~~~
 $ git clone https://github.com/kenjis/php-framework-benchmark.git
@@ -105,13 +107,20 @@ $ cd php-framework-benchmark
 $ sh setup.sh
 ~~~
 
-Run benchmarks.
+Run benchmarks:
 
 ~~~
 $ sh benchmark.sh
 ~~~
 
 See <http://localhost/php-framework-benchmark/>.
+
+If you want to benchmark some frameworks:
+
+~~~
+$ sh setup.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+$ sh benchmark.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+~~~
 
 ## Linux Kernel Configuration
 
@@ -130,6 +139,14 @@ net.ipv4.tcp_fin_timeout = 10
 and run `sudo sysctl -p`.
 
 If you want to see current configuration, run `sudo sysctl -a`.
+
+## Apache Virtual Host Configuration
+
+~~~
+<VirtualHost *:80>
+  DocumentRoot /home/vagrant/public
+</VirtualHost>
+~~~
 
 ## Reference
 
