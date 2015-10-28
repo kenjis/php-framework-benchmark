@@ -95,7 +95,7 @@ Note(2): Only frameworks with (*) mark are optimized, and optimized does not mea
 
 ## How to Benchmark
 
-Install source code as <http://localhost/php-framework-benchmark/>.
+Install source code as <http://localhost/php-framework-benchmark/>:
 
 ~~~
 $ git clone https://github.com/kenjis/php-framework-benchmark.git
@@ -104,13 +104,20 @@ $ git checkout optimize
 $ sh setup.sh
 ~~~
 
-Run benchmarks.
+Run benchmarks:
 
 ~~~
 $ sh benchmark.sh
 ~~~
 
 See <http://localhost/php-framework-benchmark/>.
+
+If you want to benchmark some frameworks:
+
+~~~
+$ sh setup.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+$ sh benchmark.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+~~~
 
 ## Linux Kernel Configuration
 
@@ -129,6 +136,14 @@ net.ipv4.tcp_fin_timeout = 10
 and run `sudo sysctl -p`.
 
 If you want to see current configuration, run `sudo sysctl -a`.
+
+## Apache Virtual Host Configuration
+
+~~~
+<VirtualHost *:80>
+  DocumentRoot /home/vagrant/public
+</VirtualHost>
+~~~
 
 ## Reference
 

@@ -10,9 +10,10 @@ benchmark ()
     curl "$url" > "$output"
 
     rps=`grep "Requests per second:" "$ab_log" | cut -f 7 -d " "`
-    m=`tail -1 "$output" | cut -f 1 -d ':'`
-    t=`tail -1 "$output" | cut -f 2 -d ':'`
-    echo "$fw: $rps: $m: $t" >> "$results_file"
+    memory=`tail -1 "$output" | cut -f 1 -d ':'`
+    time=`tail -1 "$output" | cut -f 2 -d ':'`
+    file=`tail -1 "$output" | cut -f 3 -d ':'`
+    echo "$fw: $rps: $memory: $time: $file" >> "$results_file"
 
     echo "$fw" >> "$check_file"
     grep "Document Length:" "$ab_log" >> "$check_file"
