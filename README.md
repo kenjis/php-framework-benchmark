@@ -27,22 +27,22 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ## Frameworks to Benchmark
 
-* Phalcon 2.0.0-RC1
-* Ice 1.0.10
-* Slim 2.6.2
-* CodeIgniter 3.0.0
-* Lumen 5.0.8
-* Yii 2.0.4
-* Silex 1.2.4
-* Cygnite 1.3.1
-* BEAR.Sunday 1.0.0-rc.3
-* FuelPHP 1.8-dev
-* CakePHP 3.0.2
-* Aura 2.0.2
-* Symfony 2.6.6
-* Laravel 5.0.27
-* Zend Framework 2.4.0
-* TYPO3 Flow 2.3.3
+1. Phalcon 2.0.0-RC1
+1. Ice 1.0.10
+1. Slim 2.6.2
+1. CodeIgniter 3.0.0
+1. Lumen 5.0.8
+1. Yii 2.0.4
+1. Silex 1.2.4
+1. Cygnite 1.3.1
+1. BEAR.Sunday 1.0.0-rc.3
+1. FuelPHP 1.8-dev
+1. CakePHP 3.0.2
+1. Aura 2.0.2
+1. Symfony 2.6.6
+1. Laravel 5.0.27
+1. Zend Framework 2.4.0
+1. TYPO3 Flow 2.3.3
 
 ## Results
 
@@ -147,24 +147,24 @@ If you want to see current configuration, run `sudo sysctl -a`.
 
 ## Reference
 
-* [Phalcon](http://phalconphp.com/)
+* [Aura](http://auraphp.com/)
+* [BEAR.Sunday](https://bearsunday.github.io/)
+* [CakePHP](http://cakephp.org/)
+* [CodeIgniter](http://www.codeigniter.com/)
+* [Cygnite](http://www.cygniteframework.com/)
+* [FuelPHP](http://fuelphp.com/)
 * [Ice](http://www.iceframework.org/)
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
-* [Slim](http://www.slimframework.com/)
-* [CodeIgniter](http://www.codeigniter.com/)
+* [Laravel](http://laravel.com/)
 * [Lumen](http://lumen.laravel.com/)
-* [Yii](http://www.yiiframework.com/)
+* [Phalcon](http://phalconphp.com/)
 * [Silex](http://silex.sensiolabs.org/)
-* [Cygnite](http://www.cygniteframework.com/)
-* [BEAR.Sunday](https://bearsunday.github.io/)
-* [FuelPHP](http://fuelphp.com/)
-* [CakePHP](http://cakephp.org/)
-* [Aura](http://auraphp.com/)
+* [Slim](http://www.slimframework.com/)
 * [Symfony](http://symfony.com/)
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
-* [Laravel](http://laravel.com/)
-* [Zend Framework](http://framework.zend.com/)
 * [TYPO3 Flow](http://flow.typo3.org/)
+* [Yii](http://www.yiiframework.com/)
+* [Zend Framework](http://framework.zend.com/)
 
 ## Related
 
