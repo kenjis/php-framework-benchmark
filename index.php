@@ -1,9 +1,27 @@
 <?php
 
-require __DIR__ . '/libs/parse_results.php';
-require __DIR__ . '/libs/make_graph.php';
+Parse_Results: {
+    require __DIR__ . '/libs/parse_results.php';
+    $results = parse_results(__DIR__ . '/output/results.hello_world.log');
+}
 
-$results = parse_results(__DIR__ . '/output/results.hello_world.log');
+Load_Theme: {
+    $theme = isset($_GET['theme']) ? $_GET['theme'] : 'default';
+    if (! ctype_alnum($theme)) {
+        exit('Invalid theme');
+    }
+
+    if ($theme === 'default') {
+        require __DIR__ . '/libs/make_graph.php';
+    } else {
+        $file = __DIR__ . '/libs/' . $theme . '/make_graph.php';
+        if (is_readable($file)) {
+            require $file;
+        } else {
+            require __DIR__ . '/libs/make_graph.php';
+        }
+    }
+}
 
 // RPS Benchmark
 list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second');
