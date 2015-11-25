@@ -2,6 +2,6 @@
 	"name": "arzynik/tipsy-example",
 	"description": "Tipsy Example",
 	"require": {
-		"arzynik/tipsy": "dev-master"
+		"arzynik/tipsy": "~0.10.1"
 	}
 }
