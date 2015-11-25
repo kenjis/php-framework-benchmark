@@ -36,4 +36,5 @@ laravel-5.1
 zf-2.5
 #typo3f-2.3
 typo3f-3.0
+tipsy-0.10
 "
