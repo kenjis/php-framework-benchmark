@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "092289c74598e6d51e7c3e300ee497d3",
+    "content-hash": "9b9d9d89b4783efc9763f7fd121c82a7",
+    "packages": [
+        {
+            "name": "arzynik/tipsy",
+            "version": "v0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arzynik/Tipsy.git",
+                "reference": "fd35b61d6655b3c9192d691a63ef498c6210a27a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arzynik/Tipsy/zipball/fd35b61d6655b3c9192d691a63ef498c6210a27a",
+                "reference": "fd35b61d6655b3c9192d691a63ef498c6210a27a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Tipsy": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Devin Smith",
+                    "email": "devin@tipsy.la",
+                    "homepage": "http://devin.la",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An MVW PHP framework",
+            "keywords": [
+                "framework",
+                "mvc",
+                "mvw",
+                "php"
+            ],
+            "time": "2014-07-24 00:00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
