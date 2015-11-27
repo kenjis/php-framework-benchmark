@@ -169,6 +169,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Slim](http://www.slimframework.com/) ([@slimphp](https://twitter.com/slimphp))
 * [Symfony](http://symfony.com/) ([@symfony](https://twitter.com/symfony))
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
+* [Tipsy](http://tipsy.la)
 * [TYPO3 Flow](http://flow.typo3.org/) ([@neoscms](https://twitter.com/neoscms))
 * [Yii](http://www.yiiframework.com/) ([@yiiframework](https://twitter.com/yiiframework))
 * [zend-expressive](https://github.com/zendframework/zend-expressive) ([@zfdevteam](https://twitter.com/zfdevteam))
