@@ -8,6 +8,101 @@
     "content-hash": "8647ae71a38a80e84b5c65424fd14d7d",
     "packages": [
         {
+            "name": "composer/installers",
+            "version": "v1.0.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "shasum": ""
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "Composer\\Installers\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "zend",
+                "zikula"
+            ],
+            "time": "2015-02-18 17:17:01"
+        },
+        {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
             "source": {
@@ -77,16 +172,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
+                "reference": "8c434000f420ade76a07c64cbe08ca47e5c101ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
-                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/8c434000f420ade76a07c64cbe08ca47e5c101ca",
+                "reference": "8c434000f420ade76a07c64cbe08ca47e5c101ca",
                 "shasum": ""
             },
             "require": {
@@ -107,8 +202,8 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                "psr-0": {
+                    "Doctrine\\Common\\Cache\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -143,7 +238,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-11-02 18:35:48"
+            "time": "2015-08-31 12:36:41"
         },
         {
             "name": "doctrine/collections",
@@ -357,16 +452,16 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
+                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +473,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -420,7 +515,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06 14:35:42"
+            "time": "2014-12-20 21:24:13"
         },
         {
             "name": "doctrine/lexer",
@@ -617,46 +712,17 @@
             "time": "2015-08-31 13:19:01"
         },
         {
-            "name": "neos/composer-plugin",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/neos/composer-plugin.git",
-                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/neos/composer-plugin/zipball/35a6166a1a7a033d0105f5500c057b184a47dfbb",
-                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "1.0.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Neos\\ComposerPlugin\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Neos\\ComposerPlugin\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-10-17 12:29:21"
-        },
-        {
             "name": "symfony/console",
-            "version": "v2.7.7",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750"
+                "reference": "06cb17c013a82f94a3d840682b49425cd00a2161"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/16bb1cb86df43c90931df65f529e7ebd79636750",
-                "reference": "16bb1cb86df43c90931df65f529e7ebd79636750",
+                "url": "https://api.github.com/repos/symfony/console/zipball/06cb17c013a82f94a3d840682b49425cd00a2161",
+                "reference": "06cb17c013a82f94a3d840682b49425cd00a2161",
                 "shasum": ""
             },
             "require": {
@@ -665,6 +731,7 @@
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1",
+                "symfony/phpunit-bridge": "~2.7",
                 "symfony/process": "~2.1"
             },
             "suggest": {
@@ -681,10 +748,7 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -702,7 +766,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 09:54:26"
+            "time": "2015-09-25 08:32:23"
         },
         {
             "name": "symfony/dom-crawler",
@@ -806,20 +870,20 @@
         },
         {
             "name": "typo3/eel",
-            "version": "3.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/eel.git",
-                "reference": "2793d19fd5d6a62a8029f431806a65850b6eba57"
+                "reference": "08444b7cd8523c2e7bb66bb1e193ad88588ffa23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/eel/zipball/2793d19fd5d6a62a8029f431806a65850b6eba57",
-                "reference": "2793d19fd5d6a62a8029f431806a65850b6eba57",
+                "url": "https://api.github.com/repos/neos/eel/zipball/08444b7cd8523c2e7bb66bb1e193ad88588ffa23",
+                "reference": "08444b7cd8523c2e7bb66bb1e193ad88588ffa23",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~3.0.0"
+                "typo3/flow": "3.0.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -829,26 +893,27 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0+"
             ],
             "description": "The Embedded Expression Language (Eel) is a building block for creating Domain Specific Languages",
-            "time": "2015-11-23 10:31:32"
+            "time": "2015-07-31 11:53:01"
         },
         {
             "name": "typo3/flow",
-            "version": "3.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/flow.git",
-                "reference": "556677410767eaf5299b3914d7097e5341583788"
+                "reference": "8e5d01a3ffcfc37c528b691768625ca1ce70fe86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/flow/zipball/556677410767eaf5299b3914d7097e5341583788",
-                "reference": "556677410767eaf5299b3914d7097e5341583788",
+                "url": "https://api.github.com/repos/neos/flow/zipball/8e5d01a3ffcfc37c528b691768625ca1ce70fe86",
+                "reference": "8e5d01a3ffcfc37c528b691768625ca1ce70fe86",
                 "shasum": ""
             },
             "require": {
+                "composer/installers": "~1.0.2",
                 "doctrine/migrations": "~1.0.0",
                 "doctrine/orm": "~2.4.0",
                 "ext-json": ">=1.2.0",
@@ -856,13 +921,12 @@
                 "ext-reflection": "*",
                 "ext-spl": "*",
                 "ext-zlib": "*",
-                "neos/composer-plugin": "^1.0.1",
                 "php": ">=5.5.0",
                 "symfony/console": "~2.0",
                 "symfony/dom-crawler": "~2.5.0",
                 "symfony/yaml": "~2.5.0",
-                "typo3/eel": "~3.0.0",
-                "typo3/fluid": "~3.0.0"
+                "typo3/eel": "3.0.*",
+                "typo3/fluid": "3.0.*"
             },
             "suggest": {
                 "doctrine/data-fixtures": "To manage and execute the loading of data fixtures for the Doctrine ORM or ODM",
@@ -877,28 +941,28 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0+"
             ],
-            "description": "Flow Application Framework",
+            "description": "TYPO3 Flow Application Framework",
             "homepage": "http://flow.typo3.org",
-            "time": "2015-11-23 20:52:32"
+            "time": "2015-08-11 14:17:21"
         },
         {
             "name": "typo3/fluid",
-            "version": "3.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/fluid.git",
-                "reference": "1fabd37a675d1ce35fb4c70611964664e2a90fb4"
+                "reference": "c8fea57c5e0c61f9678f17456a8cdb539a04a48c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/fluid/zipball/1fabd37a675d1ce35fb4c70611964664e2a90fb4",
-                "reference": "1fabd37a675d1ce35fb4c70611964664e2a90fb4",
+                "url": "https://api.github.com/repos/neos/fluid/zipball/c8fea57c5e0c61f9678f17456a8cdb539a04a48c",
+                "reference": "c8fea57c5e0c61f9678f17456a8cdb539a04a48c",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~3.0.0"
+                "typo3/flow": "3.0.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -908,10 +972,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0+"
             ],
-            "description": "Next-Generation Templating Framework for Flow and Neos",
-            "time": "2015-11-23 10:31:32"
+            "description": "Next-Generation Templating Framework for TYPO3 Flow and TYPO3 Neos, also backported to TYPO3 CMS",
+            "time": "2015-08-11 13:43:22"
         },
         {
             "name": "typo3/welcome",
@@ -1074,6 +1138,35 @@
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
             "time": "2015-03-29 11:19:49"
+        },
+        {
+            "name": "neos/composer-plugin",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neos/composer-plugin.git",
+                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neos/composer-plugin/zipball/35a6166a1a7a033d0105f5500c057b184a47dfbb",
+                "reference": "35a6166a1a7a033d0105f5500c057b184a47dfbb",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Neos\\ComposerPlugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Neos\\ComposerPlugin\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-10-17 12:29:21"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -1953,20 +2046,20 @@
         },
         {
             "name": "typo3/kickstart",
-            "version": "3.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/kickstart.git",
-                "reference": "d82d8e0215ecd026baa35c52bdf7cb8ec3fe8ede"
+                "reference": "c4b67c1e871696f9fb5de7235c1190a452f0c959"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/kickstart/zipball/d82d8e0215ecd026baa35c52bdf7cb8ec3fe8ede",
-                "reference": "d82d8e0215ecd026baa35c52bdf7cb8ec3fe8ede",
+                "url": "https://api.github.com/repos/neos/kickstart/zipball/c4b67c1e871696f9fb5de7235c1190a452f0c959",
+                "reference": "c4b67c1e871696f9fb5de7235c1190a452f0c959",
                 "shasum": ""
             },
             "require": {
-                "typo3/flow": "~3.0.0"
+                "typo3/flow": "3.0.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -1976,10 +2069,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0+"
             ],
             "description": "A simple generator for controller and views.",
-            "time": "2015-11-23 10:31:32"
+            "time": "2015-07-31 11:53:02"
         }
     ],
     "aliases": [],
