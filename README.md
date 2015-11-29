@@ -69,7 +69,7 @@ These are my benchmarks, not yours. **I encourage you to run on your environment
 
 (2015/11/29)
 
-![Benchmark Results Graph](https://pbs.twimg.com/media/CSXXvggUYAA74_j.png)
+![Benchmark Results Graph](https://pbs.twimg.com/media/CU9dNeqUwAEbcod.png:large)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
