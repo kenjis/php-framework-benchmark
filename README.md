@@ -148,7 +148,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 </VirtualHost>
 ~~~
 
-## Reference
+## References
 
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
 * [BEAR.Sunday](https://bearsunday.github.io/) ([@BEARSunday](https://twitter.com/BEARSunday))
