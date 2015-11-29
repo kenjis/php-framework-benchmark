@@ -5,6 +5,7 @@ list="
 #phalcon-1.3
 phalcon-2.0
 ice-1.0
+tipsy-0.10
 fatfree-3.5
 slim-2.6
 ci-3.0
@@ -36,5 +37,4 @@ laravel-5.1
 zf-2.5
 #typo3f-2.3
 typo3f-3.0
-tipsy-0.10
 "
