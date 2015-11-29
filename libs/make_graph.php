@@ -14,7 +14,7 @@ function make_graph($id, $title, $hAxis_title)
         'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
         'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
     );
-    $graphWidth  = 1000;
+    $graphWidth  = 1100;
     $graphHeight = 400;
 
     $data = array();
