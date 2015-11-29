@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "arzynik/tipsy",
-            "version": "v0.10.2",
+            "version": "v0.10.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/arzynik/Tipsy.git",
-                "reference": "fd35b61d6655b3c9192d691a63ef498c6210a27a"
+                "url": "https://github.com/arzynik/tipsy.git",
+                "reference": "e43ec8c8e42b6a2f2ed68539669e0813c5ced8af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/arzynik/Tipsy/zipball/fd35b61d6655b3c9192d691a63ef498c6210a27a",
-                "reference": "fd35b61d6655b3c9192d691a63ef498c6210a27a",
+                "url": "https://api.github.com/repos/arzynik/tipsy/zipball/e43ec8c8e42b6a2f2ed68539669e0813c5ced8af",
+                "reference": "e43ec8c8e42b6a2f2ed68539669e0813c5ced8af",
                 "shasum": ""
             },
             "require": {

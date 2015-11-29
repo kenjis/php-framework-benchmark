@@ -51,20 +51,23 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.0.10",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "2fa50aa2f17066fa74ba00d943e8cee1a98284af"
+                "reference": "19f765b66c6fbb56ee3b11bc16d52e38eebdc295"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/2fa50aa2f17066fa74ba00d943e8cee1a98284af",
-                "reference": "2fa50aa2f17066fa74ba00d943e8cee1a98284af",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/19f765b66c6fbb56ee3b11bc16d52e38eebdc295",
+                "reference": "19f765b66c6fbb56ee3b11bc16d52e38eebdc295",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
@@ -92,7 +95,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2015-10-23 13:21:37"
+            "time": "2015-11-10 00:45:41"
         },
         {
             "name": "phpixie/auth",
@@ -356,20 +359,21 @@
         },
         {
             "name": "phpixie/bundle-framework",
-            "version": "3.1",
+            "version": "3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Bundle-Framework.git",
-                "reference": "adfa85c91969afbaae5c81b5d7167b6954c357f7"
+                "reference": "78b8f536db11ff1cf6b7b4bfe9f3f3e8c37e3b01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Bundle-Framework/zipball/adfa85c91969afbaae5c81b5d7167b6954c357f7",
-                "reference": "adfa85c91969afbaae5c81b5d7167b6954c357f7",
+                "url": "https://api.github.com/repos/PHPixie/Bundle-Framework/zipball/78b8f536db11ff1cf6b7b4bfe9f3f3e8c37e3b01",
+                "reference": "78b8f536db11ff1cf6b7b4bfe9f3f3e8c37e3b01",
                 "shasum": ""
             },
             "require": {
                 "phpixie/bundles": "~3.0",
+                "phpixie/config": "~3.1",
                 "phpixie/framework": "~3.0"
             },
             "require-dev": {
@@ -403,7 +407,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-10-21 10:00:03"
+            "time": "2015-11-06 20:52:44"
         },
         {
             "name": "phpixie/bundles",
@@ -463,20 +467,20 @@
         },
         {
             "name": "phpixie/config",
-            "version": "3.0",
+            "version": "3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Config.git",
-                "reference": "c502a7be02391a5f3388a4989cb1cab02906ce22"
+                "reference": "6b3725e72a839380215de00984a8468506fa6707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Config/zipball/c502a7be02391a5f3388a4989cb1cab02906ce22",
-                "reference": "c502a7be02391a5f3388a4989cb1cab02906ce22",
+                "url": "https://api.github.com/repos/PHPixie/Config/zipball/6b3725e72a839380215de00984a8468506fa6707",
+                "reference": "6b3725e72a839380215de00984a8468506fa6707",
                 "shasum": ""
             },
             "require": {
-                "phpixie/slice": "~3.0"
+                "phpixie/slice": "~3.1"
             },
             "require-dev": {
                 "phpixie/test": "~3.0"
@@ -510,20 +514,20 @@
                 "config",
                 "configuration"
             ],
-            "time": "2015-10-10 23:30:31"
+            "time": "2015-11-06 20:40:48"
         },
         {
             "name": "phpixie/database",
-            "version": "3.1",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Database.git",
-                "reference": "19958db10eef7c1ccb54d55d2d2bcf52247c8eb5"
+                "reference": "03a9a370b598be92e1ee6157de2e9e9f38722b07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Database/zipball/19958db10eef7c1ccb54d55d2d2bcf52247c8eb5",
-                "reference": "19958db10eef7c1ccb54d55d2d2bcf52247c8eb5",
+                "url": "https://api.github.com/repos/PHPixie/Database/zipball/03a9a370b598be92e1ee6157de2e9e9f38722b07",
+                "reference": "03a9a370b598be92e1ee6157de2e9e9f38722b07",
                 "shasum": ""
             },
             "require": {
@@ -563,7 +567,7 @@
                 "postgresql",
                 "sqlite"
             ],
-            "time": "2015-10-19 15:31:41"
+            "time": "2015-10-27 20:09:38"
         },
         {
             "name": "phpixie/debug",
@@ -720,16 +724,16 @@
         },
         {
             "name": "phpixie/framework",
-            "version": "3.0.3",
+            "version": "3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Framework.git",
-                "reference": "9e35e8500b96896d251831ec559ef902ca9ec1f7"
+                "reference": "bd7dd3fae6c699b24c0544fb0fa021c237a3c182"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Framework/zipball/9e35e8500b96896d251831ec559ef902ca9ec1f7",
-                "reference": "9e35e8500b96896d251831ec559ef902ca9ec1f7",
+                "url": "https://api.github.com/repos/PHPixie/Framework/zipball/bd7dd3fae6c699b24c0544fb0fa021c237a3c182",
+                "reference": "bd7dd3fae6c699b24c0544fb0fa021c237a3c182",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +788,7 @@
             "keywords": [
                 "processors"
             ],
-            "time": "2015-10-23 12:59:04"
+            "time": "2015-10-28 14:05:32"
         },
         {
             "name": "phpixie/http",
@@ -891,16 +895,16 @@
         },
         {
             "name": "phpixie/orm",
-            "version": "3.1",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/ORM.git",
-                "reference": "c94358a6659cfcb5ff193bb57f2d36fc9aed3efe"
+                "reference": "427a6fe3f89689855fd74f72d50d6d664ea0c2a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/ORM/zipball/c94358a6659cfcb5ff193bb57f2d36fc9aed3efe",
-                "reference": "c94358a6659cfcb5ff193bb57f2d36fc9aed3efe",
+                "url": "https://api.github.com/repos/PHPixie/ORM/zipball/427a6fe3f89689855fd74f72d50d6d664ea0c2a2",
+                "reference": "427a6fe3f89689855fd74f72d50d6d664ea0c2a2",
                 "shasum": ""
             },
             "require": {
@@ -939,7 +943,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-10-23 10:01:16"
+            "time": "2015-10-27 21:35:09"
         },
         {
             "name": "phpixie/paginate",
@@ -1201,16 +1205,16 @@
         },
         {
             "name": "phpixie/slice",
-            "version": "3.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Slice.git",
-                "reference": "09f3ab149f3585b00bcd69ebda6ec6efc67efbb4"
+                "reference": "415d2c2ae576a27c12f8b54952dfc1193a7c9588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Slice/zipball/09f3ab149f3585b00bcd69ebda6ec6efc67efbb4",
-                "reference": "09f3ab149f3585b00bcd69ebda6ec6efc67efbb4",
+                "url": "https://api.github.com/repos/PHPixie/Slice/zipball/415d2c2ae576a27c12f8b54952dfc1193a7c9588",
+                "reference": "415d2c2ae576a27c12f8b54952dfc1193a7c9588",
                 "shasum": ""
             },
             "require-dev": {
@@ -1246,7 +1250,7 @@
                 "data",
                 "parameters"
             ],
-            "time": "2015-10-10 23:28:32"
+            "time": "2015-11-10 13:29:07"
         },
         {
             "name": "phpixie/template",

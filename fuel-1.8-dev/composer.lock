@@ -13,13 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41"
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
+                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
                 "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -29,9 +32,9 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "4.1.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "Composer\\Installers\\Installer",
+                "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
@@ -100,7 +103,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-06-13 15:30:38"
+            "time": "2015-10-29 23:28:48"
         },
         {
             "name": "fuel/auth",
@@ -108,12 +111,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/auth.git",
-                "reference": "539ce8a3f16896ec6d4ffadceb0b337ec94a2a15"
+                "reference": "60a677f09baed9740d7fa60dc21ac8db27350dc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/auth/zipball/539ce8a3f16896ec6d4ffadceb0b337ec94a2a15",
-                "reference": "539ce8a3f16896ec6d4ffadceb0b337ec94a2a15",
+                "url": "https://api.github.com/repos/fuel/auth/zipball/60a677f09baed9740d7fa60dc21ac8db27350dc7",
+                "reference": "60a677f09baed9740d7fa60dc21ac8db27350dc7",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +138,7 @@
                 "source": "https://github.com/fuel/auth/tree/1.8/develop",
                 "issues": "https://github.com/fuel/auth/issues"
             },
-            "time": "2015-10-21 12:18:59"
+            "time": "2015-11-12 22:53:56"
         },
         {
             "name": "fuel/core",
@@ -143,12 +146,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/core.git",
-                "reference": "6349304cf4ebb7c2c48f9095b557b1a2408ce6d7"
+                "reference": "6c48d4e63bea3c268c97f0cc085a15ef57d40032"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/core/zipball/6349304cf4ebb7c2c48f9095b557b1a2408ce6d7",
-                "reference": "6349304cf4ebb7c2c48f9095b557b1a2408ce6d7",
+                "url": "https://api.github.com/repos/fuel/core/zipball/6c48d4e63bea3c268c97f0cc085a15ef57d40032",
+                "reference": "6c48d4e63bea3c268c97f0cc085a15ef57d40032",
                 "shasum": ""
             },
             "require": {
@@ -170,7 +173,7 @@
                 "source": "https://github.com/fuel/core/tree/1.8/develop",
                 "issues": "https://github.com/fuel/core/issues"
             },
-            "time": "2015-10-23 15:04:48"
+            "time": "2015-11-23 11:01:19"
         },
         {
             "name": "fuel/email",
@@ -178,12 +181,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/email.git",
-                "reference": "255552c0f83708a869358dc0de498a005cfd1607"
+                "reference": "3a716cde8b3380ece33d649a0187794f074e123d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/email/zipball/255552c0f83708a869358dc0de498a005cfd1607",
-                "reference": "255552c0f83708a869358dc0de498a005cfd1607",
+                "url": "https://api.github.com/repos/fuel/email/zipball/3a716cde8b3380ece33d649a0187794f074e123d",
+                "reference": "3a716cde8b3380ece33d649a0187794f074e123d",
                 "shasum": ""
             },
             "require": {
@@ -205,7 +208,7 @@
                 "source": "https://github.com/fuel/email/tree/1.8/develop",
                 "issues": "https://github.com/fuel/email/issues"
             },
-            "time": "2015-07-14 22:18:45"
+            "time": "2015-11-07 13:10:14"
         },
         {
             "name": "fuel/oil",
@@ -524,12 +527,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/docs.git",
-                "reference": "eaf29e07ce2a2f1a392a76e9215c55780e5850fe"
+                "reference": "4c666b187ab8ff1efc5d4710d7d5ee47180a3d00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/docs/zipball/eaf29e07ce2a2f1a392a76e9215c55780e5850fe",
-                "reference": "eaf29e07ce2a2f1a392a76e9215c55780e5850fe",
+                "url": "https://api.github.com/repos/fuel/docs/zipball/4c666b187ab8ff1efc5d4710d7d5ee47180a3d00",
+                "reference": "4c666b187ab8ff1efc5d4710d7d5ee47180a3d00",
                 "shasum": ""
             },
             "require": {
@@ -551,7 +554,7 @@
                 "source": "https://github.com/fuel/docs/tree/1.8/develop",
                 "issues": "https://github.com/fuel/docs/issues"
             },
-            "time": "2015-09-22 11:10:36"
+            "time": "2015-11-23 11:00:03"
         }
     ],
     "aliases": [],
