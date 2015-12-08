@@ -25,7 +25,7 @@ function parse_results($file)
         
         $results[$fw] = [
             'rps'    => $rps,
-            'memory' => $memory,
+            'memory' => round($memory, 2),
             'time'   => $time,
             'file'   => $file,
         ];

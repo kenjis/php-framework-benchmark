@@ -55,7 +55,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ### Hello World Benchmark
 
-These are my benchmarks, not yours. **I encourage you to run on your environments.**
+These are my benchmarks, not yours. **I encourage you to run on your (production equivalent) environments.**
 
 (2015/05/02)
 
@@ -145,7 +145,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 </VirtualHost>
 ~~~
 
-## Reference
+## References
 
 * [Aura](http://auraphp.com/)
 * [BEAR.Sunday](https://bearsunday.github.io/)
@@ -166,7 +166,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Yii](http://www.yiiframework.com/)
 * [Zend Framework](http://framework.zend.com/)
 
-## Related
+## Other Benchmarks
 
 * [PHP ORM Benchmark](https://github.com/kenjis/php-orm-benchmark)
 * [PHP User Agent Parser Benchmarks](https://github.com/kenjis/user-agent-parser-benchmarks)

@@ -1,60 +1,39 @@
 <?php
 
-require __DIR__ . '/libs/php-recipe-2nd/make_chart_parts.php';
-require __DIR__ . '/libs/parse_results.php';
+Parse_Results: {
+    require __DIR__ . '/libs/parse_results.php';
+    $results = parse_results(__DIR__ . '/output/results.hello_world.log');
+}
 
-$results = parse_results(__DIR__ . '/output/results.hello_world.log');
-
-function makeGraph($id, $title, $hAxis_title)
-{
-    global $results;
-
-    $barColors = array(
-        'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
-        'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
-        'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
-        'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGreen',
-        'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
-        'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
-    );
-    $graphWidth  = 1000;
-    $graphHeight = 400;
-
-    $data = array();
-    $data[] = array('', $id, array('role' => 'style'));  // header
-
-    $colors = $barColors;
-    foreach ($results as $fw => $result) {
-        $data[] = array($fw, $result[$id], array_shift($colors));
+Load_Theme: {
+    $theme = isset($_GET['theme']) ? $_GET['theme'] : 'default';
+    if (! ctype_alnum($theme)) {
+        exit('Invalid theme');
     }
-    //var_dump($data); exit;
 
-    $options = array(
-      'title'  => $title,
-      'titleTextStyle' => array('fontSize' => 16),
-      'hAxis'  => array('title' => $hAxis_title,
-                        'titleTextStyle' => array('bold' => true)),
-      'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
-      'width'  => $graphWidth,
-      'height' => $graphHeight,
-      'bar'    => array('groupWidth' => '90%'),
-      'legend' => array('position' => 'none')
-    );
-    $type = 'ColumnChart';
-    return makeChartParts($data, $options, $type);
+    if ($theme === 'default') {
+        require __DIR__ . '/libs/make_graph.php';
+    } else {
+        $file = __DIR__ . '/libs/' . $theme . '/make_graph.php';
+        if (is_readable($file)) {
+            require $file;
+        } else {
+            require __DIR__ . '/libs/make_graph.php';
+        }
+    }
 }
 
 // RPS Benchmark
-list($chart_rpm, $div_rpm) = makeGraph('rps', 'Throughput', 'requests per second');
+list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second');
 
 // Memory Benchmark
-list($chart_mem, $div_mem) = makeGraph('memory', 'Memory', 'peak memory (MB)');
+list($chart_mem, $div_mem) = make_graph('memory', 'Memory', 'peak memory (MB)');
 
 // Exec Time Benchmark
-list($chart_time, $div_time) = makeGraph('time', 'Exec Time', 'ms');
+list($chart_time, $div_time) = make_graph('time', 'Exec Time', 'ms');
 
 // Included Files
-list($chart_file, $div_file) = makeGraph('file', 'Included Files', 'count');
+list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count');
 ?>
 <!DOCTYPE html>
 <html lang="en">

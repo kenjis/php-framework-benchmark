@@ -199,16 +199,16 @@
         },
         {
             "name": "bear/resource",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Resource.git",
-                "reference": "1c1960baf52e93d8113b152db56e4f31b054802b"
+                "reference": "b98e3ad30ac42f9ac133fc704f961d76644674b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/1c1960baf52e93d8113b152db56e4f31b054802b",
-                "reference": "1c1960baf52e93d8113b152db56e4f31b054802b",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/b98e3ad30ac42f9ac133fc704f961d76644674b1",
+                "reference": "b98e3ad30ac42f9ac133fc704f961d76644674b1",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +248,7 @@
                 "protocol",
                 "rest"
             ],
-            "time": "2015-10-15 14:45:26"
+            "time": "2015-10-28 05:36:08"
         },
         {
             "name": "bear/sunday",
@@ -372,16 +372,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.4.2",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "8c434000f420ade76a07c64cbe08ca47e5c101ca"
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/8c434000f420ade76a07c64cbe08ca47e5c101ca",
-                "reference": "8c434000f420ade76a07c64cbe08ca47e5c101ca",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
                 "shasum": ""
             },
             "require": {
@@ -402,8 +402,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Cache\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -438,7 +438,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-08-31 12:36:41"
+            "time": "2015-11-02 18:35:48"
         },
         {
             "name": "doctrine/lexer",
