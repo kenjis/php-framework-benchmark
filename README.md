@@ -65,7 +65,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 
 ### Hello World Benchmark
 
-These are my benchmarks, not yours. **I encourage you to run on your environments.**
+These are my benchmarks, not yours. **I encourage you to run on your (production equivalent) environments.**
 
 (2015/11/29)
 
@@ -177,7 +177,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [zend-expressive](https://github.com/zendframework/zend-expressive) ([@zfdevteam](https://twitter.com/zfdevteam))
 * [Zend Framework](http://framework.zend.com/) ([@zfdevteam](https://twitter.com/zfdevteam))
 
-## Related
+## Other Benchmarks
 
 * [PHP ORM Benchmark](https://github.com/kenjis/php-orm-benchmark)
 * [PHP User Agent Parser Benchmarks](https://github.com/kenjis/user-agent-parser-benchmarks)
