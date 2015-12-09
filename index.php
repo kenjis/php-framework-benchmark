@@ -35,17 +35,22 @@ Load_Theme: {
     }
 }
 
+$max_rps = 2300;
+$max_memory = 3;
+$max_time = 500;
+$max_file = 300;
+
 // RPS Benchmark
-list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second');
+list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second', $max_rps);
 
 // Memory Benchmark
-list($chart_mem, $div_mem) = make_graph('memory', 'Memory', 'peak memory (MB)');
+list($chart_mem, $div_mem) = make_graph('memory', 'Memory', 'peak memory (MB)', $max_memory);
 
 // Exec Time Benchmark
-list($chart_time, $div_time) = make_graph('time', 'Exec Time', 'ms');
+list($chart_time, $div_time) = make_graph('time', 'Exec Time', 'ms', $max_time);
 
 // Included Files
-list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count');
+list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count', $max_file);
 ?>
 <!DOCTYPE html>
 <html lang="en">
