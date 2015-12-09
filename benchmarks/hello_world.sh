@@ -47,4 +47,4 @@ do
     fi
 done
 
-cat "$error_file"
+cat "$error_file" || true
