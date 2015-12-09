@@ -1,6 +1,7 @@
 <?php
 
-$stack = getenv('STACK') ? getenv('STACK') : 'local';
+$stack = getenv('stack') ? getenv('stack') : 'local';
+$output_dir = __DIR__ . '/output/' . $stack;
 $host = null;
 switch ($stack) {
     case 'local':
@@ -10,7 +11,6 @@ switch ($stack) {
         $host = str_replace('docker_', '', $stack);
         break;
 };
-$output_dir = __DIR__ . '/output/' . $stack;
 
 Parse_Results: {
     require __DIR__ . '/libs/parse_results.php';

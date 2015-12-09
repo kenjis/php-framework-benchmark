@@ -4,6 +4,9 @@ require __DIR__ . '/../libs/parse_results.php';
 require __DIR__ . '/../libs/build_table.php';
 require __DIR__ . '/../libs/recalc_relative.php';
 
+$stack = getenv('stack') ? getenv('stack') : 'local';
+$output_dir = __DIR__ . '/../output/' . $stack;
+
 $list = [
     'cake-3.0',
     'symfony-2.6',
@@ -11,9 +14,9 @@ $list = [
 ];
 
 system('git checkout master');
-$results_master = parse_results(__DIR__ . '/../output/results.hello_world.log');
+$results_master = parse_results($output_dir . '/results.hello_world.log');
 system('git checkout optimize');
-$results_optimize = parse_results(__DIR__ . '/../output/results.hello_world.log');
+$results_optimize = parse_results($output_dir . '/results.hello_world.log');
 //var_dump($results_master, $results_optimize);
 
 $is_fisrt = true;
