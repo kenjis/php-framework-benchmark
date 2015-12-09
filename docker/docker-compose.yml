@@ -1,0 +1,83 @@
+# Shell to run benchmarks within
+shell:
+  build: ./stack/php/shell
+  links:
+    - nginx_php_5_6_4
+    - nginx_hhvm_3_10_1
+    - nginx_php_7_0_0
+  volumes:
+    - ..:/repo:rw
+  working_dir: '/repo'
+  command: "/bin/bash"
+
+# PHP 5.6.4
+php_5_6_4:
+  image: neam/php-benchmark:ubuntu-15.04-fpm-5.6.4-hhvm-3.10.1-phalcon-2.0.9
+  volumes:
+    - ..:/public:rw
+    - ./stack/php/:/stack/php:rw
+  ports:
+    - "9000"
+  working_dir: '/repo'
+  command: "/stack/php/run-php-fpm.sh"
+
+# HHVM 3.10.1
+hhvm_3_10_1:
+  image: neam/php-benchmark:ubuntu-15.04-fpm-5.6.4-hhvm-3.10.1-phalcon-2.0.9
+  volumes:
+    - ..:/public:rw
+    - ./stack/php/:/stack/php:rw
+  ports:
+    - "9000"
+  working_dir: '/repo'
+  command: "/stack/php/run-hhvm.sh"
+
+# PHP 7.0.0
+php_7_0_0:
+  image: neam/php-benchmark:ubuntu-15.04-fpm-7.0.0-hhvm-3.10.1-phalcon-2.0.9
+  volumes:
+    - ..:/public:rw
+    - ./stack/php/:/stack/php:rw
+  ports:
+    - "9000"
+  working_dir: '/repo'
+  command: "/stack/php/run-php-fpm-7.sh"
+
+# Nginx configured to serve PHP 5.6.4
+nginx_php_5_6_4:
+  image: nginx:1.7
+  links:
+    - php_5_6_4:php
+  volumes:
+    - ..:/public:rw
+    - ./stack/nginx/:/stack/nginx:rw
+  ports:
+    - "80"
+  working_dir: '/app'
+  command: "/stack/nginx/run.sh"
+
+# Nginx configured to serve HHVM 3.10.1
+nginx_hhvm_3_10_1:
+  image: nginx:1.7
+  links:
+    - hhvm_3_10_1:php
+  volumes:
+    - ..:/public:rw
+    - ./stack/nginx/:/stack/nginx:rw
+  ports:
+    - "80"
+  working_dir: '/app'
+  command: "/stack/nginx/run.sh"
+
+# Nginx configured to serve PHP 7.0.0
+nginx_php_7_0_0:
+  image: nginx:1.7
+  links:
+    - php_7_0_0:php
+  volumes:
+    - ..:/public:rw
+    - ./stack/nginx/:/stack/nginx:rw
+  ports:
+    - "80"
+  working_dir: '/app'
+  command: "/stack/nginx/run.sh"
