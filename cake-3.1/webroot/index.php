@@ -35,5 +35,3 @@ $dispatcher->dispatch(
     Request::createFromGlobals(),
     new Response()
 );
-
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';

@@ -20,4 +20,8 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($group) {
         '/php-framework-benchmark/lumen-5.1/public/index.php/hello/index',
         'HelloController@index'
      );
+    $group->get(
+        '/lumen-5.1/public/index.php/hello/index',
+        'HelloController@index'
+     );
 });

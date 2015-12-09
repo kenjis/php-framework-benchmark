@@ -4,10 +4,17 @@
   array (
     '*' => 
     array (
-      'home' => 
+      'home-subdirectory' =>
+      array (
+        'name' => 'home-subdirectory',
+        'regexp' => 'php-framework-benchmark/nofuss-1.2/html/index.php/hello/index',
+        'controller' => 'home/index/index',
+        'inheritableRegexp' => 'nofuss-1.2/html/index.php/hello/index',
+      ),
+      'home' =>
       array (
         'name' => 'home',
-        'regexp' => 'php-framework-benchmark/nofuss-1.2/html/index.php/hello/index',
+        'regexp' => 'nofuss-1.2/html/index.php/hello/index',
         'controller' => 'home/index/index',
         'inheritableRegexp' => 'nofuss-1.2/html/index.php/hello/index',
       ),

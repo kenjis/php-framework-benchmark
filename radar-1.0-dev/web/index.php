@@ -31,8 +31,13 @@ $adr->middle('Radar\Adr\Handler\ActionHandler');
  * Routes
  */
 $adr->get(
-    'Hello',
+    'Hello.Subdirectory',
     '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index',
+     'Domain\Hello\HelloApplicationService'
+);
+$adr->get(
+    'Hello',
+    '/radar-1.0-dev/web/index.php/hello/index',
      'Domain\Hello\HelloApplicationService'
 );
 
@@ -41,4 +46,4 @@ $adr->get(
  */
 $adr->run(ServerRequestFactory::fromGlobals(), new Response());
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../../libs/output_data.php';

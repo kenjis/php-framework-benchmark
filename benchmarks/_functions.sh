@@ -19,17 +19,23 @@ benchmark ()
     grep "Document Length:" "$ab_log" >> "$check_file"
     grep "Failed requests:" "$ab_log" >> "$check_file"
     grep 'Hello World!' "$output" >> "$check_file"
+    grep ':' "$output" >> "$check_file"
     echo "---" >> "$check_file"
 
     # check errors
     touch "$error_file"
     error=''
-    x=`grep 'Failed requests:        0' "$ab_log"`
+    x=`grep 'Failed requests:        0' "$ab_log" || true`
     if [ "$x" = "" ]; then
         tmp=`grep "Failed requests:" "$ab_log"`
         error="$error$tmp"
     fi
-    x=`grep 'Hello World!' "$output"`
+    x=`grep 'Hello World!' "$output" || true`
+    if [ "$x" = "" ]; then
+        tmp=`cat "$output"`
+        error="$error$tmp"
+    fi
+    x=`grep ':' "$output" || true`
     if [ "$x" = "" ]; then
         tmp=`cat "$output"`
         error="$error$tmp"

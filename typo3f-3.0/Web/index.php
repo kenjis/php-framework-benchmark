@@ -24,6 +24,8 @@ if ($rootPath === FALSE) {
 
 require($rootPath . 'Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php');
 
+define('BENCHMARK_ROOT_PATH', dirname($rootPath) . '/../..');
 $context = \TYPO3\Flow\Core\Bootstrap::getEnvironmentConfigurationSetting('FLOW_CONTEXT') ?: 'Development';
 $bootstrap = new \TYPO3\Flow\Core\Bootstrap($context);
+
 $bootstrap->run();

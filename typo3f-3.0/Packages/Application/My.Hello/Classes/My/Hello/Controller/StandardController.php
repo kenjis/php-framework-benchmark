@@ -12,6 +12,6 @@ class StandardController extends ActionController
 {
 	public function indexAction()
 	{
-		return 'Hello World!';
+		return 'Hello World!' . "\n" . require BENCHMARK_ROOT_PATH . '/libs/output_data.php';
 	}
 }

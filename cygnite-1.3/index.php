@@ -59,4 +59,4 @@ defined('CYGNITE_BASE') or define('CYGNITE_BASE', dirname(__FILE__));
 */
 require_once CF_BOOTSTRAP.DS.'start'.EXT;
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../libs/output_data.php';

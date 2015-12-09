@@ -8,4 +8,4 @@ $app->get('/hello/index', 'App\\Controller\\Hello::index');
 
 $app->run();
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../../libs/output_data.php';

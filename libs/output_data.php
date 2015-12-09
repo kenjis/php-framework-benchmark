@@ -1,6 +1,6 @@
 <?php
 
-printf(
+return sprintf(
     "\n%' 8d:%f:%d",
     memory_get_peak_usage(),
     microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'],

@@ -27,4 +27,4 @@ $app = require __DIR__.'/../bootstrap/app.php';
 
 $app->run();
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../../libs/output_data.php';

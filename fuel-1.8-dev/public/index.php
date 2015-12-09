@@ -101,4 +101,4 @@ if (strpos($response->body(), '{exec_time}') !== false or strpos($response->body
 
 $response->send(true);
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../../libs/output_data.php';

@@ -16,4 +16,4 @@ $kernel = (new \Aura\Project_Kernel\Factory)->newKernel(
 );
 $kernel();
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+echo require dirname(__FILE__).'/../../libs/output_data.php';
