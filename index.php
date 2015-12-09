@@ -86,6 +86,11 @@ if (file_exists($url_file)) {
 
 <hr>
 
+<h3>Error log</h3>
+<pre><?php echo file_get_contents($output_dir . '/error.hello_world.log'); ?></pre>
+
+<hr>
+
 <footer>
     <p style="text-align: right">This page is a part of <a href="https://github.com/kenjis/php-framework-benchmark">php-framework-benchmark</a>.</p>
 </footer>
