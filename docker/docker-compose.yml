@@ -18,6 +18,8 @@ php_5_6_4:
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
+  environment:
+    STACK: 'docker_nginx_php_5_6_4'
   working_dir: '/repo'
   command: "/stack/php/run-php-fpm.sh"
 
@@ -29,6 +31,8 @@ hhvm_3_10_1:
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
+  environment:
+    STACK: 'docker_nginx_hhvm_3_10_1'
   working_dir: '/repo'
   command: "/stack/php/run-hhvm.sh"
 
@@ -40,6 +44,8 @@ php_7_0_0:
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
+  environment:
+    STACK: 'docker_nginx_php_7_0_0'
   working_dir: '/repo'
   command: "/stack/php/run-php-fpm-7.sh"
 

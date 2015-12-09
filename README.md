@@ -204,6 +204,16 @@ stack=docker_nginx_hhvm_3_10_1 sh benchmark.sh
 stack=docker_nginx_php_7_0_0 sh benchmark.sh
 ~~~
 
+### Check the results
+
+To see the results graph, run the following script from outside the docker shell, from the repository root:
+
+~~~
+bin/docker-urls.sh
+~~~
+
+It echoes URLs, which you should open up in your browser.
+
 ## References
 
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
