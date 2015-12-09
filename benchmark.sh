@@ -6,6 +6,7 @@ set -e
 if [ "$stack" = "" ]; then
   stack="local"
 fi
+export stack;
 
 cd `dirname $0`
 
