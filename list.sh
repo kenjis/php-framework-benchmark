@@ -2,7 +2,7 @@
 
 if [ "$stack" = "local" ] || [ "$stack" = "docker_nginx_php_5_6_4" ]; then
 list="
-#no-framework
+no-framework
 #phalcon-1.3
 phalcon-2.0
 ice-1.0
@@ -42,7 +42,7 @@ zf-2.5
 fi
 if [ "$stack" = "docker_nginx_hhvm_3_10_1" ]; then
 list="
-#no-framework
+no-framework
 #not-supported-by-hhvm##phalcon-1.3
 #not-supported-by-hhvm#phalcon-2.0
 #not-supported-by-hhvm#ice-1.0
@@ -83,7 +83,7 @@ zf-2.5
 fi
 if [ "$stack" = "docker_nginx_php_7_0_0" ]; then
 list="
-#no-framework
+no-framework
 #not-compiled-for-php7-is-it-even-supported##phalcon-1.3
 #not-compiled-for-php7-is-it-even-supported#phalcon-2.0
 #not-compiled-for-php7-is-it-even-supported#ice-1.0
