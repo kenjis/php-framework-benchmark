@@ -5,10 +5,6 @@ $real_usage = null;
 if (defined('HHVM_VERSION')) {
     $real_usage = true;
 }
-// On PHP 7.0, using $real_usage = true ends up always returning 2097152 bytes
-if (PHP_MAJOR_VERSION === 7) {
-    $real_usage = false;
-}
 return sprintf(
     "\n%' 8d:%f:%d",
     memory_get_peak_usage($real_usage), // Using $real_usage due to
