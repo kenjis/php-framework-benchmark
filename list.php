@@ -4,7 +4,7 @@ function frameworks()
 {
 
     $frameworks = [
-        "no-framework",
+        //"no-framework",
         //"phalcon-1.3",
         "phalcon-2.0",
         "ice-1.0",
@@ -35,11 +35,11 @@ function frameworks()
         "symfony-2.7",
         //"laravel-4.2",
         //"laravel-5.0",
-        //"laravel-5.1", // Disabled since it segfaults too much
+        "laravel-5.1", // Currently segfaults a lot when running in docker stacks
         //"zf-2.4",
         "zf-2.5",
         //"typo3f-2.3",
-        //"typo3f-3.0", // Disabled since it attempts to connect to mysql
+        "typo3f-3.0", // Should probably be disabled since it attempts to connect to mysql
     ];
 
     if (strpos(getenv('stack'), 'hhvm') !== false) {
