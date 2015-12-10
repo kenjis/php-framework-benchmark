@@ -35,7 +35,7 @@ Load_Theme: {
     }
 }
 
-$max_rps = 2300;
+$max_rps = 3000;
 $max_memory = 3;
 $max_time = 500;
 $max_file = 300;
