@@ -22,7 +22,11 @@ Running on a MacBook Pro (Retina, 15-inch, Mid 2014).
 
 By sharing underlying software stacks, the benchmark results vary only according to the host machine's hardware specs and differing code implementations.
 
-## PHP-FPM 5.6.4 with opcode cache
+Note: Frameworks that were currently not reporting complete benchmark results are zeroed out in the graphs
+
+#### PHP-FPM 5.6.4 with opcode cache
+
+<img width="1002" alt="php_framework_benchmark" src="https://cloud.githubusercontent.com/assets/793037/11716938/cf4d6c5e-9f55-11e5-90f3-c177a0f6f35c.png">
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
@@ -50,7 +54,9 @@ By sharing underlying software stacks, the benchmark results vary only according
 |zf-2.5             |              17.98|     1.0|       3.22|    12.2|
 |typo3f-3.0         |               0.00|     0.0|       0.00|     0.0|
 
-## PHP-FPM 7.0.0 with opcode cache
+#### PHP-FPM 7.0.0 with opcode cache
+
+<img width="1002" alt="php_framework_benchmark" src="https://cloud.githubusercontent.com/assets/793037/11716920/c005b09e-9f55-11e5-8cb3-b932a435e725.png">
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
@@ -78,7 +84,9 @@ By sharing underlying software stacks, the benchmark results vary only according
 |zf-2.5             |              41.94|     1.0|       1.88|     5.1|
 |typo3f-3.0         |               0.00|     0.0|       0.00|     0.0|
 
-## HHVM 3.10.1 (Corresponding roughly to an up-to-date PHP 5.6)
+#### HHVM 3.10.1 (Corresponding roughly to an up-to-date PHP 5.6)
+
+<img width="1002" alt="php_framework_benchmark" src="https://cloud.githubusercontent.com/assets/793037/11716924/c83b4724-9f55-11e5-9a3f-a5cf7abf23e4.png">
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
