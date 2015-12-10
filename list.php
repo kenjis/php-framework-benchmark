@@ -42,31 +42,6 @@ function frameworks()
         "typo3f-3.0", // Should probably be disabled since it attempts to connect to mysql
     ];
 
-    if (strpos(getenv('stack'), 'hhvm') !== false) {
-        return array_diff(
-            $frameworks,
-            array(
-                'phalcon-1.3', // Not supported by HHVM
-                'phalcon-2.0', // Not supported by HHVM
-                'ice-1.0', // Not supported by HHVM
-                'bear-1.0', // apc_fetch()-error on HHVM
-                'laravel-5.1', // fails-with-no-such-file-or-directory
-            )
-        );
-    }
-
-    if (strpos(getenv('stack'), 'php_7') !== false) {
-        return array_diff(
-            $frameworks,
-            array(
-                'phalcon-1.3', // Not compiled for PHP7 - is it even supported?
-                'phalcon-2.0', // Not compiled for PHP7 - is it even supported?
-                'ice-1.0', // Not compiled for PHP7 - is it even supported?
-                'bear-1.0', // apc_fetch()-error on PHP7
-            )
-        );
-    }
-
     return $frameworks;
 
 }
