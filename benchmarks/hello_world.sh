@@ -13,13 +13,13 @@ if [ "$stack" = "local" ]; then
   base="http://127.0.0.1/php-framework-benchmark"
 fi
 if [ "$stack" = "docker_nginx_php_5_6_4" ]; then
-  base="http://nginx_php_5_6_4"
+  base="http://nginx_php_5_6_4/php-framework-benchmark"
 fi
 if [ "$stack" = "docker_nginx_hhvm_3_10_1" ]; then
-  base="http://nginx_hhvm_3_10_1"
+  base="http://nginx_hhvm_3_10_1/php-framework-benchmark"
 fi
 if [ "$stack" = "docker_nginx_php_7_0_0" ]; then
-  base="http://nginx_php_7_0_0"
+  base="http://nginx_php_7_0_0/php-framework-benchmark"
 fi
 
 output_dir="output/$stack"

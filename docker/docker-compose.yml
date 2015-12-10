@@ -16,42 +16,42 @@ shell:
 php_5_6_4:
   image: neam/php-benchmark:ubuntu-15.04-fpm-5.6.4-hhvm-3.10.1-phalcon-2.0.9
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
   environment:
     stack: 'docker_nginx_php_5_6_4'
-    php_framework_benchmark_path: /public
-  working_dir: '/public'
+    php_framework_benchmark_path: /public/php-framework-benchmark
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-php-fpm.sh"
 
 # HHVM 3.10.1
 hhvm_3_10_1:
   image: neam/php-benchmark:ubuntu-15.04-fpm-5.6.4-hhvm-3.10.1-phalcon-2.0.9
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
   environment:
     stack: 'docker_nginx_hhvm_3_10_1'
-    php_framework_benchmark_path: /public
-  working_dir: '/public'
+    php_framework_benchmark_path: /public/php-framework-benchmark
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-hhvm.sh"
 
 # PHP 7.0.0
 php_7_0_0:
   image: neam/php-benchmark:ubuntu-15.04-fpm-7.0.0-hhvm-3.10.1-phalcon-2.0.9
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/php/:/stack/php:rw
   ports:
     - "9000"
   environment:
     stack: 'docker_nginx_php_7_0_0'
-    php_framework_benchmark_path: /public
-  working_dir: '/public'
+    php_framework_benchmark_path: /public/php-framework-benchmark
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-php-fpm-7.sh"
 
 # Nginx configured to serve PHP 5.6.4
@@ -60,11 +60,11 @@ nginx_php_5_6_4:
   links:
     - php_5_6_4:php
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/public'
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/nginx/run.sh"
 
 # Nginx configured to serve HHVM 3.10.1
@@ -73,11 +73,11 @@ nginx_hhvm_3_10_1:
   links:
     - hhvm_3_10_1:php
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/public'
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/nginx/run.sh"
 
 # Nginx configured to serve PHP 7.0.0
@@ -86,9 +86,9 @@ nginx_php_7_0_0:
   links:
     - php_7_0_0:php
   volumes:
-    - ..:/public:rw
+    - ..:/public/php-framework-benchmark:rw
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/public'
+  working_dir: '/public/php-framework-benchmark'
   command: "/stack/nginx/run.sh"
