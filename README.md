@@ -99,6 +99,8 @@ These are my benchmarks, not yours. **I encourage you to run on your (production
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
+If you are interested in other results, see [OTHER_RESULTS.md](OTHER_RESULTS.md).
+
 ## How to Benchmark
 
 Install source code as <http://localhost/php-framework-benchmark/>:
