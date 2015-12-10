@@ -8,7 +8,7 @@ class HelloController extends AppController
 
     public function index()
     {
-        $this->response->body('Hello World!' . require dirname(__FILE__).'/../../../libs/output_data.php');
+        $this->response->body('Hello World!');
         return $this->response;
     }
 }

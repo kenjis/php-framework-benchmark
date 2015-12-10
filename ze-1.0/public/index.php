@@ -16,3 +16,5 @@ $container = require 'config/container.php';
 /** @var \Zend\Expressive\Application $app */
 $app = $container->get('Zend\Expressive\Application');
 $app->run();
+
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';

@@ -46,4 +46,4 @@ $adr->get(
  */
 $adr->run(ServerRequestFactory::fromGlobals(), new Response());
 
-echo require dirname(__FILE__).'/../../libs/output_data.php';
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';

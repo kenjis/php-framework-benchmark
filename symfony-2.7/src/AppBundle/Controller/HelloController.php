@@ -13,6 +13,6 @@ class HelloController extends Controller
      */
     public function indexAction()
     {
-        return new Response('Hello World!' . require dirname(__FILE__).'/../../../../libs/output_data.php');
+        return new Response('Hello World!');
     }
 }

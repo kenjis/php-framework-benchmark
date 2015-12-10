@@ -12,7 +12,7 @@ class HelloAction
         ResponseInterface $response,
         callable $next)
     {
-        $response->getBody()->write('Hello World!' . require dirname(__FILE__).'/../../../libs/output_data.php');
+        $response->getBody()->write('Hello World!');
         return $response->withHeader('Content-Type', 'text/html');
     }
 }
