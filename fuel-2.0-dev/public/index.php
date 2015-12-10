@@ -159,4 +159,4 @@ else
 	echo $response;
 }
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+require getenv('php_framework_benchmark_path').'/libs/output_data.php';

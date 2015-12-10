@@ -37,6 +37,6 @@ $bootstrap->setApplicationNamespace($applicationNamespace);
 $bootstrap->go();
 
 // The if statement is needed for setup.sh
-if ($_SERVER['DOCUMENT_ROOT'] !== '') {
-    require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+if (getenv('php_framework_benchmark_path') !== '') {
+    require getenv('php_framework_benchmark_path').'/libs/output_data.php';
 }

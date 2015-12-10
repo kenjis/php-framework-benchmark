@@ -31,7 +31,7 @@ try {
 
     // representation transfer
     $page()->transfer($app->responder, $_SERVER);
-    require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+    require getenv('php_framework_benchmark_path').'/libs/output_data.php';
     exit(0);
 } catch (\Exception $e) {
     $app->error->handle($e, $request)->transfer();

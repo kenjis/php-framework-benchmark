@@ -48,4 +48,4 @@ $app = require_once __DIR__.'/../bootstrap/start.php';
 
 $app->run();
 
-require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
+require getenv('php_framework_benchmark_path').'/libs/output_data.php';
