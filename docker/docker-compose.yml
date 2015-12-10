@@ -23,7 +23,7 @@ php_5_6_4:
   environment:
     stack: 'docker_nginx_php_5_6_4'
     php_framework_benchmark_path: /public
-  working_dir: '/repo'
+  working_dir: '/public'
   command: "/stack/php/run-php-fpm.sh"
 
 # HHVM 3.10.1
@@ -37,7 +37,7 @@ hhvm_3_10_1:
   environment:
     stack: 'docker_nginx_hhvm_3_10_1'
     php_framework_benchmark_path: /public
-  working_dir: '/repo'
+  working_dir: '/public'
   command: "/stack/php/run-hhvm.sh"
 
 # PHP 7.0.0
@@ -51,7 +51,7 @@ php_7_0_0:
   environment:
     stack: 'docker_nginx_php_7_0_0'
     php_framework_benchmark_path: /public
-  working_dir: '/repo'
+  working_dir: '/public'
   command: "/stack/php/run-php-fpm-7.sh"
 
 # Nginx configured to serve PHP 5.6.4
@@ -64,7 +64,7 @@ nginx_php_5_6_4:
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/app'
+  working_dir: '/public'
   command: "/stack/nginx/run.sh"
 
 # Nginx configured to serve HHVM 3.10.1
@@ -77,7 +77,7 @@ nginx_hhvm_3_10_1:
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/app'
+  working_dir: '/public'
   command: "/stack/nginx/run.sh"
 
 # Nginx configured to serve PHP 7.0.0
@@ -90,5 +90,5 @@ nginx_php_7_0_0:
     - ./stack/nginx/:/stack/nginx:rw
   ports:
     - "80"
-  working_dir: '/app'
+  working_dir: '/public'
   command: "/stack/nginx/run.sh"
