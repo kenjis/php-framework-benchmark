@@ -4,15 +4,16 @@ benchmark ()
     url="$2"
     ab_log="$output_dir/$fw.ab.log"
     output="$output_dir/$fw.output"
+    benchmark_data="$output_dir/$fw.benchmark_data"
 
     echo "ab -c 10 -t 3 $url"
     ab -c 10 -t 3 "$url" > "$ab_log"
-    curl "$url" > "$output"
+    curl --dump-header "$benchmark_data" "$url" > "$output"
 
     rps=`grep "Requests per second:" "$ab_log" | cut -f 7 -d " "`
-    memory=`tail -1 "$output" | cut -f 1 -d ':'`
-    time=`tail -1 "$output" | cut -f 2 -d ':'`
-    file=`tail -1 "$output" | cut -f 3 -d ':'`
+    memory=`grep "X-Benchmark-Output-Data:" "$benchmark_data" | cut -f 2 -d ':' | cut -f 2 -d ' '`
+    time=`grep "X-Benchmark-Output-Data:" "$benchmark_data" | cut -f 3 -d ':'`
+    file=`grep "X-Benchmark-Output-Data:" "$benchmark_data" | cut -f 4 -d ':'`
     echo "$fw: $rps: $memory: $time: $file" >> "$results_file"
 
     echo "$fw" >> "$check_file"
@@ -35,9 +36,16 @@ benchmark ()
         tmp=`cat "$output"`
         error="$error$tmp"
     fi
-    x=`grep ':' "$output" || true`
-    if [ "$x" = "" ]; then
-        tmp=`cat "$output"`
+    if [ "$memory" = "" ]; then
+        tmp=`cat "$benchmark_data"`
+        error="$error$tmp"
+    fi
+    if [ "$time" = "" ]; then
+        tmp=`cat "$benchmark_data"`
+        error="$error$tmp"
+    fi
+    if [ "$file" = "" ]; then
+        tmp=`cat "$benchmark_data"`
         error="$error$tmp"
     fi
     if [ "$error" != "" ]; then
