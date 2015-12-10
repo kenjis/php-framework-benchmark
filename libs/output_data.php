@@ -1,8 +1,7 @@
 <?php
 
 // Only calculate output data if specifically requested
-$headers = getallheaders();
-if (!isset($headers["X-Include-Benchmark-Output-Data"])) {
+if (!isset($_SERVER["HTTP_X_INCLUDE_BENCHMARK_OUTPUT_DATA"])) {
     return;
 }
 
