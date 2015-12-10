@@ -3,7 +3,7 @@
 // Adhoc fix for benchmarking
 // Remove sub directories from URI
 $_SERVER['REQUEST_URI'] = preg_replace(
-    ['!/php-framework-benchmark/bear-1.0/var/www/index.php!', '!/bear-1.0/var/www/index.php!'],
+    '!/php-framework-benchmark/bear-1.0/var/www/index.php!',
     '',
     $_SERVER['REQUEST_URI']
 );

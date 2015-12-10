@@ -31,13 +31,8 @@ $adr->middle('Radar\Adr\Handler\ActionHandler');
  * Routes
  */
 $adr->get(
-    'Hello.Subdirectory',
-    '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index',
-     'Domain\Hello\HelloApplicationService'
-);
-$adr->get(
     'Hello',
-    '/radar-1.0-dev/web/index.php/hello/index',
+    '/php-framework-benchmark/radar-1.0-dev/web/index.php/hello/index',
      'Domain\Hello\HelloApplicationService'
 );
 

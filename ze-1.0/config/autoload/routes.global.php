@@ -21,14 +21,8 @@ return [
             'allowed_methods' => ['GET'],
         ],
         [
-            'name' => 'hello.subdirectory',
-            'path' => '/php-framework-benchmark/ze-1.0/public/index.php/hello/index',
-            'middleware' => App\Action\HelloAction::class,
-            'allowed_methods' => ['GET'],
-        ],
-        [
             'name' => 'hello',
-            'path' => '/ze-1.0/public/index.php/hello/index',
+            'path' => '/php-framework-benchmark/ze-1.0/public/index.php/hello/index',
             'middleware' => App\Action\HelloAction::class,
             'allowed_methods' => ['GET'],
         ],
