@@ -40,10 +40,10 @@ function parse_results($file)
         if (isset($results[$fw])) {
             $data = $results[$fw];
             $ordered_results[$fw] = $data;
-            $results[$fw]['rps_relative']    = $data['rps'] / $min_rps;
-            $results[$fw]['memory_relative'] = $data['memory'] / $min_memory;
-            $results[$fw]['time_relative'] = $data['time'] / $min_time;
-            $results[$fw]['file_relative'] = $data['file'] / $min_file;
+            $ordered_results[$fw]['rps_relative']    = $data['rps'] / $min_rps;
+            $ordered_results[$fw]['memory_relative'] = $data['memory'] / $min_memory;
+            $ordered_results[$fw]['time_relative'] = $data['time'] / $min_time;
+            $ordered_results[$fw]['file_relative'] = $data['file'] / $min_file;
         } else {
             $ordered_results[$fw] = [
                 'rps' => 0,
