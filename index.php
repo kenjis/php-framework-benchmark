@@ -35,10 +35,11 @@ Load_Theme: {
     }
 }
 
-$max_rps = 3000;
-$max_memory = 3;
-$max_time = 500;
-$max_file = 300;
+// Axis/scale settings
+$max_rps = isset($_GET['max_rps']) ? $_GET['max_rps'] : null;
+$max_memory = isset($_GET['max_memory']) ? $_GET['max_memory'] : null;
+$max_time = isset($_GET['max_time']) ? $_GET['max_time'] : null;
+$max_file = isset($_GET['max_file']) ? $_GET['max_file'] : null;
 
 // RPS Benchmark
 list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second', $max_rps);
