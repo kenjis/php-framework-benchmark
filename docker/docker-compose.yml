@@ -1,3 +1,5 @@
+# Note: The relevant Dockerfiles are available here: https://github.com/neam/docker-php-benchmark
+
 # Shell to run benchmarks within
 shell:
   build: ./stack/php/shell
