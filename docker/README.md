@@ -52,7 +52,13 @@ $ docker/benchmark.sh
 
 ### Check the results
 
-To see the results graph, run the following script from outside the docker shell, from the repository root:
+To see the results tables in markdown, run the following from within the docker shell:
+
+~~~
+$ bin/docker-results.sh
+~~~
+
+To see the results graph, run the following script from **outside** the docker shell, from the repository root:
 
 ~~~
 $ bin/docker-urls.sh
