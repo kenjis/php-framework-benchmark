@@ -49,7 +49,7 @@ function frameworks()
                 'phalcon-1.3', // Not supported by HHVM
                 'phalcon-2.0', // Not supported by HHVM
                 'ice-1.0', // Not supported by HHVM
-                'bear-1.0', // apc_fetch()-error on PHP7
+                'bear-1.0', // apc_fetch()-error on HHVM
                 'laravel-5.1', // fails-with-no-such-file-or-directory
             )
         );
