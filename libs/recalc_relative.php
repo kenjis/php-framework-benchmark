@@ -7,9 +7,9 @@ function recalc_relative($results)
     $min_time   = INF;
     
     foreach ($results as $fw) {
-        $min_rps    = min($min_rps,    $fw['rps']);
-        $min_memory = min($min_memory, $fw['memory']);
-        $min_time   = min($min_time,   $fw['time']);
+        $min_rps    = $fw['rps'] > 0 ? min($min_rps, $fw['rps']) : $min_rps;
+        $min_memory = $fw['memory'] > 0 ? min($min_memory, $fw['memory']) : $min_memory;
+        $min_time   = $fw['time'] > 0 ? min($min_time, $fw['time']) : $min_time;
     }
     
     foreach ($results as $fw => $data) {
