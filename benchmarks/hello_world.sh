@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# exit on failure
-set -e
+# exit on failure - use during development
+#set -e
 
 cd `dirname $0`
 . ./_functions.sh
