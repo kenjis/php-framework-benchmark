@@ -92,7 +92,7 @@ if (file_exists($url_file)) {
 <hr>
 
 <h3>Error log</h3>
-<pre><?php echo file_get_contents($output_dir . '/error.hello_world.log'); ?></pre>
+<pre><?php echo htmlspecialchars(file_get_contents($output_dir . '/error.hello_world.log')); ?></pre>
 
 <hr>
 
