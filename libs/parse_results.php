@@ -12,6 +12,8 @@ function parse_results($file)
     $min_time   = INF;
     $min_file   = INF;
     
+    $frameworks = frameworks();
+
     foreach ($lines as $line) {
         $column = explode(':', $line);
         $fw = $column[0];
@@ -19,21 +21,40 @@ function parse_results($file)
         $memory = (float) trim($column[2])/1024/1024;
         $time   = (float) trim($column[3])*1000;
         $file   = (int) trim($column[4]);
-        
-        $min_rps    = $rps > 0 ? min($min_rps, $rps) : $min_rps;
-        $min_memory = $memory > 0 ? min($min_memory, $memory) : $min_memory;
-        $min_time   = $time > 0 ? min($min_time, $time) : $min_time;
-        $min_file   = $file > 0 ? min($min_file, $file) : $min_file;
-        
+
+        // Zero out incomplete results
+        if (empty($memory) || empty($time) || empty($file)) {
+
+            $results[$fw] = [
+                'rps'    => 0,
+                'memory' => 0,
+                'time'   => 0,
+                'file'   => 0,
+            ];
+
+            // Prevent from affecting the relative results
+            continue;
+
+        }
+
+        // Only allow enabled frameworks to affect the relative results
+        if (array_search($fw, $frameworks)) {
+
+            $min_rps    = $rps > 0 ? min($min_rps, $rps) : $min_rps;
+            $min_memory = $memory > 0 ? min($min_memory, $memory) : $min_memory;
+            $min_time   = $time > 0 ? min($min_time, $time) : $min_time;
+            $min_file   = $file > 0 ? min($min_file, $file) : $min_file;
+
+        }
+
         $results[$fw] = [
             'rps'    => $rps,
             'memory' => round($memory, 2),
             'time'   => $time,
             'file'   => $file,
         ];
-    }
 
-    $frameworks = frameworks();
+    }
 
     $ordered_results = [];
     foreach ($frameworks as $fw) {
