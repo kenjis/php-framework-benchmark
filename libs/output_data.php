@@ -1,5 +1,11 @@
 <?php
 
+// Only calculate output data if specifically requested
+$headers = getallheaders();
+if (!isset($headers["X-Include-Benchmark-Output-Data"])) {
+    return;
+}
+
 // Get benchmark output data
 $real_usage = null;
 if (defined('HHVM_VERSION')) {

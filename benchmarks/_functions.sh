@@ -8,7 +8,7 @@ benchmark ()
 
     echo "ab -c 10 -t 3 $url"
     ab -c 10 -t 3 "$url" > "$ab_log"
-    curl --dump-header "$benchmark_data" "$url" > "$output"
+    curl -H 'X-Include-Benchmark-Output-Data: 1' --dump-header "$benchmark_data" "$url" > "$output"
 
     rps=`grep "Requests per second:" "$ab_log" | cut -f 7 -d " "`
     memory=`grep "X-Benchmark-Output-Data:" "$benchmark_data" | cut -f 2 -d ':' | cut -f 2 -d ' '`
