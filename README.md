@@ -152,24 +152,6 @@ If you want to see current configuration, run `sudo sysctl -a`.
 </VirtualHost>
 ~~~
 
-## Benchmarking using the supplied Docker Stack
-
-Use the supplied Docker Stack in order to automatically set up the following benchmarking environments:
-
-* Ubuntu 15.04 64bit (Docker)
-  * Nginx 1.7.12
-  * PHP-FPM 5.6.4
-    * Zend OPcache 7.0.4-dev
-    * PhalconPHP 2.0.9
-  * PHP-FPM 7.0.0
-    * Zend OPcache 7.0.6-dev
-    * PhalconPHP 2.0.9
-  * HHVM 3.10.1
-
-By sharing underlying software stacks, the benchmark results vary only according to the host machine's hardware specs and differing code implementations.
-
-See [docker/README.md](docker/README.md)
-
 ## References
 
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
