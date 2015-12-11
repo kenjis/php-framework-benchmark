@@ -37,6 +37,7 @@ $ docker-compose up -d
 
 Start the supplied docker shell from within this repository's `docker` folder:
 ~~~
+$ docker-compose build shell
 $ docker-compose run shell
 ~~~
 
