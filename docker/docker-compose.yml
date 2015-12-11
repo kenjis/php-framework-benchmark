@@ -22,7 +22,6 @@ php_5_6_4:
     - "9000"
   environment:
     stack: 'docker_nginx_php_5_6_4'
-    php_framework_benchmark_path: /public/php-framework-benchmark
   working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-php-fpm.sh"
 
@@ -36,7 +35,6 @@ hhvm_3_10_1:
     - "9000"
   environment:
     stack: 'docker_nginx_hhvm_3_10_1'
-    php_framework_benchmark_path: /public/php-framework-benchmark
   working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-hhvm.sh"
 
@@ -50,7 +48,6 @@ php_7_0_0:
     - "9000"
   environment:
     stack: 'docker_nginx_php_7_0_0'
-    php_framework_benchmark_path: /public/php-framework-benchmark
   working_dir: '/public/php-framework-benchmark'
   command: "/stack/php/run-php-fpm-7.sh"
 

@@ -149,7 +149,6 @@ If you want to see current configuration, run `sudo sysctl -a`.
 ~~~
 <VirtualHost *:80>
   DocumentRoot /home/vagrant/public
-  SetEnv php_framework_benchmark_path /home/vagrant/public/php-framework-benchmark
 </VirtualHost>
 ~~~
 

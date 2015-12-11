@@ -6,4 +6,4 @@ $framework = new Project\Framework();
 $framework->registerDebugHandlers();
 $framework->processHttpSapiRequest();
 
-require getenv('php_framework_benchmark_path').'/libs/output_data.php';
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
