@@ -47,7 +47,7 @@ Run the set-up script:
 
 Run benchmarks against each docker stack:
 ~~~
-$ docker/benchmark.sh
+$ docker/bin/benchmark.sh
 ~~~
 
 ### Check the results
@@ -55,13 +55,13 @@ $ docker/benchmark.sh
 To see the results tables in markdown, run the following from within the docker shell:
 
 ~~~
-$ bin/docker-results.sh
+$ docker/bin/results.sh
 ~~~
 
 To see the results graph, run the following script from **outside** the docker shell, from the repository root:
 
 ~~~
-$ bin/docker-urls.sh
+$ docker/bin/urls.sh
 ~~~
 
 It echoes URLs, which you should open up in your browser.
