@@ -172,3 +172,5 @@ else
  * And away we go...
  */
 require BASEPATH.'CodeIgniter.php';
+
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
