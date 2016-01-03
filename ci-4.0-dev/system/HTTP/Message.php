@@ -18,7 +18,7 @@ class Message
 	 */
 	protected $headerMap = [];
 
-	protected $protocolVersion;
+	protected $protocolVersion = '1.1';
 
 	protected $validProtocolVersions = ['1.0', '1.1', '2'];
 
