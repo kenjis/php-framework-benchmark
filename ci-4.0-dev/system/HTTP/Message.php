@@ -18,7 +18,7 @@ class Message
 	 */
 	protected $headerMap = [];
 
-	protected $protocolVersion = '1.1';
+	protected $protocolVersion;
 
 	protected $validProtocolVersions = ['1.0', '1.1', '2'];
 
@@ -171,7 +171,7 @@ class Message
 
 		if (is_array($this->headers[$orig_name]) || $this->headers[$orig_name] instanceof \ArrayAccess)
 		{
-			return implode('; ', $this->headers[$orig_name]);
+			return implode(', ', $this->headers[$orig_name]);
 		}
 
 		return (string)$this->headers[$orig_name];
