@@ -12,10 +12,8 @@
 	],
 	"require": {
 		"php": ">=5.4",
-		"fuelphp/foundation": "dev-master"
-	},
-	"autoload": {
-		"psr-4": { "Demo\\": "components/demo/classes/" }
+		"fuelphp/foundation": "~2.0",
+		"fuelphp/demo-component": "~2.0"
 	},
 	"minimum-stability": "dev"
 }

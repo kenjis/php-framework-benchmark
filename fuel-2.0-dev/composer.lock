@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f10b700e8d310a8cb5738282a67c4bd2",
-    "content-hash": "00997db33ada2494e5939aceb5fcd2c9",
+    "hash": "9b7d5aaf8945263068f243360ee8fb23",
+    "content-hash": "e22d63a4da407ee871242f7d3a0fcecb",
     "packages": [
         {
             "name": "browscap/browscap-php",
@@ -61,6 +61,104 @@
                 "user agent"
             ],
             "time": "2014-10-09 07:43:37"
+        },
+        {
+            "name": "composer/installers",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "b1a938a75dbbd5bed80e62bb67c6f63969d67996"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b1a938a75dbbd5bed80e62bb67c6f63969d67996",
+                "reference": "b1a938a75dbbd5bed80e62bb67c6f63969d67996",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "zend",
+                "zikula"
+            ],
+            "time": "2016-01-07 09:11:10"
         },
         {
             "name": "doctrine/annotations",
@@ -136,34 +234,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425"
+                "reference": "e0ef9e9833ca024d251e77e8d82a00ca92b0aa71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/1c3483678ab767c3e21d3a96d6dd1006b327d425",
-                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/e0ef9e9833ca024d251e77e8d82a00ca92b0aa71",
+                "reference": "e0ef9e9833ca024d251e77e8d82a00ca92b0aa71",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "~5.5|~7.0"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=3.7",
-                "predis/predis": "~1.0",
-                "satooshi/php-coveralls": "~0.6"
+                "phpunit/phpunit": "~4.8|~5.0",
+                "predis/predis": "~1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Cache\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -198,7 +295,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-10-08 07:32:30"
+            "time": "2016-01-07 23:41:52"
         },
         {
             "name": "doctrine/collections",
@@ -272,12 +369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c"
+                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c",
-                "reference": "3d763ef5580f12fae0b270dca5fe1ec98ab1ca5c",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/773c56e51fc26ae07a47146fae31b320dd6cada3",
+                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3",
                 "shasum": ""
             },
             "require": {
@@ -286,20 +383,20 @@
                 "doctrine/collections": "1.*",
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
-                "php": ">=5.3.2"
+                "php": "~5.5|~7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.7"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.7.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -337,7 +434,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-10-23 21:41:01"
+            "time": "2015-12-26 08:54:38"
         },
         {
             "name": "doctrine/dbal",
@@ -345,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "4845507add849eea92e88f38882d826301e22cfb"
+                "reference": "f5b85d182799c539d1a56aa145977aa2c43dfe1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/4845507add849eea92e88f38882d826301e22cfb",
-                "reference": "4845507add849eea92e88f38882d826301e22cfb",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/f5b85d182799c539d1a56aa145977aa2c43dfe1a",
+                "reference": "f5b85d182799c539d1a56aa145977aa2c43dfe1a",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +497,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-04-30 17:02:20"
+            "time": "2016-01-05 22:19:09"
         },
         {
             "name": "doctrine/inflector",
@@ -408,12 +505,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -425,7 +522,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -467,7 +564,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-10-07 18:00:26"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/lexer",
@@ -529,33 +626,35 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "9a393ceb80f7497b6513feb574638e87048fed55"
+                "reference": "a327942c50cbd62b25c6fbe08f173031ce25fbff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/9a393ceb80f7497b6513feb574638e87048fed55",
-                "reference": "9a393ceb80f7497b6513feb574638e87048fed55",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/a327942c50cbd62b25c6fbe08f173031ce25fbff",
+                "reference": "a327942c50cbd62b25c6fbe08f173031ce25fbff",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "mockery/mockery": "0.9.*"
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Whoops": "src/"
-                },
-                "classmap": [
-                    "src/deprecated"
-                ]
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -575,11 +674,10 @@
                 "exception",
                 "handling",
                 "library",
-                "silex-provider",
                 "whoops",
                 "zf2"
             ],
-            "time": "2015-09-27 09:47:06"
+            "time": "2016-01-06 17:51:21"
         },
         {
             "name": "fuelphp/agent",
@@ -820,6 +918,50 @@
             "time": "2015-01-01 15:41:53"
         },
         {
+            "name": "fuelphp/demo-component",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fuelphp/demo-component.git",
+                "reference": "a55ef3b56ff7b4084842e1d7fedb32aca9467f28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fuelphp/demo-component/zipball/a55ef3b56ff7b4084842e1d7fedb32aca9467f28",
+                "reference": "a55ef3b56ff7b4084842e1d7fedb32aca9467f28",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "dev-master",
+                "php": ">=5.4"
+            },
+            "type": "fuelphp-component",
+            "extra": {
+                "installer-name": "demo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Demo\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FuelPHP Development Team",
+                    "email": "team@fuelphp.com"
+                }
+            ],
+            "description": "FuelPHP demo component",
+            "homepage": "http://fuelphp.com",
+            "keywords": [
+                "framework"
+            ],
+            "time": "2015-01-01 15:42:14"
+        },
+        {
             "name": "fuelphp/dependency",
             "version": "dev-master",
             "source": {
@@ -1043,12 +1185,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/foundation.git",
-                "reference": "0753a05eca5cd0465e4afc18929d851c3965b0c4"
+                "reference": "9bf2f8e11a73d974fc4038b7386c43c8da1bddff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/foundation/zipball/0753a05eca5cd0465e4afc18929d851c3965b0c4",
-                "reference": "0753a05eca5cd0465e4afc18929d851c3965b0c4",
+                "url": "https://api.github.com/repos/fuelphp/foundation/zipball/9bf2f8e11a73d974fc4038b7386c43c8da1bddff",
+                "reference": "9bf2f8e11a73d974fc4038b7386c43c8da1bddff",
                 "shasum": ""
             },
             "require": {
@@ -1101,7 +1243,7 @@
             ],
             "description": "FuelPHP Framework foundation",
             "homepage": "https://github.com/fuelphp/foundation",
-            "time": "2015-03-04 15:41:17"
+            "time": "2016-01-10 22:19:01"
         },
         {
             "name": "fuelphp/legacy",
@@ -1357,12 +1499,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuelphp/upload.git",
-                "reference": "c8b163bfd1c07b1790c53a452dfebdd5be495911"
+                "reference": "73b3abfa317c22d6b4d63588e9601c13623ea6f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuelphp/upload/zipball/c8b163bfd1c07b1790c53a452dfebdd5be495911",
-                "reference": "c8b163bfd1c07b1790c53a452dfebdd5be495911",
+                "url": "https://api.github.com/repos/fuelphp/upload/zipball/73b3abfa317c22d6b4d63588e9601c13623ea6f6",
+                "reference": "73b3abfa317c22d6b4d63588e9601c13623ea6f6",
                 "shasum": ""
             },
             "require": {
@@ -1399,7 +1541,7 @@
                 "file uploads",
                 "upload"
             ],
-            "time": "2015-10-03 10:56:54"
+            "time": "2015-11-04 17:19:56"
         },
         {
             "name": "fuelphp/validation",
@@ -1509,12 +1651,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/event.git",
-                "reference": "f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe"
+                "reference": "36920cc97c1e506b07f979337a49c4dd02d57045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/event/zipball/f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe",
-                "reference": "f5c255063dd6fe3d87de8c7ab88ee5f6a244bcbe",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/36920cc97c1e506b07f979337a49c4dd02d57045",
+                "reference": "36920cc97c1e506b07f979337a49c4dd02d57045",
                 "shasum": ""
             },
             "require": {
@@ -1551,7 +1693,7 @@
                 "event",
                 "listener"
             ],
-            "time": "2015-09-14 05:51:39"
+            "time": "2015-12-21 15:06:01"
         },
         {
             "name": "monolog/monolog",
@@ -1621,12 +1763,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4"
+                "reference": "774a766e1df0b1c0c4c0fa45ea25b973230aac93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4",
-                "reference": "33bf6e42c3a811c452bba8e4c12ecf7f6dc434f4",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/774a766e1df0b1c0c4c0fa45ea25b973230aac93",
+                "reference": "774a766e1df0b1c0c4c0fa45ea25b973230aac93",
                 "shasum": ""
             },
             "require": {
@@ -1702,7 +1844,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2015-10-22 15:14:50"
+            "time": "2016-01-08 19:30:41"
         },
         {
             "name": "psr/log",
@@ -1710,12 +1852,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26"
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/9e45edca52cc9c954680072c93e621f8b71fab26",
-                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d8e60a5619fff77f9669da8997697443ef1a1d7e",
+                "reference": "d8e60a5619fff77f9669da8997697443ef1a1d7e",
                 "shasum": ""
             },
             "require": {
@@ -1743,20 +1885,19 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-06-02 13:48:41"
+            "time": "2016-01-06 21:40:42"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "fuelphp/foundation": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
