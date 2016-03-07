@@ -32,3 +32,5 @@ do
         cd ..
     fi
 done
+
+find . -name ".htaccess" -exec rm -rf {} \;
