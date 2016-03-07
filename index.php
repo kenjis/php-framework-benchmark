@@ -1,8 +1,20 @@
 <?php
 
+$stack = getenv('stack') ? getenv('stack') : 'local';
+$output_dir = __DIR__ . '/output/' . $stack;
+$host = null;
+switch ($stack) {
+    case 'local':
+        $host = 'localhost';
+        break;
+    default:
+        $host = str_replace('docker_', '', $stack);
+        break;
+};
+
 Parse_Results: {
     require __DIR__ . '/libs/parse_results.php';
-    $results = parse_results(__DIR__ . '/output/results.hello_world.log');
+    $results = parse_results($output_dir . '/results.hello_world.log');
 }
 
 Load_Theme: {
@@ -23,17 +35,23 @@ Load_Theme: {
     }
 }
 
+// Axis/scale settings
+$max_rps = isset($_GET['max_rps']) ? $_GET['max_rps'] : null;
+$max_memory = isset($_GET['max_memory']) ? $_GET['max_memory'] : null;
+$max_time = isset($_GET['max_time']) ? $_GET['max_time'] : null;
+$max_file = isset($_GET['max_file']) ? $_GET['max_file'] : null;
+
 // RPS Benchmark
-list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second');
+list($chart_rpm, $div_rpm) = make_graph('rps', 'Throughput', 'requests per second', $max_rps);
 
 // Memory Benchmark
-list($chart_mem, $div_mem) = make_graph('memory', 'Memory', 'peak memory (MB)');
+list($chart_mem, $div_mem) = make_graph('memory', 'Memory', 'peak memory (MB)', $max_memory);
 
 // Exec Time Benchmark
-list($chart_time, $div_time) = make_graph('time', 'Exec Time', 'ms');
+list($chart_time, $div_time) = make_graph('time', 'Exec Time', 'ms', $max_time);
 
 // Included Files
-list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count');
+list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count', $max_file);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +68,7 @@ echo $chart_rpm, $chart_mem, $chart_time, $chart_file;
 <body>
 <h1>PHP Framework Benchmark</h1>
 <h2>Hello World Benchmark</h2>
+<h3><?php echo $stack; ?></h3>
 <div>
 <?php
 echo $div_rpm, $div_mem, $div_time, $div_file;
@@ -58,11 +77,11 @@ echo $div_rpm, $div_mem, $div_time, $div_file;
 
 <ul>
 <?php
-$url_file = __DIR__ . '/output/urls.log';
+$url_file = $output_dir . '/urls.log';
 if (file_exists($url_file)) {
     $urls = file($url_file);
     foreach ($urls as $url) {
-        $url = str_replace('127.0.0.1', $_SERVER['HTTP_HOST'], $url);
+        $url = str_replace(['127.0.0.1', $host], $_SERVER['HTTP_HOST'], $url);
         echo '<li><a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
              '">' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
              '</a></li>' . "\n";
@@ -70,6 +89,11 @@ if (file_exists($url_file)) {
 }
 ?>
 </ul>
+
+<hr>
+
+<h3>Error log</h3>
+<pre><?php echo htmlspecialchars(file_get_contents($output_dir . '/error.hello_world.log')); ?></pre>
 
 <hr>
 

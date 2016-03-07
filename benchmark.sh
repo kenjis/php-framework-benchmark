@@ -1,6 +1,12 @@
 #!/bin/sh
 
-base="http://127.0.0.1/php-framework-benchmark"
+# exit on failure
+set -e
+
+if [ "$stack" = "" ]; then
+  stack="local"
+fi
+export stack;
 
 cd `dirname $0`
 
@@ -14,6 +20,6 @@ fi
 
 cd benchmarks
 
-sh hello_world.sh "$base"
+sh hello_world.sh "$stack"
 
 php ../bin/show_results_table.php

@@ -2,7 +2,7 @@
 
 require __DIR__ . '/php-recipe-2nd/make_chart_parts.php';
 
-function make_graph($id, $title, $hAxis_title)
+function make_graph($id, $title, $hAxis_title, $vAxis_maxValue = 0.01)
 {
     global $results;
 
@@ -14,8 +14,8 @@ function make_graph($id, $title, $hAxis_title)
         'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid',
         'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray',
     );
-    $graphWidth  = 1100;
-    $graphHeight = 400;
+    $graphWidth  = 1300;
+    $graphHeight = 500;
 
     $data = array();
     $data[] = array('', $id, array('role' => 'style'));  // header
@@ -31,7 +31,7 @@ function make_graph($id, $title, $hAxis_title)
       'titleTextStyle' => array('fontSize' => 16),
       'hAxis'  => array('title' => $hAxis_title,
                         'titleTextStyle' => array('bold' => true)),
-      'vAxis'  => array('minValue' => 0, 'maxValue' => 0.01),
+      'vAxis'  => array('minValue' => 0, 'maxValue' => $vAxis_maxValue),
       'width'  => $graphWidth,
       'height' => $graphHeight,
       'bar'    => array('groupWidth' => '90%'),

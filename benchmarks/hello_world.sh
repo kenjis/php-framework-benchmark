@@ -1,22 +1,42 @@
 #!/bin/sh
 
+# exit on failure - use during development
+#set -e
+
 cd `dirname $0`
 . ./_functions.sh
 
-base="$1"
+stack="$1"
 bm_name=`basename $0 .sh`
 
-results_file="output/results.$bm_name.log"
-check_file="output/check.$bm_name.log"
-error_file="output/error.$bm_name.log"
-url_file="output/urls.log"
+if [ "$stack" = "local" ]; then
+  base="http://127.0.0.1/php-framework-benchmark"
+fi
+if [ "$stack" = "docker_nginx_php_5_6_4" ]; then
+  base="http://nginx_php_5_6_4/php-framework-benchmark"
+fi
+if [ "$stack" = "docker_nginx_hhvm_3_10_1" ]; then
+  base="http://nginx_hhvm_3_10_1/php-framework-benchmark"
+fi
+if [ "$stack" = "docker_nginx_php_7_0_0" ]; then
+  base="http://nginx_php_7_0_0/php-framework-benchmark"
+fi
+
+output_dir="output/$stack"
+
+results_file="$output_dir/results.$bm_name.log"
+check_file="$output_dir/check.$bm_name.log"
+error_file="$output_dir/error.$bm_name.log"
+url_file="$output_dir/urls.log"
 
 cd ..
 
-mv "$results_file" "$results_file.old"
-mv "$check_file" "$check_file.old"
-mv "$error_file" "$error_file.old"
-mv "$url_file" "$url_file.old"
+mkdir -p "$output_dir"
+
+mv "$results_file" "$results_file.old" || true
+mv "$check_file" "$check_file.old" || true
+mv "$error_file" "$error_file.old" || true
+mv "$url_file" "$url_file.old" || true
 
 for fw in `echo $targets`
 do
@@ -27,4 +47,4 @@ do
     fi
 done
 
-cat "$error_file"
+cat "$error_file" || true
