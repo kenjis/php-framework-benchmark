@@ -4,7 +4,8 @@ list="
 #no-framework
 #phalcon-1.3
 phalcon-2.0
-ice-1.0
+#ice-1.0
+ice-1.1
 tipsy-0.10
 fatfree-3.5
 slim-2.6
