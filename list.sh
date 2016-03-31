@@ -30,6 +30,7 @@ cake-3.1
 #symfony-2.5
 #symfony-2.6
 symfony-2.7
+symfony-3.0
 #laravel-4.2
 #laravel-5.0
 laravel-5.1
