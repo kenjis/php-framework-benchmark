@@ -106,13 +106,13 @@ Install source code as <http://localhost/php-framework-benchmark/>:
 ~~~
 $ git clone https://github.com/kenjis/php-framework-benchmark.git
 $ cd php-framework-benchmark
-$ sh setup.sh
+$ bash setup.sh
 ~~~
 
 Run benchmarks:
 
 ~~~
-$ sh benchmark.sh
+$ bash benchmark.sh
 ~~~
 
 See <http://localhost/php-framework-benchmark/>.
@@ -120,8 +120,8 @@ See <http://localhost/php-framework-benchmark/>.
 If you want to benchmark some frameworks:
 
 ~~~
-$ sh setup.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
-$ sh benchmark.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+$ bash setup.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
+$ bash benchmark.sh fatfree-3.5/ slim-3.0/ lumen-5.1/ silex-1.3/
 ~~~
 
 ## Linux Kernel Configuration
