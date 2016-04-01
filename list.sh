@@ -26,7 +26,8 @@ fuel-1.8-dev
 phpixie-3.2
 #cake-3.0
 aura-2.0
-cake-3.1
+#cake-3.1
+cake-3.2
 #bear-0.10
 #symfony-2.5
 #symfony-2.6
