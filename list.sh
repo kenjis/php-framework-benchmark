@@ -34,7 +34,8 @@ symfony-2.7
 symfony-3.0
 #laravel-4.2
 #laravel-5.0
-laravel-5.1
+#laravel-5.1
+laravel-5.2
 #zf-2.4
 zf-2.5
 #typo3f-2.3
