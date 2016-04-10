@@ -21,7 +21,7 @@ yii-2.0
 #silex-1.2
 silex-1.3
 cygnite-1.3
-fuel-1.8-dev
+fuel-1.8
 #fuel-2.0-dev
 phpixie-3.2
 #cake-3.0
