@@ -53,6 +53,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. Laravel 5.1.24
 1. Zend Framework 2.5.2
 1. TYPO3 Flow 3.0.0
+1. CleverStyle Framework 5.4
 
 ## Results
 
@@ -176,6 +177,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Yii](http://www.yiiframework.com/) ([@yiiframework](https://twitter.com/yiiframework))
 * [zend-expressive](https://github.com/zendframework/zend-expressive) ([@zfdevteam](https://twitter.com/zfdevteam))
 * [Zend Framework](http://framework.zend.com/) ([@zfdevteam](https://twitter.com/zfdevteam))
+* [CleverStyle Framework](https://github.com/nazar-pc/CleverStyle-Framework)
 
 ## Other Benchmarks
 
