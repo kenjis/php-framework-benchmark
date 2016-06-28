@@ -1,0 +1,81 @@
+<?php
+/**
+ * KumbiaPHP web & app Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://wiki.kumbiaphp.com/Licencia
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@kumbiaphp.com so we can send you a copy immediately.
+ *
+ * Paginador "punbb" para aplicaciones
+ *
+ * Parametros del paginador:
+ *   page: objeto obtenido al invocar al paginador
+ *   show: numero de paginas que se mostraran en el paginador
+ *   url: url para la accion que efectua la paginacion, por defecto "module/controller/page/"
+ *        y se envia por parametro el numero de pagina
+ *
+ * @category   Kumbia
+ * @package    Partials
+ * @copyright  Copyright (c) 2005 - 2016 Kumbia Team (http://www.kumbiaphp.com)
+ * @license    http://wiki.kumbiaphp.com/Licencia     New BSD License
+ */
+
+if(!isset($url)) {
+    extract(Router::get());
+    $url = "$controller/page";
+    if($module) {
+        $url = "$module/$url";
+    }
+}
+
+if(!isset($show)) {
+    $show = 10;
+}
+
+$half = floor($show/2);
+
+//Calculando el inicio de paginador centrado
+if ($page->current <= $half) {
+    $start = 1;
+} elseif (($page->total - $page->current)<$half) {
+    $start = $page->total - $show + 1;
+    if($start < 1) $start = 1;
+} else {
+    $start = $page->current - $half;
+}
+?>
+
+<div class="paginator">
+    <?php if($page->prev==1) echo Html::link("$url/", 'Anterior', 'title="Ir a la pág. anterior" class="nextprev" rel="prev"'); // Se coloca el link sin número de página para la página 1
+        elseif($page->prev) echo Html::link("$url/$page->prev/", 'Anterior', 'title="Ir a la pág. anterior" class="nextprev" rel="prev"') ?>
+
+    <?php if($start==1){ //se coloca el link sin número de página para la página 1
+        $start = 2;
+        $show -= 1;
+        echo $page->current==1 ? "<strong>1</strong>" : Html::link("$url/", '1');
+    }elseif($start > 1){
+    	echo Html::link("$url/", "1");
+    }
+    if($start > 2): ?>
+    ...
+    <?php endif; ?>
+
+    <?php for($i=$start; $i<=$page->total && $i<($start + $show); $i++): ?>
+        <?= $i==$page->current ? "<strong>$i</strong>" : Html::link("$url/$i/", $i); ?>
+    <?php endfor; ?>
+
+    <?php if ($page->total > $i): ?>
+        ...
+        <?= Html::link("$url/$page->total/", $page->total); ?>
+    <?php elseif ($i == $page->total): ?>
+        <?= Html::link("$url/$i/", $i); ?>
+    <?php endif; ?>
+
+    <?php if($page->next) echo Html::link("$url/$page->next/", 'Siguiente', 'title="Ir a la pág. siguiente" class="nextprev" rel="next"') ?>
+</div>

@@ -1,0 +1,20 @@
+<footer>
+    <div class="col-6">
+        <ul class="inline" >
+        	<li><a href='http://www.kumbiaphp.com/'>KumbiaPHP Framework</a> |</li>
+        	<li><a href='http://wiki.kumbiaphp.com/'>Wiki</a> |</li>
+        	<li><a href='https://docs.google.com/document/d/1kth1GhrmMEBK2cAMyiy_4Dw1qlJFNdXVuXajJ6nMTQg/edit?hl=es'>Manual</a> |</li>
+        	<li><a href='http://wiki.kumbiaphp.com/Licencia' title='New BSD'>Licencia</a></li>
+        </ul>
+    </div>
+    <div class="col-6 text-right">
+        <p>Ayuda Online: <a href='irc://irc.freenode.org/#kumbiaphp' title="IRC donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">IRC</a> | 
+        				 <a href='https://kiwiirc.com/client/irc.freenode.org/?nick=invitado%7C?&theme=cli#kumbiaphp' target="_blank" title="Web Chat IRC donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Web IRC</a> | 
+        				 <a href='http://groups.google.com/group/kumbia' title="Lista de Correo de KumbiaPHP donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Grupo</a> | <a href='http://foro.kumbiaphp.com' title="Foro de KumbiaPHP donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Foro</a></p>
+    </div>
+    <div class="col-12 text-center">
+        <a href='http://wiki.kumbiaphp.com/Team_Development_KumbiaPHP_Framework'>© 2007 - <?= date('Y')?> KumbiaPHP Team</a>
+        
+    </div>
+    <div class="col-12 text-center"> <?= 'Ejecutado en ', round((microtime(1)-START_TIME)*1000, 4), ' ms. usando ', number_format(memory_get_usage() / 1048576, 2), ' MB de memoria'?></div>
+</footer>

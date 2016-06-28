@@ -1,0 +1,51 @@
+<?php $parameters = (array) Router::get('parameters'); //los parametros de la url ?>
+<div class="flash error">
+	<h1>Número de Parámetros Incorrecto</h1>
+	<p><strong>Error: </strong>Número de parámetros erróneo para ejecutar la acción <b><?= $action?></b> en el controlador <b><?= $Controller?></b>
+</div>
+<div class="flash info">
+	<p><strong>Información: </strong>Se está intentando llamar a : <em class="file"><?= $controller , '->', $action , '("' , implode('","',$parameters) , '");' ?></em> pero el método no está recibiendo la cantidad de parámetros correcta.
+</div>
+<div class="flash valid">
+	<h1>Soluciones</h1>
+	<ul>
+		<li>
+	Envie el número de parámetros correcto en la url de la petición.
+		</li>
+		<li>
+	Cree los parámetros correctos en la acción <em><?= $action ?></em> del controlador : <b><?= $Controller ?>Controller</b>
+<pre>
+<?php highlight_string("<?php
+class {$Controller} extends AppController
+{
+    public function {$action}( \$param1, \$param2, ... , \$paramN)
+    {    
+    
+    }	
+}") ?>
+</pre>
+		</li>
+		<li>
+	Establesca valores por defecto a los parámetros que no siempre recibirán un valor por la url en la acción <em class="file"><?= $action ?></em> del controlador : <b><?= $Controller ?>Controller</b>
+<pre>
+<?php highlight_string("<?php
+class {$Controller} extends AppController
+{
+    public function {$action}( \$param1 , \$param2 = NULL , \$param3 = 'Valor por Defecto')
+    {    
+    
+    }	
+}") ?>
+</pre>
+		</li>
+		<li>
+	Establesca el atributo <em>$limit_params</em> en <em>FALSE</em> del controlador : <b><?= $Controller ?>Controller</b>
+<pre>
+<?php highlight_string("<?php
+class {$Controller} extends AppController
+{
+    public \$limit_params = FALSE;	
+}") ?>
+</pre>
+		</li>
+</div>

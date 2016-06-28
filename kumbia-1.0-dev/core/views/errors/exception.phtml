@@ -1,0 +1,5 @@
+<h1><?= get_class($e) ?></h1>
+<div class="error flash">
+<?= htmlspecialchars("{$e->getMessage()} ({$e->getCode() })",  ENT_NOQUOTES, 'UTF-8') ?>
+    <p>En el archivo <em class="file"><?= htmlspecialchars($e->getFile(), ENT_NOQUOTES, 'UTF-8') ?></em> en la línea: <em><?= $e->getLine() ?></em></p>
+</div>

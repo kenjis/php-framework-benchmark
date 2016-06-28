@@ -1,0 +1,34 @@
+<div id="scaffold">
+<?php View::content()?>
+<h1><?= ucwords("$model"), ": <span>$action_name</span>" ?></h1>
+<div class="actions">
+    <?= Html::linkAction("crear/", 'Crear registro', 'class="btn btn-primary"')?>
+</div>
+<?php if ($data->items) : ?>
+<table class="t">
+    <thead><tr>
+    <?php foreach (current($data->items)->fields as $field) : ?>
+        <th><?= (current($data->items)->get_alias($field))?></th>
+    <?php endforeach?>
+	<th>Acciones</th>
+    </tr></thead>
+	<tbody>
+    <?php foreach ($data->items as $item) : ?>
+        <tr>
+            <?php foreach ($item->fields as $field) : ?>
+            <td><?= h($item->$field)?></td>
+            <?php endforeach?>
+			<td><?= Html::linkAction("ver/$item->id", 'Ver')?> |
+			<?= Html::linkAction("editar/$item->id", 'Editar')?> |
+			<?= Html::linkAction("borrar/$item->id", 'Borrar', 'onclick="return confirm(\'¿Está seguro?\')"') ?>
+			</td>
+        </tr>
+    <?php endforeach?>
+	</tbody>
+</table>
+<?php View::partial('paginators/digg', false, array('page' => $data ,'url' => Router::get('controller_path').'/index')) ?>
+
+<?php else : // Si no hay items?>
+<h2>No hay ningún registro</h2>
+<?php endif ?>
+</div>
