@@ -79,9 +79,9 @@ define('CORE_PATH', dirname(dirname(APP_PATH)) . '/core/');
  *
  *  EN PRODUCCION ESTA CONSTANTE DEBERÍA SER ESTABLECIDA MANUALMENTE
  */
-$number = isset($_SERVER['PATH_INFO']) ? strlen(urldecode($_SERVER['PATH_INFO'])) - 1 : 0;
-$number += empty($_SERVER['QUERY_STRING']) ? 0 : strlen(urldecode($_SERVER['QUERY_STRING'])) + 1;
-define('PUBLIC_PATH', substr(urldecode($_SERVER['REQUEST_URI']), 0, -$number));
+//$number = isset($_SERVER['PATH_INFO']) ? strlen(urldecode($_SERVER['PATH_INFO'])) - 1 : 0;
+//$number += empty($_SERVER['QUERY_STRING']) ? 0 : strlen(urldecode($_SERVER['QUERY_STRING'])) + 1;
+define('PUBLIC_PATH', '/php-framework-benchmark/kumbia-1.0-dev/default/public/');
 
 
 /**
@@ -97,3 +97,4 @@ $url = empty($_SERVER['PATH_INFO']) ? '/' : $_SERVER['PATH_INFO'];
  */
 //require APP_PATH . 'libs/bootstrap.php'; //bootstrap de app
 require CORE_PATH . 'kumbia/bootstrap.php'; //bootstrap del core
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';

@@ -6,6 +6,7 @@ list="
 phalcon-2.0
 #ice-1.0
 ice-1.1
+kumbia-1.0-dev
 tipsy-0.10
 fatfree-3.5
 slim-2.6

@@ -1,6 +1,0 @@
-DirectoryIndex index.php
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteRule  ^$ default/public/    [L]
-    RewriteRule  (.*) default/public/$1 [L]
-</IfModule>
