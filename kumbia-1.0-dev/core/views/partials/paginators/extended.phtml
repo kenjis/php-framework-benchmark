@@ -1,0 +1,49 @@
+<?php
+/**
+ * KumbiaPHP web & app Framework
+ *
+ * LICENSE
+ *
+ * This source file is subject to the new BSD license that is bundled
+ * with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://wiki.kumbiaphp.com/Licencia
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@kumbiaphp.com so we can send you a copy immediately.
+ *
+ * Paginador "extended" para aplicaciones
+ *
+ * Parametros del paginador:
+ *   page: objeto obtenido al invocar al paginador
+ *   url: url para la accion que efectua la paginacion, por defecto "module/controller/page/"
+ *        y se envia por parametro el numero de pagina
+ *
+ * @category   Kumbia
+ * @package    Partials
+ * @copyright  Copyright (c) 2005 - 2016 Kumbia Team (http://www.kumbiaphp.com)
+ * @license    http://wiki.kumbiaphp.com/Licencia     New BSD License
+ */
+
+if(!isset($url)) {
+    extract(Router::get());
+    $url = "$controller/page";
+    if($module) {
+        $url = "$module/$url";
+    }
+}
+
+$s_item = $page->per_page*($page->current-1) + 1;
+$e_item = $s_item + count($page->items) - 1;
+?>
+
+<div class="paginator">
+    <?php if($page->prev==1) echo Html::link("$url/", 'Anterior', 'title="Ir a la pág. anterior" class="nextprev" rel="prev"'); // Se coloca el link sin número de página para la página 1
+        elseif($page->prev) echo Html::link("$url/$page->prev/", 'Anterior', 'title="Ir a la pág. anterior" class="nextprev" rel="prev"') ?>
+
+    pag. <?= $page->current ?> de <?= $page->total ?>
+    |
+    items <?= $s_item ?>-<?= $e_item ?>
+
+    <?php if($page->next) echo Html::link("$url/$page->next/", 'Siguiente', 'title="Ir a la pág. siguiente" class="nextprev" rel="next"') ?>
+</div>

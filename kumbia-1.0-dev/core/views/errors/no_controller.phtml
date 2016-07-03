@@ -1,0 +1,15 @@
+<div class="flash error">
+<h1>Controlador no encontrado</h1>
+<p><strong>Error: </strong><em><?= $Controller ?>Controller</em> no existe o no se puede encontrar.</p>
+</div>
+<div class="flash valid">
+<h1>Solución</h1>
+    <h4><strong>Crea la clase <em><?= $Controller ?>Controller</em> de abajo en el fichero : <br> 
+    <em class="file"><?= APP_PATH, 'controllers/', $controller_path, '_controller.php'?></em></strong></h4>
+<pre><?php highlight_string("<?php
+class {$Controller}Controller extends AppController
+{
+
+}") ?>
+</pre>
+</div>

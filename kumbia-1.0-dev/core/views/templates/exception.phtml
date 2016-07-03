@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="<?= APP_CHARSET ?>" />
+    <title>Oh! Hay un error - KumbiaPHP Framework</title>
+    <style>
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+    body{margin:0}
+    a{color:#0ac;font-weight:bold;text-decoration:none}
+    a:hover,a:focus{color:#ff4d4d;text-decoration:underline}
+    a:focus{outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+    ul.inline {padding-left: 0px;list-style: outside none none}
+    ul.inline > li {display: inline-block;padding-left: 5px;padding-right: 5px;}
+    
+    /* Formatea los mensajes Flash::xxx() de KumbiaPHP */
+    .flash {
+        margin: 5px 0;
+        min-height: 32px;
+        padding:3px 10px 3px 50px;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        line-height: 32px;
+        border-radius: 2px;
+    }
+
+    .error {
+        color: #D8000C;
+        background-color: #FFBABA;
+    }
+
+    .info {
+        color: #00529B;
+        background-color: #BDE5F8;
+    }
+
+    .valid {
+        color: #4F8A10;
+        background-color: #DFF2BF;
+    }
+    .warning {
+        color: #9F6000;
+        background-color: #FEEFB3;
+    }
+    pre{display:block;padding:10.5px;margin:0 0 11px;line-height:1.5;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border-radius: 5px;}
+    pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;border:0}
+    
+    .container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+    .container:before,.container:after{content:" ";display:table;}
+    .container:after{clear:both}
+    .col-6{width:50%;float:left}
+    
+    #trace{background-color:#DDD;padding:2em;margin-bottom:1.5em}
+    #trace table {background-color:white;width:100%}
+    
+    .file{word-break: break-word;}
+    .php {width: 100%;border-spacing: 2px 2px;color: white;margin:1em 0;table-layout: fixed}
+    .php td{background-color:#00A1CB; text-align:center;padding-bottom:.5em}
+    .php tr:nth-child(even) td{background-color:#007493}
+    .php a{color:#FFF}
+    
+    #files li[title ^='<?= CORE_PATH?>']{color: red;}
+    #files li[title ^='<?= APP_PATH?>']{color: green;}
+    #files li[title ^='<?= dirname(CORE_PATH).'/vendor/'?>']{color: #ffcc00;}
+    
+    .status{padding:5px;border-radius:5px;margin-left:5px;color:#FFF}
+    .status.red{background-color:#a33}
+    .status.green{background-color:#759e1a}
+    .status.blue{background-color:#0A29FF}
+    
+    #viewfiles{display:none}
+    #viewfiles:target{display:block}
+    
+    table.t{margin:auto;margin-bottom:22px;width:100%}
+    table.t tr>th,table.t tr>td{padding:8px;line-height:1.5;border-top:1px solid #ddd}
+    table.t thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}
+    table.t tbody tr:hover{background-color:#BDE5F8}
+       
+    footer{border-top:4px solid #00A1CB;margin-top:-5px;padding:1em}
+    </style>
+</head>
+<body>
+<div class="">
+<header class="row">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="370" height="60" alt="KumbiaPHP"><path fill="#00a1cb" d="M66.3 11.62h9.9v14.02l14.27-14.02h11.5L83.47 29.8l20.4 20.22h-12.4L76.2 34.9V50h-9.9V11.6"/><path fill="#00a1cb" d="M97.56 38.8V21.2h9.26c.37 6.42-.56 12.3.13 18.5.12 1.02.33 1.76.62 2.22.38.6.87 1.07 1.47 1.4.62.32 1.32.48 2.1.48 1.93 0 3.44-.74 4.54-2.2 1.1-1.48 1.65-3.53 1.65-6.15V21.22h9.2v28.8h-9.2v-4.17c-1.4 1.68-2.87 2.93-4.43 3.73-1.54.8-3.25 1.18-5.12 1.18-3.32 0-5.86-1.02-7.6-3.06-1.74-2.04-2.6-5-2.6-8.9M154.62 26c1.16-1.8 2.54-3.14 4.14-4.07 1.6-.94 3.38-1.4 5.3-1.4 3.3 0 5.83 1 7.56 3.05 1.73 2.04 2.6 5 2.6 8.9v17.54h-9.26c.04-5.9-.04-11.62.05-16.75 0-2.04-.3-3.5-.9-4.42-.6-.92-1.5-1.4-2.9-1.4-1.7 0-3.1.73-4 2.17-.9 1.44-1.4 3.53-1.4 6.25v14.15h-9.2V35c0-3.2-.2-5.24-.8-6.15-.5-.92-1.5-1.4-2.9-1.4-1.8 0-3.1.74-4.1 2.2-.9 1.44-1.4 3.5-1.4 6.2v14.17H128v-28.8h9.23v4.2c1.14-1.62 2.44-2.84 3.9-3.67 1.47-.82 3.1-1.23 4.86-1.23 2 0 3.7.48 5.2 1.44s2.7 2.3 3.4 4.04m40.1 18.2c2 0 3.4-.84 4.4-2.28 1-1.44 1.6-3.53 1.6-6.28 0-2.74-.6-4.83-1.6-6.27-1-1.44-2.5-2.16-4.5-2.16s-3.5.8-4.6 2.2c-1.08 1.5-1.6 3.6-1.6 6.3 0 2.8.5 4.8 1.6 6.3 1.06 1.5 2.6 2.2 4.55 2.2m-6.14-18.6c1.27-1.7 2.67-2.9 4.2-3.7 1.5-.8 3.3-1.2 5.3-1.2 3.55 0 6.47 1.4 8.75 4.3 2.3 2.8 3.4 6.5 3.4 10.9 0 4.5-1.1 8.1-3.4 10.9-2.3 2.8-5.2 4.2-8.7 4.2-2 0-3.8-.4-5.3-1.1-1.6-.8-3-2.02-4.27-3.7v4.2h-9.2V10h9.2v15.43m24.26-4.22h9.2v28.9h-9.2V21.3m0-11.22h9.2v7.5h-9.2V10m27.5 27.06c-1.9 0-3.4.32-4.38.97-.97.66-1.45 1.62-1.45 2.88 0 1.2.4 2.1 1.17 2.8.8.7 1.9 1 3.3 1 1.73 0 3.2-.6 4.4-1.8 1.2-1.2 1.8-2.8 1.8-4.7v-1.1m9.2 13H245v-4.3c-1.24 1.8-2.63 3.1-4.18 3.9-1.54.8-3.42 1.2-5.63 1.2-3 0-5.5-.9-7.3-2.6-1.9-1.7-2.8-4-2.8-6.8 0-3.4 1.1-5.8 3.5-7.4 2.3-1.5 6-2.3 10.9-2.3h5.5V31c0-1.48-.6-2.5-1.8-3.2-1.2-.7-3-1-5.4-1-2 0-3.9.2-5.5.6-1.7.4-3.3 1-4.8 1.74v-7c1.9-.5 3.9-.84 5.9-1.1 2-.3 3.9-.4 5.9-.4 5.2 0 8.9 1 11.2 3.1 2.3 2 3.8 5.24 3.8 9.9"/><path fill="#fe4747" d="M260 11.62h16.44c4.9 0 8.63 1.1 11.24 3.27 2.62 2.1 3.93 5.2 3.93 9.2s-1.3 7.1-3.9 9.3c-2.6 2.1-6.3 3.2-11.2 3.2H270V50h-10V11.6m9.9 7.2v10.7h5.48c1.92 0 3.4-.45 4.45-1.4 1.05-.92 1.57-2.25 1.57-3.96 0-1.72-.52-3.04-1.57-3.96-1.04-.94-2.53-1.4-4.45-1.4h-5.47m23.6-7.18h9.9v14.63H318v-14.6h9.9v38.4H318v-16.3h-14.6v16.3h-9.9v-38.4m37.32 0h16.44c4.88 0 8.63 1.1 11.24 3.26 2.62 2.1 3.93 5.2 3.93 9.2s-1.3 7.1-3.93 9.3c-2.6 2.1-6.36 3.2-11.24 3.2h-6.53V50h-9.9V11.6m9.9 7.2v10.7h5.47c1.92 0 3.4-.45 4.45-1.4 1.05-.92 1.57-2.25 1.57-3.96 0-1.72-.52-3.04-1.57-3.96-1.04-.94-2.53-1.4-4.45-1.4h-5.47"/><path fill="#00a1cb" d="M42.13 11.5L23.15 30.15 43.22 49.9h12.3L35.15 29.7l18.5-18.2z"/><path fill="#fe4747" d="M26.73 14.23L10 30.67c5.85 5.76 11.6 11.43 17.7 17.4h10.84l-17.97-17.8 16.3-16.04H26.72z"/></svg>
+    <sup><?= kumbia_version() ?></sup></h2>
+</header>
+
+    <?= $content ?> 
+
+</div>
+<div id="trace">
+<h1>Rastro</h1>
+<?php foreach ($e->getTrace() as $trace) : ?>
+    <?php if (isset($trace['file'])) //&&
+        //!(strpos ( $trace ['file'], APP_PATH) ===false) &&
+        //!(strpos ( $trace ['file'], 'index.php')))
+    : ?>
+        <p><strong class="file"><?= htmlentities($trace['file'], ENT_NOQUOTES, 'UTF-8'), "(", $trace['line'], ")" ?></strong></p>
+        <!-- <p>La excepción se ha generado en el archivo <em class="file"><?= $trace['file'] ?></em> en la línea: <em><?= $trace['line'] ?></em>:</p> -->
+
+        <?php
+            $lines = file($trace['file']);
+            $start = ($trace ['line'] - 4) < 0 ? 0 : $trace ['line'] - 4;
+            $end = ($trace ['line'] + 2) > count($lines) - 1 ? count($lines) - 1 : $trace['line'] + 2;
+        ?>
+        <table>
+        <?php for ($i = $start; $i <= $end; $i ++) : ?>
+        <tr<?= ($i == $trace['line'] - 1) ? ' style="background:#BDE5F8"' : '' ?>>
+            <th><?= ($i + 1) ?></th>
+            <td><?= str_replace('&lt;?php', '', highlight_string('<?php '.$lines[$i], true)) ?></td>
+        </tr>
+        <?php endfor ?>
+        </table>
+
+    <?php endif ?>
+<?php endforeach ?> 
+</div>
+    <table class="t">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Fichero (línea)</th>
+            <th>Función</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        $lines = explode("\n", $e->getTraceAsString());
+        $files = get_included_files();
+        foreach ($lines as $line) {
+            $line = explode(" ", $line);
+        ?>
+        <tr>
+            <td><?= $line[0] ?></td>
+            <td><?= $line[1] ?></td>
+            <td><?= (isset($line[2])) ? $line[2] : '' ?></td>
+        </tr>
+        <?php } ?>
+    </tbody>
+    </table>
+
+<h2>Información Adicional</h2>
+<div class="container">
+<div class="col-6">
+    <strong>Ubicación actual:</strong> <?= $route ?><br>
+</div>
+
+<div class="col-6">
+    <strong>IP Visitante: </strong> <?= $_SERVER['REMOTE_ADDR'] ?><br>
+</div>
+</div></div>
+
+<div class="view">
+
+
+</div>
+
+<div id="viewfiles">
+<ol id="files"><!-- TODO: usar :hover para mostrarlos -->
+<?php foreach ($files as $file) : ?>
+    <li title="<?= $file ?>"><?= $file ?></li>
+<?php endforeach ?> 
+</ol>
+<span class="status red">core</span>
+<span class="status green">app</span>
+<span class="status blue">vendor</span>
+</div>
+
+<table class="php"><tr>
+<td><h3><?= round((microtime(1)-START_TIME), 4),' seg.'?></h3>Tiempo</td>
+<td><h3><?= number_format(memory_get_usage() / 1048576, 2),' MB'?></h3>Memoria Usada</td>
+<td><h3><span class="status <?= extension_loaded('xdebug') ? 'green' : 'red' ?>" title="Recomendable en desarrollo. Nunca en producción">xdebug</span>
+<span class="status <?= extension_loaded('apc') ? 'green' : 'red' ?>" title="Siempre muy recomendable">apc</span></h3>PHP extensions</td>
+<td><h3><a href="#viewfiles"><?= count($files) ?> ficheros</a></h3>Includes</td>
+</tr>
+<tr>
+<td><h3><?= ini_get('max_execution_time'),' seg.'?></h3>Tiempo Máximo PHP</td>
+<td><h3><?= ini_get('memory_limit') ?></h3>Memoria PHP</td>
+<td><h3><?= PHP_VERSION?><br><small title="PHP SAPI"><?= PHP_SAPI ?></small></h3>Versión PHP</td>
+<td><h3><?= $_SERVER['SERVER_SOFTWARE'] ?> <br><small>IP: </strong> <?= $_SERVER['SERVER_ADDR'] ?></small></h3>Servidor</td>
+</tr>
+</table>
+
+<div class="flash info">
+<p>En <b>PRODUCCIÓN</b> no sale este error, muestra el template de error de la app: <br>
+<em class="file"><?= APP_PATH ?>views/_shared/errors/404.phtml</em> <br>
+¡ Modifica el template de error 404 a tu gusto !</p>
+</div>
+ 
+<footer>
+    <div class="col-6">
+        <ul class="inline">
+            <li><a href="http://www.kumbiaphp.com/">KumbiaPHP Framework</a> |</li>
+            <li><a href="http://wiki.kumbiaphp.com/">Wiki</a> |</li>
+            <li><a href="https://docs.google.com/document/d/1kth1GhrmMEBK2cAMyiy_4Dw1qlJFNdXVuXajJ6nMTQg/edit?hl=es">Manual</a> |</li>
+            <li><a href="http://wiki.kumbiaphp.com/Licencia" title="New BSD">Licencia</a></li>
+        </ul>
+        <div>
+            <a href="http://wiki.kumbiaphp.com/Team_Development_KumbiaPHP_Framework">© 2007 - <?= date('Y')?> KumbiaPHP Team</a>
+        </div>
+    </div>
+    <div class="col-6">
+        <p>Ayuda Online: <a href="irc://irc.freenode.org/#kumbiaphp" title="IRC donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">IRC</a> | 
+                         <a href="http://webchat.freenode.net/?channels=kumbiaphp" title="Web Chat IRC donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Web IRC</a> | 
+                         <a href="http://groups.google.com/group/kumbia" title="Lista de Correo de KumbiaPHP donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Grupo</a> | <a href="http://foro.kumbiaphp.com" title="Foro de KumbiaPHP donde podrás encontrar ayuda a problemas que tengas, hacer comentarios, proponer ideas, reportar bugs, socializar temas relacionados y disfrutar de KumbiaPHP.">Foro</a></p>
+    </div>
+    
+    <p>Ejecutado en <?= round((microtime(1)-START_TIME)*1000, 4), ' ms'?> usando <?= number_format(memory_get_usage() / 1048576, 2),' MB' ?> de memoria</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?php Tag::css('scaffold') ?>
+<div id="scaffold">
+<?php View::content();?>
+<h1><?= ucwords("$model"), ": <span>$action_name</span>" ?></h1>
+
+<div class="col-8 offset-2">
+<?php ModelForm::create($$model)?>
+</div>
+
+<div class="col-12">
+	<a href="../" class="btn btn-default">Listado</a>
+</div>
+<?php //View::partial('editors/tinymce') // ya veremos si incluimos algun wysiwyg?>
+</div>

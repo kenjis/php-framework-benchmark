@@ -1,0 +1,21 @@
+<div  class="flash error">
+<h1>Acción no encontrada</h1>
+<p><strong>Error: </strong>No se encontró la Acción <b><?= $action?></b>. Es necesario definir un método en la clase controladora <b>
+    <?= $Controller?></b> llamado <b><?= $action?></b> para que esto funcione correctamente.</p>
+</div>
+<div class="flash valid">
+<h1>Solución</h1>
+    <h4><strong>Crea el método <em><?= $action?></em> de abajo en la clase <b><?= $Controller?></b> del fichero : <br>
+    <em class="file"><?= APP_PATH,'controllers/', $controller_path,'_controller.php'?></em></strong></h4>
+<pre>
+<?php highlight_string("<?php
+class {$Controller} extends AppController 
+{
+    public function {$action}() 
+    {
+    
+    }
+	
+}") ?>
+</pre>
+</div>

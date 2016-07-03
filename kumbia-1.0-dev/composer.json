@@ -1,0 +1,15 @@
+{
+    "name": "kumbia/core",
+    "description": "KumbiaPHP",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "classmap": [
+            "core/kumbia/",
+            "core/libs/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "mockery/mockery": "^0.9.5"
+    }
+}
