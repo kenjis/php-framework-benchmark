@@ -5,7 +5,7 @@ list="
 #phalcon-1.3
 phalcon-2.0
 #ice-1.0
-ice-1.1
+#ice-1.1    # Can't build on CentOS 6
 kumbia-1.0-dev
 tipsy-0.10
 fatfree-3.5
