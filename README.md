@@ -155,7 +155,6 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
 * [BEAR.Sunday](https://bearsunday.github.io/) ([@BEARSunday](https://twitter.com/BEARSunday))
 * [CakePHP](http://cakephp.org/) ([@cakephp](https://twitter.com/cakephp))
-* [CleverStyle Framework](https://github.com/nazar-pc/CleverStyle-Framework)
 * [CodeIgniter](http://www.codeigniter.com/) ([@CodeIgniter](https://twitter.com/CodeIgniter))
 * [Cygnite](http://www.cygniteframework.com/) ([@cygnitephp](https://twitter.com/cygnitephp))
 * [FatFree](http://fatfreeframework.com/) ([@phpfatfree](https://twitter.com/phpfatfree))
