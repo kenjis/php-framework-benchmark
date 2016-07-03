@@ -156,12 +156,14 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
 * [BEAR.Sunday](https://bearsunday.github.io/) ([@BEARSunday](https://twitter.com/BEARSunday))
 * [CakePHP](http://cakephp.org/) ([@cakephp](https://twitter.com/cakephp))
+* [CleverStyle Framework](https://github.com/nazar-pc/CleverStyle-Framework)
 * [CodeIgniter](http://www.codeigniter.com/) ([@CodeIgniter](https://twitter.com/CodeIgniter))
 * [Cygnite](http://www.cygniteframework.com/) ([@cygnitephp](https://twitter.com/cygnitephp))
 * [FatFree](http://fatfreeframework.com/) ([@phpfatfree](https://twitter.com/phpfatfree))
 * [FuelPHP](http://fuelphp.com/) ([@fuelphp](https://twitter.com/fuelphp))
 * [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework))
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
+* [KumbiaPHP](https://github.com/KumbiaPHP/KumbiaPHP)
 * [Laravel](http://laravel.com/) ([@laravelphp](https://twitter.com/laravelphp))
 * [Lumen](http://lumen.laravel.com/)
 * [NoFussFramework](http://www.nofussframework.com/)
@@ -177,7 +179,6 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Yii](http://www.yiiframework.com/) ([@yiiframework](https://twitter.com/yiiframework))
 * [zend-expressive](https://github.com/zendframework/zend-expressive) ([@zfdevteam](https://twitter.com/zfdevteam))
 * [Zend Framework](http://framework.zend.com/) ([@zfdevteam](https://twitter.com/zfdevteam))
-* [CleverStyle Framework](https://github.com/nazar-pc/CleverStyle-Framework)
 
 ## Other Benchmarks
 
