@@ -64,6 +64,9 @@ if (file_exists($url_file)) {
     foreach ($urls as $url) {
         $parts = parse_url(trim($url));
         $url = $parts['scheme'] . '://' . $_SERVER['HTTP_HOST'] . $parts['path'];
+        if ($parts['query']) {
+            $url .= '?' . $parts['query'];
+        }
         echo '<li><a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
              '">' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
              '</a></li>' . "\n";
