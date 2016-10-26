@@ -1,0 +1,19 @@
+title: "StaticPHP"
+php: false
+deprecated: true
+todo: true
+download: true
+baseUrl: http://staticphp.gm.lv/docs/
+templateConfig: /root/.composer/vendor/apigen/theme-default/src/config.neon
+
+charset:
+    - UTF-8
+
+source:
+    - ./
+
+exclude:
+    - "Application/Cache/*"
+    - "Vendor/*"
+
+destination: Application/Public/docs

@@ -1,0 +1,24 @@
+{
+    "name": "4apps/staticphp",
+    "description": "A lightweight PHP framework",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Gints Murans",
+            "email": "gm@gm.lv"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "twig/twig": "~1.5",
+        "robloach/component-installer": "*",
+        "components/jquery": "~1.0",
+        "components/bootstrap": "~3.0"
+    },
+    "config": {
+        "vendor-dir": "Vendor",
+        "component-dir": "Application/Public/assets/vendor",
+        "component-baseurl": "/assets/vendor"
+    }
+}
