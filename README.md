@@ -52,7 +52,9 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. Symfony 2.7.7
 1. Laravel 5.1.24
 1. Zend Framework 2.5.2
+1. Zend Framework 3.0
 1. TYPO3 Flow 3.0.0
+
 
 ## Results
 
@@ -95,6 +97,7 @@ These are my benchmarks, not yours. **I encourage you to run on your (production
 |symfony-2.7        |             101.99|     3.8|       3.21|    12.4|
 |laravel-5.1        |              91.59|     3.4|       2.76|    10.7|
 |zf-2.5             |              81.13|     3.0|       3.02|    11.7|
+|zf-3.0             |              00.00|     0.0|       0|    0|
 |typo3f-3.0         |              26.98|     1.0|       6.50|    25.2|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
