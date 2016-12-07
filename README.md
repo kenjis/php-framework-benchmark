@@ -42,7 +42,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. Lumen 5.1.6
 1. zend-expressive 1.0.0rc2 (FastRoute + zend-servicemanager)
 1. Radar 1.0.0-dev
-1. Yii 2.0.6
+1. Yii 2.0.10
 1. Silex 1.3.4
 1. Cygnite 1.3.1
 1. FuelPHP 1.8-dev
