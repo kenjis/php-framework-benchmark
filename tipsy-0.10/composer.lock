@@ -52,6 +52,7 @@
                 "mvw",
                 "php"
             ],
+            "abandoned": "https://github.com/tipsyphp/tipsy",
             "time": "2014-07-24 00:00:00"
         }
     ],

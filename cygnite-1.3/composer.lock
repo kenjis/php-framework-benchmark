@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "cygnite/framework",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cygnite/framework.git",
-                "reference": "51fc6710ed9fa737d19850d14a8048bb82996b6c"
+                "reference": "5c1866eb64b1f59f6d9c855a782a42fc56b53c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cygnite/framework/zipball/51fc6710ed9fa737d19850d14a8048bb82996b6c",
-                "reference": "51fc6710ed9fa737d19850d14a8048bb82996b6c",
+                "url": "https://api.github.com/repos/cygnite/framework/zipball/5c1866eb64b1f59f6d9c855a782a42fc56b53c40",
+                "reference": "5c1866eb64b1f59f6d9c855a782a42fc56b53c40",
                 "shasum": ""
             },
             "require": {
@@ -54,27 +54,27 @@
                 "Cygnite",
                 "framework"
             ],
-            "time": "2015-04-07 19:40:12"
+            "time": "2016-06-30 18:34:53"
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.1",
+            "version": "v5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/545ce9136690cea74f98f86fbb9c92dd9ab1a756",
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1,<0.9.4"
+                "mockery/mockery": "~0.9.1"
             },
             "type": "library",
             "extra": {
@@ -107,21 +107,21 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-06-06 14:19:39"
+            "time": "2016-11-24 01:01:23"
         },
         {
             "name": "symfony/console",
-            "version": "v2.3.35",
+            "version": "v2.3.42",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "ed9c6cad324afb02672fa8ebf55fe0feb1659067"
+                "reference": "20c12c6d6c5a087a66d4e77999451713a92a3507"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ed9c6cad324afb02672fa8ebf55fe0feb1659067",
-                "reference": "ed9c6cad324afb02672fa8ebf55fe0feb1659067",
+                "url": "https://api.github.com/repos/symfony/console/zipball/20c12c6d6c5a087a66d4e77999451713a92a3507",
+                "reference": "20c12c6d6c5a087a66d4e77999451713a92a3507",
                 "shasum": ""
             },
             "require": {
@@ -163,7 +163,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 08:19:46"
+            "time": "2016-05-26 08:04:58"
         },
         {
             "name": "tracy/tracy",
@@ -221,16 +221,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.23.1",
+            "version": "v1.28.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6"
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
-                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b22ce0eb070e41f7cba65d78fe216de29726459c",
+                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c",
                 "shasum": ""
             },
             "require": {
@@ -238,12 +238,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.23-dev"
+                    "dev-master": "1.28-dev"
                 }
             },
             "autoload": {
@@ -278,7 +278,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-11-05 12:49:06"
+            "time": "2016-11-23 18:41:40"
         }
     ],
     "packages-dev": [],

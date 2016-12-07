@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.24",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988"
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
-                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
                 "shasum": ""
             },
             "require": {
@@ -65,21 +65,26 @@
                 "MODX Evo",
                 "Mautic",
                 "OXID",
+                "Plentymarkets",
+                "RadPHP",
                 "SMF",
                 "Thelia",
                 "WolfCMS",
                 "agl",
                 "aimeos",
                 "annotatecms",
+                "attogram",
                 "bitrix",
                 "cakephp",
                 "chef",
+                "cockpit",
                 "codeigniter",
                 "concrete5",
                 "croogo",
                 "dokuwiki",
                 "drupal",
                 "elgg",
+                "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
@@ -96,16 +101,18 @@
                 "piwik",
                 "ppi",
                 "puppet",
+                "reindex",
                 "roundcube",
                 "shopware",
                 "silverstripe",
                 "symfony",
                 "typo3",
                 "wordpress",
+                "yawik",
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-05 11:42:46"
+            "time": "2016-08-13 20:53:52"
         },
         {
             "name": "fuel/auth",
@@ -148,12 +155,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/core.git",
-                "reference": "26f6432a9f41659280c70ba47c16170adf1e7611"
+                "reference": "6cfe7d61357ce7498d8c7fed063696110b3e846a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/core/zipball/26f6432a9f41659280c70ba47c16170adf1e7611",
-                "reference": "26f6432a9f41659280c70ba47c16170adf1e7611",
+                "url": "https://api.github.com/repos/fuel/core/zipball/6cfe7d61357ce7498d8c7fed063696110b3e846a",
+                "reference": "6cfe7d61357ce7498d8c7fed063696110b3e846a",
                 "shasum": ""
             },
             "require": {
@@ -175,7 +182,7 @@
                 "source": "https://github.com/fuel/core/tree/1.8/master",
                 "issues": "https://github.com/fuel/core/issues"
             },
-            "time": "2016-04-09 16:28:31"
+            "time": "2016-07-29 15:04:03"
         },
         {
             "name": "fuel/email",
@@ -253,12 +260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/orm.git",
-                "reference": "2c1da635127c9fbedc9c76132fc904188892c365"
+                "reference": "69cd98cfed4d8e34b176d87b73a35b98703235be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/orm/zipball/2c1da635127c9fbedc9c76132fc904188892c365",
-                "reference": "2c1da635127c9fbedc9c76132fc904188892c365",
+                "url": "https://api.github.com/repos/fuel/orm/zipball/69cd98cfed4d8e34b176d87b73a35b98703235be",
+                "reference": "69cd98cfed4d8e34b176d87b73a35b98703235be",
                 "shasum": ""
             },
             "require": {
@@ -277,10 +284,10 @@
             "description": "FuelPHP 1.x ORM Package",
             "homepage": "https://github.com/fuel/orm",
             "support": {
-                "source": "https://github.com/fuel/orm/tree/1.8/develop",
+                "source": "https://github.com/fuel/orm/tree/1.8.0.1",
                 "issues": "https://github.com/fuel/orm/issues"
             },
-            "time": "2016-02-07 12:09:12"
+            "time": "2016-05-22 14:52:35"
         },
         {
             "name": "fuel/parser",
@@ -288,12 +295,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/parser.git",
-                "reference": "bec50ec304e696d72dba7f13494828532c6e18df"
+                "reference": "dd8f60343c71ccd141403749b0c5f48823d501d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/parser/zipball/bec50ec304e696d72dba7f13494828532c6e18df",
-                "reference": "bec50ec304e696d72dba7f13494828532c6e18df",
+                "url": "https://api.github.com/repos/fuel/parser/zipball/dd8f60343c71ccd141403749b0c5f48823d501d9",
+                "reference": "dd8f60343c71ccd141403749b0c5f48823d501d9",
                 "shasum": ""
             },
             "require": {
@@ -312,10 +319,10 @@
             "description": "FuelPHP 1.x Parser Package",
             "homepage": "https://github.com/fuel/parser",
             "support": {
-                "source": "https://github.com/fuel/parser/tree/1.8/develop",
+                "source": "https://github.com/fuel/parser/tree/1.8/master",
                 "issues": "https://github.com/fuel/parser/issues"
             },
-            "time": "2016-03-12 12:08:41"
+            "time": "2016-04-23 13:32:22"
         },
         {
             "name": "fuelphp/upload",
@@ -570,22 +577,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -599,12 +614,13 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-10-10 12:19:37"
         }
     ],
     "packages-dev": [
@@ -614,12 +630,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/docs.git",
-                "reference": "d16972d39cef5f936779fca83bb19037cc2a3140"
+                "reference": "e03906d02cbd09bddb653e28f92f92056e673a32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/docs/zipball/d16972d39cef5f936779fca83bb19037cc2a3140",
-                "reference": "d16972d39cef5f936779fca83bb19037cc2a3140",
+                "url": "https://api.github.com/repos/fuel/docs/zipball/e03906d02cbd09bddb653e28f92f92056e673a32",
+                "reference": "e03906d02cbd09bddb653e28f92f92056e673a32",
                 "shasum": ""
             },
             "require": {
@@ -638,10 +654,10 @@
             "description": "FuelPHP 1.x Documenataion",
             "homepage": "https://github.com/fuel/docs",
             "support": {
-                "source": "https://github.com/fuel/docs/tree/1.8/master",
+                "source": "https://github.com/fuel/docs/tree/1.8.0",
                 "issues": "https://github.com/fuel/docs/issues"
             },
-            "time": "2016-04-09 11:48:09"
+            "time": "2016-04-10 12:59:50"
         }
     ],
     "aliases": [],
