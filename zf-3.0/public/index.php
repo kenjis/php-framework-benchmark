@@ -38,3 +38,5 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
 
 // Run the application!
 Application::init($appConfig)->run();
+
+require $_SERVER['DOCUMENT_ROOT'] . '/php-framework-benchmark/libs/output_data.php';
