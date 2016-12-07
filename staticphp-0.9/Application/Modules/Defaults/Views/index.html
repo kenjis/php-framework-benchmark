@@ -1,0 +1,14 @@
+{% extends "Defaults/Views/layout.html" %}
+
+{% block content %}
+  <h1>Welcome!</h1>
+
+  This is your first page.<br /><br />
+
+  <a href="{{ base_url }}defaults/welcome/help">Help page</a><br />
+
+  {% if config.debug %}
+  <em>* Turning off debug mode will hide help navigation item.</em>
+  {% endif %}
+
+{% endblock %}

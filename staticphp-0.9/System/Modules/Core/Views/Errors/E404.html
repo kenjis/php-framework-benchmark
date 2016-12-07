@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>404 Not Found</title>
+
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body role="document">
+        <div class="container" role="main">
+            <br /><br /><br />
+            <h1 class="text-center">404 Not Found</h1>
+            <p id="description" class="text-center">{{ description|raw }}</p>
+        </div>
+        <script>
+                var description = document.getElementById('description');
+                if (description.innerHTML.indexOf('\{\{') != -1)
+                {
+                    description.innerHTML = '';
+                }
+        </script>
+    </body>
+</html>

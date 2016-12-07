@@ -53,6 +53,7 @@ If you find something wrong with my code, please feel free to send Pull Requests
 1. Laravel 5.1.24
 1. Zend Framework 2.5.2
 1. TYPO3 Flow 3.0.0
+1. StaticPHP 0.9.4
 
 ## Results
 
@@ -170,6 +171,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Radar](https://github.com/radarphp/Radar.Project)
 * [Silex](http://silex.sensiolabs.org/)
 * [Slim](http://www.slimframework.com/) ([@slimphp](https://twitter.com/slimphp))
+* [StaticPHP](https://github.com/gintsmurans/staticphp)
 * [Symfony](http://symfony.com/) ([@symfony](https://twitter.com/symfony))
   * [How to Deploy a Symfony Application](http://symfony.com/doc/current/cookbook/deployment/tools.html)
 * [Tipsy](http://tipsy.la)

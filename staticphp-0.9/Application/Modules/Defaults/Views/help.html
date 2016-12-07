@@ -1,0 +1,332 @@
+{% extends "Defaults/Views/layout.html" %}
+
+{% block content %}
+<div class="content">
+  <h1>Help</h1>
+
+  <ul>
+    <li>Basic mvc structure</li>
+    <li>Configuration, helper and model autoloading</li>
+    <li>Basic debugging</li>
+    <li>Url routing</li>
+  </ul>
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2>Installation</h2>
+  <h3>How to get a copy of StaticPHP?</h3>
+  Download or clone it from <a href="https://github.com/gintsmurans/staticphp" target="_blank">GitHub</a>
+
+  <h3>How to install it?</h3>
+  <ol>
+    <li>Extract the archive (skip it if you cloned git repository)</li>
+    <li>Point webserver's root directory to the application/public directory</li>
+    <li>Set directory index file to index.php</li>
+  </ol>
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="#usage" id="usage" class="open_description">Usage</a></h2>
+  <div class="description">
+    Framework base is built using php static methods<br /><br />
+
+    <strong class="section">Document root (application/public)</strong>
+
+    <strong class="section">Configuration (application/config)</strong>
+    All configuration files are put in application/config directory. config.php is the main application config file and is loaded automatically. routing.php is where application routes are set. View each configuration file for more details.
+
+    <strong class="section">Controllers (application/controllers)</strong>
+
+    <strong class="section">Models (application/models)</strong>
+
+    <strong class="section">Helpers (application/helpers)</strong>
+
+    <strong class="section">Views / Templates (application/views)</strong>
+    StaticPHP uses default php templating system, which means no parsing to views is done to improve its performance.
+    <br /><br />
+    Controller:
+    <pre>
+$data = ['msg' => 'Important message'];
+\load::view(['header', 'home/index', 'footer']);
+    </pre>
+
+    View: (application/views/home/index)
+    <pre>
+<?php echo htmlentities('<strong><?php echo $data[\'msg\']; ?></strong>'); ?>
+    </pre>
+  </div>
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="#system" id="system" class="open_description">System</a></h2>
+  <div class="description">
+    <h3><a href="#bootstrap_php" id="bootstrap_php" class="open_description">bootstrap.php</a></h3>
+    <div class="description">
+
+    </div>
+
+
+    <h3><a href="#router_php" id="router_php" class="open_description">router.php</a></h3>
+    <div class="description">
+
+      <strong class="section">Function Reference</strong>
+      <ul>
+        <li><i>public static function base_uri($url = '')</i></li>
+        <li><i>public static function site_uri($url = '', $prefix = NULL, $current_prefix = TRUE)</i></li>
+        <li><i>public static function make_path_string($string)</i></li>
+        <li><i>public static function redirect($url = '', $site_uri = TRUE, $e301 = FALSE, $type = 'http')</i></li>
+        <li><i>public static function have_prefix($p)</i></li>
+        <li><i>public static function segment($index)</i></li>
+        <li><i>public static function error($error_code, $error_string, $data = NULL)</i></li>
+        <li><i>public static function url_to_file($url)</i></li>
+        <li><i>public static function init()</i></li>
+        <li><i>public static function split_segments($force = FALSE)</i></li>
+        <li><i>public static function load_controller()</i></li>
+        <li><i>public static function _load_controller($file, &$class, &$method)</i></li>
+      </ul>
+    </div>
+
+
+    <h3><a href="#load_php" id="load_php" class="open_description">load.php</a></h3>
+    <div class="description">
+
+      <strong class="section">Function Reference</strong>
+      <ul>
+        <li><i>public static function &get($name)</i></li>
+        <li><i>public static function set($name, $value)</i></li>
+        <li><i>public static function merge($name, $value, $owerwrite = TRUE)</i></li>
+        <li><i>public static function config($files, $project = NULL)</i></li>
+        <li><i>public static function controller($files, $project = NULL)</i></li>
+        <li><i>public static function model($files, $project = NULL)</i></li>
+        <li><i>public static function view($files, &$data = [], $return = FALSE, $project = NULL)</i></li>
+        <li><i>public static function helper($files, $project = NULL)</i></li>
+        <li><i>public static function start_timer()</i></li>
+        <li><i>public static function stop_timer($name)</i></li>
+        <li><i>public static function mark_time($name)</i></li>
+        <li><i>public static function execution_time()</i></li>
+        <li><i>function __autoload($classname)</i></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="#models" id="models" class="open_description">Models</a></h2>
+  <div class="description">
+    To load in-built models use <i>\load::model('model name', 'system');</i>
+
+    <h3><a href="#models_db_php" id="models_db_php" class="open_description">system/models/db.php</a></h3>
+    <div class="description">
+
+      <i>Simple pdo wrapper</i><br /><br />
+
+      <strong class="section">Connecting to the database</strong>
+      <pre>
+\load::model('db', 'system');
+\models\db::init([
+  'string' => 'mysql:host=localhost;dbname=',
+  'username' => '',
+  'password' => '',
+  'charset' => 'UTF8',
+  'persistent' => TRUE,
+  'wrap_column' => '`', // ` - for mysql, " - for postgresql
+  'debug' => FALSE,
+]);
+
+// or
+
+\models\db::init(); // database class will load default configuration, assuming that database model and configuration files were auto-loaded
+      </pre>
+
+
+      <strong class="section">Selecting</strong>
+      <pre>
+\models\db::fetchAll('SELECT * FROM users WHERE user_type = ?', 1);
+
+\models\db::fetch('SELECT * FROM users WHERE user_id = ?', $user_id);
+      </pre>
+
+
+      <strong class="section">Inserting</strong>
+      <pre>
+\models\db::query('INSERT INTO users SET name = ?, email = ?', ['Gints', 'gm@gm.lv']);
+
+\models\db::insert('users', [
+  'name' => 'Gints',
+  'email' => 'gm@gm.lv'
+]);
+      </pre>
+
+      <strong class="section">Updating</strong>
+      <pre>
+\models\db::query('UPDATE users SET name = ?, email = ? WHERE user_id = ?', ['Gints', 'gm@gm.lv', $user_id]);
+
+\models\db::update('users', [
+  'name' => 'Gints',
+  'email' => 'gm@gm.lv'
+], ['user_id' => $user_id]);
+      </pre>
+
+
+      <strong class="section">Function Reference</strong>
+      <ul>
+        <li><i>(PDO) public static function init($config, $name = 'default')</i></li>
+        <li><i>(PDOStatement) public static function query($query, $data = NULL, $name = 'default')</i></li>
+        <li><i>(object) public static function fetch($query, $data = [], $name = 'default')</i></li>
+        <li><i>(array) public static function fetchAll($query, $data = [], $name = 'default')</i></li>
+        <li><i>(PDOStatement) public static function update($table, $data, $where, $name = 'default')</i></li>
+        <li><i>(PDOStatement) public static function insert($table, $data, $name = 'default')</i></li>
+        <li><i>(PDO) public static function &db_link($name = 'default')</i></li>
+        <li><i>(PDOStatement) public static function &last_statement()</i></li>
+        <li><i>(string) public static function last_query()</i></li>
+        <li><i>(mixed) public static function last_insert_id($sequence_name = '', $sql = FALSE, $name = 'default')</i></li>
+    </div>
+  </div>
+
+
+
+  <h2><a href="#models" id="models" class="open_description">Helpers</a></h2>
+  <div class="description">
+    To load in-built models use <i>\load::helper('helper name', 'system');</i>
+  </div>
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="#nginx_example" id="nginx_example" class="open_description">Nginx configuration example</a></h2>
+  <div class="description">
+  /etc/nginx/sites-enabled/gm.lv
+  <pre>
+server {
+    listen       80;
+    server_name  staticphp.gm.lv;
+
+    root   /www/sites/gm.lv/staticphp/application/public;
+    index index.php index.html index.htm;
+
+    location / {
+        if (!-e $request_filename)
+        {
+            rewrite . /index.php  last;
+        }
+    }
+
+
+    location ~ \.php$ {
+        if (!-f $request_filename) {
+            return 404;
+        }
+
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include /etc/nginx/fastcgi_params;
+    }
+
+
+    location ~ /\.ht {
+        return 404;
+    }
+}
+</pre>
+
+/etc/nginx/fastcgi_params
+<pre>
+fastcgi_param	QUERY_STRING		$query_string;
+fastcgi_param	REQUEST_METHOD		$request_method;
+fastcgi_param	CONTENT_TYPE		$content_type;
+fastcgi_param	CONTENT_LENGTH		$content_length;
+
+fastcgi_param	SCRIPT_FILENAME		$request_filename;
+fastcgi_param	SCRIPT_NAME		$fastcgi_script_name;
+fastcgi_param	REQUEST_URI		$request_uri;
+fastcgi_param	DOCUMENT_URI		$document_uri;
+fastcgi_param	DOCUMENT_ROOT		$document_root;
+fastcgi_param	SERVER_PROTOCOL		$server_protocol;
+
+fastcgi_param	GATEWAY_INTERFACE	CGI/1.1;
+fastcgi_param	SERVER_SOFTWARE		nginx/$nginx_version;
+
+fastcgi_param	REMOTE_ADDR		$remote_addr;
+fastcgi_param	REMOTE_PORT		$remote_port;
+fastcgi_param	SERVER_ADDR		$server_addr;
+fastcgi_param	SERVER_PORT		$server_port;
+fastcgi_param	SERVER_NAME		$server_name;
+
+fastcgi_param	HTTPS			$https;
+
+# PHP only, required if PHP was built with --enable-force-cgi-redirect
+fastcgi_param	REDIRECT_STATUS		200;
+</pre>
+  </div>
+
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="http://staticphp-example.gm.lv/" target="_blank">Example application</a></h2>
+
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <h2><a href="#this_page" id="this_page" class="open_description">This Page</a></h2>
+  <div class="description">
+    <strong>Some variables and definitions:</strong>
+    <ol>
+      <li>BASE_URI: <strong><?php echo BASE_URI; ?></strong></li>
+      <li>\router::site_uri(): <strong><?php echo \router::site_uri(); ?></strong><br /><br /></li>
+
+      <li>BASE_PATH: <strong><?php echo BASE_PATH; ?></strong></li>
+      <li>APP_PATH: <strong><?php echo APP_PATH; ?></strong></li>
+      <li>PUBLIC_PATH: <strong><?php echo PUBLIC_PATH; ?></strong></li>
+    </ol>
+
+    <strong>This page:</strong>
+    <ol>
+      <li>Controller: <strong><?php echo APP_PATH . 'controllers/home.php'; ?></strong></li>
+      <li>View: <strong><?php echo __FILE__; ?></strong></li>
+      <li>CSS: <strong><?php echo PUBLIC_PATH . 'css/style.css'; ?></strong></li>
+    </ol>
+
+    <div>&nbsp;</div>
+
+    <strong>All included files:</strong>
+    <ol>
+      <?php foreach (get_included_files() as $file): ?>
+      <li><?php echo $file; ?></li>
+      <?php endforeach; ?>
+      <li><?php echo APP_PATH . 'views/footer.php'; ?></li>
+    </ol>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.open_description').on('click', function(e){
+      var description = $(this).parent().next();
+
+      if (description.is(':visible'))
+      {
+        description.slideUp('fast');
+        return false;
+      }
+
+      description.add(description.parents('.description')).slideDown('fast');
+
+    });
+
+    $().ready(function(){
+      if (location.hash != '')
+      {
+        $(location.hash).trigger('click');
+      }
+    });
+</script>
+
+{% endblock %}

@@ -42,4 +42,5 @@ laravel-5.2
 zf-2.5
 #typo3f-2.3
 typo3f-3.0
+staticphp-0.9
 "
