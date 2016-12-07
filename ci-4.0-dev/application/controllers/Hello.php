@@ -1,6 +1,8 @@
-<?php
+<?php namespace App\Controllers;
 
-class Hello extends \CodeIgniter\Controller
+use CodeIgniter\Controller;
+
+class Hello extends Controller
 {
     public function index()
     {
