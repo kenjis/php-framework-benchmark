@@ -10,3 +10,5 @@ define('SYS_MODULES_PATH', SYS_PATH.'Modules'.DIRECTORY_SEPARATOR);
 
 // Load core class
 require SYS_PATH.'Modules/Core/Helpers/Bootstrap.php'; // Load
+
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
