@@ -40,6 +40,7 @@ symfony-3.0
 laravel-5.2
 #zf-2.4
 zf-2.5
+zf-3.0
 #typo3f-2.3
 typo3f-3.0
 staticphp-0.9
