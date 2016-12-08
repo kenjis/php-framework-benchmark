@@ -9,6 +9,8 @@ use Zend\Stdlib\ArrayUtils;
  */
 chdir(dirname(__DIR__));
 
+$_SERVER['REQUEST_URI'] = preg_replace('!/php-framework-benchmark/zf-3.0/public/index.php!', '', $_SERVER['REQUEST_URI']);
+
 // Decline static file requests back to the PHP built-in webserver
 if (php_sapi_name() === 'cli-server') {
     $path = realpath(__DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
@@ -38,3 +40,5 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
 
 // Run the application!
 Application::init($appConfig)->run();
+
+require $_SERVER['DOCUMENT_ROOT'].'/php-framework-benchmark/libs/output_data.php';
