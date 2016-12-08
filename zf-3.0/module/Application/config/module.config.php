@@ -34,11 +34,22 @@ return [
                     ],
                 ],
             ],
+            'hello' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/hello[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\HelloController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\HelloController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
