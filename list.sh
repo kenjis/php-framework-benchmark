@@ -19,8 +19,8 @@ ze-1.0
 radar-1.0-dev
 yii-2.0
 #lumen-5.0
-#silex-1.2
-silex-1.3
+#silex-1.3
+silex-2.0
 cygnite-1.3
 fuel-1.8
 #fuel-2.0-dev
