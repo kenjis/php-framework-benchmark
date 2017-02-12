@@ -1,0 +1,16 @@
+{
+    "name": "php-framework-benchmark/siler-0.6",
+    "description": "Benchmark Siler v0.6",
+    "type": "project",
+    "require": {
+        "leocavalcante/siler": "^0.6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leocavalcante",
+            "email": "lc@leocavalcante.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
