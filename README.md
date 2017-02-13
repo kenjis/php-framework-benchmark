@@ -169,6 +169,7 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp))
 * [PHPixie](http://phpixie.com/) ([@phpixie](https://twitter.com/phpixie))
 * [Radar](https://github.com/radarphp/Radar.Project)
+* [Siler](https://github.com/leocavalcante/siler)
 * [Silex](http://silex.sensiolabs.org/)
 * [Slim](http://www.slimframework.com/) ([@slimphp](https://twitter.com/slimphp))
 * [StaticPHP](https://github.com/gintsmurans/staticphp)
