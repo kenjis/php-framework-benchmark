@@ -37,6 +37,8 @@ function parse_results($file)
         $results[$fw]['time_relative'] = $data['time'] / $min_time;
         $results[$fw]['file_relative'] = $data['file'] / $min_file;
     }
+    
+    array_multisort(array_column($results, 'rps'), SORT_DESC, $results);
 //    var_dump($results);
     
     return $results;
