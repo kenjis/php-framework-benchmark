@@ -72,7 +72,7 @@ These are my benchmarks, not yours. **I encourage you to run on your (production
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
-Note(2): This benchmarks are limited by `ab` performance. See <https://github.com/kenjis/php-framework-benchmark/issues/62>.
+Note(2): This benchmarks are limited by `ab` performance. See [#62](https://github.com/kenjis/php-framework-benchmark/issues/62).
 
 ## How to Benchmark
 
