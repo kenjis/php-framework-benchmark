@@ -43,7 +43,7 @@ These are my benchmarks, not yours. **I encourage you to run on your (production
 
 (2017/02/14)
 
-![Benchmark Results Graph](https://pbs.twimg.com/media/CU9dNeqUwAEbcod.png:large)
+![Benchmark Results Graph](img/php-framework-benchmark-20170214.png)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
