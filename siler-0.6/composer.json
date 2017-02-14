@@ -3,7 +3,7 @@
     "description": "Benchmark Siler v0.6",
     "type": "project",
     "require": {
-        "leocavalcante/siler": "^0.6.0"
+        "leocavalcante/siler": "0.6.*"
     },
     "license": "MIT",
     "authors": [
