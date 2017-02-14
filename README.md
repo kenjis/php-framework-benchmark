@@ -28,75 +28,47 @@ But if you are interested in benchmarking with optimization (removing components
 
 If you find something wrong with my code, please feel free to send Pull Requests. But please note optimizing only for "Hello World" is not acceptable. Building fastest "Hello World" application is not the goal in this project.
 
-## Frameworks to Benchmark
-
-1. Phalcon 2.0.8
-1. Ice 1.0.34
-1. Tipsy 0.10.3
-1. FatFree 3.5.0
-1. Slim 2.6.2
-1. CodeIgniter 3.0.2
-1. NoFussFramework 1.2.3
-1. Slim 3.0.0-RC2
-1. BEAR.Sunday 1.0.1
-1. Lumen 5.1.6
-1. zend-expressive 1.0.0rc2 (FastRoute + zend-servicemanager)
-1. Radar 1.0.0-dev
-1. Yii 2.0.6
-1. Silex 1.3.4
-1. Cygnite 1.3.1
-1. FuelPHP 1.8-dev
-1. PHPixie 3.2
-1. Aura 2.0.2
-1. CakePHP 3.1.4
-1. Symfony 2.7.7
-1. Laravel 5.1.24
-1. Zend Framework 2.5.2
-1. TYPO3 Flow 3.0.0
-1. StaticPHP 0.9.4
-
 ## Results
 
 ### Benchmarking Environment
 
-* CentOS 6.6 64bit (VM; VirtualBox)
-  * PHP 5.5.30 (Remi RPM)
-    * Zend OPcache v7.0.4-dev
+* CentOS 6.8 64bit (VM; VirtualBox)
+  * PHP 5.6.30 (Remi RPM)
+    * Zend OPcache v7.0.6-dev
   * Apache 2.2
 
 ### Hello World Benchmark
 
 These are my benchmarks, not yours. **I encourage you to run on your (production equivalent) environments.**
 
-(2015/11/29)
+(2017/02/14)
 
 ![Benchmark Results Graph](https://pbs.twimg.com/media/CU9dNeqUwAEbcod.png:large)
 
 |framework          |requests per second|relative|peak memory|relative|
 |-------------------|------------------:|-------:|----------:|-------:|
-|phalcon-2.0        |           1,746.90|    64.7|       0.27|     1.0|
-|ice-1.0            |           1,454.79|    53.9|       0.26|     1.0|
-|tipsy-0.10         |           1,425.66|    52.8|       0.32|     1.2|
-|fatfree-3.5        |           1,106.20|    41.0|       0.42|     1.6|
-|slim-2.6           |             880.24|    32.6|       0.47|     1.8|
-|ci-3.0             |             810.99|    30.1|       0.43|     1.7|
-|nofuss-1.2         |             672.16|    24.9|       0.40|     1.5|
-|slim-3.0           |             534.16|    19.8|       0.61|     2.4|
-|bear-1.0           |             442.63|    16.4|       0.76|     2.9|
-|lumen-5.1          |             412.36|    15.3|       0.95|     3.7|
-|ze-1.0             |             391.97|    14.5|       0.80|     3.1|
-|radar-1.0-dev      |             369.79|    13.7|       0.70|     2.7|
-|yii-2.0            |             379.77|    14.1|       1.37|     5.3|
-|silex-1.3          |             383.66|    14.2|       0.86|     3.3|
-|cygnite-1.3        |             385.16|    14.3|       0.76|     2.9|
-|fuel-1.8-dev       |             346.33|    12.8|       0.65|     2.5|
-|phpixie-3.2        |             236.58|     8.8|       1.31|     5.1|
-|aura-2.0           |             233.80|     8.7|       0.89|     3.5|
-|cake-3.1           |             207.27|     7.7|       1.37|     5.3|
-|symfony-2.7        |             101.99|     3.8|       3.21|    12.4|
-|laravel-5.1        |              91.59|     3.4|       2.76|    10.7|
-|zf-2.5             |              81.13|     3.0|       3.02|    11.7|
-|typo3f-3.0         |              26.98|     1.0|       6.50|    25.2|
+|siler-0.6          |           2,069.69|    20.3|       0.25|     1.0|
+|kumbia-1.0-dev     |           1,753.60|    17.2|       0.29|     1.2|
+|staticphp-0.9      |           1,665.28|    16.3|       0.27|     1.1|
+|phalcon-2.0        |           1,618.39|    15.9|       0.26|     1.1|
+|tipsy-0.10         |           1,376.97|    13.5|       0.32|     1.3|
+|fatfree-3.5        |             965.16|     9.5|       0.41|     1.7|
+|ci-3.0             |             753.09|     7.4|       0.42|     1.7|
+|nofuss-1.2         |             667.24|     6.5|       0.40|     1.6|
+|slim-3.0           |             550.43|     5.4|       0.61|     2.5|
+|bear-1.0           |             502.52|     4.9|       0.73|     3.0|
+|lumen-5.1          |             415.57|     4.1|       0.85|     3.5|
+|yii-2.0            |             410.08|     4.0|       1.32|     5.4|
+|ze-1.0             |             403.34|     4.0|       0.75|     3.1|
+|cygnite-1.3        |             369.12|     3.6|       0.71|     2.9|
+|fuel-1.8           |             344.26|     3.4|       0.63|     2.6|
+|silex-2.0          |             342.81|     3.4|       0.78|     3.2|
+|phpixie-3.2        |             267.24|     2.6|       1.25|     5.1|
+|aura-2.0           |             233.54|     2.3|       0.88|     3.6|
+|cake-3.2           |             174.91|     1.7|       1.95|     7.9|
+|zf-3.0             |             133.87|     1.3|       2.24|     9.1|
+|symfony-3.0        |             131.50|     1.3|       2.18|     8.9|
+|laravel-5.3        |             101.94|     1.0|       2.83|    11.5|
 
 Note(1): All the results are run on php with `phalcon.so` and `ice.so`. If you don't load phalcon.so or ice.so, the rps except for Phalcon or Ice probably increase a bit.
 
