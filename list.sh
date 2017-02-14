@@ -27,7 +27,7 @@ nofuss-1.2
 #phalcon-1.3
 phalcon-2.0
 phpixie-3.2
-radar-1.0-dev
+#radar-1.0-dev  # does not work
 siler-0.6
 #silex-1.2
 #silex-1.3
@@ -40,8 +40,8 @@ staticphp-0.9
 #symfony-2.7
 symfony-3.0
 tipsy-0.10
-typo3f-2.3
-#typo3f-3.0    # Catchable Fatal Error: Argument 1 passed to TYPO3\Flow\Object\ObjectManager::setObjects() must be of the type array, null given
+#typo3f-2.3 # does not work
+#typo3f-3.0 # Catchable Fatal Error: Argument 1 passed to TYPO3\Flow\Object\ObjectManager::setObjects() must be of the type array, null given
 yii-2.0
 ze-1.0
 #zf-2.4
