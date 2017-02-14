@@ -2,15 +2,7 @@ Upgrading instructions
 ======================
 
 This file contains instructions for upgrading your Flow 2.2 based
-applications to TYPO3 Flow 2.3.
-
-What has changed
-----------------
-
-Flow
-^^^^
-
-TBD
+applications to Flow 2.3.
 
 Upgrading your Packages
 -----------------------
@@ -18,10 +10,10 @@ Upgrading your Packages
 Upgrading existing code
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Here comes the easier part. As with earlier changes to TYPO3 Flow that
-required code changes on the user side we provide a code migration tool.
-Given you have a TYPO3 Flow system with your (outdated) package in place
-you should run the following before attempting to fix anything by hand::
+Here comes the easier part. As with earlier changes to Flow that required
+code changes on the user side we provide a code migration tool.
+Given you have a Flow system with your (outdated) package in place you
+should run the following before attempting to fix anything by hand::
 
  ./flow core:migrate --package-key Acme.Demo
 

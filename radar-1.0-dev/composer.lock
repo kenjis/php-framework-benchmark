@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/auraphp/Aura.Di.git",
-                "reference": "ce79ce32ecffe1b41e3191336061a599fdeb9bc3"
+                "reference": "e688871c5e206ae954c7af18b0c155c965264db2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Di/zipball/ce79ce32ecffe1b41e3191336061a599fdeb9bc3",
-                "reference": "ce79ce32ecffe1b41e3191336061a599fdeb9bc3",
+                "url": "https://api.github.com/repos/auraphp/Aura.Di/zipball/e688871c5e206ae954c7af18b0c155c965264db2",
+                "reference": "e688871c5e206ae954c7af18b0c155c965264db2",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "di",
                 "di container"
             ],
-            "time": "2016-11-18 19:49:46"
+            "time": "2017-02-10 02:08:53"
         },
         {
             "name": "aura/payload",
@@ -197,12 +197,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/auraphp/Aura.Router.git",
-                "reference": "46cccea7d1ae9eeac611a527898089665567959d"
+                "reference": "34e508e85dc3040a9c1cdca466fe324900a9ea98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Router/zipball/46cccea7d1ae9eeac611a527898089665567959d",
-                "reference": "46cccea7d1ae9eeac611a527898089665567959d",
+                "url": "https://api.github.com/repos/auraphp/Aura.Router/zipball/34e508e85dc3040a9c1cdca466fe324900a9ea98",
+                "reference": "34e508e85dc3040a9c1cdca466fe324900a9ea98",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +237,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-11-23 04:39:08"
+            "time": "2017-02-10 18:43:29"
         },
         {
             "name": "container-interop/container-interop",
@@ -459,12 +459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/relayphp/Relay.Middleware.git",
-                "reference": "fe3530ba5f775eec223d4ff80f1cc62d0cfb5b70"
+                "reference": "7ae2a923239e0de544869526a30f873990557aff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/relayphp/Relay.Middleware/zipball/fe3530ba5f775eec223d4ff80f1cc62d0cfb5b70",
-                "reference": "fe3530ba5f775eec223d4ff80f1cc62d0cfb5b70",
+                "url": "https://api.github.com/repos/relayphp/Relay.Middleware/zipball/7ae2a923239e0de544869526a30f873990557aff",
+                "reference": "7ae2a923239e0de544869526a30f873990557aff",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
             ],
             "description": "Relay-compatible middleware decorators.",
             "homepage": "https://github.com/relayphp/Relay.Middleware",
-            "time": "2016-09-19 16:48:40"
+            "time": "2016-12-07 16:45:53"
         },
         {
             "name": "relay/relay",
@@ -538,12 +538,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "5325839f226963235bd47391b2f1535e06077a23"
+                "reference": "79367d68b5ea582e6504f26f8009d4574518f867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/5325839f226963235bd47391b2f1535e06077a23",
-                "reference": "5325839f226963235bd47391b2f1535e06077a23",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/79367d68b5ea582e6504f26f8009d4574518f867",
+                "reference": "79367d68b5ea582e6504f26f8009d4574518f867",
                 "shasum": ""
             },
             "require": {
@@ -555,7 +555,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.6 || ^5.5",
-                "squizlabs/php_codesniffer": "^2.3.1"
+                "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
@@ -580,7 +580,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-10-11 13:28:06"
+            "time": "2017-01-23 04:54:09"
         }
     ],
     "packages-dev": [],

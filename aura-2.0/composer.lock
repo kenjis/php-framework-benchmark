@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b3df6c58523885e917bd00bf3d9ce96",
-    "content-hash": "84454ed3514d22b84092f0d410a6a74c",
+    "hash": "d09fe0081ee1f815da8ee7ffbdcb6966",
+    "content-hash": "9242351f6b14e443e865fd9edbd0d7c9",
     "packages": [
         {
             "name": "aura/di",
@@ -214,16 +214,16 @@
         },
         {
             "name": "aura/web",
-            "version": "2.0.4",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/auraphp/Aura.Web.git",
-                "reference": "cdf90465761103c0843338aa675296100c5274d9"
+                "reference": "6aa9f316e8d6f7f6e29577aa3c7bf4493a89bdd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Web/zipball/cdf90465761103c0843338aa675296100c5274d9",
-                "reference": "cdf90465761103c0843338aa675296100c5274d9",
+                "url": "https://api.github.com/repos/auraphp/Aura.Web/zipball/6aa9f316e8d6f7f6e29577aa3c7bf4493a89bdd6",
+                "reference": "6aa9f316e8d6f7f6e29577aa3c7bf4493a89bdd6",
                 "shasum": ""
             },
             "require": {
@@ -263,20 +263,20 @@
                 "request",
                 "response"
             ],
-            "time": "2016-10-03 21:32:34"
+            "time": "2017-02-09 17:05:11"
         },
         {
             "name": "aura/web-kernel",
-            "version": "2.1.3",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/auraphp/Aura.Web_Kernel.git",
-                "reference": "42ab3bec4ccc83f575a1ea869ded964a3893aebe"
+                "reference": "09b66bdfcd96c5082458f79ee41974501079efbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Web_Kernel/zipball/42ab3bec4ccc83f575a1ea869ded964a3893aebe",
-                "reference": "42ab3bec4ccc83f575a1ea869ded964a3893aebe",
+                "url": "https://api.github.com/repos/auraphp/Aura.Web_Kernel/zipball/09b66bdfcd96c5082458f79ee41974501079efbf",
+                "reference": "09b66bdfcd96c5082458f79ee41974501079efbf",
                 "shasum": ""
             },
             "require": {
@@ -294,6 +294,9 @@
                         "common": "Aura\\Web_Kernel\\_Config\\Common",
                         "web-kernel-test": "Aura\\Web_Kernel\\_Config\\WebKernelTest"
                     }
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -318,7 +321,7 @@
                 "kernel",
                 "web"
             ],
-            "time": "2016-10-03 21:38:39"
+            "time": "2014-11-06 21:57:11"
         },
         {
             "name": "monolog/monolog",

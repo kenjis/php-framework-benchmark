@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "03f6288e725c3cebc4377bb972d5ce80",
+    "hash": "e0ed839e79ce1163113864f793e78909",
+    "content-hash": "bf7a8be7aab9ff31d584f8c8c0666926",
     "packages": [
         {
             "name": "leocavalcante/siler",
-            "version": "v0.6.0-alpha",
+            "version": "v0.6.2-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leocavalcante/siler.git",
-                "reference": "d8fa708b22f14458faa4fbc4129ca3b6465bf1cf"
+                "reference": "5aae3e180951e9670084c24721525e45e3253207"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leocavalcante/siler/zipball/d8fa708b22f14458faa4fbc4129ca3b6465bf1cf",
-                "reference": "d8fa708b22f14458faa4fbc4129ca3b6465bf1cf",
+                "url": "https://api.github.com/repos/leocavalcante/siler/zipball/5aae3e180951e9670084c24721525e45e3253207",
+                "reference": "5aae3e180951e9670084c24721525e45e3253207",
                 "shasum": ""
             },
             "require": {
@@ -37,6 +38,8 @@
                     "src/Siler.php",
                     "src/Container/Container.php",
                     "src/Http/Http.php",
+                    "src/Http/Request.php",
+                    "src/Http/Response.php",
                     "src/Route/Route.php",
                     "src/Dotenv/Dotenv.php",
                     "src/Twig/Twig.php"
@@ -59,7 +62,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2017-02-11T17:44:23+00:00"
+            "time": "2017-02-14 01:11:38"
         }
     ],
     "packages-dev": [],
