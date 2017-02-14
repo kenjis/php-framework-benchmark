@@ -1,6 +1,6 @@
 # PHP Framework Benchmark
 
-This project attempts to measure minimum overhead (minimum bootstrap cost) of PHP frameworks in real world.
+This project attempts to measure minimum overhead (minimum bootstrap cost) of PHP frameworks in the real world.
 
 So I think the minimum applications to benchmark should not include:
 
@@ -8,7 +8,7 @@ So I think the minimum applications to benchmark should not include:
 * cost of database manipulation
 * cost of debugging information
 
-Components like Template engine or ORM/Database library are out of scope in this project.
+Components like Template engine or ORM/Database libraries are out of scope in this project.
 
 ## Benchmarking Policy
 
@@ -19,7 +19,7 @@ This is `master` branch.
   * Don't remove any components/configurations even if they are not used.
   * With minimum changes to run this benchmark.
 * Set environment production/Turn off debug mode.
-* Run optimization which you normally do in your production environment, like composer's `--optimize-autoloader`.
+* Run optimization which you normally do in your production environment, like Composer's `--optimize-autoloader`.
 * Use controller or action class if a framework has the functionality.
 
 Some people may think using default configuration is not fair. But I think a framework's default configuration is an assertion of what it is. Default configuration is a good starting point to know a framework. And I can't optimize all the frameworks. Some frameworks are optimized, some are not, it is not fair. So I don't remove any components/configurations.
@@ -134,13 +134,13 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Cygnite](http://www.cygniteframework.com/) ([@cygnitephp](https://twitter.com/cygnitephp))
 * [FatFree](http://fatfreeframework.com/) ([@phpfatfree](https://twitter.com/phpfatfree))
 * [FuelPHP](http://fuelphp.com/) ([@fuelphp](https://twitter.com/fuelphp))
-* [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework))
+* [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework)) [PHP extension]
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
 * [KumbiaPHP](https://github.com/KumbiaPHP/KumbiaPHP)
 * [Laravel](http://laravel.com/) ([@laravelphp](https://twitter.com/laravelphp))
 * [Lumen](http://lumen.laravel.com/)
 * [NoFussFramework](http://www.nofussframework.com/)
-* [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp))
+* [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp)) [PHP extension]
 * [PHPixie](http://phpixie.com/) ([@phpixie](https://twitter.com/phpixie))
 * [Radar](https://github.com/radarphp/Radar.Project)
 * [Siler](https://github.com/leocavalcante/siler)
