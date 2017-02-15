@@ -76,6 +76,8 @@ Note(2): This benchmarks are limited by `ab` performance. See [#62](https://gith
 
 ## How to Benchmark
 
+If you want to benchmark PHP extension frameworks like Phalcon, you need to install the extenstions.
+
 Install source code as <http://localhost/php-framework-benchmark/>:
 
 ~~~
