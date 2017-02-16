@@ -139,10 +139,12 @@ If you want to see current configuration, run `sudo sysctl -a`.
 * [Ice](http://www.iceframework.org/) ([@iceframework](https://twitter.com/iceframework)) [PHP extension]
   * See https://github.com/kenjis/php-framework-benchmark/pull/17#issuecomment-98244668
 * [KumbiaPHP](https://github.com/KumbiaPHP/KumbiaPHP) ([@KumbiaPHP](https://twitter.com/KumbiaPHP))
+  * [Install KumbiaPHP](https://github.com/KumbiaPHP/Documentation/blob/master/en/to-install.md#instalar-kumbiaphp)
 * [Laravel](http://laravel.com/) ([@laravelphp](https://twitter.com/laravelphp))
 * [Lumen](http://lumen.laravel.com/)
 * [NoFussFramework](http://www.nofussframework.com/)
 * [Phalcon](http://phalconphp.com/) ([@phalconphp](https://twitter.com/phalconphp)) [PHP extension]
+  * [Installation](https://docs.phalconphp.com/en/latest/reference/install.html)
 * [PHPixie](http://phpixie.com/) ([@phpixie](https://twitter.com/phpixie))
 * [Radar](https://github.com/radarphp/Radar.Project)
 * [Siler](https://github.com/leocavalcante/siler)
