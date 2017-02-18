@@ -7,7 +7,8 @@ bear-1.0
 #cake-3.0
 #cake-3.1
 cake-3.2
-ci-3.0
+#ci-3.0
+ci-3.1
 #ci-4.0-dev
 cygnite-1.3
 fatfree-3.5
