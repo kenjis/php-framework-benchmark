@@ -9,7 +9,7 @@ if [ $# -eq 0 ]; then
     . ./list.sh
     export targets="$list"
 else
-    export targets="${@%/}"
+    export targets="${@}"
 fi
 
 cd benchmarks
