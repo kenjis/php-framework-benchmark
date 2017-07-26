@@ -1,0 +1,4 @@
+/cache/
+!/cache/.gitkeep
+!/cache/smarty/.gitignore
+!/cache/templates_c/.gitignore
