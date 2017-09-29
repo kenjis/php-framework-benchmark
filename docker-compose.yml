@@ -1,0 +1,15 @@
+version: "2"
+services:
+    app:
+        build:
+            context: .
+            args:
+                - GITHUB_OAUTH_TOKEN=${GITHUB_OAUTH_TOKEN}
+
+        container_name: php-framework-benchmark
+
+        volumes:
+            - .:/var/www/html/php-framework-benchmark:cached
+
+        ports:
+            - "80:80"
