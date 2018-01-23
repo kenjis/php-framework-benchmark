@@ -1,0 +1,35 @@
+{
+    "name": "gnugat/symfony-empty-edition",
+    "license": "MIT",
+    "type": "project",
+    "description": "The \"Symfony Empty Edition\" distribution",
+    "autoload": {
+        "psr-4": { "": "src" },
+        "files": [ "app/AppKernel.php" ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests" }
+    },
+    "require": {
+        "php": "^5.5.9|^7.0",
+        "symfony/console": "^3.0",
+        "symfony/event-dispatcher": "^3.0",
+        "symfony/finder": "^3.0",
+        "symfony/yaml": "^3.0",
+        "incenteev/composer-parameter-handler": "^2.1",
+        "gnugat/micro-framework-bundle": "0.5.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": [
+            { "file": "app/config/parameters.yml" }
+        ]
+    }
+}

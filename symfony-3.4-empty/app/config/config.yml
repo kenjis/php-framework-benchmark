@@ -1,0 +1,23 @@
+#imports:
+#    - { resource: parameters.yml }
+#    - { resource: services/ }
+#
+#framework:
+#    secret: '%secret%'
+#    router:
+#        resource: '%kernel.root_dir%/config/routings/'
+#        type: directory
+
+# app/config/config.yml
+imports:
+  - { resource: parameters.yml }
+
+#framework:
+#  secret: "%secret%"
+#  router:
+#    resource: "%kernel.root_dir%/config/routings.yml"
+
+services:
+  app.hello_controller:
+    class: AppBundle\Controller\HelloController
+    tags: ['controller.service_arguments']
