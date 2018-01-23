@@ -1,5 +1,5 @@
 {
-    "name": "kenji/symfony.3.3",
+    "name": "kenji/symfony.3.4",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -17,8 +17,8 @@
         }
     },
     "require": {
-        "php": ">=5.5.9",
-        "symfony/symfony": "3.3.*",
+        "php": "^5.5.9|>=7.0.8",
+        "symfony/symfony": "3.4.*",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",

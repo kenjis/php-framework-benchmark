@@ -1,4 +1,4 @@
-symfony-3.3
+symfony-3.4
 ===========
 
 A Symfony project

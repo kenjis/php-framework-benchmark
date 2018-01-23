@@ -12,18 +12,21 @@
         ]
     },
     "require": {
-        "php": ">=5.5.9",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "php": "^5.5.9|>=7.0.8",
         "sensio/distribution-bundle": "^5.0",
-        "symfony/framework-bundle": "3.3.*",
+        "symfony/framework-bundle": "3.4.*",
         "symfony/monolog-bundle": "^2.8",
-        "symfony/yaml": "^3.3"
+        "symfony/yaml": "^3.4"
     },
     "scripts": {
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache"
         ]
