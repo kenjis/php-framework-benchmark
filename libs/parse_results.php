@@ -18,10 +18,10 @@ function parse_results($file)
         $time   = (float) trim($column[3])*1000;
         $file   = (int) trim($column[4]);
         
-        $min_rps    = min($min_rps, $rps);
-        $min_memory = min($min_memory, $memory);
-        $min_time   = min($min_time, $time);
-        $min_file   = min($min_file, $file);
+        $min_rps    = min($min_rps, $rps ?: INF);
+        $min_memory = min($min_memory, $memory ?: INF);
+        $min_time   = min($min_time, $time ?: INF);
+        $min_file   = min($min_file, $file ?: INF);
         
         $results[$fw] = [
             'rps'    => $rps,

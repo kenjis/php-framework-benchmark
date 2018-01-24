@@ -1,0 +1,12 @@
+main_page:
+    path: /
+    defaults:
+        _controller: app.hello_controller:worldAction
+    methods:
+        - GET
+hello_world:
+    path: /hello/index
+    defaults:
+        _controller: app.hello_controller:worldAction
+    methods:
+        - GET

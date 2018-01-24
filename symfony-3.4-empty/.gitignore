@@ -1,0 +1,17 @@
+# Temporary Files
+/var/*
+
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+
+# Configuration
+/app/config/parameters.yml
+
+# Third Party libraries
+/vendor/
+/composer.phar
