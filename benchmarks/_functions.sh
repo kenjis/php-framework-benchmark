@@ -11,12 +11,14 @@ benchmark ()
     rps=`grep "Requests per second:" "$ab_log" | cut -f 7 -d " "`
 
     # get time
+    i=0
     count=10
     total=0
-    for ((i=0; i < $count; i++)); do
+    while [ "$i" -le $count ]; do
         curl "$url" > "$output"
         t=`tail -1 "$output" | cut -f 2 -d ':'`
         total=`php ./benchmarks/sum_ms.php $t $total`
+        i=$(( i + 1 ))
     done
     time=`php ./benchmarks/avg_ms.php $total $count`
 

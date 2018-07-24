@@ -127,6 +127,11 @@ If you want to see current configuration, run `sudo sysctl -a`.
 </VirtualHost>
 ~~~
 
+## Docker Environment
+- You need only `docker` and `docker-compose` installed
+- Run `$ GITHUB_OAUTH_TOKEN=<your-github-oauth-token> docker-compose up --build` (for Composer installs and avoid GitHub API Rate limits)
+- Go to inside the container: `$ docker exec -it php-framework-benchmark bash`
+
 ## References
 
 * [Aura](http://auraphp.com/) ([@auraphp](https://twitter.com/auraphp))
