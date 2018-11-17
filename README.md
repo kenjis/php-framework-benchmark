@@ -94,6 +94,8 @@ $ bash benchmark.sh
 
 See <http://localhost/php-framework-benchmark/>.
 
+> The project path must be under the root of DOCUMENT_ROOT and named `php-framework-benchmark`, which keep the process right for output data. 
+
 If you want to benchmark some frameworks:
 
 ~~~
