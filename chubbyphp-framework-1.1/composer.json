@@ -1,0 +1,7 @@
+{
+    "require": {
+        "chubbyphp/chubbyphp-framework": "1.1.*",
+        "nikic/fast-route": "1.3.*",
+        "slim/psr7": "0.4.*"
+    }
+}
