@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "28b134f6de1e764b1e96581fe733fde5",
+    "content-hash": "feeff98692f794c642ebb99a506d1733",
     "packages": [
         {
             "name": "any/serializer",
@@ -43,7 +43,7 @@
                 "make it possible",
                 "serialize"
             ],
-            "time": "2013-09-20 05:52:42"
+            "time": "2013-09-20T05:52:42+00:00"
         },
         {
             "name": "aura/di",
@@ -106,7 +106,7 @@
                 "di",
                 "di container"
             ],
-            "time": "2014-05-31 00:00:00"
+            "time": "2014-05-31T00:00:00+00:00"
         },
         {
             "name": "aura/input",
@@ -182,7 +182,7 @@
                 "html",
                 "input"
             ],
-            "time": "2014-08-24 00:00:00"
+            "time": "2014-08-24T00:00:00+00:00"
         },
         {
             "name": "aura/installer-default",
@@ -223,7 +223,7 @@
                 "aura",
                 "installer"
             ],
-            "time": "2012-11-26 21:35:57"
+            "time": "2012-11-26T21:35:57+00:00"
         },
         {
             "name": "aura/router",
@@ -277,7 +277,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2015-03-15 19:41:14"
+            "time": "2015-03-15T19:41:14+00:00"
         },
         {
             "name": "aura/signal",
@@ -351,7 +351,7 @@
                 "signal",
                 "signal slots"
             ],
-            "time": "2014-08-24 00:00:00"
+            "time": "2014-08-24T00:00:00+00:00"
         },
         {
             "name": "aura/sql",
@@ -404,7 +404,7 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-            "time": "2015-03-16 14:51:58"
+            "time": "2015-03-16T14:51:58+00:00"
         },
         {
             "name": "aura/view",
@@ -468,7 +468,7 @@
                 "twostep view",
                 "view"
             ],
-            "time": "2014-05-31 00:00:00"
+            "time": "2014-05-31T00:00:00+00:00"
         },
         {
             "name": "aura/web",
@@ -521,7 +521,7 @@
                 "request",
                 "response"
             ],
-            "time": "2015-03-15 19:12:55"
+            "time": "2015-03-15T19:12:55+00:00"
         },
         {
             "name": "bear/package",
@@ -600,7 +600,7 @@
                 "hypermedia",
                 "rest"
             ],
-            "time": "2014-07-07 10:35:16"
+            "time": "2014-07-07T10:35:16+00:00"
         },
         {
             "name": "bear/resource",
@@ -663,7 +663,7 @@
                 "rest",
                 "stateless"
             ],
-            "time": "2014-07-07 09:45:19"
+            "time": "2014-07-07T09:45:19+00:00"
         },
         {
             "name": "bear/sunday",
@@ -714,7 +714,7 @@
                 "hypermedia",
                 "rest"
             ],
-            "time": "2014-05-30 11:44:38"
+            "time": "2014-05-30T11:44:38+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -782,7 +782,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-12-20 20:49:38"
+            "time": "2014-12-20T20:49:38+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -852,7 +852,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-01-15 20:38:55"
+            "time": "2015-01-15T20:38:55+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -920,7 +920,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2014-02-03 23:07:43"
+            "time": "2014-02-03T23:07:43+00:00"
         },
         {
             "name": "doctrine/common",
@@ -998,7 +998,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2014-05-21 19:28:51"
+            "time": "2014-05-21T19:28:51+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -1069,7 +1069,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-01-12 21:52:47"
+            "time": "2015-01-12T21:52:47+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1136,7 +1136,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2014-12-20T21:24:13+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -1190,7 +1190,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09 13:34:57"
+            "time": "2014-09-09T13:34:57+00:00"
         },
         {
             "name": "guzzlehttp/command",
@@ -1236,20 +1236,20 @@
                 }
             ],
             "description": "Provides the foundation for building command based web service clients",
-            "time": "2014-08-08 16:41:48"
+            "time": "2014-08-08T16:41:48+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c"
+                "reference": "13a8e5acff26b0a87d353042170b48976da004a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66fd916e9f9130bc22c51450476823391cb2f67c",
-                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/13a8e5acff26b0a87d353042170b48976da004a1",
+                "reference": "13a8e5acff26b0a87d353042170b48976da004a1",
                 "shasum": ""
             },
             "require": {
@@ -1272,12 +1272,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1301,7 +1301,11 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-10-05 19:29:14"
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/4.x"
+            },
+            "time": "2016-07-15T17:44:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle-services",
@@ -1342,7 +1346,7 @@
                 }
             ],
             "description": "Provides an implementation of the Guzzle Command library that uses Guzzle service descriptions to describe web services, serialize requests, and parse responses into easy to use model structures.",
-            "time": "2014-06-01 20:00:25"
+            "time": "2014-06-01T20:00:25+00:00"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1395,7 +1399,12 @@
                 "Guzzle",
                 "stream"
             ],
-            "time": "2014-08-17 21:15:53"
+            "support": {
+                "issues": "https://github.com/guzzle/streams/issues",
+                "source": "https://github.com/guzzle/streams/tree/master"
+            },
+            "abandoned": true,
+            "time": "2014-08-17T21:15:53+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1440,7 +1449,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2014-07-23 18:24:17"
+            "time": "2014-07-23T18:24:17+00:00"
         },
         {
             "name": "nocarrier/hal",
@@ -1488,7 +1497,7 @@
                 "rest",
                 "xml"
             ],
-            "time": "2014-11-24 11:48:52"
+            "time": "2014-11-24T11:48:52+00:00"
         },
         {
             "name": "pagerfanta/pagerfanta",
@@ -1555,7 +1564,7 @@
                 "paginator",
                 "paging"
             ],
-            "time": "2014-10-06 10:57:25"
+            "time": "2014-10-06T10:57:25+00:00"
         },
         {
             "name": "psr/log",
@@ -1593,7 +1602,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2012-12-21T11:40:51+00:00"
         },
         {
             "name": "ray/aop",
@@ -1645,7 +1654,7 @@
                 "aop",
                 "aspect"
             ],
-            "time": "2014-08-19 06:44:37"
+            "time": "2014-08-19T06:44:37+00:00"
         },
         {
             "name": "ray/di",
@@ -1700,7 +1709,7 @@
                 "guice",
                 "jsr"
             ],
-            "time": "2014-08-21 05:34:58"
+            "time": "2014-08-21T05:34:58+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1754,7 +1763,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-13 17:37:22"
+            "time": "2015-03-13T17:37:22+00:00"
         },
         {
             "name": "twig/twig",
@@ -1811,7 +1820,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-01-25 17:32:08"
+            "time": "2015-01-25T17:32:08+00:00"
         }
     ],
     "packages-dev": [
@@ -1856,7 +1865,7 @@
                 "editor",
                 "online editor"
             ],
-            "time": "2013-06-21 04:38:46"
+            "time": "2013-06-21T04:38:46+00:00"
         },
         {
             "name": "bear/dev-package",
@@ -1910,7 +1919,7 @@
                 }
             ],
             "description": "dev-require packages for BEAR.Package",
-            "time": "2014-09-29 03:37:35"
+            "time": "2014-09-29T03:37:35+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1957,7 +1966,7 @@
                 "class",
                 "preload"
             ],
-            "time": "2014-03-12 00:05:31"
+            "time": "2014-03-12T00:05:31+00:00"
         },
         {
             "name": "dg/adminer-custom",
@@ -1976,7 +1985,7 @@
             "type": "project",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Customization for the best database management tool written in PHP, Adminer",
-            "time": "2015-02-07 20:26:30"
+            "time": "2015-02-07T20:26:30+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -2030,7 +2039,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-13 12:58:55"
+            "time": "2014-10-13T12:58:55+00:00"
         },
         {
             "name": "facebook/xhprof",
@@ -2066,7 +2075,7 @@
                 "performance",
                 "profiling"
             ],
-            "time": "2014-08-29 01:48:15"
+            "time": "2014-08-29T01:48:15+00:00"
         },
         {
             "name": "filp/whoops",
@@ -2124,7 +2133,7 @@
                 "whoops",
                 "zf2"
             ],
-            "time": "2015-02-17 15:50:31"
+            "time": "2015-02-17T15:50:31+00:00"
         },
         {
             "name": "firephp/firephp-core",
@@ -2160,7 +2169,7 @@
             ],
             "description": "Traditional FirePHPCore library for sending PHP variables to the browser.",
             "homepage": "https://github.com/firephp/firephp-core",
-            "time": "2013-04-23 15:28:20"
+            "time": "2013-04-23T15:28:20+00:00"
         },
         {
             "name": "koriym/printo",
@@ -2210,7 +2219,7 @@
                 "debug",
                 "var_dump"
             ],
-            "time": "2015-02-13 19:04:21"
+            "time": "2015-02-13T19:04:21+00:00"
         },
         {
             "name": "phpunit/dbunit",
@@ -2269,7 +2278,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-03-26 11:25:06"
+            "time": "2014-03-26T11:25:06+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2331,7 +2340,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-01-24 10:06:35"
+            "time": "2015-01-24T10:06:35+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2376,7 +2385,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2013-10-10 15:34:57"
+            "time": "2013-10-10T15:34:57+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -2420,7 +2429,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2014-01-30 17:20:04"
+            "time": "2014-01-30T17:20:04+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -2464,7 +2473,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2013-08-02 07:42:54"
+            "time": "2013-08-02T07:42:54+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -2513,7 +2522,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-01-17 09:51:32"
+            "time": "2015-01-17T09:51:32+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -2587,7 +2596,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-09-14 09:31:24"
+            "time": "2014-09-14T09:31:24+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2642,7 +2651,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-10-03 05:12:11"
+            "time": "2014-10-03T05:12:11+00:00"
         },
         {
             "name": "robmorgan/phinx",
@@ -2704,7 +2713,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2015-02-23 16:38:12"
+            "time": "2015-02-23T16:38:12+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -2768,7 +2777,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2015-01-29 16:28:08"
+            "time": "2015-01-29T16:28:08+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -2820,7 +2829,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2014-08-15 10:29:00"
+            "time": "2014-08-15T10:29:00+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -2870,7 +2879,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2014-10-25 08:00:45"
+            "time": "2014-10-25T08:00:45+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -2936,7 +2945,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2015-01-27 07:23:06"
+            "time": "2015-01-27T07:23:06+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -2989,7 +2998,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2015-01-24 09:48:32"
+            "time": "2015-01-24T09:48:32+00:00"
         },
         {
             "name": "sebastian/version",
@@ -3024,7 +3033,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2014-12-15 14:25:24"
+            "time": "2014-12-15T14:25:24+00:00"
         },
         {
             "name": "symfony/config",
@@ -3075,7 +3084,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-12 10:28:44"
+            "time": "2015-03-12T10:28:44+00:00"
         },
         {
             "name": "symfony/console",
@@ -3133,7 +3142,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-13 17:37:22"
+            "time": "2015-03-13T17:37:22+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -3183,7 +3192,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-12 10:28:44"
+            "time": "2015-03-12T10:28:44+00:00"
         },
         {
             "name": "symfony/finder",
@@ -3233,7 +3242,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-12 10:28:44"
+            "time": "2015-03-12T10:28:44+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -3283,7 +3292,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-12 10:28:44"
+            "time": "2015-03-12T10:28:44+00:00"
         },
         {
             "name": "zendframework/zend-db",
@@ -3334,7 +3343,7 @@
                 "db",
                 "zf2"
             ],
-            "time": "2015-03-12 16:55:53"
+            "time": "2015-03-12T16:55:53+00:00"
         },
         {
             "name": "zendframework/zend-log",
@@ -3394,7 +3403,7 @@
                 "logging",
                 "zf2"
             ],
-            "time": "2015-03-12 16:55:53"
+            "time": "2015-03-12T16:55:53+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -3442,7 +3451,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2015-03-12 16:55:53"
+            "time": "2015-03-12T16:55:53+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -3495,7 +3504,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-03-12 16:55:53"
+            "time": "2015-03-12T16:55:53+00:00"
         }
     ],
     "aliases": [],
@@ -3506,5 +3515,6 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
