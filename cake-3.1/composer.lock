@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "0dafa358c38deed8034fa4a5ab5d5853",
     "content-hash": "05f75a961792ceab5f1eaed86e3988f2",
     "packages": [
         {
@@ -46,7 +45,11 @@
                 "aura",
                 "installer"
             ],
-            "time": "2012-11-26 21:35:57"
+            "support": {
+                "issues": "https://github.com/auraphp/installer-default/issues",
+                "source": "https://github.com/auraphp/installer-default/tree/1.0.0"
+            },
+            "time": "2012-11-26T21:35:57+00:00"
         },
         {
             "name": "aura/intl",
@@ -124,20 +127,24 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2014-08-24 00:00:00"
+            "support": {
+                "issues": "https://github.com/auraphp/Aura.Intl/issues",
+                "source": "https://github.com/auraphp/Aura.Intl/tree/1.1.1"
+            },
+            "time": "2014-08-24T00:00:00+00:00"
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.1.4",
+            "version": "3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "46abd7761c0528ad6eee5da6dde292abbeade851"
+                "reference": "88e0ff225324d746a2772bbfad128e858692a668"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/46abd7761c0528ad6eee5da6dde292abbeade851",
-                "reference": "46abd7761c0528ad6eee5da6dde292abbeade851",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/88e0ff225324d746a2772bbfad128e858692a668",
+                "reference": "88e0ff225324d746a2772bbfad128e858692a668",
                 "shasum": ""
             },
             "require": {
@@ -169,15 +176,15 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Cake\\": "src"
-                },
                 "files": [
                     "src/Core/functions.php",
                     "src/Collection/functions.php",
                     "src/I18n/functions.php",
                     "src/Utility/bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Cake\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -194,7 +201,13 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-11-06 03:48:56"
+            "support": {
+                "forum": "http://stackoverflow.com/tags/cakephp",
+                "irc": "irc://irc.freenode.org/cakephp",
+                "issues": "https://github.com/cakephp/cakephp/issues",
+                "source": "https://github.com/cakephp/cakephp"
+            },
+            "time": "2016-11-26T04:18:20+00:00"
         },
         {
             "name": "cakephp/migrations",
@@ -244,7 +257,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2015-10-16 20:29:10"
+            "time": "2015-10-16T20:29:10+00:00"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -284,7 +297,7 @@
                 }
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
-            "time": "2015-06-10 10:35:13"
+            "time": "2015-06-10T10:35:13+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -326,7 +339,11 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20 16:49:30"
+            "support": {
+                "issues": "https://github.com/ircmaxell/password_compat/issues",
+                "source": "https://github.com/ircmaxell/password_compat/tree/v1.0"
+            },
+            "time": "2014-11-20T16:49:30+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -380,7 +397,7 @@
                 "mobile detector",
                 "php mobile detect"
             ],
-            "time": "2015-09-17 14:45:21"
+            "time": "2015-09-17T14:45:21+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -426,7 +443,11 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-09-26 02:52:02"
+            "support": {
+                "issues": "https://github.com/briannesbitt/Carbon/issues",
+                "source": "https://github.com/briannesbitt/Carbon/tree/1.13.0"
+            },
+            "time": "2014-09-26T02:52:02+00:00"
         },
         {
             "name": "psr/log",
@@ -464,7 +485,11 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "support": {
+                "issues": "https://github.com/php-fig/log/issues",
+                "source": "https://github.com/php-fig/log/tree/1.0.0"
+            },
+            "time": "2012-12-21T11:40:51+00:00"
         },
         {
             "name": "robmorgan/phinx",
@@ -526,7 +551,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2015-11-04 21:03:56"
+            "time": "2015-11-04T21:03:56+00:00"
         },
         {
             "name": "symfony/config",
@@ -576,7 +601,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-02 20:20:53"
+            "time": "2015-11-02T20:20:53+00:00"
         },
         {
             "name": "symfony/console",
@@ -635,7 +660,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 09:54:26"
+            "time": "2015-11-18T09:54:26+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -684,7 +709,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 13:41:01"
+            "time": "2015-11-18T13:41:01+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -733,7 +758,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 13:41:01"
+            "time": "2015-11-18T13:41:01+00:00"
         }
     ],
     "packages-dev": [
@@ -781,7 +806,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-10-31 17:24:20"
+            "time": "2015-10-31T17:24:20+00:00"
         },
         {
             "name": "cakephp/debug_kit",
@@ -837,7 +862,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-10-21 19:57:25"
+            "time": "2015-10-21T19:57:25+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -870,7 +895,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24 07:27:01"
+            "time": "2014-10-24T07:27:01+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -913,7 +938,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08 15:00:19"
+            "time": "2014-04-08T15:00:19+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -957,7 +982,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20 18:58:01"
+            "time": "2015-04-20T18:58:01+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1007,7 +1032,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2014-01-12 16:20:24"
+            "time": "2014-01-12T16:20:24+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1052,7 +1077,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2015-09-19 14:15:08"
+            "time": "2015-09-19T14:15:08+00:00"
         },
         {
             "name": "psy/psysh",
@@ -1124,7 +1149,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-11-12 16:18:56"
+            "time": "2015-11-12T16:18:56+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -1183,7 +1208,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2015-11-18 13:41:01"
+            "time": "2015-11-18T13:41:01+00:00"
         }
     ],
     "aliases": [],
@@ -1196,5 +1221,6 @@
     "platform": {
         "php": ">=5.4.16"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
